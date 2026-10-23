@@ -1,0 +1,127 @@
+{
+ "date": "20261023",
+ "games": [
+  {
+   "id": "401909848",
+   "start": "2026-10-23T20:00Z",
+   "final": false,
+   "status": "10/23 - 4:00 PM EDT",
+   "home": "MIL",
+   "away": "CHI",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909095",
+   "start": "2026-10-23T23:00Z",
+   "final": false,
+   "status": "10/23 - 7:00 PM EDT",
+   "home": "BOS",
+   "away": "NYK",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909843",
+   "start": "2026-10-23T23:00Z",
+   "final": false,
+   "status": "10/23 - 7:00 PM EDT",
+   "home": "CHA",
+   "away": "ATL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909844",
+   "start": "2026-10-23T23:00Z",
+   "final": false,
+   "status": "10/23 - 7:00 PM EDT",
+   "home": "IND",
+   "away": "DAL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909845",
+   "start": "2026-10-23T23:00Z",
+   "final": false,
+   "status": "10/23 - 7:00 PM EDT",
+   "home": "ORL",
+   "away": "MIN",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909846",
+   "start": "2026-10-23T23:00Z",
+   "final": false,
+   "status": "10/23 - 7:00 PM EDT",
+   "home": "WAS",
+   "away": "TOR",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909847",
+   "start": "2026-10-24T00:00Z",
+   "final": false,
+   "status": "10/23 - 8:00 PM EDT",
+   "home": "MIA",
+   "away": "DET",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909096",
+   "start": "2026-10-24T01:30Z",
+   "final": false,
+   "status": "10/23 - 9:30 PM EDT",
+   "home": "SAS",
+   "away": "HOU",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909849",
+   "start": "2026-10-24T01:30Z",
+   "final": false,
+   "status": "10/23 - 9:30 PM EDT",
+   "home": "UTA",
+   "away": "NOP",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909850",
+   "start": "2026-10-24T02:00Z",
+   "final": false,
+   "status": "10/23 - 10:00 PM EDT",
+   "home": "GSW",
+   "away": "MEM",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909851",
+   "start": "2026-10-24T02:00Z",
+   "final": false,
+   "status": "10/23 - 10:00 PM EDT",
+   "home": "LAL",
+   "away": "LAC",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909852",
+   "start": "2026-10-24T02:00Z",
+   "final": false,
+   "status": "10/23 - 10:00 PM EDT",
+   "home": "SAC",
+   "away": "POR",
+   "home_score": 0,
+   "away_score": 0
+  }
+ ],
+ "players": [],
+ "all_final": false
+}
