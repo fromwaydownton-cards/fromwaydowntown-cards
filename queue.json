@@ -1,16 +1,1 @@
-{
-  "queue": [
-    {
-      "key": "test:20261021",
-      "kind": "nightly",
-      "test": true,
-      "folder": "cards/test/20261021.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/test/20261021.jpg"
-      ],
-      "caption": "NBA night leaders, Oct 21, 2026. All 11 final scores in the graphic.\n\nMost points: Ty Jerome (MEM) 45 pts\nMost rebounds: Domantas Sabonis (SAC) 18 reb\nMost assists: Trae Young (WAS) 13 ast\nBest 3PT%: Marcus Sasser (DAL) 4-5 from 3\nWorst +/-: Caleb Wilson (CHI) -45\n\n#NBA #NBAStats #hoops #basketball",
-      "title": "NBA night leaders Oct 21",
-      "queued_at": "2026-10-23T16:20:26+00:00"
-    }
-  ]
-}
+{"queue": []}

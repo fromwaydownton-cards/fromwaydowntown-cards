@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parent
 SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={}"
 SUMMARY = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary?event={}"
 HEADSHOT = "https://a.espncdn.com/i/headshots/nba/players/full/{}.png"
+LOGO_DARK = "https://a.espncdn.com/i/teamlogos/nba/500-dark/{}.png"
+LOGO = "https://a.espncdn.com/i/teamlogos/nba/500/{}.png"
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/129.0 Safari/537.36"}
 ESPN_ABBR = {"GS": "GSW", "NY": "NYK", "SA": "SAS", "NO": "NOP", "UTAH": "UTA",
@@ -99,6 +101,30 @@ def save_headshots(ids_urls):
             print("headshot FAILED", pid, url, e)
 
 
+def save_logos(abbrs):
+    """Team logos (dark-background versions where ESPN has them)."""
+    back = {v: k for k, v in ESPN_ABBR.items() if k not in ("PHO", "BRK", "CHO")}
+    d = ROOT / "data" / "logos"
+    d.mkdir(parents=True, exist_ok=True)
+    for abbr in abbrs:
+        f = d / f"{abbr}.png"
+        if f.exists():
+            continue
+        code = back.get(abbr, abbr).lower()
+        for url in (LOGO_DARK.format(code), LOGO.format(code)):
+            try:
+                f.write_bytes(fetch(url, raw=True))
+                print("logo", abbr, url.split("/")[-2], f.stat().st_size, "bytes")
+                break
+            except Exception as e:
+                print("logo miss", abbr, url, e)
+
+
+ALL_TEAMS = ["ATL", "BOS", "BKN", "CHA", "CHI", "CLE", "DAL", "DEN", "DET", "GSW", "HOU",
+             "IND", "LAC", "LAL", "MEM", "MIA", "MIL", "MIN", "NOP", "NYK", "OKC", "ORL",
+             "PHI", "PHX", "POR", "SAC", "SAS", "TOR", "UTA", "WAS"]
+
+
 if __name__ == "__main__":
     from leaders import pick
     night = collect(sys.argv[1])
@@ -109,4 +135,5 @@ if __name__ == "__main__":
             print(f"{k}: {p['name']} ({p['team']}) {p['pts']}p {p['reb']}r {p['ast']}a "
                   f"{p['tpm']}-{p['tpa']} 3pt {p['pm']:+d}")
         save_headshots([(p["id"], p["headshot"]) for p in leaders.values()])
+    save_logos(ALL_TEAMS)
     print("ALL_FINAL" if night["all_final"] else "NOT_FINAL")

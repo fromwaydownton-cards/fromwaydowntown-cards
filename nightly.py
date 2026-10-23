@@ -17,7 +17,7 @@ from zoneinfo import ZoneInfo
 
 from leaders import pick
 from night_card import render
-from night_data import collect, save_headshots
+from night_data import ALL_TEAMS, collect, save_headshots, save_logos
 
 ROOT = Path(__file__).resolve().parent
 QUEUE = ROOT / "queue.json"
@@ -55,6 +55,7 @@ def build(date, test=False):
         return None
     leaders = pick(night["players"])
     save_headshots([(p["id"], p["headshot"]) for p in leaders.values()])
+    save_logos(ALL_TEAMS)
     out = (ROOT / "cards" / "test" if test else NIGHTS) / f"{date}.jpg"
     out.parent.mkdir(parents=True, exist_ok=True)
     render(night, out)
