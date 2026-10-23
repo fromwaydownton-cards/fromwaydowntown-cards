@@ -28,7 +28,13 @@ jobs:
           python-version: "3.12"
       - run: pip install pillow
       - name: Build cards for new finals
-        run: python3 fetch_finals.py ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: |
+          set -o pipefail
+          if ! python3 fetch_finals.py ${{ inputs.dry_run && '--dry-run' || '' }} 2>&1 | tee run.log; then
+            echo "::error title=fetch_finals failed::$(tail -c 900 run.log | tr '\n' '|')"
+            exit 1
+          fi
+          echo "::notice title=fetch_finals::$(tail -c 900 run.log | tr '\n' '|')"
       - name: Commit and push
         run: |
           git config user.name "fromwaydowntown-bot"
