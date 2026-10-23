@@ -1,59 +1,52 @@
-# Nightly post-game run
+# Hourly posting run
 
-Goal: every NBA game that has gone final gets ONE 4-card carousel (top 2 scorers
-per team, winners first) posted to TikTok and Facebook through Metricool, once.
+GitHub Actions (`nightly.yml`) builds the nightly leaders graphic once every
+game of an NBA night is final and adds it to `queue.json`. This run only
+POSTS what is in the queue. It never builds or edits graphics, and never needs
+sports data.
 
 ## Steps
 
-1. **Repo.** Attach `fromwaydownton-cards/fromwaydowntown-cards` with push access
-   (add_repo), clone it to `/home/claude/fromwaydowntown-cards` (or `git pull` if
-   already there), and work from that folder.
-2. **Find finished games.** Fetch NBA `scores`. Take every game with status
-   `closed` whose `start_time` is within the last 36 hours and whose `id` is NOT a
-   key in `posted.json` → `posted`. Nothing new → stop, post nothing.
-3. **For each new game:**
-   1. Fetch its `game_stats`. Write `game.json` in the scratchpad with:
-      `id`, `start_time` (from scores), `home`, `away`, `score`, and
-      `player_stats` → for each team, every player as `{"name", "stats"}` keeping
-      these stat keys: points, rebounds, assists, field_goals_made,
-      field_goals_att, three_points_made, three_points_att, blocks, steals,
-      turnovers, personal_fouls, efficiency_game_score. Copy numbers exactly.
-   2. Run `python3 run_game.py <path to game.json>`. It writes the 4 PNGs and
-      caption into `cards/YYYY-MM-DD/AWAY_at_HOME/` and prints the image URLs,
-      caption and title.
-   3. Open one or two of the PNGs to check they rendered (name, big points number,
-      two stat rows, final score). Check the top scorers' points against the box
-      score.
-   4. Commit the new card folder and **push before posting** (Metricool pulls the
-      images from the raw GitHub URLs, so they must be live first).
-   5. Schedule the post with Metricool `createScheduledPost`:
-      - blogId `7591436`
-      - date/publicationDate = now + 3 minutes, timezone `America/Los_Angeles`
-      - info:
-        ```json
-        {"autoPublish": true, "draft": false, "descendants": [],
-         "firstCommentText": "", "hasNotReadNotes": false, "shortener": false,
-         "smartLinkData": {"ids": []}, "mediaAltText": [],
-         "media": [<the 4 image URLs in order>],
-         "text": <caption>,
-         "providers": [{"network": "tiktok"}, {"network": "facebook"}],
-         "tiktokData": {"privacyOption": "PUBLIC_TO_EVERYONE", "title": <title>,
-                        "photoCoverIndex": 0, "autoAddMusic": false,
-                        "disableComment": false, "disableDuet": false,
-                        "disableStitch": false, "isAigc": false,
-                        "commercialContentThirdParty": false,
-                        "commercialContentOwnBrand": false},
-         "facebookData": {"type": "POST"},
-         "publicationDate": {"dateTime": "<YYYY-MM-DDTHH:MM:SS>",
-                             "timezone": "America/Los_Angeles"}}
-        ```
-   6. Only after Metricool accepts it: add `"<game id>": "<AWAY>_at_<HOME> <date>"`
-      to `posted.json` → `posted`, commit and push.
-4. **Report** one line per game posted (matchup + the 4 players), and anything
-   skipped or failed. If Metricool or GitHub errors, do not retry more than once
-   and do not add the game to `posted.json`, so the next run picks it up.
+1. **Get the latest repo.** It is usually already checked out at
+   `/home/claude/fromwaydowntown-cards`: run `git -C /home/claude/fromwaydowntown-cards fetch -q origin main && git -C /home/claude/fromwaydowntown-cards reset -q --hard origin/main`.
+   If the folder is missing: `git clone --depth 1 https://github.com/fromwaydownton-cards/fromwaydowntown-cards /home/claude/fromwaydowntown-cards`.
+2. **Read** `queue.json` → `queue` and `posted.json` → `posted`.
+   Pending = queue entries whose `key` is not a key in `posted`.
+   None pending → stop: "Nothing to post."
+3. **Duplicate check (always).** Call Metricool `getScheduledPosts` for brandId
+   `7591436`, timezone `America/Los_Angeles`, from 3 days ago to 1 day ahead.
+   If any returned post's `text` equals the entry's `caption`, it was already
+   posted: do not post again; just record it in step 5.
+4. **Post** with Metricool `createScheduledPost`, blogId `7591436`,
+   date/publicationDate = now + 3 minutes in `America/Los_Angeles`.
+   - Normal entry (`"test": false`): providers tiktok, facebook, instagram.
+   - Test entry (`"test": true`): provider tiktok ONLY, privacyOption `SELF_ONLY`.
+   ```json
+   {"autoPublish": true, "draft": false, "descendants": [],
+    "firstCommentText": "", "hasNotReadNotes": false, "shortener": false,
+    "smartLinkData": {"ids": []}, "mediaAltText": [],
+    "media": <entry.images>,
+    "text": <entry.caption>,
+    "providers": [{"network": "tiktok"}, {"network": "facebook"}, {"network": "instagram"}],
+    "tiktokData": {"privacyOption": "PUBLIC_TO_EVERYONE", "title": <entry.title>,
+                   "photoCoverIndex": 0, "autoAddMusic": false, "disableComment": false,
+                   "disableDuet": false, "disableStitch": false, "isAigc": false,
+                   "commercialContentThirdParty": false, "commercialContentOwnBrand": false},
+    "facebookData": {"type": "POST"},
+    "instagramData": {"type": "POST", "showReelOnFeed": true, "isAiGenerated": false},
+    "publicationDate": {"dateTime": "<YYYY-MM-DDTHH:MM:SS>", "timezone": "America/Los_Angeles"}}
+   ```
+   (For a test entry, drop facebook/instagram from providers and their data blocks.)
+   If Metricool rejects one network, retry once without that network and
+   report which one failed.
+5. **Record it.** Add `"<entry.key>": "<what was posted, e.g. tiktok+facebook+instagram, Metricool id>"`
+   to `posted.json` → `posted` and save it to GitHub on branch `main`. Use the
+   GitHub tools (`create_or_update_file` / `push_files` on repo
+   `fromwaydownton-cards/fromwaydowntown-cards`) or `git push` if available.
+   If saving fails, say so: step 3 still prevents a double post next hour.
+6. **Report** one line per entry: posted / skipped as duplicate / failed + why.
 
 ## Never
-- Post a game twice (always check `posted.json`).
-- Post anything other than these stat cards: no logos, photos or video.
-- Change the card design, colors or handle (@FROMWAYDOWNTOWN).
+- Post anything that is not in `queue.json`.
+- Post the same entry twice.
+- Change graphics, captions or the queue.

@@ -65,6 +65,10 @@ def collect(date):
         comp = ev["competitions"][0]
         t = {c["homeAway"]: c for c in comp["competitors"]}
         final = comp["status"]["type"].get("completed", False)
+        dead = comp["status"]["type"].get("name") in ("STATUS_POSTPONED", "STATUS_CANCELED",
+                                                        "STATUS_SUSPENDED", "STATUS_FORFEIT")
+        if dead:
+            continue
         all_final &= final
         g = {"id": ev["id"], "start": ev["date"], "final": final,
              "status": comp["status"]["type"].get("shortDetail", ""),

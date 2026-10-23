@@ -1,0 +1,50 @@
+name: Nightly leaders graphic
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Force a date YYYYMMDD (blank = automatic)"
+        required: false
+        default: ""
+      test:
+        description: "Build a private TikTok test post instead"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-writes
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Build when the night is over
+        run: |
+          set -o pipefail
+          ARGS=""
+          if [ -n "${{ inputs.date }}" ]; then ARGS="--date ${{ inputs.date }}"; fi
+          if [ "${{ inputs.test }}" = "true" ]; then ARGS="$ARGS --test"; fi
+          if ! python3 nightly.py $ARGS 2>&1 | tee run.log; then
+            echo "::error title=nightly failed::$(tail -c 900 run.log | tr '\n' '|')"; exit 1; fi
+          echo "::notice title=nightly::$(tail -c 900 run.log | tr '\n' '|')"
+      - name: Commit and push
+        run: |
+          git config user.name "fromwaydowntown-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A cards data queue.json
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Nightly graphic"
+          git pull --rebase -q && git push
