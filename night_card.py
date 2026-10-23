@@ -25,7 +25,7 @@ BOLD = str(FONTS / "DejaVuSans-Bold.ttf")         # names (full accent coverage)
 
 W, H = 1080, 1350
 BG = (255, 255, 255)
-CIRCLE_FILL = (0, 0, 0)
+CIRCLE_FILL = (150, 154, 160)   # gray so hair and skin stand out
 BAR = (60, 60, 60)
 BAR_EDGE = (10, 10, 10)
 INK = (20, 20, 24)
@@ -46,6 +46,7 @@ SLOTS = [
 TAGS = {"pts": "MOST POINTS", "reb": "MOST REBOUNDS", "ast": "MOST ASSISTS",
         "three": "BEST 3PT%", "worst_pm": "WORST +/-"}
 BAR_W, BAR_H = 350, 96
+IMG = [None]   # current canvas, so the bar can paste logos
 
 
 def F(path, size):
@@ -110,8 +111,18 @@ def stat_bar(d, cx, top, p, category):
     x0 = cx - BAR_W // 2
     d.rounded_rectangle((x0, top, x0 + BAR_W, top + BAR_H), radius=6, fill=BAR,
                         outline=BAR_EDGE, width=4)
-    name_f = fit(d, p["name"].upper(), BOLD, 24, BAR_W - 28)
-    centered(d, cx, top + 9, p["name"].upper(), name_f, (255, 255, 255))
+    name = p["name"].upper()
+    logo_sz, gap = 32, 8
+    name_f = fit(d, name, BOLD, 24, BAR_W - 28 - logo_sz - gap)
+    group = logo_sz + gap + d.textlength(name, font=name_f)
+    gx = cx - group / 2
+    lf_path = ROOT / "data" / "logos" / f"{p['team']}.png"
+    if lf_path.exists():
+        logo = Image.open(lf_path).convert("RGBA")
+        logo.thumbnail((logo_sz, logo_sz), Image.LANCZOS)
+        IMG[0].alpha_composite(logo, (int(gx + (logo_sz - logo.width) / 2), int(top + 6 + (logo_sz - logo.height) / 2)))
+        d = ImageDraw.Draw(IMG[0])
+    d.text((gx + logo_sz + gap, top + 9), name, font=name_f, fill=(255, 255, 255))
     stats = [("PTS", p["pts"]), ("REB", p["reb"]), ("AST", p["ast"]),
              ("TO", p["tov"]), ("STOCKS", p["stl"] + p["blk"])]
     col = (BAR_W - 20) / len(stats)
@@ -172,6 +183,7 @@ def scoreboard(d, games, top):
 def render(night, out):
     leaders = pick(night["players"])
     img = Image.new("RGBA", (W, H), BG + (255,))
+    IMG[0] = img
     d = ImageDraw.Draw(img)
 
     date = datetime.strptime(night["date"], "%Y%m%d")
