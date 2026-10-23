@@ -114,7 +114,7 @@ def render(card, out):
         x += d.textlength(t, font=sf)
     centered(d, y + 85, card.get("handle", "@FROMWAYDOWNTOWN"), font(BOLD_FONT, 34), GREY)
 
-    img.save(out / f"{card['slug']}.png")
+    img.save(out / f"{card['slug']}.jpg", "JPEG", quality=92, subsampling=0)
     if "caption" not in card:
         return
 

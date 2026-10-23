@@ -30,7 +30,7 @@ game["date"] = start.strftime("%b %-d, %Y")
 day_dir = Path("cards") / start.strftime("%Y-%m-%d")
 
 folder, made = build(game, day_dir)
-pngs = sorted(folder.glob("*.png"))
+pngs = sorted(folder.glob("*.jpg"))
 sc, home, away = game["score"], game["home"], game["away"]
 win, lose = (home, away) if sc[home] > sc[away] else (away, home)
 print(json.dumps({
