@@ -12,9 +12,10 @@ from PIL import Image, ImageDraw, ImageFont
 from team_colors import team_color
 
 W, H = 1080, 1920
-BLACK_FONT = "/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc"
-BOLD_FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-REG_FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+_FONTS = Path(__file__).resolve().parent / "fonts"
+BLACK_FONT = str(_FONTS / "NotoSansBlack-Latin.otf")
+BOLD_FONT = str(_FONTS / "DejaVuSans-Bold.ttf")
+REG_FONT = str(_FONTS / "DejaVuSans.ttf")
 
 BG_TOP = (26, 29, 38)
 BG_BOT = (42, 34, 54)

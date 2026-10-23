@@ -13,6 +13,7 @@ from zoneinfo import ZoneInfo
 
 from build_game import build
 
+ROOT = Path(__file__).resolve().parent
 RAW = "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/"
 TEAM_NAMES = {
     "ATL": "Hawks", "BOS": "Celtics", "BKN": "Nets", "CHA": "Hornets", "CHI": "Bulls",
@@ -24,19 +25,28 @@ TEAM_NAMES = {
     "SAC": "Kings", "SAS": "Spurs", "TOR": "Raptors", "UTA": "Jazz", "WAS": "Wizards",
 }
 
-game = json.loads(Path(sys.argv[1]).read_text())
-start = datetime.fromisoformat(game["start_time"]).astimezone(ZoneInfo("America/Chicago"))
-game["date"] = start.strftime("%b %-d, %Y")
-day_dir = Path("cards") / start.strftime("%Y-%m-%d")
 
-folder, made = build(game, day_dir)
-pngs = sorted(folder.glob("*.jpg"))
-sc, home, away = game["score"], game["home"], game["away"]
-win, lose = (home, away) if sc[home] > sc[away] else (away, home)
-print(json.dumps({
-    "game_id": game["id"],
-    "folder": str(folder),
-    "images": [RAW + str(p) for p in pngs],
-    "caption": (folder / "caption.txt").read_text(),
-    "title": f"{TEAM_NAMES[win]} {sc[win]}, {TEAM_NAMES[lose]} {sc[lose]}",
-}, indent=2))
+def game_folder(game):
+    start = datetime.fromisoformat(game["start_time"].replace("Z", "+00:00"))
+    start = start.astimezone(ZoneInfo("America/Chicago"))
+    return start, ROOT / "cards" / start.strftime("%Y-%m-%d") / f"{game['away']}_at_{game['home']}"
+
+
+def make(game):
+    start, folder = game_folder(game)
+    game = dict(game, date=start.strftime("%b %-d, %Y"))
+    build(game, folder.parent)
+    imgs = sorted(folder.glob("*.jpg"))
+    sc, home, away = game["score"], game["home"], game["away"]
+    win, lose = (home, away) if sc[home] > sc[away] else (away, home)
+    return {
+        "game_id": game["id"],
+        "folder": str(folder.relative_to(ROOT)),
+        "images": [RAW + str(p.relative_to(ROOT)) for p in imgs],
+        "caption": (folder / "caption.txt").read_text(),
+        "title": f"{TEAM_NAMES.get(win, win)} {sc[win]}, {TEAM_NAMES.get(lose, lose)} {sc[lose]}",
+    }
+
+
+if __name__ == "__main__":
+    print(json.dumps(make(json.loads(Path(sys.argv[1]).read_text())), indent=2))

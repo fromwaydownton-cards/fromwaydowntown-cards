@@ -1,0 +1,40 @@
+name: Build post-game cards
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only print what would be built"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-cards
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Build cards for new finals
+        run: python3 fetch_finals.py ${{ inputs.dry_run && '--dry-run' || '' }}
+      - name: Commit and push
+        run: |
+          git config user.name "fromwaydowntown-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A cards queue.json
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Cards for new finals"
+          git pull --rebase -q
+          git push
