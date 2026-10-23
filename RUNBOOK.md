@@ -23,7 +23,7 @@ sports data.
    - Test entry (`"test": true`): provider tiktok ONLY, privacyOption `SELF_ONLY`.
    ```json
    {"autoPublish": true, "draft": false, "descendants": [],
-    "firstCommentText": "", "hasNotReadNotes": false, "shortener": false,
+    "firstCommentText": <entry.first_comment or "">, "hasNotReadNotes": false, "shortener": false,
     "smartLinkData": {"ids": []}, "mediaAltText": [],
     "media": <entry.images>,
     "text": <entry.caption>,
@@ -38,7 +38,8 @@ sports data.
    ```
    (For a test entry, drop facebook/instagram from providers and their data blocks.)
    If Metricool rejects one network, retry once without that network and
-   report which one failed.
+   report which one failed. If it rejects the first comment, retry once with
+   firstCommentText "" and say so.
 5. **Record it.** Add `"<entry.key>": "<what was posted, e.g. tiktok+facebook+instagram, Metricool id>"`
    to `posted.json` → `posted` and save it to GitHub on branch `main`. Use the
    GitHub tools (`create_or_update_file` / `push_files` on repo
