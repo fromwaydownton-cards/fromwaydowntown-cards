@@ -19,7 +19,17 @@ from run_game import ROOT, game_folder, make
 SCOREBOARD = "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard_00.json"
 BOXSCORE = "https://cdn.nba.com/static/json/liveData/boxscore/boxscore_{}.json"
 QUEUE = ROOT / "queue.json"
-HEADERS = {"User-Agent": "Mozilla/5.0 (fromwaydowntown-cards)", "Accept": "application/json"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/129.0 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "https://www.nba.com/",
+    "Origin": "https://www.nba.com",
+}
+ESPN_SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={}"
+ESPN_SUMMARY = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary?event={}"
+ESPN_ABBR = {"GS": "GSW", "NY": "NYK", "SA": "SAS", "NO": "NOP", "UTAH": "UTA",
+             "WSH": "WAS", "PHO": "PHX", "BRK": "BKN", "CHO": "CHA"}
 
 
 def get(url):
@@ -61,32 +71,110 @@ def to_game(box):
     return out
 
 
+def espn_team(abbr):
+    return ESPN_ABBR.get(abbr, abbr)
+
+
+def espn_games(now):
+    """Final/unfinished games from ESPN for yesterday and today (US Central)."""
+    out = []
+    for d in {(now - timedelta(hours=h)).strftime("%Y%m%d") for h in (6, 30)}:
+        for ev in get(ESPN_SCOREBOARD.format(d)).get("events", []):
+            comp = ev["competitions"][0]
+            teams = {c["homeAway"]: c for c in comp["competitors"]}
+            out.append({"source": "espn", "id": ev["id"],
+                        "final": comp["status"]["type"].get("completed", False),
+                        "status_text": comp["status"]["type"].get("shortDetail", ""),
+                        "start_time": ev["date"],
+                        "home": espn_team(teams["home"]["team"]["abbreviation"]),
+                        "away": espn_team(teams["away"]["team"]["abbreviation"])})
+    return out
+
+
+def espn_box(event_id, stub):
+    summ = get(ESPN_SUMMARY.format(event_id))
+    out = {"id": f"espn:{event_id}", "start_time": stub["start_time"],
+           "home": stub["home"], "away": stub["away"], "score": {}, "player_stats": {}}
+    for c in summ["header"]["competitions"][0]["competitors"]:
+        out["score"][espn_team(c["team"]["abbreviation"])] = int(c["score"])
+    for team in summ["boxscore"]["players"]:
+        abbr = espn_team(team["team"]["abbreviation"])
+        block = team["statistics"][0]
+        idx = {k: i for i, k in enumerate(block["labels"])}
+        players = []
+        for a in block["athletes"]:
+            st = a.get("stats") or []
+            if a.get("didNotPlay") or not st:
+                continue
+            mk = lambda k: [int(x) for x in st[idx[k]].split("-")]
+            n = lambda k: int(st[idx[k]])
+            fgm, fga = mk("FG"); tpm, tpa = mk("3PT"); ftm, fta = mk("FT")
+            line = {"points": n("PTS"), "fieldGoalsMade": fgm, "fieldGoalsAttempted": fga,
+                    "freeThrowsMade": ftm, "freeThrowsAttempted": fta,
+                    "reboundsOffensive": n("OREB"), "reboundsDefensive": n("DREB"),
+                    "steals": n("STL"), "assists": n("AST"), "blocks": n("BLK"),
+                    "foulsPersonal": n("PF"), "turnovers": n("TO")}
+            players.append({"name": a["athlete"]["displayName"], "stats": {
+                "points": line["points"], "rebounds": n("REB"), "assists": line["assists"],
+                "field_goals_made": fgm, "field_goals_att": fga,
+                "three_points_made": tpm, "three_points_att": tpa,
+                "blocks": line["blocks"], "steals": line["steals"], "turnovers": line["turnovers"],
+                "personal_fouls": line["foulsPersonal"], "efficiency_game_score": game_score(line)}})
+        out["player_stats"][abbr] = players
+    return out
+
+
+def nba_games():
+    out = []
+    for sg in get(SCOREBOARD)["scoreboard"]["games"]:
+        out.append({"source": "nba", "id": sg["gameId"], "final": sg.get("gameStatus") == 3,
+                    "status_text": sg.get("gameStatusText", "").strip(),
+                    "start_time": sg["gameTimeUTC"],
+                    "home": sg["homeTeam"]["teamTricode"], "away": sg["awayTeam"]["teamTricode"]})
+    return out
+
+
+def list_games(now):
+    if "--espn" in sys.argv:
+        return espn_games(now)
+    try:
+        return nba_games()
+    except Exception as e:  # NBA feed blocks some cloud IPs
+        print(f"NBA feed unavailable ({e}); using ESPN")
+        return espn_games(now)
+
+
+def box_for(g):
+    if g["source"] == "nba":
+        return to_game(get(BOXSCORE.format(g["id"])))
+    return espn_box(g["id"], g)
+
+
 def main(dry_run=False):
     queue = json.loads(QUEUE.read_text()) if QUEUE.exists() else {"queue": []}
-    queued = {e["game_id"] for e in queue["queue"]}
-    games = get(SCOREBOARD)["scoreboard"]["games"]
     now = datetime.now(timezone.utc)
-    added = []
-    for sg in games:
-        label = f"{sg['awayTeam']['teamTricode']} at {sg['homeTeam']['teamTricode']}"
-        if sg.get("gameStatus") != 3:
-            print(f"skip {label}: not final ({sg.get('gameStatusText', '').strip()})")
+    games = list_games(now)
+    added, seen = [], set()
+    for g in games:
+        label = f"{g['away']} at {g['home']}"
+        if label + g["start_time"][:10] in seen:
             continue
-        gid = f"nba:{sg['gameId']}"
-        stub = {"start_time": sg["gameTimeUTC"], "home": sg["homeTeam"]["teamTricode"],
-                "away": sg["awayTeam"]["teamTricode"]}
-        _, folder = game_folder(stub)
-        if gid in queued or folder.exists():
+        seen.add(label + g["start_time"][:10])
+        if not g["final"]:
+            print(f"skip {label}: not final ({g['status_text']})")
+            continue
+        _, folder = game_folder(g)
+        if folder.exists() or any(e["folder"] == str(folder.relative_to(ROOT)) for e in queue["queue"]):
             print(f"skip {label}: already built ({folder.relative_to(ROOT)})")
             continue
-        start = datetime.fromisoformat(sg["gameTimeUTC"].replace("Z", "+00:00"))
+        start = datetime.fromisoformat(g["start_time"].replace("Z", "+00:00"))
         if now - start > timedelta(hours=36):
             print(f"skip {label}: too old")
             continue
-        game = to_game(get(BOXSCORE.format(sg["gameId"])))
+        game = box_for(g)
         tops = {t: sorted(ps, key=lambda p: p["stats"]["points"], reverse=True)[:2]
                 for t, ps in game["player_stats"].items()}
-        print(f"FINAL {label} {game['score']} top: "
+        print(f"FINAL {label} {game['score']} via {g['source']} top: "
               + "; ".join(f"{p['name']} {p['stats']['points']}" for ps in tops.values() for p in ps))
         if dry_run:
             continue

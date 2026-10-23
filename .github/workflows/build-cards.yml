@@ -9,6 +9,10 @@ on:
         description: "Only print what would be built"
         type: boolean
         default: false
+      espn:
+        description: "Force the ESPN data source"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -30,7 +34,7 @@ jobs:
       - name: Build cards for new finals
         run: |
           set -o pipefail
-          if ! python3 fetch_finals.py ${{ inputs.dry_run && '--dry-run' || '' }} 2>&1 | tee run.log; then
+          if ! python3 fetch_finals.py ${{ inputs.dry_run && '--dry-run' || '' }} ${{ inputs.espn && '--espn' || '' }} 2>&1 | tee run.log; then
             echo "::error title=fetch_finals failed::$(tail -c 900 run.log | tr '\n' '|')"
             exit 1
           fi
