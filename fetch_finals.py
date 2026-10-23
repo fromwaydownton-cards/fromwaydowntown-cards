@@ -164,7 +164,9 @@ def main(dry_run=False):
             print(f"skip {label}: not final ({g['status_text']})")
             continue
         _, folder = game_folder(g)
-        if folder.exists() or any(e["folder"] == str(folder.relative_to(ROOT)) for e in queue["queue"]):
+        if "--ignore-built" in sys.argv and dry_run:
+            pass
+        elif folder.exists() or any(e["folder"] == str(folder.relative_to(ROOT)) for e in queue["queue"]):
             print(f"skip {label}: already built ({folder.relative_to(ROOT)})")
             continue
         start = datetime.fromisoformat(g["start_time"].replace("Z", "+00:00"))
@@ -175,7 +177,10 @@ def main(dry_run=False):
         tops = {t: sorted(ps, key=lambda p: p["stats"]["points"], reverse=True)[:2]
                 for t, ps in game["player_stats"].items()}
         print(f"FINAL {label} {game['score']} via {g['source']} top: "
-              + "; ".join(f"{p['name']} {p['stats']['points']}" for ps in tops.values() for p in ps))
+              + "; ".join(f"{p['name']} {p['stats']['points']}p {p['stats']['rebounds']}r "
+                          f"{p['stats']['field_goals_made']}-{p['stats']['field_goals_att']} "
+                          f"gs{p['stats']['efficiency_game_score']}"
+                          for ps in tops.values() for p in ps))
         if dry_run:
             continue
         entry = make(game)
