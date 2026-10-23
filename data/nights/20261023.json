@@ -15,51 +15,51 @@
    "id": "401909095",
    "start": "2026-10-23T23:00Z",
    "final": false,
-   "status": "10/23 - 7:00 PM EDT",
+   "status": "End of 1st",
    "home": "BOS",
    "away": "NYK",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 26,
+   "away_score": 27
   },
   {
    "id": "401909843",
    "start": "2026-10-23T23:00Z",
    "final": false,
-   "status": "10/23 - 7:00 PM EDT",
+   "status": "End of 1st",
    "home": "CHA",
    "away": "ATL",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 20,
+   "away_score": 33
   },
   {
    "id": "401909844",
    "start": "2026-10-23T23:00Z",
    "final": false,
-   "status": "10/23 - 7:00 PM EDT",
+   "status": "11:22 - 2nd",
    "home": "IND",
    "away": "DAL",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 27,
+   "away_score": 44
   },
   {
    "id": "401909845",
    "start": "2026-10-23T23:00Z",
    "final": false,
-   "status": "10/23 - 7:00 PM EDT",
+   "status": "9:31 - 2nd",
    "home": "ORL",
    "away": "MIN",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 22,
+   "away_score": 32
   },
   {
    "id": "401909846",
    "start": "2026-10-23T23:00Z",
    "final": false,
-   "status": "10/23 - 7:00 PM EDT",
+   "status": "2.7 - 1st",
    "home": "WAS",
    "away": "TOR",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 21,
+   "away_score": 34
   },
   {
    "id": "401909847",
@@ -241,7 +241,7 @@
    "ast": 2,
    "stl": 0,
    "blk": 1,
-   "tov": 0,
+   "tov": 1,
    "fgm": 7,
    "fga": 11,
    "tpm": 2,
