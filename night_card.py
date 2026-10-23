@@ -32,6 +32,8 @@ INK = (20, 20, 24)
 MUTED = (120, 124, 132)
 LIGHT = (205, 208, 214)
 HANDLE = "@FROMWAYDOWNTOWN"
+HIGHLIGHT = (255, 214, 10)   # yellow for the stat that earned the spot
+HIGHLIGHT_STAT = {"pts": "PTS", "reb": "REB", "ast": "AST"}
 
 # (category, circle center, radius) from the template
 SLOTS = [
@@ -116,8 +118,9 @@ def stat_bar(d, cx, top, p, category):
     vf, lf = F(NUM, 30), F(BOLD, 12)
     for i, (lab, val) in enumerate(stats):
         c = x0 + 10 + col * i + col / 2
-        centered(d, c, top + 36, str(val), vf, (255, 255, 255))
-        centered(d, c, top + 76, lab, lf, LIGHT)
+        hot = HIGHLIGHT_STAT.get(category) == lab
+        centered(d, c, top + 36, str(val), vf, HIGHLIGHT if hot else (255, 255, 255))
+        centered(d, c, top + 76, lab, lf, HIGHLIGHT if hot else LIGHT)
 
 
 def tag(d, cx, y, text, color):
@@ -190,7 +193,12 @@ def render(night, out):
         tag(d, cx, cy - r, TAGS[cat], color)
         extra = detail(p, cat)
         if extra:
-            centered(d, cx, bar_top + BAR_H + 8, extra, F(BOLD, 17), INK)
+            ef = F(BOLD, 18)
+            ew = d.textlength(extra, font=ef) + 30
+            ey = bar_top + BAR_H + 6
+            d.rounded_rectangle((cx - ew / 2, ey, cx + ew / 2, ey + 32), radius=6,
+                                fill=BAR, outline=BAR_EDGE, width=3)
+            centered(d, cx, ey + 5, extra, ef, HIGHLIGHT)
 
     scoreboard(d, night["games"], 905)
     img.convert("RGB").save(out, "JPEG", quality=93, subsampling=0)
