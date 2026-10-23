@@ -1,0 +1,39 @@
+name: Fetch a night of data
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "ESPN game date YYYYMMDD"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-writes
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch
+        run: |
+          set -o pipefail
+          if ! python3 night_data.py "${{ inputs.date }}" 2>&1 | tee run.log; then
+            echo "::error title=night_data failed::$(tail -c 900 run.log | tr '\n' '|')"; exit 1; fi
+          echo "::notice title=night_data::$(tail -c 900 run.log | tr '\n' '|')"
+      - name: Commit and push
+        run: |
+          git config user.name "fromwaydowntown-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A data
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Night data ${{ inputs.date }}"
+          git pull --rebase -q && git push
