@@ -1,0 +1,87 @@
+{
+ "date": "20261024",
+ "games": [
+  {
+   "id": "401909853",
+   "start": "2026-10-24T22:00Z",
+   "final": false,
+   "status": "10/24 - 6:00 PM EDT",
+   "home": "CHA",
+   "away": "MIA",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909854",
+   "start": "2026-10-24T23:30Z",
+   "final": false,
+   "status": "10/24 - 7:30 PM EDT",
+   "home": "CLE",
+   "away": "BKN",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909855",
+   "start": "2026-10-24T23:30Z",
+   "final": false,
+   "status": "10/24 - 7:30 PM EDT",
+   "home": "PHI",
+   "away": "MIL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909857",
+   "start": "2026-10-25T00:00Z",
+   "final": false,
+   "status": "10/24 - 8:00 PM EDT",
+   "home": "CHI",
+   "away": "WAS",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909858",
+   "start": "2026-10-25T00:00Z",
+   "final": false,
+   "status": "10/24 - 8:00 PM EDT",
+   "home": "DAL",
+   "away": "SAS",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909856",
+   "start": "2026-10-25T00:30Z",
+   "final": false,
+   "status": "10/24 - 8:30 PM EDT",
+   "home": "ATL",
+   "away": "HOU",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909859",
+   "start": "2026-10-25T01:00Z",
+   "final": false,
+   "status": "10/24 - 9:00 PM EDT",
+   "home": "DEN",
+   "away": "NOP",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909860",
+   "start": "2026-10-25T02:00Z",
+   "final": false,
+   "status": "10/24 - 10:00 PM EDT",
+   "home": "PHX",
+   "away": "GSW",
+   "home_score": 0,
+   "away_score": 0
+  }
+ ],
+ "players": [],
+ "all_final": false
+}
