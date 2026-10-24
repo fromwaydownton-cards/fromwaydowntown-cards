@@ -65,61 +65,61 @@
    "id": "401909847",
    "start": "2026-10-24T00:00Z",
    "final": false,
-   "status": "8:27 - 4th",
+   "status": "End of 4th",
    "home": "MIA",
    "away": "DET",
-   "home_score": 94,
-   "away_score": 108
+   "home_score": 111,
+   "away_score": 128
   },
   {
    "id": "401909096",
    "start": "2026-10-24T01:30Z",
    "final": false,
-   "status": "2:55 - 1st",
+   "status": "4:08 - 2nd",
    "home": "SAS",
    "away": "HOU",
-   "home_score": 21,
-   "away_score": 25
+   "home_score": 42,
+   "away_score": 47
   },
   {
    "id": "401909849",
    "start": "2026-10-24T01:30Z",
    "final": false,
-   "status": "2.6 - 1st",
+   "status": "2:08 - 2nd",
    "home": "UTA",
    "away": "NOP",
-   "home_score": 31,
-   "away_score": 28
+   "home_score": 58,
+   "away_score": 50
   },
   {
    "id": "401909850",
    "start": "2026-10-24T02:00Z",
    "final": false,
-   "status": "10/23 - 10:00 PM EDT",
+   "status": "4:04 - 1st",
    "home": "GSW",
    "away": "MEM",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 24,
+   "away_score": 22
   },
   {
    "id": "401909851",
    "start": "2026-10-24T02:00Z",
    "final": false,
-   "status": "10/23 - 10:00 PM EDT",
+   "status": "End of 1st",
    "home": "LAL",
    "away": "LAC",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 27,
+   "away_score": 31
   },
   {
    "id": "401909852",
    "start": "2026-10-24T02:00Z",
    "final": false,
-   "status": "10/23 - 10:00 PM EDT",
+   "status": "1:46 - 1st",
    "home": "SAC",
    "away": "POR",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 29,
+   "away_score": 24
   }
  ],
  "players": [
@@ -621,7 +621,7 @@
    "blk": 0,
    "tov": 0,
    "fgm": 0,
-   "fga": 1,
+   "fga": 0,
    "tpm": 0,
    "tpa": 0,
    "pm": 3,
@@ -1695,13 +1695,13 @@
    "team": "IND",
    "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4278355.png",
    "pts": 13,
-   "reb": 4,
+   "reb": 5,
    "ast": 1,
    "stl": 0,
    "blk": 1,
    "tov": 1,
    "fgm": 5,
-   "fga": 9,
+   "fga": 10,
    "tpm": 0,
    "tpa": 2,
    "pm": -9,
