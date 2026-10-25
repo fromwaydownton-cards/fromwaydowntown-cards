@@ -1,0 +1,77 @@
+{
+ "date": "20261025",
+ "games": [
+  {
+   "id": "401909861",
+   "start": "2026-10-25T21:00Z",
+   "final": false,
+   "status": "10/25 - 5:00 PM EDT",
+   "home": "UTA",
+   "away": "LAL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909862",
+   "start": "2026-10-25T22:00Z",
+   "final": false,
+   "status": "10/25 - 6:00 PM EDT",
+   "home": "BKN",
+   "away": "IND",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909863",
+   "start": "2026-10-25T23:00Z",
+   "final": false,
+   "status": "10/25 - 7:00 PM EDT",
+   "home": "NYK",
+   "away": "ORL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909864",
+   "start": "2026-10-25T23:00Z",
+   "final": false,
+   "status": "10/25 - 7:00 PM EDT",
+   "home": "MIN",
+   "away": "TOR",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909865",
+   "start": "2026-10-25T23:00Z",
+   "final": false,
+   "status": "10/25 - 7:00 PM EDT",
+   "home": "OKC",
+   "away": "LAC",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909866",
+   "start": "2026-10-25T23:30Z",
+   "final": false,
+   "status": "10/25 - 7:30 PM EDT",
+   "home": "PHI",
+   "away": "DET",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909867",
+   "start": "2026-10-26T01:00Z",
+   "final": false,
+   "status": "10/25 - 9:00 PM EDT",
+   "home": "SAC",
+   "away": "MEM",
+   "home_score": 0,
+   "away_score": 0
+  }
+ ],
+ "players": [],
+ "all_final": false
+}
