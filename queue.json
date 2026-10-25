@@ -12,6 +12,19 @@
       "first_comment": "Vote for the best night \ud83d\udc47 1) Tatum  2) Sabonis  3) Young  4) Collins",
       "title": "NBA night leaders Oct 23",
       "queued_at": "2026-10-24T05:05:32+00:00"
+    },
+    {
+      "key": "night:20261024",
+      "kind": "nightly",
+      "test": false,
+      "folder": "cards/nights/20261024.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261024.jpg"
+      ],
+      "caption": "Whose night are you taking: Booker, Jokic or Johnson?\n\nNBA night leaders, Oct 24, 2026. All 8 final scores in the graphic.\n\nMost points: Devin Booker (PHX) 43 pts\nMost rebounds: Nikola Jokic (DEN) 15 reb\nMost assists: Jalen Johnson (ATL) 16 ast\nBest 3PT%: Kentavious Caldwell-Pope (PHI) 4-6 from 3\nWorst +/-: Max Christie (DAL) -22\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
+      "first_comment": "Vote for the best night \ud83d\udc47 1) Booker  2) Jokic  3) Johnson  4) Caldwell-Pope",
+      "title": "NBA night leaders Oct 24",
+      "queued_at": "2026-10-25T04:33:36+00:00"
     }
   ]
 }
