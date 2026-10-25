@@ -5,51 +5,51 @@
    "id": "401909861",
    "start": "2026-10-25T21:00Z",
    "final": false,
-   "status": "10:26 - 4th",
+   "status": "3:15 - 4th",
    "home": "UTA",
    "away": "LAL",
-   "home_score": 102,
-   "away_score": 107
+   "home_score": 117,
+   "away_score": 118
   },
   {
    "id": "401909862",
    "start": "2026-10-25T22:00Z",
    "final": false,
-   "status": "2:45 - 2nd",
+   "status": "11:07 - 3rd",
    "home": "BKN",
    "away": "IND",
-   "home_score": 51,
-   "away_score": 49
+   "home_score": 58,
+   "away_score": 65
   },
   {
    "id": "401909863",
    "start": "2026-10-25T23:00Z",
    "final": false,
-   "status": "10/25 - 7:00 PM EDT",
+   "status": "3:40 - 1st",
    "home": "NYK",
    "away": "ORL",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 20,
+   "away_score": 10
   },
   {
    "id": "401909864",
    "start": "2026-10-25T23:00Z",
    "final": false,
-   "status": "10/25 - 7:00 PM EDT",
+   "status": "3:39 - 1st",
    "home": "MIN",
    "away": "TOR",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 25,
+   "away_score": 18
   },
   {
    "id": "401909865",
    "start": "2026-10-25T23:00Z",
    "final": false,
-   "status": "10/25 - 7:00 PM EDT",
+   "status": "3:07 - 1st",
    "home": "OKC",
    "away": "LAC",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 21,
+   "away_score": 15
   },
   {
    "id": "401909866",
