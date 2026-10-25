@@ -15,61 +15,61 @@
    "id": "401909854",
    "start": "2026-10-24T23:30Z",
    "final": false,
-   "status": "2:48 - 2nd",
+   "status": "7:18 - 3rd",
    "home": "CLE",
    "away": "BKN",
-   "home_score": 58,
-   "away_score": 46
+   "home_score": 77,
+   "away_score": 59
   },
   {
    "id": "401909855",
    "start": "2026-10-24T23:30Z",
    "final": false,
-   "status": "0.0 - 2nd",
+   "status": "2:42 - 3rd",
    "home": "PHI",
    "away": "MIL",
-   "home_score": 64,
-   "away_score": 60
+   "home_score": 87,
+   "away_score": 82
   },
   {
    "id": "401909857",
    "start": "2026-10-25T00:00Z",
    "final": false,
-   "status": "End of 1st",
+   "status": "Halftime",
    "home": "CHI",
    "away": "WAS",
-   "home_score": 27,
-   "away_score": 28
+   "home_score": 62,
+   "away_score": 57
   },
   {
    "id": "401909858",
    "start": "2026-10-25T00:00Z",
    "final": false,
-   "status": "2.1 - 1st",
+   "status": "Halftime",
    "home": "DAL",
    "away": "SAS",
-   "home_score": 31,
-   "away_score": 32
+   "home_score": 60,
+   "away_score": 68
   },
   {
    "id": "401909856",
    "start": "2026-10-25T00:30Z",
    "final": false,
-   "status": "10/24 - 8:30 PM EDT",
+   "status": "7:40 - 2nd",
    "home": "ATL",
    "away": "HOU",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 35,
+   "away_score": 38
   },
   {
    "id": "401909859",
    "start": "2026-10-25T01:00Z",
    "final": false,
-   "status": "10/24 - 9:00 PM EDT",
+   "status": "7:12 - 1st",
    "home": "DEN",
    "away": "NOP",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 10,
+   "away_score": 12
   },
   {
    "id": "401909860",
@@ -152,7 +152,7 @@
    "fga": 12,
    "tpm": 4,
    "tpa": 9,
-   "pm": -16,
+   "pm": -9,
    "game": "401909853"
   },
   {
@@ -224,7 +224,7 @@
    "fga": 6,
    "tpm": 0,
    "tpa": 5,
-   "pm": 11,
+   "pm": 4,
    "game": "401909853"
   },
   {
@@ -278,7 +278,7 @@
    "fga": 3,
    "tpm": 0,
    "tpa": 0,
-   "pm": -16,
+   "pm": -12,
    "game": "401909853"
   },
   {
@@ -368,7 +368,7 @@
    "fga": 1,
    "tpm": 0,
    "tpa": 1,
-   "pm": 8,
+   "pm": 4,
    "game": "401909853"
   },
   {
