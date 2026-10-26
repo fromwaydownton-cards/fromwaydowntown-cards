@@ -1,0 +1,884 @@
+{
+ "3945274": {
+  "player": {
+   "id": "3945274",
+   "name": "Luka Doncic",
+   "team": "LAL",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/3945274.png",
+   "pts": 52,
+   "reb": 8,
+   "ast": 10,
+   "stl": 2,
+   "blk": 0,
+   "tov": 4,
+   "fgm": 17,
+   "fga": 30,
+   "tpm": 8,
+   "tpa": 18,
+   "pm": 3,
+   "game": "401909861"
+  },
+  "shots": [
+   {
+    "x": 15,
+    "y": 7,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Luka Doncic makes 12-foot two point shot",
+    "period": 1,
+    "clock": "11:40"
+   },
+   {
+    "x": 12,
+    "y": 22,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Ace Bailey blocks Luka Doncic 's 25-foot three point pullup jump shot",
+    "period": 1,
+    "clock": "9:50"
+   },
+   {
+    "x": 16,
+    "y": 7,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Bank Jump Shot",
+    "text": "Luka Doncic makes 10-foot two point shot",
+    "period": 1,
+    "clock": "9:23"
+   },
+   {
+    "x": 6,
+    "y": 19,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic misses 26-foot three point pullup jump shot",
+    "period": 1,
+    "clock": "8:49"
+   },
+   {
+    "x": 22,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Luka Doncic makes running layup",
+    "period": 1,
+    "clock": "7:56"
+   },
+   {
+    "x": 1,
+    "y": 10,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Luka Doncic misses 25-foot three point jumper",
+    "period": 1,
+    "clock": "4:59"
+   },
+   {
+    "x": 13,
+    "y": 25,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Luka Doncic misses 27-foot three point jumper",
+    "period": 1,
+    "clock": "3:35"
+   },
+   {
+    "x": 46,
+    "y": 13,
+    "made": false,
+    "value": 0,
+    "type": "Running Pullup Jump Shot",
+    "text": "Luka Doncic misses running pullup jump shot",
+    "period": 1,
+    "clock": "3:18"
+   },
+   {
+    "x": 41,
+    "y": 20,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 25-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "2:21"
+   },
+   {
+    "x": 40,
+    "y": 23,
+    "made": true,
+    "value": 3,
+    "type": "Running Pullup Jump Shot",
+    "text": "Luka Doncic makes 27-foot running pullup jump shot",
+    "period": 1,
+    "clock": "1:21"
+   },
+   {
+    "x": 42,
+    "y": 20,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic misses 25-foot three point pullup jump shot",
+    "period": 1,
+    "clock": "56.2"
+   },
+   {
+    "x": 15,
+    "y": 11,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic misses 14-foot pullup jump shot",
+    "period": 2,
+    "clock": "4:24"
+   },
+   {
+    "x": 34,
+    "y": 5,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic makes 10-foot pullup jump shot",
+    "period": 2,
+    "clock": "2:22"
+   },
+   {
+    "x": 30,
+    "y": 12,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Luka Doncic makes 13-foot fade away jump shot",
+    "period": 2,
+    "clock": "33.8"
+   },
+   {
+    "x": 14,
+    "y": 25,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic makes 26-foot three pointer",
+    "period": 2,
+    "clock": "4.7"
+   },
+   {
+    "x": 14,
+    "y": 15,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Luka Doncic misses 18-foot fade away jump shot",
+    "period": 3,
+    "clock": "10:33"
+   },
+   {
+    "x": 26,
+    "y": 10,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic makes 9-foot pullup jump shot",
+    "period": 3,
+    "clock": "9:13"
+   },
+   {
+    "x": 21,
+    "y": 27,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Luka Doncic makes 26-foot three point jumper (Matisse Thybulle assists)",
+    "period": 3,
+    "clock": "8:32"
+   },
+   {
+    "x": 35,
+    "y": 23,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic misses 25-foot three point pullup jump shot",
+    "period": 3,
+    "clock": "8:08"
+   },
+   {
+    "x": 10,
+    "y": 20,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 25-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "6:44"
+   },
+   {
+    "x": 23,
+    "y": 10,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic makes 9-foot pullup jump shot",
+    "period": 3,
+    "clock": "6:01"
+   },
+   {
+    "x": 33,
+    "y": 4,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Luka Doncic misses 8-foot turnaround jump shot",
+    "period": 3,
+    "clock": "5:08"
+   },
+   {
+    "x": 6,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Luka Doncic makes 19-foot fade away jump shot",
+    "period": 3,
+    "clock": "4:16"
+   },
+   {
+    "x": 31,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Luka Doncic makes driving layup",
+    "period": 3,
+    "clock": "3:38"
+   },
+   {
+    "x": 43,
+    "y": 19,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Luka Doncic misses 25-foot three point jumper",
+    "period": 3,
+    "clock": "2:35"
+   },
+   {
+    "x": 14,
+    "y": 24,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 26-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "2.1"
+   },
+   {
+    "x": 6,
+    "y": 16,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 24-foot three point step back jumpshot",
+    "period": 4,
+    "clock": "4:06"
+   },
+   {
+    "x": 4,
+    "y": 19,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Luka Doncic makes 28-foot three point jumper (Austin Reaves assists)",
+    "period": 4,
+    "clock": "2:22"
+   },
+   {
+    "x": 3,
+    "y": 18,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Luka Doncic makes 27-foot three point jumper (Ziaire Williams assists)",
+    "period": 4,
+    "clock": "1:42"
+   },
+   {
+    "x": 1,
+    "y": 8,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Luka Doncic misses 25-foot fade away jump shot",
+    "period": 4,
+    "clock": "1:05"
+   }
+  ],
+  "ft_made": 10,
+  "ft_att": 11
+ },
+ "3064440": {
+  "player": {
+   "id": "3064440",
+   "name": "Zach LaVine",
+   "team": "SAC",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/3064440.png",
+   "pts": 37,
+   "reb": 2,
+   "ast": 5,
+   "stl": 2,
+   "blk": 0,
+   "tov": 3,
+   "fgm": 13,
+   "fga": 25,
+   "tpm": 3,
+   "tpa": 10,
+   "pm": -21,
+   "game": "401909867"
+  },
+  "shots": [
+   {
+    "x": 39,
+    "y": -5,
+    "made": true,
+    "value": 2,
+    "type": "Layup Shot",
+    "text": "Zach LaVine makes layup (Darius Acuff Jr. assists)",
+    "period": 1,
+    "clock": "11:43"
+   },
+   {
+    "x": 26,
+    "y": 27,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Zach LaVine misses 26-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "9:24"
+   },
+   {
+    "x": 23,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Layup Driving Reverse",
+    "text": "Zach LaVine makes two point shot",
+    "period": 1,
+    "clock": "8:20"
+   },
+   {
+    "x": 22,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Running Layup Shot",
+    "text": "Zach LaVine misses running layup",
+    "period": 1,
+    "clock": "2:22"
+   },
+   {
+    "x": 1,
+    "y": 3,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Jerami Grant blocks Zach LaVine 's 24-foot three point jumper",
+    "period": 1,
+    "clock": "3.6"
+   },
+   {
+    "x": 24,
+    "y": 27,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Zach LaVine misses 26-foot three point pullup jump shot",
+    "period": 2,
+    "clock": "9:43"
+   },
+   {
+    "x": 37,
+    "y": 12,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Zach LaVine makes 16-foot pullup jump shot",
+    "period": 2,
+    "clock": "7:35"
+   },
+   {
+    "x": 20,
+    "y": 4,
+    "made": false,
+    "value": 0,
+    "type": "Driving Jump Shot Bank",
+    "text": "Zach LaVine misses 6-foot two point shot",
+    "period": 2,
+    "clock": "6:55"
+   },
+   {
+    "x": 3,
+    "y": 12,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Zach LaVine makes 25-foot three point step back jumpshot",
+    "period": 2,
+    "clock": "6:31"
+   },
+   {
+    "x": 25,
+    "y": 4,
+    "made": false,
+    "value": 0,
+    "type": "Running Layup Shot",
+    "text": "Isaiah Stewart blocks Zach LaVine's running layup",
+    "period": 2,
+    "clock": "6:16"
+   },
+   {
+    "x": 16,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Bank Jump Shot",
+    "text": "Zach LaVine makes 9-foot two point shot",
+    "period": 2,
+    "clock": "5:12"
+   },
+   {
+    "x": 12,
+    "y": 16,
+    "made": true,
+    "value": 2,
+    "type": "Step Back Jump Shot",
+    "text": "Zach LaVine makes 20-foot step back jumpshot",
+    "period": 2,
+    "clock": "3:50"
+   },
+   {
+    "x": 20,
+    "y": 31,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Zach LaVine misses 30-foot three point pullup jump shot",
+    "period": 2,
+    "clock": "3:18"
+   },
+   {
+    "x": 37,
+    "y": 12,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Zach LaVine misses 17-foot step back jumpshot",
+    "period": 2,
+    "clock": "55.3"
+   },
+   {
+    "x": 42,
+    "y": 21,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Zach LaVine makes 26-foot three point jumper (Daeqwon Plowden assists)",
+    "period": 2,
+    "clock": "18.8"
+   },
+   {
+    "x": 2,
+    "y": -1,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Zach LaVine makes 23-foot three point jumper (Darius Acuff Jr. assists)",
+    "period": 3,
+    "clock": "11:01"
+   },
+   {
+    "x": 16,
+    "y": 18,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Zach LaVine misses 19-foot pullup jump shot",
+    "period": 3,
+    "clock": "9:17"
+   },
+   {
+    "x": 35,
+    "y": 9,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Zach LaVine makes 13-foot fade away jump shot",
+    "period": 3,
+    "clock": "6:52"
+   },
+   {
+    "x": 2,
+    "y": 10,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Zach LaVine misses 24-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "40.3"
+   },
+   {
+    "x": 25,
+    "y": 6,
+    "made": true,
+    "value": 2,
+    "type": "Driving Dunk Shot",
+    "text": "Zach LaVine makes 5-foot driving dunk",
+    "period": 3,
+    "clock": "14.3"
+   },
+   {
+    "x": 27,
+    "y": 5,
+    "made": true,
+    "value": 2,
+    "type": "Layup Running Reverse",
+    "text": "Zach LaVine makes two point shot (Darius Acuff Jr. assists)",
+    "period": 4,
+    "clock": "9:39"
+   },
+   {
+    "x": 9,
+    "y": 25,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Zach LaVine misses 29-foot three point jumper",
+    "period": 4,
+    "clock": "7:45"
+   },
+   {
+    "x": 25,
+    "y": 27,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Zach LaVine misses 26-foot three point step back jumpshot",
+    "period": 4,
+    "clock": "7:15"
+   },
+   {
+    "x": 15,
+    "y": 13,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Bank Jump Shot",
+    "text": "Zach LaVine makes 16-foot two point shot",
+    "period": 4,
+    "clock": "3:32"
+   },
+   {
+    "x": 22,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Zach LaVine makes driving layup",
+    "period": 4,
+    "clock": "3:03"
+   }
+  ],
+  "ft_made": 8,
+  "ft_att": 8
+ },
+ "4278073": {
+  "player": {
+   "id": "4278073",
+   "name": "Shai Gilgeous-Alexander",
+   "team": "OKC",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4278073.png",
+   "pts": 34,
+   "reb": 6,
+   "ast": 5,
+   "stl": 2,
+   "blk": 1,
+   "tov": 2,
+   "fgm": 13,
+   "fga": 26,
+   "tpm": 1,
+   "tpa": 5,
+   "pm": 17,
+   "game": "401909865"
+  },
+  "shots": [
+   {
+    "x": 24,
+    "y": 6,
+    "made": false,
+    "value": 0,
+    "type": "Running Layup Shot",
+    "text": "Kris Dunn blocks Shai Gilgeous-Alexander 's 6-foot running layup",
+    "period": 1,
+    "clock": "8:20"
+   },
+   {
+    "x": 40,
+    "y": 20,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Shai Gilgeous-Alexander makes 25-foot three point jumper (Cason Wallace assists)",
+    "period": 1,
+    "clock": "7:57"
+   },
+   {
+    "x": 23,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Driving Finger Roll Layup",
+    "text": "Shai Gilgeous-Alexander misses two point shot",
+    "period": 1,
+    "clock": "6:39"
+   },
+   {
+    "x": 24,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Shai Gilgeous-Alexander makes driving layup (Aday Mara assists)",
+    "period": 1,
+    "clock": "4:35"
+   },
+   {
+    "x": 28,
+    "y": 3,
+    "made": false,
+    "value": 0,
+    "type": "Driving Jump Shot Bank",
+    "text": "Shai Gilgeous-Alexander misses 3-foot two point shot",
+    "period": 1,
+    "clock": "3:42"
+   },
+   {
+    "x": 23,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Shai Gilgeous-Alexander makes driving layup",
+    "period": 2,
+    "clock": "4:41"
+   },
+   {
+    "x": 25,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Shai Gilgeous-Alexander makes running layup (Alex Caruso assists)",
+    "period": 2,
+    "clock": "3:01"
+   },
+   {
+    "x": 25,
+    "y": 7,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Shai Gilgeous-Alexander misses driving floating jump shot",
+    "period": 2,
+    "clock": "2:23"
+   },
+   {
+    "x": 17,
+    "y": 12,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Shai Gilgeous-Alexander misses 13-foot fade away jump shot",
+    "period": 2,
+    "clock": "1:52"
+   },
+   {
+    "x": 24,
+    "y": 13,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Shai Gilgeous-Alexander makes 12-foot pullup jump shot (Ajay Mitchell assists)",
+    "period": 2,
+    "clock": "1:13"
+   },
+   {
+    "x": 16,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Shai Gilgeous-Alexander makes 8-foot pullup jump shot",
+    "period": 3,
+    "clock": "11:03"
+   },
+   {
+    "x": 1,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Shai Gilgeous-Alexander misses 24-foot three point jumper",
+    "period": 3,
+    "clock": "10:11"
+   },
+   {
+    "x": 23,
+    "y": -1,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Shai Gilgeous-Alexander makes running layup",
+    "period": 3,
+    "clock": "8:24"
+   },
+   {
+    "x": 39,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Shai Gilgeous-Alexander makes 13-foot pullup jump shot",
+    "period": 3,
+    "clock": "7:41"
+   },
+   {
+    "x": 24,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Shai Gilgeous-Alexander makes driving layup",
+    "period": 3,
+    "clock": "7:09"
+   },
+   {
+    "x": 16,
+    "y": 25,
+    "made": false,
+    "value": 0,
+    "type": "Running Pullup Jump Shot",
+    "text": "Shai Gilgeous-Alexander misses running pullup jump shot",
+    "period": 3,
+    "clock": "4:05"
+   },
+   {
+    "x": 33,
+    "y": 16,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Shai Gilgeous-Alexander misses 17-foot step back jumpshot",
+    "period": 3,
+    "clock": "3:13"
+   },
+   {
+    "x": 27,
+    "y": 0,
+    "made": false,
+    "value": 0,
+    "type": "Driving Finger Roll Layup",
+    "text": "Shai Gilgeous-Alexander misses two point shot",
+    "period": 3,
+    "clock": "2:49"
+   },
+   {
+    "x": 26,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Shai Gilgeous-Alexander makes running layup",
+    "period": 3,
+    "clock": "2:36"
+   },
+   {
+    "x": 24,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Running Dunk Shot",
+    "text": "Shai Gilgeous-Alexander makes 1-foot running dunk (Alex Caruso assists)",
+    "period": 3,
+    "clock": "2:21"
+   },
+   {
+    "x": 28,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Bank Jump Shot",
+    "text": "Shai Gilgeous-Alexander makes 2-foot two point shot",
+    "period": 3,
+    "clock": "1:22"
+   },
+   {
+    "x": 22,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Shai Gilgeous-Alexander misses driving layup",
+    "period": 4,
+    "clock": "5:50"
+   },
+   {
+    "x": 24,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Shai Gilgeous-Alexander misses 25-foot three point pullup jump shot",
+    "period": 4,
+    "clock": "5:21"
+   },
+   {
+    "x": 23,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Finger Roll Layup",
+    "text": "Shai Gilgeous-Alexander makes 1-foot two point shot",
+    "period": 4,
+    "clock": "3:56"
+   },
+   {
+    "x": 13,
+    "y": 14,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Shai Gilgeous-Alexander misses 18-foot step back jumpshot",
+    "period": 4,
+    "clock": "3:16"
+   },
+   {
+    "x": 24,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Shai Gilgeous-Alexander misses 25-foot three point step back jumpshot",
+    "period": 4,
+    "clock": "1:01"
+   }
+  ],
+  "ft_made": 7,
+  "ft_att": 8
+ }
+}
