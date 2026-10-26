@@ -15,51 +15,51 @@
    "id": "401909862",
    "start": "2026-10-25T22:00Z",
    "final": false,
-   "status": "3:19 - 3rd",
+   "status": "5:44 - 4th",
    "home": "BKN",
    "away": "IND",
-   "home_score": 74,
-   "away_score": 100
+   "home_score": 98,
+   "away_score": 116
   },
   {
    "id": "401909863",
    "start": "2026-10-25T23:00Z",
    "final": false,
-   "status": "6:36 - 2nd",
+   "status": "Halftime",
    "home": "NYK",
    "away": "ORL",
-   "home_score": 40,
-   "away_score": 37
+   "home_score": 52,
+   "away_score": 48
   },
   {
    "id": "401909864",
    "start": "2026-10-25T23:00Z",
    "final": false,
-   "status": "8:28 - 2nd",
+   "status": "Halftime",
    "home": "MIN",
    "away": "TOR",
-   "home_score": 40,
-   "away_score": 24
+   "home_score": 55,
+   "away_score": 47
   },
   {
    "id": "401909865",
    "start": "2026-10-25T23:00Z",
    "final": false,
-   "status": "3:37 - 2nd",
+   "status": "10:33 - 3rd",
    "home": "OKC",
    "away": "LAC",
-   "home_score": 34,
-   "away_score": 39
+   "home_score": 47,
+   "away_score": 48
   },
   {
    "id": "401909866",
    "start": "2026-10-25T23:30Z",
    "final": false,
-   "status": "7:05 - 1st",
+   "status": "9:01 - 2nd",
    "home": "PHI",
    "away": "DET",
-   "home_score": 4,
-   "away_score": 20
+   "home_score": 25,
+   "away_score": 42
   },
   {
    "id": "401909867",
@@ -169,13 +169,13 @@
    "team": "LAL",
    "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/3155535.png",
    "pts": 2,
-   "reb": 1,
+   "reb": 2,
    "ast": 0,
    "stl": 0,
    "blk": 0,
    "tov": 0,
    "fgm": 0,
-   "fga": 0,
+   "fga": 1,
    "tpm": 0,
    "tpa": 0,
    "pm": -5,
