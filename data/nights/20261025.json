@@ -65,11 +65,11 @@
    "id": "401909867",
    "start": "2026-10-26T01:00Z",
    "final": false,
-   "status": "5:43 - 3rd",
+   "status": "6:37 - 4th",
    "home": "SAC",
    "away": "MEM",
-   "home_score": 78,
-   "away_score": 85
+   "home_score": 103,
+   "away_score": 104
   }
  ],
  "players": [
@@ -1831,9 +1831,9 @@
    "blk": 2,
    "tov": 2,
    "fgm": 6,
-   "fga": 8,
+   "fga": 7,
    "tpm": 1,
-   "tpa": 3,
+   "tpa": 2,
    "pm": 5,
    "game": "401909865"
   },
