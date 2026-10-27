@@ -43,15 +43,21 @@ def ring(img, cx, cy, r, color, width=7):
 
 
 def guess(date, out):
-    data = json.loads((ROOT / "data" / "shots" / f"{date}.json").read_text())
+    saved = json.loads((ROOT / "data" / "guess" / f"{date}.json").read_text())
     night = json.loads((ROOT / "data" / "nights" / f"{date}.json").read_text())
-    v = max(data.values(), key=lambda v: v["player"]["pts"])
-    p, shots = v["player"], v["shots"]
+    v = saved["shots"]
+    p, shots = saved["pick"], v["shots"]
     tag_threes(shots, p["tpm"], p["tpa"])
     g = next(g for g in night["games"] if g["id"] == p["game"])
     mine, theirs = ((g["home_score"], g["away_score"]) if g["home"] == p["team"]
                     else (g["away_score"], g["home_score"]))
-    hint = f"HINT: HIS TEAM {'WON' if mine > theirs else 'LOST'} BY {abs(mine - theirs)}"
+    hints = [f"HIS TEAM {'WON' if mine > theirs else 'LOST'} BY {abs(mine - theirs)}"]
+    if p.get("normal_src") == "last season":
+        hints.insert(0, f"AVERAGED {p['normal']:g} PPG LAST SEASON")
+    elif p.get("normal_src") == "rookie":
+        hints.insert(0, "ROOKIE")
+    else:
+        hints.insert(0, f"AVERAGING {p['normal']:g} PPG THIS SEASON")
 
     img = Image.new("RGBA", (W, H), BG + (255,))
     d = ImageDraw.Draw(img)
@@ -98,29 +104,40 @@ def guess(date, out):
         centered(d, zx + zw / 2, zy + 6, f"{m}-{a}  {round(100 * m / a) if a else 0}%", F(NUM, 22), INK)
         centered(d, zx + zw / 2, zy + 36, "MIDRANGE" if z == "MID" else z, F(BOLD, 13), MUTED)
     # hint + call to action
-    hf = F(BOLD, 20)
-    hw = d.textlength(hint, font=hf) + 34
-    d.rounded_rectangle((px, zy + 72, px + hw, zy + 108), radius=18, fill=INK)
-    d.text((px + 17, zy + 79), hint, font=hf, fill=HIGHLIGHT)
-    cta_y = hy + r + 70
+    hf = F(BOLD, 19)
+    hy2 = zy + 72
+    for hint in hints:
+        txt = "HINT: " + hint
+        hw = d.textlength(txt, font=hf) + 34
+        d.rounded_rectangle((px, hy2, px + hw, hy2 + 34), radius=17, fill=INK)
+        d.text((px + 17, hy2 + 6), txt, font=hf, fill=HIGHLIGHT)
+        hy2 += 42
+    cta_y = max(hy + r + 70, hy2 + 40)
     d.rounded_rectangle((36, cta_y - 18, W - 36, cta_y + 96), radius=14, fill=BAR)
     centered(d, W / 2, cta_y - 2, "DROP YOUR GUESS IN THE COMMENTS", F(NUM, 40), (255, 255, 255))
-    centered(d, W / 2, cta_y + 56, "ANSWER REVEALED TOMORROW", F(BOLD, 20), HIGHLIGHT)
+    centered(d, W / 2, cta_y + 56, "ANSWER IN TONIGHT'S POST", F(BOLD, 20), HIGHLIGHT)
     img.convert("RGB").save(out, "JPEG", quality=93, subsampling=0)
     return p
 
 
-def mvp(start, end, out):
+def ordinal(n):
+    return f"{n}{'TH' if 10 <= n % 100 <= 20 else {1: 'ST', 2: 'ND', 3: 'RD'}.get(n % 10, 'TH')}"
+
+
+def mvp(start, end, out, standings=None):
+    if standings is None:
+        f = ROOT / "data" / "standings.json"
+        standings = json.loads(f.read_text()) if f.exists() else {}
     nights = []
     for f in sorted((ROOT / "data" / "nights").glob("*.json")):
         if start <= f.stem <= end:
             nights.append(json.loads(f.read_text()))
-    rows = ladder(nights, 5)
+    rows = ladder(nights, 5, standings)
     img = Image.new("RGBA", (W, H), BG + (255,))
     d = ImageDraw.Draw(img)
     s = datetime.strptime(start, "%Y%m%d"); e = datetime.strptime(end, "%Y%m%d")
     header(d, "MVP LADDER", f"WEEK OF {s.strftime('%b %-d').upper()}–{e.strftime('%-d') if s.month == e.month else e.strftime('%b %-d').upper()}"
-           "  ·  RANKED BY AVERAGE GAME SCORE  ·  MIN 2 GAMES")
+           "  ·  GAME SCORE + ON/OFF IMPACT + TEAM RECORD")
     top, row_h = 132, 228
     for i, rw in enumerate(rows):
         y = top + i * row_h
@@ -148,12 +165,14 @@ def mvp(start, end, out):
             lx = nx + 50
         nf = fit(d, rw["name"].upper(), NUM, 38, W - 48 - lx)
         d.text((lx, y + 26), rw["name"].upper(), font=nf, fill=INK)
-        meta = f"{rw['gp']} GAMES  ·  TEAM {rw['w']}-{rw['l']}  ·  BEST {rw['best']} PTS"
+        rec = (f"{rw['team_w']}-{rw['team_l']}, {ordinal(rw['seed'])} IN {rw['conf'].upper()}"
+               if rw.get("seed") else f"{rw['w']}-{rw['l']} THIS WEEK")
+        meta = f"{rw['gp']} GAMES  ·  TEAM {rec}  ·  BEST {rw['best']} PTS"
         d.text((nx, y + 78), meta, font=F(BOLD, 16), fill=color if color != INK else MUTED)
         bar(d, nx, y + 110, nw, [("PPG", f"{rw['ppg']:.1f}", False), ("RPG", f"{rw['rpg']:.1f}", False),
                                  ("APG", f"{rw['apg']:.1f}", False),
-                                 ("FG%", f"{round(100 * rw['fg'][0] / rw['fg'][1])}", False),
-                                 ("GAME SCORE", f"{rw['gmsc']:.1f}", True)], h=78, vsize=30)
+                                 ("ON/OFF", f"{rw['onoff']:+.0f}", False),
+                                 ("MVP SCORE", f"{rw['score']:.1f}", True)], h=78, vsize=30)
     centered(d, W / 2, H - 62, "WHO'S TOO HIGH? WHO'S MISSING? TELL US BELOW", F(BOLD, 22), INK)
     img.convert("RGB").save(out, "JPEG", quality=93, subsampling=0)
     return rows
