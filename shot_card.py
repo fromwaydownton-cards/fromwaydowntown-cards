@@ -9,6 +9,7 @@ Usage: python3 shot_card.py YYYYMMDD [outfile]   (needs data/shots/YYYYMMDD.json
 """
 import json
 import math
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -31,7 +32,31 @@ MAKE = (34, 166, 82)
 MISS = (214, 48, 49)
 
 
+def shot_distance(s):
+    m = re.search(r"(\d+)-foot", s.get("text", ""))
+    return int(m.group(1)) if m else math.hypot(s["x"] - 25, s["y"])
+
+
+def tag_threes(shots, box_tpm, box_tpa):
+    """Mark each shot as a three so totals match the official box score.
+    Makes: ESPN's point value is exact. Misses: the longest misses (by the
+    play text's distance, then court position) fill the box score's missed threes."""
+    for s in shots:
+        s["three"] = s["made"] and s.get("value") == 3
+    misses = [s for s in shots if not s["made"]]
+    need = max(0, (box_tpa - box_tpm))
+    def key(s):
+        t = s.get("text", "").lower()
+        corner = s["y"] <= 8.8 and (s["x"] <= 3 or s["x"] >= 47)
+        return ("three point" in t, corner, shot_distance(s))
+    for s in sorted(misses, key=key, reverse=True)[:need]:
+        s["three"] = True
+    return shots
+
+
 def is_three(s):
+    if "three" in s:
+        return s["three"]
     t = s["text"].lower()
     if "three point" in t or s.get("value") == 3:
         return True
@@ -45,9 +70,10 @@ def zone(s):
     return "PAINT" if in_paint else "MID"
 
 
-def court(shots):
-    w, h = COURT_W_PX * SS, COURT_H_PX * SS
-    k = SCALE * SS
+def court(shots, w_px=COURT_W_PX, dot=9):
+    scale = w_px / 50.0
+    w, h = w_px * SS, int(DEPTH * scale) * SS
+    k = scale * SS
     img = Image.new("RGBA", (w, h), FLOOR + (255,))
     d = ImageDraw.Draw(img)
     lw = 2 * SS
@@ -79,7 +105,7 @@ def court(shots):
     d.ellipse((hx - rr, hy - rr, hx + rr, hy + rr), outline=(232, 98, 34), width=lw)
 
     # misses first, makes on top
-    r = 9 * SS
+    r = dot * SS
     for s in sorted(shots, key=lambda s: s["made"]):
         x, y = P(max(0.6, min(49.4, s["x"])), min(DEPTH - HOOP_FROM_BASELINE - 0.6, max(-4.5, s["y"])))
         if s["made"]:
@@ -88,7 +114,7 @@ def court(shots):
             q = r * 0.75
             d.line((x - q, y - q, x + q, y + q), fill=MISS, width=4 * SS)
             d.line((x - q, y + q, x + q, y - q), fill=MISS, width=4 * SS)
-    return img.resize((COURT_W_PX, COURT_H_PX), Image.LANCZOS)
+    return img.resize((w_px, int(DEPTH * scale)), Image.LANCZOS)
 
 
 def splits(shots):
@@ -167,6 +193,7 @@ def render(shots_data, date, out):
             # the light-background logo reads better on white; fall back to what we have
             img.alpha_composite(lg, (int(W - 36 - lg.width), int(hcy - 66)))
             d = ImageDraw.Draw(img)
+        tag_threes(shots, p["tpm"], p["tpa"])
         made = sum(s["made"] for s in shots)
         sp = splits(shots)
         tpm, tpa = sp["3PT"]
