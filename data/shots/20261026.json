@@ -1,0 +1,371 @@
+{
+ "4594268": {
+  "player": {
+   "id": "4594268",
+   "name": "Anthony Edwards",
+   "team": "MIN",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4594268.png",
+   "pts": 47,
+   "reb": 4,
+   "ast": 4,
+   "stl": 2,
+   "blk": 2,
+   "tov": 4,
+   "fgm": 19,
+   "fga": 34,
+   "tpm": 5,
+   "tpa": 15,
+   "pm": 11,
+   "ftm": 4,
+   "fta": 6,
+   "pf": 3,
+   "oreb": 1,
+   "dreb": 3,
+   "game": "401909869"
+  },
+  "shots": [
+   {
+    "x": 3,
+    "y": 19,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Anthony Edwards misses 28-foot three point jumper",
+    "period": 1,
+    "clock": "10:33"
+   },
+   {
+    "x": 27,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Anthony Edwards makes running layup (Jonathan Kuminga assists)",
+    "period": 1,
+    "clock": "8:29"
+   },
+   {
+    "x": 24,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Anthony Edwards makes driving layup",
+    "period": 1,
+    "clock": "6:19"
+   },
+   {
+    "x": 27,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Running Pullup Jump Shot",
+    "text": "Anthony Edwards makes 8-foot running pullup jump shot",
+    "period": 1,
+    "clock": "5:35"
+   },
+   {
+    "x": 39,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Anthony Edwards makes 14-foot two point shot",
+    "period": 1,
+    "clock": "5:08"
+   },
+   {
+    "x": 2,
+    "y": 13,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Anthony Edwards misses 25-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "3:20"
+   },
+   {
+    "x": 26,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Anthony Edwards makes driving layup",
+    "period": 1,
+    "clock": "2:18"
+   },
+   {
+    "x": 10,
+    "y": 12,
+    "made": true,
+    "value": 2,
+    "type": "Step Back Jump Shot",
+    "text": "Anthony Edwards makes 18-foot step back jumpshot",
+    "period": 2,
+    "clock": "8:48"
+   },
+   {
+    "x": 42,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Anthony Edwards misses 30-foot three point pullup jump shot",
+    "period": 2,
+    "clock": "8:25"
+   },
+   {
+    "x": 26,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Anthony Edwards makes driving layup (Rudy Gobert assists)",
+    "period": 2,
+    "clock": "6:43"
+   },
+   {
+    "x": 25,
+    "y": 14,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Anthony Edwards makes 13-foot fade away jump shot (Terrence Shannon Jr. assists)",
+    "period": 2,
+    "clock": "5:03"
+   },
+   {
+    "x": 23,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Anthony Edwards misses 26-foot three point pullup jump shot",
+    "period": 2,
+    "clock": "3:41"
+   },
+   {
+    "x": 10,
+    "y": 0,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Anthony Edwards misses 15-foot fade away jump shot",
+    "period": 2,
+    "clock": "1:02"
+   },
+   {
+    "x": 15,
+    "y": 14,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Anthony Edwards misses 17-foot pullup jump shot",
+    "period": 2,
+    "clock": "32.8"
+   },
+   {
+    "x": 17,
+    "y": 26,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Anthony Edwards makes 27-foot three point jumper (Jaden McDaniels assists)",
+    "period": 3,
+    "clock": "10:20"
+   },
+   {
+    "x": 10,
+    "y": 5,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Anthony Edwards makes 15-foot fade away jump shot",
+    "period": 3,
+    "clock": "9:52"
+   },
+   {
+    "x": 22,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Anthony Edwards misses 25-foot three point pullup jump shot",
+    "period": 4,
+    "clock": "7:54"
+   },
+   {
+    "x": 46,
+    "y": 16,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Peyton Watson blocks Anthony Edwards 's 26-foot three point jumper",
+    "period": 4,
+    "clock": "7:50"
+   },
+   {
+    "x": 44,
+    "y": 20,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Anthony Edwards misses 27-foot three point jumper",
+    "period": 4,
+    "clock": "7:47"
+   },
+   {
+    "x": 25,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Layup Driving Reverse",
+    "text": "Anthony Edwards makes two point shot",
+    "period": 4,
+    "clock": "6:57"
+   },
+   {
+    "x": 16,
+    "y": 24,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Anthony Edwards makes 25-foot three point step back jumpshot",
+    "period": 4,
+    "clock": "5:39"
+   },
+   {
+    "x": 34,
+    "y": 25,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Anthony Edwards misses 26-foot three point pullup jump shot",
+    "period": 4,
+    "clock": "5:09"
+   },
+   {
+    "x": 36,
+    "y": 24,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Anthony Edwards misses 26-foot three point step back jumpshot",
+    "period": 4,
+    "clock": "4:42"
+   },
+   {
+    "x": 41,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Anthony Edwards misses 15-foot pullup jump shot",
+    "period": 4,
+    "clock": "2:51"
+   },
+   {
+    "x": 19,
+    "y": 14,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Anthony Edwards makes 15-foot pullup jump shot (LaMelo Ball assists)",
+    "period": 4,
+    "clock": "2:15"
+   },
+   {
+    "x": 21,
+    "y": 7,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Anthony Edwards makes 7-foot fade away jump shot",
+    "period": 4,
+    "clock": "1:45"
+   },
+   {
+    "x": 32,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Anthony Edwards makes 10-foot driving floating jump shot (LaMelo Ball assists)",
+    "period": 4,
+    "clock": "1:16"
+   },
+   {
+    "x": 25,
+    "y": 4,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Peyton Watson blocks Anthony Edwards's driving layup",
+    "period": 4,
+    "clock": "4.4"
+   },
+   {
+    "x": 41,
+    "y": 21,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Anthony Edwards makes 26-foot three point jumper (LaMelo Ball assists)",
+    "period": 5,
+    "clock": "2:52"
+   },
+   {
+    "x": 3,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Step Back Jump Shot",
+    "text": "Anthony Edwards makes 22-foot step back jumpshot",
+    "period": 5,
+    "clock": "2:21"
+   },
+   {
+    "x": 12,
+    "y": 9,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Anthony Edwards misses 16-foot fade away jump shot",
+    "period": 5,
+    "clock": "1:47"
+   },
+   {
+    "x": 1,
+    "y": 3,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Anthony Edwards makes 24-foot three point jumper (Rudy Gobert assists)",
+    "period": 5,
+    "clock": "1:03"
+   },
+   {
+    "x": 27,
+    "y": 25,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Anthony Edwards misses 25-foot three point pullup jump shot",
+    "period": 5,
+    "clock": "3.9"
+   },
+   {
+    "x": 8,
+    "y": 23,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Anthony Edwards makes 28-foot three pointer",
+    "period": 5,
+    "clock": "0.0"
+   }
+  ],
+  "ft_made": 4,
+  "ft_att": 6
+ }
+}
