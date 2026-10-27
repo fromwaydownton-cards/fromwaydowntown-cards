@@ -1,0 +1,212 @@
+{
+ "MIA": {
+  "w": 0,
+  "l": 4,
+  "pct": 0.0,
+  "seed": 15,
+  "conf": "East"
+ },
+ "NYK": {
+  "w": 0,
+  "l": 3,
+  "pct": 0.0,
+  "seed": 13,
+  "conf": "East"
+ },
+ "BKN": {
+  "w": 0,
+  "l": 3,
+  "pct": 0.0,
+  "seed": 14,
+  "conf": "East"
+ },
+ "CHI": {
+  "w": 1,
+  "l": 3,
+  "pct": 0.25,
+  "seed": 11,
+  "conf": "East"
+ },
+ "MIL": {
+  "w": 1,
+  "l": 3,
+  "pct": 0.25,
+  "seed": 12,
+  "conf": "East"
+ },
+ "ORL": {
+  "w": 1,
+  "l": 2,
+  "pct": 0.33333334,
+  "seed": 10,
+  "conf": "East"
+ },
+ "ATL": {
+  "w": 2,
+  "l": 2,
+  "pct": 0.5,
+  "seed": 7,
+  "conf": "East"
+ },
+ "IND": {
+  "w": 2,
+  "l": 2,
+  "pct": 0.5,
+  "seed": 8,
+  "conf": "East"
+ },
+ "WAS": {
+  "w": 2,
+  "l": 2,
+  "pct": 0.5,
+  "seed": 9,
+  "conf": "East"
+ },
+ "TOR": {
+  "w": 2,
+  "l": 1,
+  "pct": 0.6666667,
+  "seed": 4,
+  "conf": "East"
+ },
+ "BOS": {
+  "w": 2,
+  "l": 1,
+  "pct": 0.6666667,
+  "seed": 5,
+  "conf": "East"
+ },
+ "CLE": {
+  "w": 2,
+  "l": 1,
+  "pct": 0.6666667,
+  "seed": 6,
+  "conf": "East"
+ },
+ "PHI": {
+  "w": 3,
+  "l": 1,
+  "pct": 0.75,
+  "seed": 2,
+  "conf": "East"
+ },
+ "CHA": {
+  "w": 3,
+  "l": 1,
+  "pct": 0.75,
+  "seed": 3,
+  "conf": "East"
+ },
+ "DET": {
+  "w": 3,
+  "l": 0,
+  "pct": 1.0,
+  "seed": 1,
+  "conf": "East"
+ },
+ "NOP": {
+  "w": 0,
+  "l": 3,
+  "pct": 0.0,
+  "seed": 14,
+  "conf": "West"
+ },
+ "SAC": {
+  "w": 0,
+  "l": 3,
+  "pct": 0.0,
+  "seed": 15,
+  "conf": "West"
+ },
+ "GSW": {
+  "w": 1,
+  "l": 3,
+  "pct": 0.25,
+  "seed": 12,
+  "conf": "West"
+ },
+ "UTA": {
+  "w": 1,
+  "l": 3,
+  "pct": 0.25,
+  "seed": 13,
+  "conf": "West"
+ },
+ "SAS": {
+  "w": 1,
+  "l": 2,
+  "pct": 0.33333334,
+  "seed": 8,
+  "conf": "West"
+ },
+ "LAC": {
+  "w": 1,
+  "l": 2,
+  "pct": 0.33333334,
+  "seed": 9,
+  "conf": "West"
+ },
+ "DEN": {
+  "w": 1,
+  "l": 2,
+  "pct": 0.33333334,
+  "seed": 10,
+  "conf": "West"
+ },
+ "PHX": {
+  "w": 1,
+  "l": 2,
+  "pct": 0.33333334,
+  "seed": 11,
+  "conf": "West"
+ },
+ "DAL": {
+  "w": 2,
+  "l": 2,
+  "pct": 0.5,
+  "seed": 7,
+  "conf": "West"
+ },
+ "POR": {
+  "w": 2,
+  "l": 0,
+  "pct": 1.0,
+  "seed": 5,
+  "conf": "West"
+ },
+ "MIN": {
+  "w": 3,
+  "l": 1,
+  "pct": 0.75,
+  "seed": 6,
+  "conf": "West"
+ },
+ "LAL": {
+  "w": 3,
+  "l": 0,
+  "pct": 1.0,
+  "seed": 4,
+  "conf": "West"
+ },
+ "HOU": {
+  "w": 4,
+  "l": 0,
+  "pct": 1.0,
+  "seed": 1,
+  "conf": "West"
+ },
+ "OKC": {
+  "w": 4,
+  "l": 0,
+  "pct": 1.0,
+  "seed": 2,
+  "conf": "West"
+ },
+ "MEM": {
+  "w": 4,
+  "l": 0,
+  "pct": 1.0,
+  "seed": 3,
+  "conf": "West"
+ }
+}
