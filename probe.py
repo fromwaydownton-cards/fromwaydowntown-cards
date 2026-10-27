@@ -1,19 +1,13 @@
 import json
-from espn_extra import standings, prior_ppg
+from espn_extra import prior_ppg, standings
 from guess import pick_outlier
-from night_data import ROOT, collect
-from datetime import datetime, timedelta
-st = standings()
-d = datetime(2026, 10, 20)
-nights = []
-while d <= datetime(2026, 10, 26):
-    nights.append(collect(d.strftime("%Y%m%d"))); d += timedelta(days=1)
-for n in nights:
-    c = pick_outlier(n, prior_ppg)
-    print(n["date"], "GUESS:", (f"{c['name']} ({c['team']}) {c['pts']} pts vs normal {c['normal']} ({c['normal_src']})" if c else "none"))
-from mvp import ladder
-from night_data import save_headshots
-rows = ladder(nights, 10, st)
-save_headshots([(r["id"], r["headshot"]) for r in rows])
-for i, r in enumerate(rows, 1):
-    print(f"{i}. {r['name']} ({r['team']}) score {r['score']:.1f} | GmSc {r['gmsc']:.1f} on/off {r['onoff']:+.1f} | team {r['team_w']}-{r['team_l']} #{r['seed']} {r['conf']} | {r['mins']} min")
+from night_data import ROOT, save_headshots
+from shots_data import shots_for
+standings()
+n = json.loads((ROOT / "data" / "nights" / "20261026.json").read_text())
+c = pick_outlier(n, prior_ppg)
+out, _ = shots_for([c])
+(ROOT / "data" / "guess").mkdir(parents=True, exist_ok=True)
+(ROOT / "data" / "guess" / "20261026.json").write_text(json.dumps({"pick": c, "shots": out[c["id"]]}, indent=1))
+save_headshots([(c["id"], c["headshot"])])
+print("guess", c["name"], c["pts"], "normal", c["normal"], len(out[c["id"]]["shots"]), "shots")
