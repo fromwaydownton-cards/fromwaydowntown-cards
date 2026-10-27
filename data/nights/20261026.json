@@ -5,41 +5,41 @@
    "id": "401909868",
    "start": "2026-10-26T23:00Z",
    "final": false,
-   "status": "9:48 - 2nd",
+   "status": "Halftime",
    "home": "CHA",
    "away": "WAS",
-   "home_score": 23,
-   "away_score": 22
+   "home_score": 54,
+   "away_score": 44
   },
   {
    "id": "401909869",
    "start": "2026-10-26T23:00Z",
    "final": false,
-   "status": "9:02 - 2nd",
+   "status": "25.4 - 2nd",
    "home": "CLE",
    "away": "MIN",
-   "home_score": 34,
-   "away_score": 41
+   "home_score": 49,
+   "away_score": 59
   },
   {
    "id": "401909870",
    "start": "2026-10-26T23:30Z",
    "final": false,
-   "status": "9:13 - 1st",
+   "status": "10:31 - 2nd",
    "home": "BOS",
    "away": "CHI",
-   "home_score": 9,
-   "away_score": 7
+   "home_score": 37,
+   "away_score": 28
   },
   {
    "id": "401909871",
    "start": "2026-10-26T23:30Z",
    "final": false,
-   "status": "8:55 - 1st",
+   "status": "11:57 - 2nd",
    "home": "MIA",
    "away": "DAL",
-   "home_score": 4,
-   "away_score": 10
+   "home_score": 27,
+   "away_score": 23
   },
   {
    "id": "401909872",
