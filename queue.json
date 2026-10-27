@@ -1,19 +1,6 @@
 {
   "queue": [
     {
-      "key": "night:20261023",
-      "kind": "nightly",
-      "test": false,
-      "folder": "cards/nights/20261023.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261023.jpg"
-      ],
-      "caption": "36 points for Tatum. Real or a one-night thing?\n\nNBA night leaders, Oct 23, 2026. All 12 final scores in the graphic.\n\nMost points: Jayson Tatum (BOS) 36 pts\nMost rebounds: Domantas Sabonis (SAC) 19 reb\nMost assists: Trae Young (WAS) 12 ast\nBest 3PT%: John Collins (DET) 5-6 from 3\nWorst +/-: Brandon Miller (CHA) -37\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
-      "first_comment": "Vote for the best night \ud83d\udc47 1) Tatum  2) Sabonis  3) Young  4) Collins",
-      "title": "NBA night leaders Oct 23",
-      "queued_at": "2026-10-24T05:05:32+00:00"
-    },
-    {
       "key": "night:20261024",
       "kind": "nightly",
       "test": false,
