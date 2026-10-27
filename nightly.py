@@ -18,6 +18,8 @@ from zoneinfo import ZoneInfo
 from leaders import pick
 from night_card import render
 from night_data import ALL_TEAMS, collect, save_headshots, save_logos
+from shot_card import render as render_shots, splits
+from shots_data import build_shots
 
 ROOT = Path(__file__).resolve().parent
 QUEUE = ROOT / "queue.json"
@@ -78,6 +80,46 @@ def caption(night, leaders):
             + "\n\n#NBA #NBAStats #hoops #basketball")
 
 
+def shots_caption(date, rows):
+    d = datetime.strptime(date, "%Y%m%d").strftime("%b %-d")
+    top = rows[0]["player"]
+    lines = []
+    for i, v in enumerate(rows, 1):
+        p, sp = v["player"], splits(v["shots"])
+        made = sum(s["made"] for s in v["shots"])
+        lines.append(f"{i}. {p['name']} ({p['team']}) {p['pts']} pts, {made}-{len(v['shots'])} FG, "
+                     f"{sp['3PT'][0]}-{sp['3PT'][1]} 3PT")
+    q = [f"Where was {last(top['name'])} most dangerous last night? Paint, midrange or three?",
+         f"Whose shot chart are you taking: {', '.join(last(v['player']['name']) for v in rows)}?",
+         f"{last(top['name'])} put up {top['pts']}. Which spot on the floor should defenses take away?"]
+    return (f"{q[int(date) % len(q)]}\n\nShot charts for the top scorers from {d}.\n\n"
+            + "\n".join(lines)
+            + "\n\nGreen = made, red = missed. Follow for the leaders every night."
+            + "\n\n#NBA #NBAStats #ShotChart #hoops #basketball")
+
+
+def next_morning(date, hour=9):
+    """9:00 AM Central on the morning after the games."""
+    day = datetime.strptime(date, "%Y%m%d") + timedelta(days=1)
+    return day.replace(hour=hour, tzinfo=ZoneInfo("America/Chicago")).isoformat(timespec="seconds")
+
+
+def build_shot_entry(night, test=False):
+    data = build_shots(night)
+    if not data:
+        return None
+    date = night["date"]
+    out = (ROOT / "cards" / "test" if test else ROOT / "cards" / "shots") / f"{date}-shots.jpg"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    rows = render_shots(data, date, out)
+    rel = str(out.relative_to(ROOT))
+    return {"key": ("test-shots:" if test else "shots:") + date, "kind": "shots", "test": test,
+            "folder": rel, "images": [RAW + rel], "caption": shots_caption(date, rows),
+            "first_comment": "", "post_at": next_morning(date),
+            "title": "Top scorer shot charts " + datetime.strptime(date, "%Y%m%d").strftime("%b %-d"),
+            "queued_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+
+
 def build(date, test=False):
     night = collect(date)
     if not night["all_final"]:
@@ -97,7 +139,15 @@ def build(date, test=False):
              "title": "NBA night leaders " + datetime.strptime(date, "%Y%m%d").strftime("%b %-d"),
              "queued_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
     print(f"BUILT {rel}: " + "; ".join(f"{k}={p['name']}" for k, p in leaders.items()))
-    return entry
+    entries = [entry]
+    try:
+        se = build_shot_entry(night, test)
+        if se:
+            entries.append(se)
+            print(f"BUILT {se['folder']} (posts {se['post_at']})")
+    except Exception as e:  # a shot-chart problem must never block the leaders post
+        print(f"SHOTS FAILED for {date}: {e}")
+    return entries
 
 
 def main():
@@ -115,8 +165,7 @@ def main():
                          or key in keys):
             print(f"{date}: already done")
             continue
-        entry = build(date, test)
-        if entry:
+        for entry in build(date, test) or []:
             queue["queue"] = [e for e in queue["queue"] if e.get("key") != entry["key"]] + [entry]
     cutoff = datetime.now(timezone.utc) - timedelta(days=3)
     queue["queue"] = [e for e in queue["queue"] if datetime.fromisoformat(e["queued_at"]) > cutoff]

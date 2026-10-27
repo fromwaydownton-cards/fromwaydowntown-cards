@@ -15,10 +15,15 @@ sports data.
    None pending → stop: "Nothing to post."
 3. **Duplicate check (always).** Call Metricool `getScheduledPosts` for brandId
    `7591436`, timezone `America/Los_Angeles`, from 3 days ago to 1 day ahead.
+   For an entry with `post_at`, search through post_at + 1 day too.
    If any returned post's `text` equals the entry's `caption`, it was already
    posted: do not post again; just record it in step 5.
-4. **Post** with Metricool `createScheduledPost`, blogId `7591436`,
-   date/publicationDate = now + 3 minutes in `America/Los_Angeles`.
+4. **Post** with Metricool `createScheduledPost`, blogId `7591436`.
+   Publish time: if the entry has `post_at` and it is later than now + 3 minutes,
+   use `post_at` exactly (it is the next morning, 9:00 AM Central: send it as
+   date `post_at` and publicationDate {dateTime: post_at's local time, timezone
+   "America/Chicago"}). Otherwise use now + 3 minutes in `America/Los_Angeles`.
+   Metricool holds future posts and publishes them on time, so schedule it in this run.
    - Normal entry (`"test": false`): providers tiktok, facebook, instagram.
    - Test entry (`"test": true`): provider tiktok ONLY, privacyOption `SELF_ONLY`.
    ```json

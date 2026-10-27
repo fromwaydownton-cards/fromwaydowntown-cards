@@ -8,7 +8,7 @@ import json
 import sys
 from pathlib import Path
 
-from night_data import ROOT, SUMMARY, fetch
+from night_data import ROOT, SUMMARY, fetch, save_headshots
 
 
 def top_scorers(night, n):
@@ -52,6 +52,15 @@ def shots_for(players):
     return out, sample
 
 
+def build_shots(night, n=3):
+    out, _ = shots_for(top_scorers(night, n))
+    d = ROOT / "data" / "shots"
+    d.mkdir(parents=True, exist_ok=True)
+    (d / f"{night['date']}.json").write_text(json.dumps(out, indent=1))
+    save_headshots([(v["player"]["id"], v["player"]["headshot"]) for v in out.values()])
+    return out
+
+
 if __name__ == "__main__":
     date = sys.argv[1]
     n = int(sys.argv[2]) if len(sys.argv) > 2 else 3
@@ -60,6 +69,7 @@ if __name__ == "__main__":
     d = ROOT / "data" / "shots"
     d.mkdir(parents=True, exist_ok=True)
     (d / f"{date}.json").write_text(json.dumps(out, indent=1))
+    save_headshots([(v["player"]["id"], v["player"]["headshot"]) for v in out.values()])
     for pid, v in out.items():
         s = v["shots"]
         made = sum(x["made"] for x in s)
