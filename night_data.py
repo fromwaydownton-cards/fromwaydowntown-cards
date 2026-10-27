@@ -49,6 +49,7 @@ def parse_players(summ):
                 continue
             fgm, fga = split(v[idx["FG"]])
             tpm, tpa = split(v[idx["3PT"]])
+            ftm, fta = split(v[idx["FT"]]) if "FT" in idx else (0, 0)
             pm = v[idx["+/-"]].replace("+", "") if "+/-" in idx else "0"
             out.append({
                 "id": a["athlete"]["id"], "name": a["athlete"]["displayName"], "team": abbr,
@@ -56,6 +57,9 @@ def parse_players(summ):
                 "pts": int(v[idx["PTS"]]), "reb": int(v[idx["REB"]]), "ast": int(v[idx["AST"]]),
                 "stl": int(v[idx["STL"]]), "blk": int(v[idx["BLK"]]), "tov": int(v[idx["TO"]]),
                 "fgm": fgm, "fga": fga, "tpm": tpm, "tpa": tpa, "pm": int(pm or 0),
+                "ftm": ftm, "fta": fta, "pf": int(v[idx["PF"]]) if "PF" in idx else 0,
+                "oreb": int(v[idx["OREB"]]) if "OREB" in idx else 0,
+                "dreb": int(v[idx["DREB"]]) if "DREB" in idx else 0,
             })
     return out
 

@@ -1,0 +1,48 @@
+name: Fetch a week of data
+
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: "First game date YYYYMMDD"
+        required: true
+      end:
+        description: "Last game date YYYYMMDD"
+        required: true
+      shots:
+        description: "Also pull top-scorer shots for this date (optional)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-writes
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch
+        run: |
+          set -o pipefail
+          ARGS="${{ inputs.start }} ${{ inputs.end }}"
+          if [ -n "${{ inputs.shots }}" ]; then ARGS="$ARGS --shots ${{ inputs.shots }}"; fi
+          if ! python3 week_data.py $ARGS 2>&1 | grep -v -E "^(headshot|logo) " | tee run.log; then
+            echo "::error title=week_data failed::$(tail -c 900 run.log | tr '\n' '|')"; exit 1; fi
+          echo "::notice title=week_data::$(tail -c 900 run.log | tr '\n' '|')"
+      - name: Commit and push
+        run: |
+          git config user.name "fromwaydowntown-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A data
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Week data ${{ inputs.start }}-${{ inputs.end }}"
+          git pull --rebase -q && git push
