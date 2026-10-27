@@ -19,7 +19,13 @@ from leaders import pick
 from night_card import render
 from night_data import ALL_TEAMS, collect, save_headshots, save_logos
 from shot_card import render as render_shots, splits
-from shots_data import build_shots
+from shots_data import build_shots, shots_for
+from espn_extra import prior_ppg, standings
+from guess import pick_outlier
+from weekly_cards import guess as render_guess, mvp as render_mvp
+
+GUESS_DAYS = {1, 3, 5}      # post Guess the Player on Tue, Thu, Sat (Mon=0)
+NOON = 12
 
 ROOT = Path(__file__).resolve().parent
 QUEUE = ROOT / "queue.json"
@@ -73,8 +79,10 @@ def caption(night, leaders):
             v = f"{p['pm']:+d}"
         lines.append(f"{LABEL[k]}: {p['name']} ({p['team']}) {v}")
     n = sum(g["final"] for g in night["games"])
+    reveal = guess_reveal(night["date"])
     return (f"{question(night, leaders)}\n\n"
-            f"NBA night leaders, {date}. All {n} final scores in the graphic.\n\n"
+            + (f"{reveal}\n\n" if reveal else "")
+            + f"NBA night leaders, {date}. All {n} final scores in the graphic.\n\n"
             + "\n".join(lines)
             + "\n\nDrop your take in the comments. Follow for the leaders every night."
             + "\n\n#NBA #NBAStats #hoops #basketball")
@@ -120,6 +128,83 @@ def build_shot_entry(night, test=False):
             "queued_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
 
 
+def day_after(date):
+    return datetime.strptime(date, "%Y%m%d") + timedelta(days=1)
+
+
+def at_central(day, hour):
+    return day.replace(hour=hour, minute=0, tzinfo=ZoneInfo("America/Chicago")).isoformat(timespec="seconds")
+
+
+def guess_reveal(date):
+    """If yesterday's night produced a Guess the Player that posted today, return the answer line."""
+    prev = (datetime.strptime(date, "%Y%m%d") - timedelta(days=1)).strftime("%Y%m%d")
+    f = ROOT / "data" / "guess" / f"{prev}.json"
+    if not f.exists():
+        return None
+    p = json.loads(f.read_text())["pick"]
+    return (f"Today's Guess the Player answer: {p['name']} ({p['team']}), {p['pts']} pts "
+            f"vs his usual {p['normal']:g}. Did you get it?")
+
+
+def build_guess_entry(night, test=False):
+    date = night["date"]
+    post_day = day_after(date)
+    if not test and post_day.weekday() not in GUESS_DAYS:
+        return None
+    pick = pick_outlier(night, prior_ppg)
+    if not pick:
+        print(f"{date}: no outlier game for Guess the Player")
+        return None
+    shots, _ = shots_for([pick])
+    gdir = ROOT / "data" / "guess"
+    gdir.mkdir(parents=True, exist_ok=True)
+    (gdir / f"{date}.json").write_text(json.dumps({"pick": pick, "shots": shots[pick["id"]]}, indent=1))
+    out = (ROOT / "cards" / "test" if test else ROOT / "cards" / "guess") / f"{date}-guess.jpg"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    render_guess(date, out)
+    rel = str(out.relative_to(ROOT))
+    hint = "He's not a star, and this was way above his usual."
+    caption = (f"GUESS THE PLAYER. {pick['pts']} points last night. Who put up this shot chart?\n\n"
+               f"{hint} Two hints are on the graphic.\n\n"
+               "Drop your guess in the comments. Answer in tonight's post.\n\n"
+               "#NBA #GuessThePlayer #NBAStats #hoops #basketball")
+    return {"key": ("test-guess:" if test else "guess:") + date, "kind": "guess", "test": test,
+            "folder": rel, "images": [RAW + rel], "caption": caption, "first_comment": "",
+            "post_at": at_central(post_day, NOON),
+            "title": "Guess the player " + post_day.strftime("%b %-d"),
+            "queued_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+
+
+def build_mvp_entry(night, test=False):
+    """Sunday night closes the Mon-Sun week; the ladder posts Monday at noon."""
+    date = night["date"]
+    end = datetime.strptime(date, "%Y%m%d")
+    if not test and end.weekday() != 6:
+        return None
+    start = (end - timedelta(days=6)).strftime("%Y%m%d")
+    st = standings()
+    out = (ROOT / "cards" / "test" if test else ROOT / "cards" / "mvp") / f"{start}-{date}.jpg"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    rows = render_mvp(start, date, out, st)
+    save_headshots([(r["id"], r["headshot"]) for r in rows])
+    rows = render_mvp(start, date, out, st)      # again, now with every headshot on disk
+    rel = str(out.relative_to(ROOT))
+    lines = [f"{i}. {r['name']} ({r['team']}) {r['ppg']:.1f} PPG, on/off {r['onoff']:+.0f}, "
+             f"team {r['team_w']}-{r['team_l']}" for i, r in enumerate(rows, 1)]
+    wk = f"{datetime.strptime(start, '%Y%m%d').strftime('%b %-d')}-{end.strftime('%b %-d')}"
+    caption = (f"MVP LADDER, week of {wk}. Is {last(rows[0]['name'])} really No. 1?\n\n"
+               + "\n".join(lines)
+               + "\n\nRanked by Game Score, on/off impact and team record. Who's too high? Who's missing?"
+               + "\n\n#NBA #MVP #NBAStats #hoops #basketball")
+    post_day = day_after(date)
+    return {"key": ("test-mvp:" if test else "mvp:") + date, "kind": "mvp", "test": test,
+            "folder": rel, "images": [RAW + rel], "caption": caption,
+            "first_comment": "Your top 5? Drop it below 👇", "post_at": at_central(post_day, NOON),
+            "title": "MVP ladder " + wk,
+            "queued_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+
+
 def build(date, test=False):
     night = collect(date)
     if not night["all_final"]:
@@ -147,6 +232,14 @@ def build(date, test=False):
             print(f"BUILT {se['folder']} (posts {se['post_at']})")
     except Exception as e:  # a shot-chart problem must never block the leaders post
         print(f"SHOTS FAILED for {date}: {e}")
+    for name, fn in (("GUESS", build_guess_entry), ("MVP", build_mvp_entry)):
+        try:
+            e = fn(night, test)
+            if e:
+                entries.append(e)
+                print(f"BUILT {e['folder']} (posts {e['post_at']})")
+        except Exception as ex:  # extra graphics never block the nightly post
+            print(f"{name} FAILED for {date}: {ex}")
     return entries
 
 
