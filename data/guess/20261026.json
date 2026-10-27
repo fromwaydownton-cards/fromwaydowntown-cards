@@ -1,0 +1,342 @@
+{
+ "pick": {
+  "id": "4433287",
+  "name": "Brandon Miller",
+  "team": "CHA",
+  "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4433287.png",
+  "pts": 39,
+  "reb": 6,
+  "ast": 1,
+  "stl": 3,
+  "blk": 2,
+  "tov": 2,
+  "fgm": 15,
+  "fga": 28,
+  "tpm": 5,
+  "tpa": 10,
+  "pm": 16,
+  "ftm": 4,
+  "fta": 5,
+  "pf": 3,
+  "min": 36,
+  "oreb": 2,
+  "dreb": 4,
+  "game": "401909868",
+  "normal": 20.2,
+  "normal_src": "last season",
+  "jump": 18.8
+ },
+ "shots": {
+  "player": {
+   "id": "4433287",
+   "name": "Brandon Miller",
+   "team": "CHA",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4433287.png",
+   "pts": 39,
+   "reb": 6,
+   "ast": 1,
+   "stl": 3,
+   "blk": 2,
+   "tov": 2,
+   "fgm": 15,
+   "fga": 28,
+   "tpm": 5,
+   "tpa": 10,
+   "pm": 16,
+   "ftm": 4,
+   "fta": 5,
+   "pf": 3,
+   "min": 36,
+   "oreb": 2,
+   "dreb": 4,
+   "game": "401909868",
+   "normal": 20.2,
+   "normal_src": "last season",
+   "jump": 18.8
+  },
+  "shots": [
+   {
+    "x": 7,
+    "y": 18,
+    "made": false,
+    "value": 0,
+    "type": "Running Pullup Jump Shot",
+    "text": "Brandon Miller misses running pullup jump shot",
+    "period": 1,
+    "clock": "10:44"
+   },
+   {
+    "x": 35,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Brandon Miller makes 9-foot two point shot",
+    "period": 1,
+    "clock": "10:36"
+   },
+   {
+    "x": 33,
+    "y": 16,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Brandon Miller misses 17-foot pullup jump shot",
+    "period": 1,
+    "clock": "9:26"
+   },
+   {
+    "x": 35,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Brandon Miller misses 11-foot turnaround jump shot",
+    "period": 1,
+    "clock": "8:34"
+   },
+   {
+    "x": 9,
+    "y": 19,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Brandon Miller misses 25-foot three point jumper",
+    "period": 1,
+    "clock": "7:09"
+   },
+   {
+    "x": 26,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Brandon Miller makes driving layup",
+    "period": 1,
+    "clock": "4:37"
+   },
+   {
+    "x": 48,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Running Jump Shot",
+    "text": "Brandon Miller misses 23-foot running jump shot",
+    "period": 1,
+    "clock": "4:04"
+   },
+   {
+    "x": 34,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Brandon Miller misses 9-foot two point shot",
+    "period": 2,
+    "clock": "11:01"
+   },
+   {
+    "x": 25,
+    "y": 6,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Brandon Miller misses driving floating jump shot",
+    "period": 2,
+    "clock": "10:19"
+   },
+   {
+    "x": 26,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Brandon Miller makes driving layup (Ryan Kalkbrenner assists)",
+    "period": 2,
+    "clock": "9:49"
+   },
+   {
+    "x": 8,
+    "y": 20,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Brandon Miller makes 26-foot three pointer",
+    "period": 2,
+    "clock": "8:17"
+   },
+   {
+    "x": 25,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Running Dunk Shot",
+    "text": "Brandon Miller makes 1-foot running dunk",
+    "period": 2,
+    "clock": "7:52"
+   },
+   {
+    "x": 7,
+    "y": 20,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Brandon Miller makes 27-foot three pointer",
+    "period": 2,
+    "clock": "1:46"
+   },
+   {
+    "x": 26,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Driving Dunk Shot",
+    "text": "Brandon Miller misses driving dunk",
+    "period": 2,
+    "clock": "26.1"
+   },
+   {
+    "x": 48,
+    "y": 7,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Brandon Miller makes 24-foot three point jumper (Dennis Schroder assists)",
+    "period": 2,
+    "clock": "22.2"
+   },
+   {
+    "x": 26,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Brandon Miller misses 25-foot three point pullup jump shot",
+    "period": 3,
+    "clock": "10:24"
+   },
+   {
+    "x": 25,
+    "y": 9,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Brandon Miller makes 8-foot pullup jump shot",
+    "period": 3,
+    "clock": "8:28"
+   },
+   {
+    "x": 24,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Brandon Miller makes 7-foot driving floating jump shot",
+    "period": 3,
+    "clock": "7:51"
+   },
+   {
+    "x": 13,
+    "y": 22,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Brandon Miller misses 24-foot three point jumper",
+    "period": 3,
+    "clock": "7:24"
+   },
+   {
+    "x": 21,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Brandon Miller misses driving floating jump shot",
+    "period": 3,
+    "clock": "6:06"
+   },
+   {
+    "x": 32,
+    "y": 18,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Brandon Miller makes 18-foot pullup jump shot",
+    "period": 3,
+    "clock": "4:43"
+   },
+   {
+    "x": 29,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Brandon Miller misses driving floating jump shot",
+    "period": 3,
+    "clock": "4:06"
+   },
+   {
+    "x": 35,
+    "y": 9,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Brandon Miller makes 13-foot fade away jump shot",
+    "period": 3,
+    "clock": "3:06"
+   },
+   {
+    "x": 19,
+    "y": 27,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Brandon Miller makes 27-foot three pointer",
+    "period": 3,
+    "clock": "2:10"
+   },
+   {
+    "x": 36,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Brandon Miller misses 10-foot two point shot",
+    "period": 3,
+    "clock": "1:04"
+   },
+   {
+    "x": 24,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Dunk Shot",
+    "text": "Brandon Miller makes dunk (Sion James assists)",
+    "period": 4,
+    "clock": "6:52"
+   },
+   {
+    "x": 45,
+    "y": 18,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Brandon Miller makes 26-foot three point jumper (Naz Reid assists)",
+    "period": 4,
+    "clock": "6:16"
+   },
+   {
+    "x": 21,
+    "y": 13,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Brandon Miller makes 12-foot two point shot",
+    "period": 4,
+    "clock": "50.9"
+   }
+  ],
+  "ft_made": 4,
+  "ft_att": 5
+ }
+}
