@@ -26,9 +26,9 @@ jobs:
       - name: Fetch
         run: |
           set -o pipefail
-          if ! { python3 night_data.py "${{ inputs.date }}" && python3 shots_data.py "${{ inputs.date }}" 3; } 2>&1 | tee run.log; then
-            echo "::error title=night_data failed::$(tail -c 900 run.log | tr '\n' '|')"; exit 1; fi
-          echo "::notice title=night_data::$(tail -c 900 run.log | tr '\n' '|')"
+          if ! { if [ "${{ inputs.date }}" = "probe" ]; then python3 probe.py; else python3 night_data.py "${{ inputs.date }}" && python3 shots_data.py "${{ inputs.date }}" 3; fi; } 2>&1 | tee run.log; then
+            echo "::error title=night_data failed::$(tail -c 6000 run.log | tr '\n' '|')"; exit 1; fi
+          echo "::notice title=night_data::$(tail -c 6000 run.log | tr '\n' '|')"
       - name: Commit and push
         run: |
           git config user.name "fromwaydowntown-bot"
