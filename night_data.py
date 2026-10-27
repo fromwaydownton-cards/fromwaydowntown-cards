@@ -58,6 +58,7 @@ def parse_players(summ):
                 "stl": int(v[idx["STL"]]), "blk": int(v[idx["BLK"]]), "tov": int(v[idx["TO"]]),
                 "fgm": fgm, "fga": fga, "tpm": tpm, "tpa": tpa, "pm": int(pm or 0),
                 "ftm": ftm, "fta": fta, "pf": int(v[idx["PF"]]) if "PF" in idx else 0,
+                "min": int(float(v[idx["MIN"]] or 0)) if v[idx["MIN"]] not in ("", "--") else 0,
                 "oreb": int(v[idx["OREB"]]) if "OREB" in idx else 0,
                 "dreb": int(v[idx["DREB"]]) if "DREB" in idx else 0,
             })
