@@ -1,0 +1,47 @@
+{
+ "date": "20261027",
+ "games": [
+  {
+   "id": "401909877",
+   "start": "2026-10-27T23:30Z",
+   "final": false,
+   "status": "10/27 - 7:30 PM EDT",
+   "home": "BOS",
+   "away": "BKN",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909878",
+   "start": "2026-10-28T00:00Z",
+   "final": false,
+   "status": "10/27 - 8:00 PM EDT",
+   "home": "NYK",
+   "away": "DET",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909879",
+   "start": "2026-10-28T00:00Z",
+   "final": false,
+   "status": "10/27 - 8:00 PM EDT",
+   "home": "SAS",
+   "away": "SAC",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909880",
+   "start": "2026-10-28T03:00Z",
+   "final": false,
+   "status": "10/27 - 11:00 PM EDT",
+   "home": "LAL",
+   "away": "POR",
+   "home_score": 0,
+   "away_score": 0
+  }
+ ],
+ "players": [],
+ "all_final": false
+}
