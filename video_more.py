@@ -341,7 +341,7 @@ def mvp_video(start, end, out):
             title_intro(img, t, wk, "MVP", "LADDER", "COUNTING DOWN THE TOP 5")
             return
         if t >= INTRO + SEG * len(pre):
-            outro_card(img, t - INTRO - SEG * len(pre), card, "WHO'S TOO HIGH? WHO'S MISSING?")
+            outro_card(img, t - INTRO - SEG * len(pre), card, "NEW LADDER EVERY MONDAY. FOLLOW!")
             return
         k = int((t - INTRO) // SEG)
         st = t - INTRO - k * SEG
