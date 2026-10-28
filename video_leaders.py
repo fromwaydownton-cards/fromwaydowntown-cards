@@ -183,10 +183,10 @@ def intro(img, t, night):
 def scores(img, t, night):
     d = ImageDraw.Draw(img)
     games = [g for g in night["games"] if g["final"]]
-    ctext(d, W / 2, 200 + (1 - ease(t / 0.4)) * -60, "FINAL SCORES", F(NUM, 80), INK)
+    ctext(d, W / 2, 270 + (1 - ease(t / 0.4)) * -60, "FINAL SCORES", F(NUM, 80), INK)
     cols = 1 if len(games) <= 11 else 2
     rows = -(-len(games) // cols)
-    top, bottom = 330, 1470
+    top, bottom = 400, 1490
     rh = min(100, (bottom - top) / rows)
     cw = (W - 120) / cols
     f = F(NUM, int(rh * 0.5))
@@ -223,6 +223,28 @@ def outro(img, t, card):
     alpha_text(img, W / 2, 1460, "FOLLOW FOR THE LEADERS EVERY NIGHT", F(NUM, 46), INK, ease((t - 0.6) / 0.5))
 
 
+def speed_badge(img, t):
+    """'2X SPEED' pill with a fast-forward icon, top right, under the app's
+    search icon. Pulses twice at the start so viewers notice it."""
+    pulse = 1 + 0.12 * abs(math.sin(math.pi * t / 0.6)) if t < 2.4 else 1.0
+    f = F(NUM, int(34 * pulse))
+    d = ImageDraw.Draw(img)
+    label = "2X SPEED"
+    tw = d.textlength(label, font=f)
+    icon = int(26 * pulse)
+    pad, gap = 22, 12
+    w = pad * 2 + icon + gap + tw
+    h = int(60 * pulse)
+    x1, y0 = W - 40, 178
+    x0 = x1 - w
+    d.rounded_rectangle((x0, y0, x1, y0 + h), radius=h // 2, fill=BAR, outline=HIGHLIGHT, width=3)
+    # two triangles = fast forward
+    ix, iy = x0 + pad, y0 + (h - icon) / 2
+    for k in (0, icon * 0.55):
+        d.polygon([(ix + k, iy), (ix + k + icon * 0.6, iy + icon / 2), (ix + k, iy + icon)], fill=HIGHLIGHT)
+    d.text((ix + icon + gap, y0 + (h - f.size) / 2 - f.size * 0.12), label, font=f, fill=(255, 255, 255))
+
+
 def build(date, out, keep_frames=False):
     night = json.loads((ROOT / "data" / "nights" / f"{date}.json").read_text())
     L = pick(night["players"])
@@ -251,6 +273,7 @@ def build(date, out, keep_frames=False):
             scores(img, t - INTRO - SEG * len(leaders), night)
         else:
             outro(img, t - INTRO - SEG * len(leaders) - SCORES, card)
+        speed_badge(img, t)
         proc.stdin.write(img.convert("RGB").tobytes())
     proc.stdin.close()
     proc.wait()
