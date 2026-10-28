@@ -1,0 +1,732 @@
+{
+ "3945274": {
+  "player": {
+   "id": "3945274",
+   "name": "Luka Doncic",
+   "team": "LAL",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/3945274.png",
+   "pts": 41,
+   "reb": 5,
+   "ast": 9,
+   "stl": 0,
+   "blk": 1,
+   "tov": 2,
+   "fgm": 12,
+   "fga": 22,
+   "tpm": 6,
+   "tpa": 15,
+   "pm": 7,
+   "ftm": 11,
+   "fta": 13,
+   "pf": 3,
+   "min": 37,
+   "oreb": 0,
+   "dreb": 5,
+   "game": "401909880"
+  },
+  "shots": [
+   {
+    "x": 34,
+    "y": 14,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 15-foot step back jumpshot",
+    "period": 1,
+    "clock": "11:43"
+   },
+   {
+    "x": 45,
+    "y": 16,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 24-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "10:04"
+   },
+   {
+    "x": 42,
+    "y": 19,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 24-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "7:26"
+   },
+   {
+    "x": 24,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Luka Doncic makes running layup (Ziaire Williams assists)",
+    "period": 1,
+    "clock": "6:59"
+   },
+   {
+    "x": 8,
+    "y": 17,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 24-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "6:13"
+   },
+   {
+    "x": 13,
+    "y": 24,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 26-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "5:09"
+   },
+   {
+    "x": 16,
+    "y": 6,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot Bank",
+    "text": "Luka Doncic makes 10-foot jump bank shot",
+    "period": 1,
+    "clock": "3:58"
+   },
+   {
+    "x": 4,
+    "y": 12,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 23-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "30.7"
+   },
+   {
+    "x": 17,
+    "y": 12,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Luka Doncic makes 14-foot driving floating jump shot",
+    "period": 2,
+    "clock": "4:53"
+   },
+   {
+    "x": 30,
+    "y": 5,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic makes 7-foot pullup jump shot",
+    "period": 2,
+    "clock": "4:01"
+   },
+   {
+    "x": 42,
+    "y": 22,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 27-foot three point step back jumpshot",
+    "period": 2,
+    "clock": "51.1"
+   },
+   {
+    "x": 11,
+    "y": 22,
+    "made": true,
+    "value": 3,
+    "type": "Running Pullup Jump Shot",
+    "text": "Luka Doncic makes 26-foot running pullup jump shot",
+    "period": 3,
+    "clock": "10:46"
+   },
+   {
+    "x": 10,
+    "y": 24,
+    "made": true,
+    "value": 3,
+    "type": "Running Pullup Jump Shot",
+    "text": "Luka Doncic makes 27-foot running pullup jump shot",
+    "period": 3,
+    "clock": "9:51"
+   },
+   {
+    "x": 28,
+    "y": 28,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 27-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "9:20"
+   },
+   {
+    "x": 2,
+    "y": 2,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Luka Doncic makes 23-foot three point jumper",
+    "period": 3,
+    "clock": "7:27"
+   },
+   {
+    "x": 2,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Luka Doncic misses 23-foot fade away jump shot",
+    "period": 3,
+    "clock": "6:34"
+   },
+   {
+    "x": 2,
+    "y": 18,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Luka Doncic misses 28-foot three point jumper",
+    "period": 3,
+    "clock": "5:11"
+   },
+   {
+    "x": 16,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Running Pullup Jump Shot",
+    "text": "Luka Doncic makes 9-foot running pullup jump shot",
+    "period": 3,
+    "clock": "4:21"
+   },
+   {
+    "x": 8,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Robert Williams III blocks Luka Doncic 's 31-foot shot",
+    "period": 3,
+    "clock": "1:01"
+   },
+   {
+    "x": 23,
+    "y": 29,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Luka Doncic makes 28-foot three point jumper (Sandro Mamukelashvili assists)",
+    "period": 4,
+    "clock": "3:24"
+   },
+   {
+    "x": 28,
+    "y": 9,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic makes 8-foot pullup jump shot",
+    "period": 4,
+    "clock": "1:06"
+   },
+   {
+    "x": 9,
+    "y": 21,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic misses 26-foot three point pullup jump shot",
+    "period": 4,
+    "clock": "38.6"
+   }
+  ],
+  "ft_made": 11,
+  "ft_att": 13
+ },
+ "4065648": {
+  "player": {
+   "id": "4065648",
+   "name": "Jayson Tatum",
+   "team": "BOS",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4065648.png",
+   "pts": 40,
+   "reb": 5,
+   "ast": 8,
+   "stl": 0,
+   "blk": 1,
+   "tov": 0,
+   "fgm": 10,
+   "fga": 20,
+   "tpm": 2,
+   "tpa": 7,
+   "pm": 5,
+   "ftm": 18,
+   "fta": 22,
+   "pf": 3,
+   "min": 42,
+   "oreb": 0,
+   "dreb": 5,
+   "game": "401909877"
+  },
+  "shots": [
+   {
+    "x": 25,
+    "y": 27,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Jayson Tatum misses 26-foot three point pullup jump shot",
+    "period": 1,
+    "clock": "10:19"
+   },
+   {
+    "x": 22,
+    "y": 4,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Jayson Tatum misses driving layup",
+    "period": 1,
+    "clock": "8:52"
+   },
+   {
+    "x": 39,
+    "y": 7,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Jayson Tatum makes 15-foot pullup jump shot",
+    "period": 1,
+    "clock": "7:23"
+   },
+   {
+    "x": 31,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Jayson Tatum misses 26-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "6:54"
+   },
+   {
+    "x": 24,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Reverse Layup Shot",
+    "text": "Jayson Tatum makes 1-foot reverse layup (Neemias Queta assists)",
+    "period": 1,
+    "clock": "3:05"
+   },
+   {
+    "x": 26,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Jayson Tatum makes running layup (Jordan Walsh assists)",
+    "period": 2,
+    "clock": "6:23"
+   },
+   {
+    "x": 19,
+    "y": 10,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Jayson Tatum misses 11-foot two point shot",
+    "period": 2,
+    "clock": "5:27"
+   },
+   {
+    "x": 18,
+    "y": 12,
+    "made": true,
+    "value": 2,
+    "type": "Step Back Jump Shot",
+    "text": "Jayson Tatum makes 13-foot step back jumpshot",
+    "period": 2,
+    "clock": "3:29"
+   },
+   {
+    "x": 36,
+    "y": 15,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Jayson Tatum misses 18-foot pullup jump shot",
+    "period": 3,
+    "clock": "8:53"
+   },
+   {
+    "x": 10,
+    "y": 21,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Jayson Tatum makes 25-foot three point jumper (Derrick White assists)",
+    "period": 3,
+    "clock": "8:21"
+   },
+   {
+    "x": 9,
+    "y": 19,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Jayson Tatum misses 24-foot three point jumper",
+    "period": 3,
+    "clock": "6:16"
+   },
+   {
+    "x": 35,
+    "y": 25,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Jayson Tatum misses 26-foot three point jumper",
+    "period": 3,
+    "clock": "3:54"
+   },
+   {
+    "x": 32,
+    "y": 27,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Jayson Tatum makes 27-foot three point jumper",
+    "period": 3,
+    "clock": "1:18"
+   },
+   {
+    "x": 23,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Jayson Tatum makes driving layup",
+    "period": 4,
+    "clock": "5:18"
+   },
+   {
+    "x": 28,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Jayson Tatum makes driving layup",
+    "period": 4,
+    "clock": "2:03"
+   },
+   {
+    "x": 24,
+    "y": 18,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Jayson Tatum misses 17-foot two point shot",
+    "period": 5,
+    "clock": "4:41"
+   },
+   {
+    "x": 11,
+    "y": 25,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Jayson Tatum misses 28-foot three point jumper",
+    "period": 5,
+    "clock": "3:29"
+   },
+   {
+    "x": 21,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Finger Roll Layup Shot",
+    "text": "Jayson Tatum makes layup (Derrick White assists)",
+    "period": 5,
+    "clock": "2:52"
+   },
+   {
+    "x": 27,
+    "y": 0,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Noah Clowney blocks Jayson Tatum's driving layup",
+    "period": 5,
+    "clock": "28.3"
+   },
+   {
+    "x": 20,
+    "y": 17,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Jump Shot",
+    "text": "Jayson Tatum makes 17-foot turnaround jump shot (Derrick White assists)",
+    "period": 5,
+    "clock": "0.0"
+   }
+  ],
+  "ft_made": 18,
+  "ft_att": 22
+ },
+ "5104157": {
+  "player": {
+   "id": "5104157",
+   "name": "Victor Wembanyama",
+   "team": "SAS",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/5104157.png",
+   "pts": 29,
+   "reb": 10,
+   "ast": 2,
+   "stl": 2,
+   "blk": 5,
+   "tov": 0,
+   "fgm": 14,
+   "fga": 21,
+   "tpm": 0,
+   "tpa": 3,
+   "pm": 22,
+   "ftm": 1,
+   "fta": 1,
+   "pf": 0,
+   "min": 27,
+   "oreb": 3,
+   "dreb": 7,
+   "game": "401909879"
+  },
+  "shots": [
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Alley Oop Dunk Shot",
+    "text": "Victor Wembanyama makes alley oop dunk (De'Aaron Fox assists)",
+    "period": 1,
+    "clock": "11:48"
+   },
+   {
+    "x": 26,
+    "y": -1,
+    "made": true,
+    "value": 2,
+    "type": "Alley Oop Dunk Shot",
+    "text": "Victor Wembanyama makes 1-foot alley oop dunk (Stephon Castle assists)",
+    "period": 1,
+    "clock": "10:41"
+   },
+   {
+    "x": 14,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Victor Wembanyama misses 10-foot turnaround jump shot",
+    "period": 1,
+    "clock": "9:31"
+   },
+   {
+    "x": 33,
+    "y": 25,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama misses 25-foot three point jumper",
+    "period": 1,
+    "clock": "9:09"
+   },
+   {
+    "x": 26,
+    "y": -1,
+    "made": true,
+    "value": 2,
+    "type": "Alley Oop Dunk Shot",
+    "text": "Victor Wembanyama makes 1-foot alley oop dunk (Devin Vassell assists)",
+    "period": 1,
+    "clock": "6:31"
+   },
+   {
+    "x": 26,
+    "y": 0,
+    "made": false,
+    "value": 0,
+    "type": "Running Layup Shot",
+    "text": "Victor Wembanyama misses running layup",
+    "period": 1,
+    "clock": "6:13"
+   },
+   {
+    "x": 13,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama makes 12-foot jumper (Julian Champagnie assists)",
+    "period": 1,
+    "clock": "3:06"
+   },
+   {
+    "x": 26,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Driving Finger Roll Layup",
+    "text": "Victor Wembanyama makes two point shot",
+    "period": 1,
+    "clock": "2:37"
+   },
+   {
+    "x": 26,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Running Dunk Shot",
+    "text": "Victor Wembanyama makes running dunk (De'Aaron Fox assists)",
+    "period": 1,
+    "clock": "1:12"
+   },
+   {
+    "x": 20,
+    "y": 17,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama makes 17-foot jumper (De'Aaron Fox assists)",
+    "period": 1,
+    "clock": "10.9"
+   },
+   {
+    "x": 40,
+    "y": 43,
+    "made": false,
+    "value": 0,
+    "type": "Heave Jump Shot",
+    "text": "Victor Wembanyama misses heave jump shot",
+    "period": 1,
+    "clock": "0.0"
+   },
+   {
+    "x": 28,
+    "y": 4,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Victor Wembanyama misses driving layup",
+    "period": 2,
+    "clock": "10:20"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Tip Shot",
+    "text": "Victor Wembanyama makes tip shot",
+    "period": 2,
+    "clock": "10:17"
+   },
+   {
+    "x": 39,
+    "y": 22,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama misses 25-foot three point jumper",
+    "period": 2,
+    "clock": "9:54"
+   },
+   {
+    "x": 26,
+    "y": -1,
+    "made": true,
+    "value": 2,
+    "type": "Alley Oop Dunk Shot",
+    "text": "Victor Wembanyama makes 1-foot alley oop dunk (Devin Vassell assists)",
+    "period": 2,
+    "clock": "3:14"
+   },
+   {
+    "x": 36,
+    "y": 6,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Victor Wembanyama misses 12-foot pullup jump shot",
+    "period": 2,
+    "clock": "2:13"
+   },
+   {
+    "x": 30,
+    "y": 27,
+    "made": false,
+    "value": 0,
+    "type": "Running Pullup Jump Shot",
+    "text": "Victor Wembanyama misses running pullup jump shot",
+    "period": 2,
+    "clock": "1:19"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Putback Dunk Shot",
+    "text": "Victor Wembanyama makes dunk",
+    "period": 2,
+    "clock": "39.3"
+   },
+   {
+    "x": 26,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Tip Shot",
+    "text": "Victor Wembanyama makes tip shot",
+    "period": 2,
+    "clock": "0.3"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Driving Dunk Shot",
+    "text": "Victor Wembanyama makes driving dunk (De'Aaron Fox assists)",
+    "period": 3,
+    "clock": "9:01"
+   },
+   {
+    "x": 25,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Alley Oop Dunk Shot",
+    "text": "Victor Wembanyama makes 1-foot alley oop dunk (Devin Vassell assists)",
+    "period": 3,
+    "clock": "7:44"
+   },
+   {
+    "x": 26,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Dunk Shot",
+    "text": "Victor Wembanyama makes 1-foot driving dunk",
+    "period": 3,
+    "clock": "5:31"
+   }
+  ],
+  "ft_made": 1,
+  "ft_att": 1
+ }
+}

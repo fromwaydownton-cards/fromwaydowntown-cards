@@ -25,6 +25,33 @@
       "first_comment": "Vote for the best night \ud83d\udc47 1) Edwards  2) Gobert  3) Jokic  4) Mobley",
       "title": "NBA night leaders Oct 26",
       "queued_at": "2026-10-27T04:36:04+00:00"
+    },
+    {
+      "key": "night:20261027",
+      "kind": "nightly",
+      "test": false,
+      "folder": "cards/nights/20261027.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261027.jpg"
+      ],
+      "caption": "Toumani Camara went 4-for-5 from three. Who's the best shooter in the league right now?\n\nToday's Guess the Player answer: Brandon Miller (CHA), 39 pts vs his usual 20.2. Did you get it?\n\nNBA night leaders, Oct 27, 2026. All 4 final scores in the graphic.\n\nMost points: Luka Doncic (LAL) 41 pts\nMost rebounds: Karl-Anthony Towns (NYK) 20 reb\nMost assists: Deni Avdija (POR) 9 ast\nBest 3PT%: Toumani Camara (POR) 4-5 from 3\nWorst +/-: Zach LaVine (SAC) -20\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
+      "first_comment": "Vote for the best night \ud83d\udc47 1) Doncic  2) Towns  3) Avdija  4) Camara",
+      "title": "NBA night leaders Oct 27",
+      "queued_at": "2026-10-28T06:00:13+00:00"
+    },
+    {
+      "key": "shots:20261027",
+      "kind": "shots",
+      "test": false,
+      "folder": "cards/shots/20261027-shots.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/shots/20261027-shots.jpg"
+      ],
+      "caption": "Doncic put up 41. Which spot on the floor should defenses take away?\n\nShot charts for the top scorers from Oct 27.\n\n1. Luka Doncic (LAL) 41 pts, 12-22 FG, 6-15 3PT\n2. Jayson Tatum (BOS) 40 pts, 10-20 FG, 2-7 3PT\n3. Victor Wembanyama (SAS) 29 pts, 14-22 FG, 0-3 3PT\n\nGreen = made, red = missed. Follow for the leaders every night.\n\n#NBA #NBAStats #ShotChart #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-10-28T09:00:00-05:00",
+      "title": "Top scorer shot charts Oct 27",
+      "queued_at": "2026-10-28T06:00:14+00:00"
     }
   ]
 }
