@@ -21,7 +21,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw
 
-from audio_bed import write_beat
+from video_common import draw_result, encode, game_result
 from leaders import pick
 from night_card import (BAR, BAR_EDGE, BG, BOLD, HANDLE, HIGHLIGHT, INK, LIGHT, MUTED, NUM,
                         ROOT, F, fit, headshot_circle, ring_color, text_color)
@@ -77,8 +77,9 @@ def detail(p, cat):
 
 class Leader:
     """Pre-rendered pieces for one leader segment."""
-    def __init__(self, p, cat):
+    def __init__(self, p, cat, night):
         self.p, self.cat = p, cat
+        self.result = game_result(night, p)
         self.color = ring_color(p["team"])
         self.r = 300
         self.disc = headshot_circle(p, self.r)
@@ -152,13 +153,15 @@ class Leader:
                 alpha_text(img, W / 2, 1314, txt, df, HIGHLIGHT, da)
             else:
                 alpha_text(img, W / 2, 1312, txt, df, INK, da)
+        # opponent + final score
+        draw_result(img, W / 2, 1392, self.result, ease((t - 3.0) / 0.5), size=42)
         # progress dots
         d = ImageDraw.Draw(img)
         for j in range(5):
             x = W / 2 + (j - 2) * 44
             fill = self.color if j == idx else (210, 213, 219)
             rr = 11 if j == idx else 8
-            d.ellipse((x - rr, 1440 - rr, x + rr, 1440 + rr), fill=fill)
+            d.ellipse((x - rr, 1480 - rr, x + rr, 1480 + rr), fill=fill)
         if fade < 1:
             veil = Image.new("RGBA", img.size, BG + (int(255 * (1 - fade)),))
             img.alpha_composite(veil)
@@ -223,47 +226,16 @@ def outro(img, t, card):
     alpha_text(img, W / 2, 1460, "FOLLOW FOR THE LEADERS EVERY NIGHT", F(NUM, 46), INK, ease((t - 0.6) / 0.5))
 
 
-def speed_badge(img, t):
-    """'2X SPEED' pill with a fast-forward icon, top right, under the app's
-    search icon. Pulses twice at the start so viewers notice it."""
-    pulse = 1 + 0.12 * abs(math.sin(math.pi * t / 0.6)) if t < 2.4 else 1.0
-    f = F(NUM, int(34 * pulse))
-    d = ImageDraw.Draw(img)
-    label = "2X SPEED"
-    tw = d.textlength(label, font=f)
-    icon = int(26 * pulse)
-    pad, gap = 22, 12
-    w = pad * 2 + icon + gap + tw
-    h = int(60 * pulse)
-    x1, y0 = W - 40, 178
-    x0 = x1 - w
-    d.rounded_rectangle((x0, y0, x1, y0 + h), radius=h // 2, fill=BAR, outline=HIGHLIGHT, width=3)
-    # two triangles = fast forward
-    ix, iy = x0 + pad, y0 + (h - icon) / 2
-    for k in (0, icon * 0.55):
-        d.polygon([(ix + k, iy), (ix + k + icon * 0.6, iy + icon / 2), (ix + k, iy + icon)], fill=HIGHLIGHT)
-    d.text((ix + icon + gap, y0 + (h - f.size) / 2 - f.size * 0.12), label, font=f, fill=(255, 255, 255))
-
-
 def build(date, out, keep_frames=False):
     night = json.loads((ROOT / "data" / "nights" / f"{date}.json").read_text())
     L = pick(night["players"])
-    leaders = [Leader(L[k], k) for k in ORDER if k in L]
+    leaders = [Leader(L[k], k, night) for k in ORDER if k in L]
     card_path = Path(out).with_suffix(".card.jpg")
     render_card(night, card_path)
     card = Image.open(card_path).convert("RGBA").resize((1000, 1250), Image.LANCZOS)
     total = INTRO + SEG * len(leaders) + SCORES + OUTRO
-    wav = Path(out).with_suffix(".wav")
-    write_beat(wav, total)
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
-           "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-i", str(wav),
-           "-c:v", "libx264", "-preset", "medium", "-crf", "23", "-pix_fmt", "yuv420p",
-           "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", str(out)]
-    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    blank = Image.new("RGBA", (W, H), BG + (255,))
-    for fi in range(int(total * FPS)):
-        t = fi / FPS
-        img = blank.copy()
+
+    def frame(img, t):
         if t < INTRO:
             intro(img, t, night)
         elif t < INTRO + SEG * len(leaders):
@@ -273,11 +245,8 @@ def build(date, out, keep_frames=False):
             scores(img, t - INTRO - SEG * len(leaders), night)
         else:
             outro(img, t - INTRO - SEG * len(leaders) - SCORES, card)
-        speed_badge(img, t)
-        proc.stdin.write(img.convert("RGB").tobytes())
-    proc.stdin.close()
-    proc.wait()
-    wav.unlink(missing_ok=True)
+
+    encode(out, total, frame, seed=1)
     card_path.unlink(missing_ok=True)
     return total
 
