@@ -1,0 +1,127 @@
+{
+ "date": "20261028",
+ "games": [
+  {
+   "id": "401909881",
+   "start": "2026-10-28T23:00Z",
+   "final": false,
+   "status": "10/28 - 7:00 PM EDT",
+   "home": "ATL",
+   "away": "MIA",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909882",
+   "start": "2026-10-28T23:00Z",
+   "final": false,
+   "status": "10/28 - 7:00 PM EDT",
+   "home": "CLE",
+   "away": "WAS",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909883",
+   "start": "2026-10-28T23:00Z",
+   "final": false,
+   "status": "10/28 - 7:00 PM EDT",
+   "home": "DET",
+   "away": "CHA",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909884",
+   "start": "2026-10-28T23:00Z",
+   "final": false,
+   "status": "10/28 - 7:00 PM EDT",
+   "home": "IND",
+   "away": "PHI",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909885",
+   "start": "2026-10-28T23:30Z",
+   "final": false,
+   "status": "10/28 - 7:30 PM EDT",
+   "home": "TOR",
+   "away": "ORL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909886",
+   "start": "2026-10-29T00:00Z",
+   "final": false,
+   "status": "10/28 - 8:00 PM EDT",
+   "home": "CHI",
+   "away": "NYK",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909887",
+   "start": "2026-10-29T00:00Z",
+   "final": false,
+   "status": "10/28 - 8:00 PM EDT",
+   "home": "MIL",
+   "away": "HOU",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909888",
+   "start": "2026-10-29T00:00Z",
+   "final": false,
+   "status": "10/28 - 8:00 PM EDT",
+   "home": "MIN",
+   "away": "GSW",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909889",
+   "start": "2026-10-29T00:00Z",
+   "final": false,
+   "status": "10/28 - 8:00 PM EDT",
+   "home": "NOP",
+   "away": "DEN",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909890",
+   "start": "2026-10-29T01:00Z",
+   "final": false,
+   "status": "10/28 - 9:00 PM EDT",
+   "home": "UTA",
+   "away": "SAS",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909891",
+   "start": "2026-10-29T01:30Z",
+   "final": false,
+   "status": "10/28 - 9:30 PM EDT",
+   "home": "DAL",
+   "away": "OKC",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909892",
+   "start": "2026-10-29T02:30Z",
+   "final": false,
+   "status": "10/28 - 10:30 PM EDT",
+   "home": "LAC",
+   "away": "LAL",
+   "home_score": 0,
+   "away_score": 0
+  }
+ ],
+ "players": [],
+ "all_final": false
+}
