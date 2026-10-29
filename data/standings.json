@@ -1,155 +1,141 @@
 {
- "MIA": {
+ "BKN": {
   "w": 0,
   "l": 4,
   "pct": 0.0,
   "seed": 15,
   "conf": "East"
  },
- "NYK": {
-  "w": 0,
-  "l": 3,
-  "pct": 0.0,
+ "CHI": {
+  "w": 1,
+  "l": 4,
+  "pct": 0.2,
+  "seed": 12,
+  "conf": "East"
+ },
+ "MIA": {
+  "w": 1,
+  "l": 4,
+  "pct": 0.2,
   "seed": 13,
   "conf": "East"
  },
- "BKN": {
-  "w": 0,
-  "l": 3,
-  "pct": 0.0,
+ "MIL": {
+  "w": 1,
+  "l": 4,
+  "pct": 0.2,
   "seed": 14,
   "conf": "East"
  },
- "CHI": {
+ "ORL": {
   "w": 1,
   "l": 3,
   "pct": 0.25,
   "seed": 11,
   "conf": "East"
  },
- "MIL": {
-  "w": 1,
-  "l": 3,
-  "pct": 0.25,
-  "seed": 12,
-  "conf": "East"
- },
- "ORL": {
-  "w": 1,
-  "l": 2,
-  "pct": 0.33333334,
-  "seed": 10,
-  "conf": "East"
- },
  "ATL": {
   "w": 2,
-  "l": 2,
-  "pct": 0.5,
+  "l": 3,
+  "pct": 0.4,
   "seed": 7,
   "conf": "East"
  },
- "IND": {
+ "NYK": {
   "w": 2,
-  "l": 2,
-  "pct": 0.5,
+  "l": 3,
+  "pct": 0.4,
   "seed": 8,
   "conf": "East"
  },
  "WAS": {
   "w": 2,
-  "l": 2,
-  "pct": 0.5,
+  "l": 3,
+  "pct": 0.4,
   "seed": 9,
   "conf": "East"
  },
- "TOR": {
+ "IND": {
   "w": 2,
-  "l": 1,
-  "pct": 0.6666667,
-  "seed": 4,
-  "conf": "East"
- },
- "BOS": {
-  "w": 2,
-  "l": 1,
-  "pct": 0.6666667,
-  "seed": 5,
-  "conf": "East"
- },
- "CLE": {
-  "w": 2,
-  "l": 1,
-  "pct": 0.6666667,
-  "seed": 6,
-  "conf": "East"
- },
- "PHI": {
-  "w": 3,
-  "l": 1,
-  "pct": 0.75,
-  "seed": 2,
+  "l": 3,
+  "pct": 0.4,
+  "seed": 10,
   "conf": "East"
  },
  "CHA": {
+  "w": 3,
+  "l": 2,
+  "pct": 0.6,
+  "seed": 6,
+  "conf": "East"
+ },
+ "TOR": {
   "w": 3,
   "l": 1,
   "pct": 0.75,
   "seed": 3,
   "conf": "East"
  },
- "DET": {
+ "BOS": {
   "w": 3,
-  "l": 0,
-  "pct": 1.0,
+  "l": 1,
+  "pct": 0.75,
+  "seed": 4,
+  "conf": "East"
+ },
+ "CLE": {
+  "w": 3,
+  "l": 1,
+  "pct": 0.75,
+  "seed": 5,
+  "conf": "East"
+ },
+ "DET": {
+  "w": 4,
+  "l": 1,
+  "pct": 0.8,
   "seed": 1,
+  "conf": "East"
+ },
+ "PHI": {
+  "w": 4,
+  "l": 1,
+  "pct": 0.8,
+  "seed": 2,
   "conf": "East"
  },
  "NOP": {
   "w": 0,
-  "l": 3,
+  "l": 4,
   "pct": 0.0,
   "seed": 14,
   "conf": "West"
  },
  "SAC": {
   "w": 0,
-  "l": 3,
+  "l": 4,
   "pct": 0.0,
   "seed": 15,
   "conf": "West"
  },
- "GSW": {
+ "UTA": {
+  "w": 1,
+  "l": 4,
+  "pct": 0.2,
+  "seed": 13,
+  "conf": "West"
+ },
+ "LAC": {
   "w": 1,
   "l": 3,
   "pct": 0.25,
   "seed": 12,
   "conf": "West"
  },
- "UTA": {
-  "w": 1,
+ "GSW": {
+  "w": 2,
   "l": 3,
-  "pct": 0.25,
-  "seed": 13,
-  "conf": "West"
- },
- "SAS": {
-  "w": 1,
-  "l": 2,
-  "pct": 0.33333334,
-  "seed": 8,
-  "conf": "West"
- },
- "LAC": {
-  "w": 1,
-  "l": 2,
-  "pct": 0.33333334,
-  "seed": 9,
-  "conf": "West"
- },
- "DEN": {
-  "w": 1,
-  "l": 2,
-  "pct": 0.33333334,
+  "pct": 0.4,
   "seed": 10,
   "conf": "West"
  },
@@ -160,53 +146,67 @@
   "seed": 11,
   "conf": "West"
  },
- "DAL": {
+ "DEN": {
   "w": 2,
   "l": 2,
   "pct": 0.5,
-  "seed": 7,
+  "seed": 9,
   "conf": "West"
  },
- "POR": {
-  "w": 2,
-  "l": 0,
-  "pct": 1.0,
-  "seed": 5,
+ "SAS": {
+  "w": 3,
+  "l": 2,
+  "pct": 0.6,
+  "seed": 6,
+  "conf": "West"
+ },
+ "DAL": {
+  "w": 3,
+  "l": 2,
+  "pct": 0.6,
+  "seed": 7,
   "conf": "West"
  },
  "MIN": {
   "w": 3,
-  "l": 1,
-  "pct": 0.75,
-  "seed": 6,
+  "l": 2,
+  "pct": 0.6,
+  "seed": 8,
   "conf": "West"
  },
- "LAL": {
+ "POR": {
   "w": 3,
   "l": 0,
   "pct": 1.0,
-  "seed": 4,
+  "seed": 3,
   "conf": "West"
  },
- "HOU": {
+ "LAL": {
   "w": 4,
-  "l": 0,
-  "pct": 1.0,
-  "seed": 1,
+  "l": 1,
+  "pct": 0.8,
+  "seed": 4,
   "conf": "West"
  },
  "OKC": {
   "w": 4,
-  "l": 0,
-  "pct": 1.0,
-  "seed": 2,
+  "l": 1,
+  "pct": 0.8,
+  "seed": 5,
   "conf": "West"
  },
  "MEM": {
   "w": 4,
   "l": 0,
   "pct": 1.0,
-  "seed": 3,
+  "seed": 2,
+  "conf": "West"
+ },
+ "HOU": {
+  "w": 5,
+  "l": 0,
+  "pct": 1.0,
+  "seed": 1,
   "conf": "West"
  }
 }

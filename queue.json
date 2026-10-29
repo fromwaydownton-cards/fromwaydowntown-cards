@@ -80,6 +80,77 @@
       "post_at": "2026-10-29T12:00:00-05:00",
       "title": "Guess the player Oct 29",
       "queued_at": "2026-10-29T05:16:00+00:00"
+    },
+    {
+      "key": "test:20261028",
+      "kind": "nightly",
+      "test": true,
+      "folder": "cards/test/20261028.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/test/20261028.jpg"
+      ],
+      "caption": "Stephen Curry dropped 44. Best performance of the night, or was someone better?\n\nNBA night leaders, Oct 28, 2026. All 12 final scores in the graphic.\n\nMost points: Stephen Curry (GSW) 44 pts\nMost rebounds: Giannis Antetokounmpo (MIA) 18 reb\nMost assists: Andrew Nembhard (IND) 14 ast\nBest 3PT%: Evan Mobley (CLE) 5-6 from 3\nWorst +/-: Kel'el Ware (MIL) -31\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
+      "first_comment": "Vote for the best night \ud83d\udc47 1) Curry  2) Antetokounmpo  3) Nembhard  4) Mobley",
+      "title": "NBA night leaders Oct 28",
+      "queued_at": "2026-10-29T15:20:29+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261028-nightly-test.mp4"
+      ]
+    },
+    {
+      "key": "test-shots:20261028",
+      "kind": "shots",
+      "test": true,
+      "folder": "cards/test/20261028-shots.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/test/20261028-shots.jpg"
+      ],
+      "caption": "Where was Curry most dangerous last night? Paint, midrange or three?\n\nShot charts for the top scorers from Oct 28.\n\n1. Stephen Curry (GSW) 44 pts, 11-27 FG, 6-16 3PT\n2. Jalen Brunson (NYK) 38 pts, 13-25 FG, 6-10 3PT\n3. Victor Wembanyama (SAS) 36 pts, 14-25 FG, 4-10 3PT\n\nGreen = made, red = missed. Follow for the leaders every night.\n\n#NBA #NBAStats #ShotChart #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-10-29T09:00:00-05:00",
+      "title": "Top scorer shot charts Oct 28",
+      "queued_at": "2026-10-29T15:20:30+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261028-shots-test.mp4"
+      ]
+    },
+    {
+      "key": "test-guess:20261028",
+      "kind": "guess",
+      "test": true,
+      "folder": "cards/test/20261028-guess.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/test/20261028-guess.jpg"
+      ],
+      "caption": "GUESS THE PLAYER. 23 points last night. Who put up this shot chart?\n\nHe's not a star, and this was way above his usual. Two hints are on the graphic.\n\nDrop your guess in the comments. Answer in tonight's post.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-10-29T12:00:00-05:00",
+      "title": "Guess the player Oct 29",
+      "queued_at": "2026-10-29T15:20:30+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261028-guess-test.mp4"
+      ]
+    },
+    {
+      "key": "test-mvp:20261028",
+      "kind": "mvp",
+      "test": true,
+      "folder": "cards/test/20261022-20261028.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/test/20261022-20261028.jpg"
+      ],
+      "caption": "MVP LADDER, week of Oct 22-Oct 28. Is Sengun really No. 1?\n\n1. Alperen Sengun (HOU) 25.0 PPG, on/off +51, team 5-0\n2. Luka Doncic (LAL) 38.7 PPG, on/off +24, team 4-1\n3. Victor Wembanyama (SAS) 28.2 PPG, on/off +45, team 3-2\n4. Ty Jerome (MEM) 24.7 PPG, on/off +42, team 4-0\n5. Jayson Tatum (BOS) 33.0 PPG, on/off -8, team 3-1\n\nRanked by Game Score, on/off impact and team record. Who's too high? Who's missing?\n\n#NBA #MVP #NBAStats #hoops #basketball",
+      "first_comment": "Your top 5? Drop it below \ud83d\udc47",
+      "post_at": "2026-10-29T12:00:00-05:00",
+      "week": [
+        "20261022",
+        "20261028"
+      ],
+      "title": "MVP ladder Oct 22-Oct 28",
+      "queued_at": "2026-10-29T15:20:32+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261028-mvp-test.mp4"
+      ]
     }
   ]
 }
