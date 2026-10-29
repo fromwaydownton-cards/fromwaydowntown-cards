@@ -5,101 +5,101 @@
    "id": "401909881",
    "start": "2026-10-28T23:00Z",
    "final": false,
-   "status": "Halftime",
+   "status": "39.1 - 4th",
    "home": "ATL",
    "away": "MIA",
-   "home_score": 56,
-   "away_score": 69
+   "home_score": 117,
+   "away_score": 128
   },
   {
    "id": "401909882",
    "start": "2026-10-28T23:00Z",
    "final": false,
-   "status": "Halftime",
+   "status": "2:06 - 4th",
    "home": "CLE",
    "away": "WAS",
-   "home_score": 59,
-   "away_score": 69
+   "home_score": 117,
+   "away_score": 109
   },
   {
    "id": "401909883",
    "start": "2026-10-28T23:00Z",
    "final": false,
-   "status": "40.0 - 2nd",
+   "status": "5:09 - 4th",
    "home": "DET",
    "away": "CHA",
-   "home_score": 41,
-   "away_score": 50
+   "home_score": 85,
+   "away_score": 79
   },
   {
    "id": "401909884",
    "start": "2026-10-28T23:00Z",
    "final": false,
-   "status": "2:45 - 2nd",
+   "status": "9:04 - 4th",
    "home": "IND",
    "away": "PHI",
-   "home_score": 44,
-   "away_score": 55
+   "home_score": 92,
+   "away_score": 84
   },
   {
    "id": "401909885",
    "start": "2026-10-28T23:30Z",
    "final": false,
-   "status": "10:57 - 2nd",
+   "status": "4:22 - 3rd",
    "home": "TOR",
    "away": "ORL",
-   "home_score": 32,
-   "away_score": 27
+   "home_score": 89,
+   "away_score": 66
   },
   {
    "id": "401909886",
    "start": "2026-10-29T00:00Z",
    "final": false,
-   "status": "8:24 - 1st",
+   "status": "Halftime",
    "home": "CHI",
    "away": "NYK",
-   "home_score": 10,
-   "away_score": 9
+   "home_score": 62,
+   "away_score": 56
   },
   {
    "id": "401909887",
    "start": "2026-10-29T00:00Z",
    "final": false,
-   "status": "7:31 - 1st",
+   "status": "Halftime",
    "home": "MIL",
    "away": "HOU",
-   "home_score": 7,
-   "away_score": 11
+   "home_score": 35,
+   "away_score": 57
   },
   {
    "id": "401909888",
    "start": "2026-10-29T00:00Z",
    "final": false,
-   "status": "8:17 - 1st",
+   "status": "Halftime",
    "home": "MIN",
    "away": "GSW",
-   "home_score": 11,
-   "away_score": 7
+   "home_score": 48,
+   "away_score": 64
   },
   {
    "id": "401909889",
    "start": "2026-10-29T00:00Z",
    "final": false,
-   "status": "9:32 - 1st",
+   "status": "Halftime",
    "home": "NOP",
    "away": "DEN",
-   "home_score": 3,
-   "away_score": 10
+   "home_score": 45,
+   "away_score": 57
   },
   {
    "id": "401909890",
    "start": "2026-10-29T01:00Z",
    "final": false,
-   "status": "10/28 - 9:00 PM EDT",
+   "status": "6:55 - 1st",
    "home": "UTA",
    "away": "SAS",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 16,
+   "away_score": 15
   },
   {
    "id": "401909891",
