@@ -1,19 +1,6 @@
 {
   "queue": [
     {
-      "key": "night:20261025",
-      "kind": "nightly",
-      "test": false,
-      "folder": "cards/nights/20261025.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261025.jpg"
-      ],
-      "caption": "Rank them: Doncic's 52 pts, Sabonis's 15 reb, Garland's 11 ast.\n\nNBA night leaders, Oct 25, 2026. All 7 final scores in the graphic.\n\nMost points: Luka Doncic (LAL) 52 pts\nMost rebounds: Domantas Sabonis (SAC) 15 reb\nMost assists: Darius Garland (LAC) 11 ast\nBest 3PT%: Austin Reaves (LAL) 4-5 from 3\nWorst +/-: Scottie Barnes (TOR) -27\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
-      "first_comment": "Vote for the best night \ud83d\udc47 1) Doncic  2) Sabonis  3) Garland  4) Reaves",
-      "title": "NBA night leaders Oct 25",
-      "queued_at": "2026-10-26T03:53:27+00:00"
-    },
-    {
       "key": "night:20261026",
       "kind": "nightly",
       "test": false,
