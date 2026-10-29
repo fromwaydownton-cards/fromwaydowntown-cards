@@ -39,6 +39,47 @@
       "post_at": "2026-10-28T09:00:00-05:00",
       "title": "Top scorer shot charts Oct 27",
       "queued_at": "2026-10-28T06:00:14+00:00"
+    },
+    {
+      "key": "night:20261028",
+      "kind": "nightly",
+      "test": false,
+      "folder": "cards/nights/20261028.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261028.jpg"
+      ],
+      "caption": "Stephen Curry dropped 44. Best performance of the night, or was someone better?\n\nNBA night leaders, Oct 28, 2026. All 12 final scores in the graphic.\n\nMost points: Stephen Curry (GSW) 44 pts\nMost rebounds: Giannis Antetokounmpo (MIA) 18 reb\nMost assists: Andrew Nembhard (IND) 14 ast\nBest 3PT%: Evan Mobley (CLE) 5-6 from 3\nWorst +/-: Kel'el Ware (MIL) -31\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
+      "first_comment": "Vote for the best night \ud83d\udc47 1) Curry  2) Antetokounmpo  3) Nembhard  4) Mobley",
+      "title": "NBA night leaders Oct 28",
+      "queued_at": "2026-10-29T05:15:56+00:00"
+    },
+    {
+      "key": "shots:20261028",
+      "kind": "shots",
+      "test": false,
+      "folder": "cards/shots/20261028-shots.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/shots/20261028-shots.jpg"
+      ],
+      "caption": "Where was Curry most dangerous last night? Paint, midrange or three?\n\nShot charts for the top scorers from Oct 28.\n\n1. Stephen Curry (GSW) 44 pts, 11-27 FG, 6-16 3PT\n2. Jalen Brunson (NYK) 38 pts, 13-25 FG, 6-10 3PT\n3. Victor Wembanyama (SAS) 36 pts, 14-25 FG, 4-10 3PT\n\nGreen = made, red = missed. Follow for the leaders every night.\n\n#NBA #NBAStats #ShotChart #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-10-29T09:00:00-05:00",
+      "title": "Top scorer shot charts Oct 28",
+      "queued_at": "2026-10-29T05:15:58+00:00"
+    },
+    {
+      "key": "guess:20261028",
+      "kind": "guess",
+      "test": false,
+      "folder": "cards/guess/20261028-guess.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261028-guess.jpg"
+      ],
+      "caption": "GUESS THE PLAYER. 23 points last night. Who put up this shot chart?\n\nHe's not a star, and this was way above his usual. Two hints are on the graphic.\n\nDrop your guess in the comments. Answer in tonight's post.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-10-29T12:00:00-05:00",
+      "title": "Guess the player Oct 29",
+      "queued_at": "2026-10-29T05:16:00+00:00"
     }
   ]
 }

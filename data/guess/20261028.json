@@ -1,0 +1,182 @@
+{
+ "pick": {
+  "id": "5149077",
+  "name": "Kingston Flemings",
+  "team": "ATL",
+  "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/5149077.png",
+  "pts": 23,
+  "reb": 5,
+  "ast": 5,
+  "stl": 1,
+  "blk": 1,
+  "tov": 2,
+  "fgm": 9,
+  "fga": 12,
+  "tpm": 3,
+  "tpa": 5,
+  "pm": -4,
+  "ftm": 2,
+  "fta": 3,
+  "pf": 2,
+  "min": 28,
+  "oreb": 1,
+  "dreb": 4,
+  "game": "401909881",
+  "normal": 3.2,
+  "normal_src": "this season",
+  "jump": 19.8
+ },
+ "shots": {
+  "player": {
+   "id": "5149077",
+   "name": "Kingston Flemings",
+   "team": "ATL",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/5149077.png",
+   "pts": 23,
+   "reb": 5,
+   "ast": 5,
+   "stl": 1,
+   "blk": 1,
+   "tov": 2,
+   "fgm": 9,
+   "fga": 12,
+   "tpm": 3,
+   "tpa": 5,
+   "pm": -4,
+   "ftm": 2,
+   "fta": 3,
+   "pf": 2,
+   "min": 28,
+   "oreb": 1,
+   "dreb": 4,
+   "game": "401909881",
+   "normal": 3.2,
+   "normal_src": "this season",
+   "jump": 19.8
+  },
+  "shots": [
+   {
+    "x": 13,
+    "y": 11,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Kingston Flemings misses 16-foot fade away jump shot",
+    "period": 1,
+    "clock": "4:05"
+   },
+   {
+    "x": 27,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Kingston Flemings makes driving layup",
+    "period": 2,
+    "clock": "11:27"
+   },
+   {
+    "x": 26,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Kingston Flemings makes driving layup (Luguentz Dort assists)",
+    "period": 2,
+    "clock": "10:54"
+   },
+   {
+    "x": 49,
+    "y": 9,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Kingston Flemings misses 25-foot three point jumper",
+    "period": 3,
+    "clock": "7:16"
+   },
+   {
+    "x": 39,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot",
+    "text": "Kingston Flemings makes 14-foot jumper (Dyson Daniels assists)",
+    "period": 3,
+    "clock": "6:44"
+   },
+   {
+    "x": 17,
+    "y": 7,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Kingston Flemings makes 10-foot pullup jump shot (Luguentz Dort assists)",
+    "period": 3,
+    "clock": "4:52"
+   },
+   {
+    "x": 12,
+    "y": 23,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Kingston Flemings makes 25-foot three point jumper (Onyeka Okongwu assists)",
+    "period": 4,
+    "clock": "10:29"
+   },
+   {
+    "x": 25,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Running Dunk Shot",
+    "text": "Kingston Flemings makes running dunk",
+    "period": 4,
+    "clock": "9:53"
+   },
+   {
+    "x": 25,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Kingston Flemings makes driving layup",
+    "period": 4,
+    "clock": "7:45"
+   },
+   {
+    "x": 10,
+    "y": 21,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Kingston Flemings misses 25-foot three point step back jumpshot",
+    "period": 4,
+    "clock": "5:51"
+   },
+   {
+    "x": 49,
+    "y": 4,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Kingston Flemings makes 23-foot three point jumper (Jalen Johnson assists)",
+    "period": 4,
+    "clock": "4:10"
+   },
+   {
+    "x": 37,
+    "y": 22,
+    "made": true,
+    "value": 3,
+    "type": "Running Pullup Jump Shot",
+    "text": "Kingston Flemings makes 24-foot running pullup jump shot (Jalen Johnson assists)",
+    "period": 4,
+    "clock": "40.0"
+   }
+  ],
+  "ft_made": 2,
+  "ft_att": 3
+ }
+}

@@ -1,0 +1,862 @@
+{
+ "3975": {
+  "player": {
+   "id": "3975",
+   "name": "Stephen Curry",
+   "team": "GSW",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/3975.png",
+   "pts": 44,
+   "reb": 8,
+   "ast": 6,
+   "stl": 2,
+   "blk": 0,
+   "tov": 2,
+   "fgm": 11,
+   "fga": 27,
+   "tpm": 6,
+   "tpa": 16,
+   "pm": 10,
+   "ftm": 16,
+   "fta": 16,
+   "pf": 0,
+   "min": 32,
+   "oreb": 1,
+   "dreb": 7,
+   "game": "401909888"
+  },
+  "shots": [
+   {
+    "x": 34,
+    "y": 25,
+    "made": false,
+    "value": 0,
+    "type": "Running Jump Shot",
+    "text": "Stephen Curry misses 26-foot running jump shot",
+    "period": 1,
+    "clock": "10:42"
+   },
+   {
+    "x": 27,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Stephen Curry makes driving layup (Georges Niang assists)",
+    "period": 1,
+    "clock": "10:13"
+   },
+   {
+    "x": 18,
+    "y": 27,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Stephen Curry misses 28-foot three point pullup jump shot",
+    "period": 1,
+    "clock": "9:22"
+   },
+   {
+    "x": 28,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Layup Driving Reverse",
+    "text": "Stephen Curry misses two point shot",
+    "period": 1,
+    "clock": "8:35"
+   },
+   {
+    "x": 13,
+    "y": 23,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Stephen Curry misses 25-foot three point jumper",
+    "period": 1,
+    "clock": "7:41"
+   },
+   {
+    "x": 27,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Layup Shot",
+    "text": "Stephen Curry makes 2-foot layup (Draymond Green assists)",
+    "period": 1,
+    "clock": "7:32"
+   },
+   {
+    "x": 25,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Driving Finger Roll Layup",
+    "text": "Stephen Curry misses two point shot",
+    "period": 2,
+    "clock": "11:37"
+   },
+   {
+    "x": 18,
+    "y": 24,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Stephen Curry misses 24-foot three point jumper",
+    "period": 2,
+    "clock": "10:43"
+   },
+   {
+    "x": 14,
+    "y": 22,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Stephen Curry makes 24-foot three pointer",
+    "period": 2,
+    "clock": "9:11"
+   },
+   {
+    "x": 41,
+    "y": 21,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Stephen Curry makes 26-foot three point jumper (Draymond Green assists)",
+    "period": 2,
+    "clock": "8:39"
+   },
+   {
+    "x": 25,
+    "y": 10,
+    "made": true,
+    "value": 2,
+    "type": "Driving Finger Roll Layup",
+    "text": "Stephen Curry makes 10-foot two point shot (Draymond Green assists)",
+    "period": 2,
+    "clock": "8:09"
+   },
+   {
+    "x": 30,
+    "y": 24,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Stephen Curry makes 24-foot three pointer",
+    "period": 2,
+    "clock": "7:31"
+   },
+   {
+    "x": 20,
+    "y": 25,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Stephen Curry makes 25-foot three point jumper (Brandin Podziemski assists)",
+    "period": 2,
+    "clock": "6:48"
+   },
+   {
+    "x": 32,
+    "y": 31,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Stephen Curry makes 31-foot three pointer",
+    "period": 2,
+    "clock": "6:07"
+   },
+   {
+    "x": 49,
+    "y": 3,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Stephen Curry misses 24-foot three point jumper",
+    "period": 2,
+    "clock": "5:38"
+   },
+   {
+    "x": 31,
+    "y": 17,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Stephen Curry misses driving floating jump shot",
+    "period": 2,
+    "clock": "34.5"
+   },
+   {
+    "x": 35,
+    "y": 26,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Stephen Curry makes 27-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "10:04"
+   },
+   {
+    "x": 45,
+    "y": 11,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Stephen Curry misses 22-foot two point shot",
+    "period": 3,
+    "clock": "9:19"
+   },
+   {
+    "x": 17,
+    "y": 9,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Bank Jump Shot",
+    "text": "Stephen Curry makes 12-foot two point shot (Al Horford assists)",
+    "period": 3,
+    "clock": "6:18"
+   },
+   {
+    "x": 7,
+    "y": 30,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Stephen Curry misses 34-foot three point pullup jump shot",
+    "period": 3,
+    "clock": "5:53"
+   },
+   {
+    "x": 28,
+    "y": 25,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Stephen Curry misses 25-foot three point pullup jump shot",
+    "period": 3,
+    "clock": "5:09"
+   },
+   {
+    "x": 15,
+    "y": 27,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Stephen Curry misses 28-foot three point pullup jump shot",
+    "period": 4,
+    "clock": "9:35"
+   },
+   {
+    "x": 9,
+    "y": 19,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Stephen Curry misses 24-foot three point step back jumpshot",
+    "period": 4,
+    "clock": "3:32"
+   },
+   {
+    "x": 28,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Finger Roll Layup",
+    "text": "Stephen Curry makes 3-foot two point shot",
+    "period": 4,
+    "clock": "2:30"
+   },
+   {
+    "x": 28,
+    "y": 4,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Stephen Curry misses driving layup",
+    "period": 4,
+    "clock": "1:48"
+   },
+   {
+    "x": 44,
+    "y": 18,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Stephen Curry misses 25-foot three point jumper",
+    "period": 4,
+    "clock": "53.7"
+   },
+   {
+    "x": 23,
+    "y": 3,
+    "made": false,
+    "value": 0,
+    "type": "Cutting Layup Shot",
+    "text": "Stephen Curry misses layup",
+    "period": 4,
+    "clock": "44.6"
+   }
+  ],
+  "ft_made": 16,
+  "ft_att": 16
+ },
+ "3934672": {
+  "player": {
+   "id": "3934672",
+   "name": "Jalen Brunson",
+   "team": "NYK",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/3934672.png",
+   "pts": 38,
+   "reb": 1,
+   "ast": 7,
+   "stl": 2,
+   "blk": 0,
+   "tov": 2,
+   "fgm": 13,
+   "fga": 25,
+   "tpm": 6,
+   "tpa": 10,
+   "pm": 3,
+   "ftm": 6,
+   "fta": 8,
+   "pf": 3,
+   "min": 35,
+   "oreb": 1,
+   "dreb": 0,
+   "game": "401909886"
+  },
+  "shots": [
+   {
+    "x": 25,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Jalen Brunson misses driving floating jump shot",
+    "period": 1,
+    "clock": "11:43"
+   },
+   {
+    "x": 33,
+    "y": 18,
+    "made": true,
+    "value": 2,
+    "type": "Step Back Jump Shot",
+    "text": "Jalen Brunson makes 19-foot step back jumpshot",
+    "period": 1,
+    "clock": "10:16"
+   },
+   {
+    "x": 27,
+    "y": 6,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Jalen Brunson misses driving floating jump shot",
+    "period": 1,
+    "clock": "8:43"
+   },
+   {
+    "x": 26,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Running Layup Shot",
+    "text": "Jalen Brunson misses running layup",
+    "period": 1,
+    "clock": "8:31"
+   },
+   {
+    "x": 12,
+    "y": 14,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Jalen Brunson makes 18-foot pullup jump shot (Landry Shamet assists)",
+    "period": 1,
+    "clock": "7:41"
+   },
+   {
+    "x": 48,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Jalen Brunson misses 23-foot three point jumper",
+    "period": 1,
+    "clock": "7:01"
+   },
+   {
+    "x": 25,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Finger Roll Layup",
+    "text": "Jalen Brunson makes two point shot",
+    "period": 1,
+    "clock": "5:41"
+   },
+   {
+    "x": 35,
+    "y": 23,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Jalen Brunson makes 25-foot three pointer",
+    "period": 1,
+    "clock": "4:47"
+   },
+   {
+    "x": 48,
+    "y": 13,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Jalen Brunson misses 26-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "3:39"
+   },
+   {
+    "x": 19,
+    "y": 9,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Jalen Brunson makes 10-foot driving floating jump shot (Andre Drummond assists)",
+    "period": 1,
+    "clock": "3:14"
+   },
+   {
+    "x": 7,
+    "y": 20,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Jalen Brunson makes 26-foot three point jumper",
+    "period": 2,
+    "clock": "3:54"
+   },
+   {
+    "x": 23,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Driving Finger Roll Layup",
+    "text": "Jalen Brunson misses two point shot",
+    "period": 2,
+    "clock": "3:23"
+   },
+   {
+    "x": 37,
+    "y": 15,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Jalen Brunson misses 18-foot fade away jump shot",
+    "period": 2,
+    "clock": "1:00"
+   },
+   {
+    "x": 26,
+    "y": 14,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Jalen Brunson makes 13-foot driving floating jump shot",
+    "period": 3,
+    "clock": "11:21"
+   },
+   {
+    "x": 19,
+    "y": 12,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Jalen Brunson misses 13-foot turnaround jump shot",
+    "period": 3,
+    "clock": "8:19"
+   },
+   {
+    "x": 26,
+    "y": 25,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Jalen Brunson makes 24-foot three pointer",
+    "period": 3,
+    "clock": "4:10"
+   },
+   {
+    "x": 43,
+    "y": 21,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Jalen Brunson misses 27-foot three point jumper",
+    "period": 3,
+    "clock": "2:52"
+   },
+   {
+    "x": 17,
+    "y": 16,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Jalen Brunson misses 17-foot step back jumpshot",
+    "period": 3,
+    "clock": "2:42"
+   },
+   {
+    "x": 24,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Running Layup Shot",
+    "text": "Jalen Brunson misses running layup",
+    "period": 3,
+    "clock": "2:20"
+   },
+   {
+    "x": 39,
+    "y": 17,
+    "made": true,
+    "value": 2,
+    "type": "Step Back Jump Shot",
+    "text": "Jalen Brunson makes 21-foot step back jumpshot",
+    "period": 4,
+    "clock": "6:51"
+   },
+   {
+    "x": 41,
+    "y": 22,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Jalen Brunson misses 27-foot three point pullup jump shot",
+    "period": 4,
+    "clock": "4:59"
+   },
+   {
+    "x": 19,
+    "y": 26,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Jalen Brunson makes 26-foot three point jumper (Jordan Clarkson assists)",
+    "period": 4,
+    "clock": "4:56"
+   },
+   {
+    "x": 23,
+    "y": 9,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Jump Shot",
+    "text": "Jalen Brunson makes 9-foot turnaround jump shot",
+    "period": 4,
+    "clock": "3:45"
+   },
+   {
+    "x": 41,
+    "y": 21,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Jalen Brunson makes 25-foot three pointer",
+    "period": 4,
+    "clock": "3:17"
+   },
+   {
+    "x": 47,
+    "y": 14,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Jalen Brunson makes 25-foot three point jumper",
+    "period": 4,
+    "clock": "1:39"
+   }
+  ],
+  "ft_made": 6,
+  "ft_att": 8
+ },
+ "5104157": {
+  "player": {
+   "id": "5104157",
+   "name": "Victor Wembanyama",
+   "team": "SAS",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/5104157.png",
+   "pts": 36,
+   "reb": 14,
+   "ast": 5,
+   "stl": 2,
+   "blk": 2,
+   "tov": 0,
+   "fgm": 14,
+   "fga": 25,
+   "tpm": 4,
+   "tpa": 10,
+   "pm": 14,
+   "ftm": 4,
+   "fta": 4,
+   "pf": 4,
+   "min": 39,
+   "oreb": 2,
+   "dreb": 12,
+   "game": "401909890"
+  },
+  "shots": [
+   {
+    "x": 26,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Alley Oop Dunk Shot",
+    "text": "Victor Wembanyama makes 3-foot alley oop dunk (Stephon Castle assists)",
+    "period": 1,
+    "clock": "11:24"
+   },
+   {
+    "x": 21,
+    "y": 26,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama makes 26-foot three point jumper (Stephon Castle assists)",
+    "period": 1,
+    "clock": "10:24"
+   },
+   {
+    "x": 22,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Victor Wembanyama makes driving layup",
+    "period": 1,
+    "clock": "7:55"
+   },
+   {
+    "x": 23,
+    "y": 16,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama makes 16-foot jumper (Dylan Harper assists)",
+    "period": 1,
+    "clock": "7:26"
+   },
+   {
+    "x": 40,
+    "y": 20,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama misses 25-foot three point jumper",
+    "period": 1,
+    "clock": "6:27"
+   },
+   {
+    "x": 25,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Running Alley Oop Dunk Shot",
+    "text": "Victor Wembanyama makes 3-foot dunk (Stephon Castle assists)",
+    "period": 2,
+    "clock": "8:25"
+   },
+   {
+    "x": 25,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Alley Oop Dunk Shot",
+    "text": "Victor Wembanyama makes 2-foot alley oop dunk (Stephon Castle assists)",
+    "period": 2,
+    "clock": "7:11"
+   },
+   {
+    "x": 26,
+    "y": 17,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Victor Wembanyama misses 17-foot pullup jump shot",
+    "period": 2,
+    "clock": "6:48"
+   },
+   {
+    "x": 28,
+    "y": 15,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama misses 15-foot jumper",
+    "period": 2,
+    "clock": "3:27"
+   },
+   {
+    "x": 26,
+    "y": 25,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama makes 25-foot three point jumper (Devin Vassell assists)",
+    "period": 2,
+    "clock": "2:57"
+   },
+   {
+    "x": 10,
+    "y": 16,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama makes 21-foot jumper",
+    "period": 2,
+    "clock": "1:55"
+   },
+   {
+    "x": 22,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama misses 25-foot three point jumper",
+    "period": 2,
+    "clock": "1:15"
+   },
+   {
+    "x": 8,
+    "y": 19,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Victor Wembanyama makes 25-foot three point step back jumpshot",
+    "period": 2,
+    "clock": "32.3"
+   },
+   {
+    "x": 43,
+    "y": 18,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Jaxson Hayes blocks Victor Wembanyama 's 25-foot three point jumper",
+    "period": 2,
+    "clock": "1.1"
+   },
+   {
+    "x": 29,
+    "y": 3,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Victor Wembanyama misses driving layup",
+    "period": 3,
+    "clock": "11:35"
+   },
+   {
+    "x": 13,
+    "y": 22,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama misses 25-foot three point jumper",
+    "period": 3,
+    "clock": "10:03"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Putback Dunk Shot",
+    "text": "Victor Wembanyama makes dunk",
+    "period": 3,
+    "clock": "9:59"
+   },
+   {
+    "x": 9,
+    "y": 22,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama makes 27-foot three point jumper (De'Aaron Fox assists)",
+    "period": 3,
+    "clock": "1:29"
+   },
+   {
+    "x": 29,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Victor Wembanyama misses 26-foot three point pullup jump shot",
+    "period": 4,
+    "clock": "11:09"
+   },
+   {
+    "x": 22,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Alley Oop Dunk Shot",
+    "text": "Victor Wembanyama makes 3-foot alley oop dunk (Keldon Johnson assists)",
+    "period": 4,
+    "clock": "9:49"
+   },
+   {
+    "x": 15,
+    "y": 24,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama misses 25-foot three point jumper",
+    "period": 4,
+    "clock": "4:31"
+   },
+   {
+    "x": 20,
+    "y": 10,
+    "made": false,
+    "value": 0,
+    "type": "Floating Jump Shot",
+    "text": "Victor Wembanyama misses 10-foot floating jump shot",
+    "period": 4,
+    "clock": "1:33"
+   },
+   {
+    "x": 21,
+    "y": 10,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Victor Wembanyama misses 10-foot turnaround jump shot",
+    "period": 4,
+    "clock": "31.9"
+   },
+   {
+    "x": 28,
+    "y": 13,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot",
+    "text": "Victor Wembanyama makes 12-foot jumper (De'Aaron Fox assists)",
+    "period": 5,
+    "clock": "1:34"
+   },
+   {
+    "x": 25,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Dunk Shot",
+    "text": "Victor Wembanyama makes 2-foot dunk (Devin Vassell assists)",
+    "period": 5,
+    "clock": "1:18"
+   }
+  ],
+  "ft_made": 4,
+  "ft_att": 4
+ }
+}
