@@ -24,8 +24,16 @@ sports data.
    date `post_at` and publicationDate {dateTime: post_at's local time, timezone
    "America/Chicago"}). Otherwise use now + 3 minutes in `America/Los_Angeles`.
    Metricool holds future posts and publishes them on time, so schedule it in this run.
-   - Normal entry (`"test": false`): providers tiktok, facebook, instagram.
+   - Normal entry (`"test": false`): providers tiktok, facebook, instagram
+     (+ youtube if getBrandSettings shows a YouTube channel connected).
    - Test entry (`"test": true`): provider tiktok ONLY, privacyOption `SELF_ONLY`.
+   - **Video entries.** If the entry has `videos`, post the VIDEO, not the image:
+     `media` = entry.videos; instagramData type `"REEL"` (showReelOnFeed true);
+     facebookData type `"REEL"`; tiktokData without photoCoverIndex;
+     youtubeData {"title": entry.title (max 100 chars), "type": "short",
+     "privacy": "public", "madeForKids": false, "category": "SPORTS"}.
+     If Metricool rejects the video, retry once with the image version
+     (media = entry.images, types back to POST) and report it.
    ```json
    {"autoPublish": true, "draft": false, "descendants": [],
     "firstCommentText": <entry.first_comment or "">, "hasNotReadNotes": false, "shortener": false,

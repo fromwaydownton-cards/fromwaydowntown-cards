@@ -31,6 +31,8 @@ ROOT = Path(__file__).resolve().parent
 QUEUE = ROOT / "queue.json"
 NIGHTS = ROOT / "cards" / "nights"
 RAW = "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/"
+MEDIA_RAW = "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/"
+MEDIA = ROOT / "media"     # videos are published to the 'media' branch (last 8 days kept)
 LABEL = {"pts": "Most points", "reb": "Most rebounds", "ast": "Most assists",
          "three": "Best 3PT%", "worst_pm": "Worst +/-"}
 
@@ -201,8 +203,35 @@ def build_mvp_entry(night, test=False):
     return {"key": ("test-mvp:" if test else "mvp:") + date, "kind": "mvp", "test": test,
             "folder": rel, "images": [RAW + rel], "caption": caption,
             "first_comment": "Your top 5? Drop it below 👇", "post_at": at_central(post_day, NOON),
+            "week": [start, date],
             "title": "MVP ladder " + wk,
             "queued_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+
+
+def add_video(entry, date):
+    """Render the 60+ second video for an entry. On any failure the entry stays
+    image-only, so a video problem never stops a post."""
+    import video_leaders
+    import video_more
+    MEDIA.mkdir(exist_ok=True)
+    name = f"{date}-{entry['kind']}{'-test' if entry.get('test') else ''}.mp4"
+    out = MEDIA / name
+    try:
+        if entry["kind"] == "nightly":
+            video_leaders.build(date, out)
+        elif entry["kind"] == "shots":
+            video_more.shots_video(date, out)
+        elif entry["kind"] == "guess":
+            video_more.guess_video(date, out)
+        elif entry["kind"] == "mvp":
+            video_more.mvp_video(entry["week"][0], entry["week"][1], out)
+        else:
+            return entry
+        entry["videos"] = [MEDIA_RAW + name]
+        print(f"VIDEO {name} {out.stat().st_size // 1024} KB")
+    except Exception as e:
+        print(f"VIDEO FAILED {name}: {e} (posting the image instead)")
+    return entry
 
 
 def build(date, test=False):
@@ -240,6 +269,8 @@ def build(date, test=False):
                 print(f"BUILT {e['folder']} (posts {e['post_at']})")
         except Exception as ex:  # extra graphics never block the nightly post
             print(f"{name} FAILED for {date}: {ex}")
+    for e in entries:
+        add_video(e, date)
     return entries
 
 

@@ -24,13 +24,15 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install pillow
+      - run: pip install pillow numpy
+      - name: ffmpeg
+        run: which ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
       - name: Build when the night is over
         run: |
           set -o pipefail
@@ -40,6 +42,10 @@ jobs:
           if ! python3 nightly.py $ARGS 2>&1 | tee run.log; then
             echo "::error title=nightly failed::$(tail -c 900 run.log | tr '\n' '|')"; exit 1; fi
           echo "::notice title=nightly::$(tail -c 900 run.log | tr '\n' '|')"
+      - name: Publish videos to the media branch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: ./publish_media.sh
       - name: Commit and push
         run: |
           git config user.name "fromwaydowntown-bot"
