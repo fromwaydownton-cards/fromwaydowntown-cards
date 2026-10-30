@@ -37,8 +37,15 @@ LABEL = {"pts": "Most points", "reb": "Most rebounds", "ast": "Most assists",
          "three": "Best 3PT%", "worst_pm": "Worst +/-"}
 
 
+SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv", "v"}
+
+
 def last(name):
-    return name.split()[-1]
+    """Last name for captions, skipping suffixes: 'Darius Acuff Jr.' -> 'Acuff'."""
+    parts = name.split()
+    while len(parts) > 1 and parts[-1].lower() in SUFFIXES:
+        parts.pop()
+    return parts[-1]
 
 
 def question(night, L):
