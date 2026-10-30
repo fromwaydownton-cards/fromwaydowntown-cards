@@ -25,11 +25,11 @@
    "id": "401909895",
    "start": "2026-10-30T02:00Z",
    "final": false,
-   "status": "3:23 - 2nd",
+   "status": "1:15 - 3rd",
    "home": "POR",
    "away": "MEM",
-   "home_score": 49,
-   "away_score": 48
+   "home_score": 78,
+   "away_score": 87
   }
  ],
  "players": [
@@ -883,7 +883,7 @@
    "ast": 3,
    "stl": 0,
    "blk": 0,
-   "tov": 2,
+   "tov": 1,
    "fgm": 3,
    "fga": 6,
    "tpm": 1,
