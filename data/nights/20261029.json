@@ -5,21 +5,21 @@
    "id": "401909893",
    "start": "2026-10-30T00:00Z",
    "final": false,
-   "status": "10:19 - 1st",
+   "status": "Halftime",
    "home": "ATL",
    "away": "CLE",
-   "home_score": 0,
-   "away_score": 4
+   "home_score": 46,
+   "away_score": 44
   },
   {
    "id": "401909894",
    "start": "2026-10-30T00:00Z",
    "final": false,
-   "status": "9:53 - 1st",
+   "status": "Halftime",
    "home": "NOP",
    "away": "SAC",
-   "home_score": 5,
-   "away_score": 0
+   "home_score": 63,
+   "away_score": 61
   },
   {
    "id": "401909895",
