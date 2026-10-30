@@ -1,19 +1,6 @@
 {
   "queue": [
     {
-      "key": "night:20261026",
-      "kind": "nightly",
-      "test": false,
-      "folder": "cards/nights/20261026.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261026.jpg"
-      ],
-      "caption": "Buddy Hield finished -29. Fair to blame him or was it the whole team?\n\nNBA night leaders, Oct 26, 2026. All 9 final scores in the graphic.\n\nMost points: Anthony Edwards (MIN) 47 pts\nMost rebounds: Rudy Gobert (MIN) 20 reb\nMost assists: Nikola Jokic (DEN) 11 ast\nBest 3PT%: Evan Mobley (CLE) 4-5 from 3\nWorst +/-: Buddy Hield (CHI) -29\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
-      "first_comment": "Vote for the best night \ud83d\udc47 1) Edwards  2) Gobert  3) Jokic  4) Mobley",
-      "title": "NBA night leaders Oct 26",
-      "queued_at": "2026-10-27T04:36:04+00:00"
-    },
-    {
       "key": "night:20261027",
       "kind": "nightly",
       "test": false,
