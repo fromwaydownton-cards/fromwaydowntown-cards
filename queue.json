@@ -80,6 +80,39 @@
       "post_at": "2026-10-29T12:00:00-05:00",
       "title": "Guess the player Oct 29",
       "queued_at": "2026-10-29T05:16:00+00:00"
+    },
+    {
+      "key": "night:20261029",
+      "kind": "nightly",
+      "test": false,
+      "folder": "cards/nights/20261029.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261029.jpg"
+      ],
+      "caption": "34 points for Jr.. Real or a one-night thing?\n\nToday's Guess the Player answer: Kingston Flemings (ATL), 23 pts vs his usual 3.2. Did you get it?\n\nNBA night leaders, Oct 29, 2026. All 3 final scores in the graphic.\n\nMost points: Darius Acuff Jr. (SAC) 34 pts\nMost rebounds: Domantas Sabonis (SAC) 15 reb\nMost assists: Jeremiah Fears (NOP) 13 ast\nBest 3PT%: Cameron Boozer (MEM) 4-5 from 3\nWorst +/-: Zach LaVine (SAC) -25\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
+      "first_comment": "Vote for the best night \ud83d\udc47 1) Jr.  2) Sabonis  3) Fears  4) Boozer",
+      "title": "NBA night leaders Oct 29",
+      "queued_at": "2026-10-30T04:29:38+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261029-nightly.mp4"
+      ]
+    },
+    {
+      "key": "shots:20261029",
+      "kind": "shots",
+      "test": false,
+      "folder": "cards/shots/20261029-shots.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/shots/20261029-shots.jpg"
+      ],
+      "caption": "Whose shot chart are you taking: Jr., Okongwu, Alexander-Walker?\n\nShot charts for the top scorers from Oct 29.\n\n1. Darius Acuff Jr. (SAC) 34 pts, 13-26 FG, 3-11 3PT\n2. Onyeka Okongwu (ATL) 29 pts, 11-17 FG, 4-6 3PT\n3. Nickeil Alexander-Walker (ATL) 25 pts, 8-17 FG, 4-12 3PT\n\nGreen = made, red = missed. Follow for the leaders every night.\n\n#NBA #NBAStats #ShotChart #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-10-30T09:00:00-05:00",
+      "title": "Top scorer shot charts Oct 29",
+      "queued_at": "2026-10-30T04:29:39+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261029-shots.mp4"
+      ]
     }
   ]
 }
