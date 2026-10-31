@@ -1,0 +1,882 @@
+{
+ "4433134": {
+  "player": {
+   "id": "4433134",
+   "name": "Scottie Barnes",
+   "team": "TOR",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4433134.png",
+   "pts": 41,
+   "reb": 5,
+   "ast": 5,
+   "stl": 2,
+   "blk": 0,
+   "tov": 4,
+   "fgm": 19,
+   "fga": 34,
+   "tpm": 1,
+   "tpa": 2,
+   "pm": -11,
+   "ftm": 2,
+   "fta": 3,
+   "pf": 6,
+   "min": 39,
+   "oreb": 2,
+   "dreb": 3,
+   "game": "401909281"
+  },
+  "shots": [
+   {
+    "x": 24,
+    "y": 13,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Scottie Barnes misses 12-foot two point shot",
+    "period": 1,
+    "clock": "11:42"
+   },
+   {
+    "x": 24,
+    "y": 6,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Jump Shot",
+    "text": "Scottie Barnes makes 6-foot turnaround jump shot",
+    "period": 1,
+    "clock": "10:45"
+   },
+   {
+    "x": 19,
+    "y": 13,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Scottie Barnes misses 14-foot pullup jump shot",
+    "period": 1,
+    "clock": "10:11"
+   },
+   {
+    "x": 35,
+    "y": 0,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Scottie Barnes misses driving layup",
+    "period": 1,
+    "clock": "6:50"
+   },
+   {
+    "x": 33,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Scottie Barnes misses 26-foot three point jumper",
+    "period": 1,
+    "clock": "4:11"
+   },
+   {
+    "x": 25,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Scottie Barnes makes running layup (Immanuel Quickley assists)",
+    "period": 1,
+    "clock": "3:06"
+   },
+   {
+    "x": 28,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Jump Shot",
+    "text": "Scottie Barnes makes 8-foot turnaround jump shot",
+    "period": 1,
+    "clock": "28.9"
+   },
+   {
+    "x": 29,
+    "y": 11,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Scottie Barnes misses 11-foot pullup jump shot",
+    "period": 2,
+    "clock": "11:18"
+   },
+   {
+    "x": 34,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Jump Shot",
+    "text": "Scottie Barnes makes 9-foot turnaround jump shot (Immanuel Quickley assists)",
+    "period": 2,
+    "clock": "8:47"
+   },
+   {
+    "x": 10,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Scottie Barnes makes 15-foot two point shot",
+    "period": 2,
+    "clock": "6:26"
+   },
+   {
+    "x": 29,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Scottie Barnes misses 6-foot turnaround jump shot",
+    "period": 2,
+    "clock": "5:58"
+   },
+   {
+    "x": 24,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Dunk Shot",
+    "text": "Scottie Barnes makes 1-foot dunk (Collin Murray-Boyles assists)",
+    "period": 2,
+    "clock": "4:51"
+   },
+   {
+    "x": 24,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Driving Finger Roll Layup",
+    "text": "Scottie Barnes misses two point shot",
+    "period": 2,
+    "clock": "4:27"
+   },
+   {
+    "x": 38,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Scottie Barnes makes 12-foot fade away jump shot",
+    "period": 2,
+    "clock": "4:11"
+   },
+   {
+    "x": 36,
+    "y": 11,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Scottie Barnes misses 15-foot pullup jump shot",
+    "period": 2,
+    "clock": "3:46"
+   },
+   {
+    "x": 28,
+    "y": 4,
+    "made": false,
+    "value": 0,
+    "type": "Driving Finger Roll Layup",
+    "text": "Scottie Barnes misses two point shot",
+    "period": 2,
+    "clock": "3:10"
+   },
+   {
+    "x": 24,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Hook Shot",
+    "text": "Scottie Barnes makes two point shot",
+    "period": 2,
+    "clock": "3:06"
+   },
+   {
+    "x": 27,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Hook Shot",
+    "text": "Scottie Barnes makes 3-foot two point shot (Jamal Shead assists)",
+    "period": 2,
+    "clock": "2:40"
+   },
+   {
+    "x": 29,
+    "y": 4,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Goga Bitadze blocks Scottie Barnes 's 6-foot driving layup",
+    "period": 2,
+    "clock": "2:08"
+   },
+   {
+    "x": 26,
+    "y": 0,
+    "made": false,
+    "value": 0,
+    "type": "Tip Shot",
+    "text": "Scottie Barnes misses 1-foot tip shot",
+    "period": 2,
+    "clock": "2:05"
+   },
+   {
+    "x": 24,
+    "y": 14,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Scottie Barnes misses 13-foot jumper",
+    "period": 2,
+    "clock": "1:34"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Layup Shot",
+    "text": "Scottie Barnes makes layup (Jamal Shead assists)",
+    "period": 2,
+    "clock": "1:29"
+   },
+   {
+    "x": 22,
+    "y": 13,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Scottie Barnes misses 12-foot pullup jump shot",
+    "period": 2,
+    "clock": "27.0"
+   },
+   {
+    "x": 21,
+    "y": 13,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Scottie Barnes makes 13-foot pullup jump shot (Jamal Shead assists)",
+    "period": 2,
+    "clock": "0.0"
+   },
+   {
+    "x": 31,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Bank Jump Shot",
+    "text": "Scottie Barnes makes 6-foot two point shot (Jakob Poeltl assists)",
+    "period": 3,
+    "clock": "11:16"
+   },
+   {
+    "x": 25,
+    "y": -2,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Tristan da Silva blocks Scottie Barnes's jumper",
+    "period": 3,
+    "clock": "2:58"
+   },
+   {
+    "x": 13,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Scottie Barnes makes 12-foot pullup jump shot (Immanuel Quickley assists)",
+    "period": 3,
+    "clock": "1:40"
+   },
+   {
+    "x": 24,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Jump Shot",
+    "text": "Scottie Barnes makes 7-foot turnaround jump shot",
+    "period": 3,
+    "clock": "1:06"
+   },
+   {
+    "x": 39,
+    "y": -2,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Scottie Barnes makes 13-foot two point shot",
+    "period": 3,
+    "clock": "1.5"
+   },
+   {
+    "x": 48,
+    "y": 6,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Scottie Barnes makes 24-foot three point jumper (RJ Barrett assists)",
+    "period": 4,
+    "clock": "11:48"
+   },
+   {
+    "x": 13,
+    "y": 14,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Scottie Barnes makes 18-foot pullup jump shot (Immanuel Quickley assists)",
+    "period": 4,
+    "clock": "11:12"
+   },
+   {
+    "x": 17,
+    "y": 16,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Scottie Barnes makes 17-foot two point shot (Ja'Kobe Walter assists)",
+    "period": 4,
+    "clock": "9:43"
+   },
+   {
+    "x": 39,
+    "y": 5,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Scottie Barnes makes 14-foot two point shot",
+    "period": 4,
+    "clock": "9:08"
+   },
+   {
+    "x": 24,
+    "y": -2,
+    "made": false,
+    "value": 0,
+    "type": "Driving Finger Roll Layup",
+    "text": "Scottie Barnes misses two point shot",
+    "period": 4,
+    "clock": "50.3"
+   }
+  ],
+  "ft_made": 2,
+  "ft_att": 3
+ },
+ "3936299": {
+  "player": {
+   "id": "3936299",
+   "name": "Jamal Murray",
+   "team": "DEN",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/3936299.png",
+   "pts": 39,
+   "reb": 8,
+   "ast": 5,
+   "stl": 1,
+   "blk": 1,
+   "tov": 5,
+   "fgm": 10,
+   "fga": 18,
+   "tpm": 7,
+   "tpa": 9,
+   "pm": 13,
+   "ftm": 12,
+   "fta": 15,
+   "pf": 1,
+   "min": 37,
+   "oreb": 2,
+   "dreb": 6,
+   "game": "401909286"
+  },
+  "shots": [
+   {
+    "x": 29,
+    "y": 12,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Jump Shot",
+    "text": "Jamal Murray makes 12-foot turnaround jump shot",
+    "period": 2,
+    "clock": "6:25"
+   },
+   {
+    "x": 24,
+    "y": 25,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Jamal Murray makes 24-foot three pointer (Nikola Jokic assists)",
+    "period": 2,
+    "clock": "5:13"
+   },
+   {
+    "x": 6,
+    "y": 14,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Jamal Murray misses 23-foot step back jumpshot",
+    "period": 2,
+    "clock": "3:21"
+   },
+   {
+    "x": 11,
+    "y": -1,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Jamal Murray makes 13-foot fade away jump shot",
+    "period": 2,
+    "clock": "1:15"
+   },
+   {
+    "x": 12,
+    "y": 14,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Jamal Murray misses 19-foot step back jumpshot",
+    "period": 2,
+    "clock": "0.3"
+   },
+   {
+    "x": 13,
+    "y": 12,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Jamal Murray misses 16-foot step back jumpshot",
+    "period": 3,
+    "clock": "11:43"
+   },
+   {
+    "x": 47,
+    "y": 16,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Jamal Murray makes 27-foot three point jumper (Aaron Gordon assists)",
+    "period": 3,
+    "clock": "10:55"
+   },
+   {
+    "x": 5,
+    "y": 17,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Jamal Murray makes 26-foot three point jumper (Nikola Jokic assists)",
+    "period": 3,
+    "clock": "9:28"
+   },
+   {
+    "x": 26,
+    "y": 28,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Jamal Murray makes 27-foot three pointer (Nikola Jokic assists)",
+    "period": 3,
+    "clock": "8:26"
+   },
+   {
+    "x": 39,
+    "y": 12,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Jamal Murray misses 18-foot pullup jump shot",
+    "period": 3,
+    "clock": "7:50"
+   },
+   {
+    "x": 14,
+    "y": 23,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Jamal Murray misses 25-foot three point pullup jump shot",
+    "period": 3,
+    "clock": "5:31"
+   },
+   {
+    "x": 18,
+    "y": 25,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Jamal Murray makes 26-foot three point jumper (Nikola Jokic assists)",
+    "period": 3,
+    "clock": "4:04"
+   },
+   {
+    "x": 10,
+    "y": 21,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Jamal Murray makes 25-foot three point jumper (Aaron Gordon assists)",
+    "period": 4,
+    "clock": "9:21"
+   },
+   {
+    "x": 45,
+    "y": 22,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Jamal Murray makes 29-foot three point jumper (Aaron Gordon assists)",
+    "period": 4,
+    "clock": "7:35"
+   },
+   {
+    "x": 26,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Jamal Murray misses driving layup",
+    "period": 4,
+    "clock": "7:08"
+   },
+   {
+    "x": 44,
+    "y": 12,
+    "made": true,
+    "value": 2,
+    "type": "Step Back Jump Shot",
+    "text": "Jamal Murray makes 22-foot step back jumpshot (Trevon Brazile assists)",
+    "period": 4,
+    "clock": "6:54"
+   },
+   {
+    "x": 18,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Jamal Murray misses 7-foot turnaround jump shot",
+    "period": 4,
+    "clock": "6:09"
+   },
+   {
+    "x": 50,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Jamal Murray misses 24-foot turnaround jump shot",
+    "period": 4,
+    "clock": "3:17"
+   }
+  ],
+  "ft_made": 12,
+  "ft_att": 15
+ },
+ "3945274": {
+  "player": {
+   "id": "3945274",
+   "name": "Luka Doncic",
+   "team": "LAL",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/3945274.png",
+   "pts": 37,
+   "reb": 7,
+   "ast": 5,
+   "stl": 1,
+   "blk": 2,
+   "tov": 3,
+   "fgm": 12,
+   "fga": 27,
+   "tpm": 6,
+   "tpa": 16,
+   "pm": 9,
+   "ftm": 7,
+   "fta": 8,
+   "pf": 2,
+   "min": 37,
+   "oreb": 1,
+   "dreb": 6,
+   "game": "401909285"
+  },
+  "shots": [
+   {
+    "x": 32,
+    "y": 6,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Luka Doncic misses driving floating jump shot",
+    "period": 1,
+    "clock": "11:23"
+   },
+   {
+    "x": 2,
+    "y": 7,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Luka Doncic makes 23-foot three point jumper",
+    "period": 1,
+    "clock": "11:15"
+   },
+   {
+    "x": 13,
+    "y": 22,
+    "made": false,
+    "value": 0,
+    "type": "Running Pullup Jump Shot",
+    "text": "Luka Doncic misses running pullup jump shot",
+    "period": 1,
+    "clock": "10:15"
+   },
+   {
+    "x": 20,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Luka Doncic makes running layup (Austin Reaves assists)",
+    "period": 1,
+    "clock": "9:30"
+   },
+   {
+    "x": 22,
+    "y": 27,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 27-foot three point step back jumpshot (Austin Reaves assists)",
+    "period": 1,
+    "clock": "7:01"
+   },
+   {
+    "x": 11,
+    "y": 21,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic misses 24-foot three point pullup jump shot",
+    "period": 1,
+    "clock": "6:35"
+   },
+   {
+    "x": 3,
+    "y": 13,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Luka Doncic misses 25-foot three point jumper",
+    "period": 1,
+    "clock": "4:56"
+   },
+   {
+    "x": 2,
+    "y": 2,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Luka Doncic makes 22-foot three point jumper (Jarred Vanderbilt assists)",
+    "period": 1,
+    "clock": "4:51"
+   },
+   {
+    "x": 20,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Luka Doncic makes 9-foot driving floating jump shot",
+    "period": 1,
+    "clock": "4:27"
+   },
+   {
+    "x": 3,
+    "y": 11,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 24-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "2:17"
+   },
+   {
+    "x": 29,
+    "y": 30,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Luka Doncic misses 30-foot three point jumper",
+    "period": 1,
+    "clock": "1:42"
+   },
+   {
+    "x": 2,
+    "y": 9,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Luka Doncic makes 24-foot three point jumper (Jarred Vanderbilt assists)",
+    "period": 1,
+    "clock": "23.5"
+   },
+   {
+    "x": 19,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Luka Doncic makes 9-foot driving floating jump shot",
+    "period": 2,
+    "clock": "5:32"
+   },
+   {
+    "x": 39,
+    "y": 30,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Luka Doncic misses 33-foot three point jumper",
+    "period": 2,
+    "clock": "4:58"
+   },
+   {
+    "x": 24,
+    "y": 27,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Brandin Podziemski blocks Luka Doncic 's 27-foot three point step back jumpshot",
+    "period": 2,
+    "clock": "1:42"
+   },
+   {
+    "x": 23,
+    "y": 3,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Luka Doncic misses driving layup",
+    "period": 2,
+    "clock": "1:37"
+   },
+   {
+    "x": 14,
+    "y": 23,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic misses 25-foot three point pullup jump shot",
+    "period": 2,
+    "clock": "32.7"
+   },
+   {
+    "x": 7,
+    "y": 20,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 26-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "11:49"
+   },
+   {
+    "x": 7,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot",
+    "text": "Luka Doncic makes 17-foot jumper (Walker Kessler assists)",
+    "period": 3,
+    "clock": "10:52"
+   },
+   {
+    "x": 19,
+    "y": 12,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Luka Doncic misses 13-foot fade away jump shot",
+    "period": 3,
+    "clock": "9:28"
+   },
+   {
+    "x": 33,
+    "y": 24,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 25-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "8:16"
+   },
+   {
+    "x": 26,
+    "y": 18,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Luka Doncic makes 18-foot fade away jump shot",
+    "period": 3,
+    "clock": "6:49"
+   },
+   {
+    "x": 31,
+    "y": 27,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 27-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "5:54"
+   },
+   {
+    "x": 38,
+    "y": 0,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Luka Doncic misses 13-foot fade away jump shot",
+    "period": 3,
+    "clock": "4:42"
+   },
+   {
+    "x": 29,
+    "y": 28,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 27-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "2:56"
+   },
+   {
+    "x": 12,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Floating Jump Shot",
+    "text": "Luka Doncic makes 13-foot floating jump shot (Austin Reaves assists)",
+    "period": 4,
+    "clock": "6:42"
+   },
+   {
+    "x": 18,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Luka Doncic misses driving layup",
+    "period": 4,
+    "clock": "2:11"
+   }
+  ],
+  "ft_made": 7,
+  "ft_att": 8
+ }
+}
