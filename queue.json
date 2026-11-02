@@ -1,39 +1,6 @@
 {
   "queue": [
     {
-      "key": "night:20261029",
-      "kind": "nightly",
-      "test": false,
-      "folder": "cards/nights/20261029.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261029.jpg"
-      ],
-      "caption": "34 points for Jr.. Real or a one-night thing?\n\nToday's Guess the Player answer: Kingston Flemings (ATL), 23 pts vs his usual 3.2. Did you get it?\n\nNBA night leaders, Oct 29, 2026. All 3 final scores in the graphic.\n\nMost points: Darius Acuff Jr. (SAC) 34 pts\nMost rebounds: Domantas Sabonis (SAC) 15 reb\nMost assists: Jeremiah Fears (NOP) 13 ast\nBest 3PT%: Cameron Boozer (MEM) 4-5 from 3\nWorst +/-: Zach LaVine (SAC) -25\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
-      "first_comment": "Vote for the best night \ud83d\udc47 1) Jr.  2) Sabonis  3) Fears  4) Boozer",
-      "title": "NBA night leaders Oct 29",
-      "queued_at": "2026-10-30T04:29:38+00:00",
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261029-nightly.mp4"
-      ]
-    },
-    {
-      "key": "shots:20261029",
-      "kind": "shots",
-      "test": false,
-      "folder": "cards/shots/20261029-shots.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/shots/20261029-shots.jpg"
-      ],
-      "caption": "Whose shot chart are you taking: Jr., Okongwu, Alexander-Walker?\n\nShot charts for the top scorers from Oct 29.\n\n1. Darius Acuff Jr. (SAC) 34 pts, 13-26 FG, 3-11 3PT\n2. Onyeka Okongwu (ATL) 29 pts, 11-17 FG, 4-6 3PT\n3. Nickeil Alexander-Walker (ATL) 25 pts, 8-17 FG, 4-12 3PT\n\nGreen = made, red = missed. Follow for the leaders every night.\n\n#NBA #NBAStats #ShotChart #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-10-30T09:00:00-05:00",
-      "title": "Top scorer shot charts Oct 29",
-      "queued_at": "2026-10-30T04:29:39+00:00",
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261029-shots.mp4"
-      ]
-    },
-    {
       "key": "night:20261030",
       "kind": "nightly",
       "test": false,
@@ -114,6 +81,60 @@
       "queued_at": "2026-11-01T02:51:04+00:00",
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261031-shots.mp4"
+      ]
+    },
+    {
+      "key": "night:20261101",
+      "kind": "nightly",
+      "test": false,
+      "folder": "cards/nights/20261101.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261101.jpg"
+      ],
+      "caption": "45 points for Doncic. Real or a one-night thing?\n\nNBA night leaders, Nov 1, 2026. All 4 final scores in the graphic.\n\nMost points: Luka Doncic (LAL) 45 pts\nMost rebounds: Walker Kessler (LAL) 15 reb\nMost assists: Franz Wagner (ORL) 12 ast\nBest 3PT%: De'Anthony Melton (GSW) 6-8 from 3\nWorst +/-: Rui Hachimura (LAC) -28\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
+      "first_comment": "Vote for the best night \ud83d\udc47 1) Doncic  2) Kessler  3) Wagner  4) Melton",
+      "title": "NBA night leaders Nov 1",
+      "queued_at": "2026-11-02T05:30:07+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261101-nightly.mp4"
+      ]
+    },
+    {
+      "key": "shots:20261101",
+      "kind": "shots",
+      "test": false,
+      "folder": "cards/shots/20261101-shots.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/shots/20261101-shots.jpg"
+      ],
+      "caption": "Whose shot chart are you taking: Doncic, Lendeborg, Tatum?\n\nShot charts for the top scorers from Nov 1.\n\n1. Luka Doncic (LAL) 45 pts, 12-23 FG, 8-12 3PT\n2. Yaxel Lendeborg (GSW) 37 pts, 13-19 FG, 6-11 3PT\n3. Jayson Tatum (BOS) 32 pts, 8-19 FG, 1-5 3PT\n\nGreen = made, red = missed. Follow for the leaders every night.\n\n#NBA #NBAStats #ShotChart #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-02T09:00:00-06:00",
+      "title": "Top scorer shot charts Nov 1",
+      "queued_at": "2026-11-02T05:30:07+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261101-shots.mp4"
+      ]
+    },
+    {
+      "key": "mvp:20261101",
+      "kind": "mvp",
+      "test": false,
+      "folder": "cards/mvp/20261026-20261101.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/mvp/20261026-20261101.jpg"
+      ],
+      "caption": "MVP LADDER, week of Oct 26-Nov 1. Is Doncic really No. 1?\n\n1. Luka Doncic (LAL) 41.0 PPG, on/off +103, team 5-2\n2. Victor Wembanyama (SAS) 36.0 PPG, on/off +26, team 4-2\n3. Alperen Sengun (HOU) 22.5 PPG, on/off +64, team 6-1\n4. Stephen Curry (GSW) 33.0 PPG, on/off +14, team 4-3\n5. Jamal Murray (DEN) 27.0 PPG, on/off +36, team 3-2\n\nRanked by Game Score, on/off impact and team record. Who's too high? Who's missing?\n\n#NBA #MVP #NBAStats #hoops #basketball",
+      "first_comment": "Your top 5? Drop it below \ud83d\udc47",
+      "post_at": "2026-11-02T12:00:00-06:00",
+      "week": [
+        "20261026",
+        "20261101"
+      ],
+      "title": "MVP ladder Oct 26-Nov 1",
+      "queued_at": "2026-11-02T05:30:09+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261101-mvp.mp4"
       ]
     }
   ]

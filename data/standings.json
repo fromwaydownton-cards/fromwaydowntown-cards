@@ -1,209 +1,209 @@
 {
- "BKN": {
-  "w": 0,
-  "l": 4,
-  "pct": 0.0,
-  "seed": 15,
-  "conf": "East"
- },
  "CHI": {
   "w": 1,
-  "l": 4,
-  "pct": 0.2,
-  "seed": 12,
-  "conf": "East"
- },
- "MIA": {
-  "w": 1,
-  "l": 4,
-  "pct": 0.2,
+  "l": 5,
+  "pct": 0.16666667,
   "seed": 13,
   "conf": "East"
  },
  "MIL": {
   "w": 1,
-  "l": 4,
-  "pct": 0.2,
+  "l": 5,
+  "pct": 0.16666667,
   "seed": 14,
   "conf": "East"
  },
- "ORL": {
+ "BKN": {
   "w": 1,
-  "l": 3,
-  "pct": 0.25,
-  "seed": 11,
-  "conf": "East"
- },
- "ATL": {
-  "w": 2,
-  "l": 3,
-  "pct": 0.4,
-  "seed": 7,
-  "conf": "East"
- },
- "NYK": {
-  "w": 2,
-  "l": 3,
-  "pct": 0.4,
-  "seed": 8,
-  "conf": "East"
- },
- "WAS": {
-  "w": 2,
-  "l": 3,
-  "pct": 0.4,
-  "seed": 9,
+  "l": 5,
+  "pct": 0.16666667,
+  "seed": 15,
   "conf": "East"
  },
  "IND": {
   "w": 2,
-  "l": 3,
-  "pct": 0.4,
+  "l": 5,
+  "pct": 0.2857143,
+  "seed": 12,
+  "conf": "East"
+ },
+ "ORL": {
+  "w": 2,
+  "l": 4,
+  "pct": 0.33333334,
+  "seed": 9,
+  "conf": "East"
+ },
+ "MIA": {
+  "w": 2,
+  "l": 4,
+  "pct": 0.33333334,
   "seed": 10,
+  "conf": "East"
+ },
+ "NYK": {
+  "w": 2,
+  "l": 4,
+  "pct": 0.33333334,
+  "seed": 11,
+  "conf": "East"
+ },
+ "ATL": {
+  "w": 3,
+  "l": 4,
+  "pct": 0.42857143,
+  "seed": 7,
   "conf": "East"
  },
  "CHA": {
   "w": 3,
-  "l": 2,
-  "pct": 0.6,
-  "seed": 6,
+  "l": 4,
+  "pct": 0.42857143,
+  "seed": 8,
   "conf": "East"
  },
  "TOR": {
   "w": 3,
-  "l": 1,
-  "pct": 0.75,
-  "seed": 3,
-  "conf": "East"
- },
- "BOS": {
-  "w": 3,
-  "l": 1,
-  "pct": 0.75,
-  "seed": 4,
-  "conf": "East"
- },
- "CLE": {
-  "w": 3,
-  "l": 1,
-  "pct": 0.75,
+  "l": 3,
+  "pct": 0.5,
   "seed": 5,
   "conf": "East"
  },
- "DET": {
-  "w": 4,
-  "l": 1,
-  "pct": 0.8,
-  "seed": 1,
+ "WAS": {
+  "w": 3,
+  "l": 3,
+  "pct": 0.5,
+  "seed": 6,
   "conf": "East"
  },
- "PHI": {
+ "CLE": {
   "w": 4,
+  "l": 2,
+  "pct": 0.6666667,
+  "seed": 4,
+  "conf": "East"
+ },
+ "DET": {
+  "w": 5,
   "l": 1,
-  "pct": 0.8,
+  "pct": 0.8333333,
   "seed": 2,
   "conf": "East"
  },
- "NOP": {
-  "w": 0,
-  "l": 4,
-  "pct": 0.0,
-  "seed": 14,
-  "conf": "West"
+ "BOS": {
+  "w": 5,
+  "l": 1,
+  "pct": 0.8333333,
+  "seed": 3,
+  "conf": "East"
+ },
+ "PHI": {
+  "w": 6,
+  "l": 1,
+  "pct": 0.85714287,
+  "seed": 1,
+  "conf": "East"
  },
  "SAC": {
   "w": 0,
-  "l": 4,
+  "l": 6,
   "pct": 0.0,
   "seed": 15,
   "conf": "West"
  },
- "UTA": {
+ "LAC": {
   "w": 1,
-  "l": 4,
-  "pct": 0.2,
+  "l": 5,
+  "pct": 0.16666667,
   "seed": 13,
   "conf": "West"
  },
- "LAC": {
+ "UTA": {
+  "w": 1,
+  "l": 5,
+  "pct": 0.16666667,
+  "seed": 14,
+  "conf": "West"
+ },
+ "NOP": {
+  "w": 2,
+  "l": 4,
+  "pct": 0.33333334,
+  "seed": 11,
+  "conf": "West"
+ },
+ "PHX": {
   "w": 1,
   "l": 3,
   "pct": 0.25,
   "seed": 12,
   "conf": "West"
  },
- "GSW": {
-  "w": 2,
-  "l": 3,
-  "pct": 0.4,
-  "seed": 10,
-  "conf": "West"
- },
- "PHX": {
-  "w": 1,
-  "l": 2,
-  "pct": 0.33333334,
-  "seed": 11,
-  "conf": "West"
- },
  "DEN": {
-  "w": 2,
-  "l": 2,
-  "pct": 0.5,
-  "seed": 9,
-  "conf": "West"
- },
- "SAS": {
-  "w": 3,
-  "l": 2,
-  "pct": 0.6,
-  "seed": 6,
-  "conf": "West"
- },
- "DAL": {
-  "w": 3,
-  "l": 2,
-  "pct": 0.6,
-  "seed": 7,
-  "conf": "West"
- },
- "MIN": {
   "w": 3,
   "l": 2,
   "pct": 0.6,
   "seed": 8,
   "conf": "West"
  },
- "POR": {
-  "w": 3,
-  "l": 0,
-  "pct": 1.0,
-  "seed": 3,
+ "GSW": {
+  "w": 4,
+  "l": 3,
+  "pct": 0.5714286,
+  "seed": 9,
   "conf": "West"
  },
- "LAL": {
+ "MIN": {
   "w": 4,
-  "l": 1,
-  "pct": 0.8,
-  "seed": 4,
+  "l": 3,
+  "pct": 0.5714286,
+  "seed": 10,
   "conf": "West"
  },
  "OKC": {
   "w": 4,
-  "l": 1,
-  "pct": 0.8,
+  "l": 2,
+  "pct": 0.6666667,
   "seed": 5,
   "conf": "West"
  },
- "MEM": {
+ "SAS": {
   "w": 4,
-  "l": 0,
-  "pct": 1.0,
-  "seed": 2,
+  "l": 2,
+  "pct": 0.6666667,
+  "seed": 6,
+  "conf": "West"
+ },
+ "DAL": {
+  "w": 4,
+  "l": 2,
+  "pct": 0.6666667,
+  "seed": 7,
+  "conf": "West"
+ },
+ "POR": {
+  "w": 4,
+  "l": 1,
+  "pct": 0.8,
+  "seed": 3,
+  "conf": "West"
+ },
+ "LAL": {
+  "w": 5,
+  "l": 2,
+  "pct": 0.71428573,
+  "seed": 4,
   "conf": "West"
  },
  "HOU": {
-  "w": 5,
+  "w": 6,
+  "l": 1,
+  "pct": 0.85714287,
+  "seed": 2,
+  "conf": "West"
+ },
+ "MEM": {
+  "w": 6,
   "l": 0,
   "pct": 1.0,
   "seed": 1,

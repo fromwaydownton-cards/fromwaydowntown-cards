@@ -1,0 +1,702 @@
+{
+ "3945274": {
+  "player": {
+   "id": "3945274",
+   "name": "Luka Doncic",
+   "team": "LAL",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/3945274.png",
+   "pts": 45,
+   "reb": 15,
+   "ast": 6,
+   "stl": 5,
+   "blk": 1,
+   "tov": 7,
+   "fgm": 12,
+   "fga": 23,
+   "tpm": 8,
+   "tpa": 12,
+   "pm": 27,
+   "ftm": 13,
+   "fta": 13,
+   "pf": 5,
+   "min": 35,
+   "oreb": 0,
+   "dreb": 15,
+   "game": "401909906"
+  },
+  "shots": [
+   {
+    "x": 3,
+    "y": 14,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 25-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "10:34"
+   },
+   {
+    "x": 22,
+    "y": 27,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Luka Doncic makes 27-foot three point jumper (Matisse Thybulle assists)",
+    "period": 1,
+    "clock": "8:26"
+   },
+   {
+    "x": 20,
+    "y": 14,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Luka Doncic misses 14-foot pullup jump shot",
+    "period": 1,
+    "clock": "7:53"
+   },
+   {
+    "x": 10,
+    "y": 25,
+    "made": false,
+    "value": 0,
+    "type": "Running Jump Shot",
+    "text": "Luka Doncic misses 28-foot running jump shot",
+    "period": 1,
+    "clock": "7:41"
+   },
+   {
+    "x": 33,
+    "y": 27,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 27-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "2:13"
+   },
+   {
+    "x": 25,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Luka Doncic makes driving layup (Collin Sexton assists)",
+    "period": 1,
+    "clock": "1:15"
+   },
+   {
+    "x": 47,
+    "y": 18,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Bank Jump Shot",
+    "text": "Luka Doncic makes 27-foot three point shot",
+    "period": 1,
+    "clock": "45.2"
+   },
+   {
+    "x": 33,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Luka Doncic misses 9-foot turnaround jump shot",
+    "period": 2,
+    "clock": "5:40"
+   },
+   {
+    "x": 23,
+    "y": 9,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Luka Doncic misses driving floating jump shot",
+    "period": 2,
+    "clock": "4:12"
+   },
+   {
+    "x": 32,
+    "y": 13,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Luka Doncic misses 14-foot fade away jump shot",
+    "period": 2,
+    "clock": "1:21"
+   },
+   {
+    "x": 6,
+    "y": 21,
+    "made": true,
+    "value": 3,
+    "type": "Running Pullup Jump Shot",
+    "text": "Luka Doncic makes 27-foot running pullup jump shot",
+    "period": 2,
+    "clock": "1:02"
+   },
+   {
+    "x": 11,
+    "y": 26,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 29-foot three point step back jumpshot",
+    "period": 2,
+    "clock": "1.3"
+   },
+   {
+    "x": 12,
+    "y": 21,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic makes 24-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "9:46"
+   },
+   {
+    "x": 13,
+    "y": 24,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Luka Doncic makes 26-foot three point jumper (Jake LaRavia assists)",
+    "period": 3,
+    "clock": "7:25"
+   },
+   {
+    "x": 10,
+    "y": 20,
+    "made": false,
+    "value": 0,
+    "type": "Running Pullup Jump Shot",
+    "text": "Luka Doncic misses running pullup jump shot",
+    "period": 3,
+    "clock": "6:58"
+   },
+   {
+    "x": 22,
+    "y": 13,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Luka Doncic makes 12-foot fade away jump shot",
+    "period": 3,
+    "clock": "6:25"
+   },
+   {
+    "x": 7,
+    "y": 19,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 25-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "5:40"
+   },
+   {
+    "x": 22,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Bank Jump Shot",
+    "text": "Luka Doncic misses 3-foot two point shot",
+    "period": 3,
+    "clock": "4:07"
+   },
+   {
+    "x": 21,
+    "y": 7,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Luka Doncic misses 8-foot turnaround jump shot",
+    "period": 3,
+    "clock": "3:35"
+   },
+   {
+    "x": 27,
+    "y": 14,
+    "made": true,
+    "value": 2,
+    "type": "Fade Away Jump Shot",
+    "text": "Luka Doncic makes 14-foot fade away jump shot",
+    "period": 3,
+    "clock": "3:04"
+   },
+   {
+    "x": 13,
+    "y": 21,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Luka Doncic misses 24-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "1:01"
+   },
+   {
+    "x": 22,
+    "y": 11,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Luka Doncic misses 11-foot turnaround jump shot",
+    "period": 4,
+    "clock": "7:06"
+   },
+   {
+    "x": 24,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Layup Driving Reverse",
+    "text": "Luka Doncic makes two point shot",
+    "period": 4,
+    "clock": "6:28"
+   }
+  ],
+  "ft_made": 13,
+  "ft_att": 13
+ },
+ "5175737": {
+  "player": {
+   "id": "5175737",
+   "name": "Yaxel Lendeborg",
+   "team": "GSW",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/5175737.png",
+   "pts": 37,
+   "reb": 4,
+   "ast": 6,
+   "stl": 1,
+   "blk": 0,
+   "tov": 2,
+   "fgm": 13,
+   "fga": 19,
+   "tpm": 6,
+   "tpa": 11,
+   "pm": 6,
+   "ftm": 5,
+   "fta": 6,
+   "pf": 1,
+   "min": 34,
+   "oreb": 2,
+   "dreb": 2,
+   "game": "401909905"
+  },
+  "shots": [
+   {
+    "x": 15,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Jump Shot",
+    "text": "Yaxel Lendeborg makes 10-foot turnaround jump shot",
+    "period": 1,
+    "clock": "9:20"
+   },
+   {
+    "x": 43,
+    "y": 21,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Yaxel Lendeborg makes 27-foot three pointer (Brandon Williams assists)",
+    "period": 1,
+    "clock": "4:10"
+   },
+   {
+    "x": 27,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Driving Finger Roll Layup",
+    "text": "Yaxel Lendeborg makes 3-foot two point shot (Charles Bassey assists)",
+    "period": 2,
+    "clock": "7:56"
+   },
+   {
+    "x": 28,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Yaxel Lendeborg makes running layup (De'Anthony Melton assists)",
+    "period": 2,
+    "clock": "7:30"
+   },
+   {
+    "x": 6,
+    "y": 17,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Yaxel Lendeborg misses 25-foot three point pullup jump shot",
+    "period": 2,
+    "clock": "4:16"
+   },
+   {
+    "x": 19,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Jump Shot",
+    "text": "Yaxel Lendeborg makes 9-foot turnaround jump shot",
+    "period": 2,
+    "clock": "1:28"
+   },
+   {
+    "x": 44,
+    "y": 20,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Yaxel Lendeborg makes 27-foot three pointer",
+    "period": 2,
+    "clock": "54.2"
+   },
+   {
+    "x": 19,
+    "y": 26,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Yaxel Lendeborg makes 26-foot three point jumper (Brandin Podziemski assists)",
+    "period": 2,
+    "clock": "8.5"
+   },
+   {
+    "x": 27,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Alley Oop Layup Shot",
+    "text": "Yaxel Lendeborg makes alley oop layup (Brandin Podziemski assists)",
+    "period": 3,
+    "clock": "8:03"
+   },
+   {
+    "x": 28,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Yaxel Lendeborg makes driving layup (Brandin Podziemski assists)",
+    "period": 3,
+    "clock": "6:51"
+   },
+   {
+    "x": 31,
+    "y": 23,
+    "made": true,
+    "value": 2,
+    "type": "Step Back Jump Shot",
+    "text": "Yaxel Lendeborg makes 23-foot step back jumpshot",
+    "period": 3,
+    "clock": "5:46"
+   },
+   {
+    "x": 2,
+    "y": 14,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Yaxel Lendeborg makes 26-foot three point jumper (Al Horford assists)",
+    "period": 3,
+    "clock": "5:20"
+   },
+   {
+    "x": 15,
+    "y": 4,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Yaxel Lendeborg misses 11-foot turnaround jump shot",
+    "period": 3,
+    "clock": "4:55"
+   },
+   {
+    "x": 46,
+    "y": 16,
+    "made": true,
+    "value": 3,
+    "type": "Running Jump Shot",
+    "text": "Yaxel Lendeborg makes 26-foot running jump shot (De'Anthony Melton assists)",
+    "period": 4,
+    "clock": "8:29"
+   },
+   {
+    "x": 11,
+    "y": 24,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Yaxel Lendeborg misses 27-foot three point step back jumpshot",
+    "period": 4,
+    "clock": "7:17"
+   },
+   {
+    "x": 37,
+    "y": 25,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Yaxel Lendeborg makes 27-foot three point step back jumpshot (Brandin Podziemski assists)",
+    "period": 4,
+    "clock": "6:36"
+   },
+   {
+    "x": 1,
+    "y": 4,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Yaxel Lendeborg misses 24-foot three point step back jumpshot",
+    "period": 4,
+    "clock": "4:59"
+   },
+   {
+    "x": 1,
+    "y": 3,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Yaxel Lendeborg misses 24-foot three point jumper",
+    "period": 4,
+    "clock": "3:16"
+   },
+   {
+    "x": 30,
+    "y": 27,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Yaxel Lendeborg misses 26-foot three point pullup jump shot",
+    "period": 4,
+    "clock": "2:24"
+   }
+  ],
+  "ft_made": 5,
+  "ft_att": 6
+ },
+ "4065648": {
+  "player": {
+   "id": "4065648",
+   "name": "Jayson Tatum",
+   "team": "BOS",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4065648.png",
+   "pts": 32,
+   "reb": 4,
+   "ast": 7,
+   "stl": 0,
+   "blk": 2,
+   "tov": 4,
+   "fgm": 8,
+   "fga": 19,
+   "tpm": 1,
+   "tpa": 5,
+   "pm": 7,
+   "ftm": 15,
+   "fta": 17,
+   "pf": 0,
+   "min": 34,
+   "oreb": 1,
+   "dreb": 3,
+   "game": "401909903"
+  },
+  "shots": [
+   {
+    "x": 28,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Driving Finger Roll Layup",
+    "text": "Jayson Tatum misses two point shot",
+    "period": 1,
+    "clock": "9:23"
+   },
+   {
+    "x": 26,
+    "y": 18,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Jayson Tatum makes 18-foot pullup jump shot (Paul George assists)",
+    "period": 1,
+    "clock": "8:38"
+   },
+   {
+    "x": 38,
+    "y": 21,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Jayson Tatum misses 24-foot three point pullup jump shot",
+    "period": 1,
+    "clock": "7:25"
+   },
+   {
+    "x": 24,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Jayson Tatum makes driving layup",
+    "period": 1,
+    "clock": "6:30"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Running Dunk Shot",
+    "text": "Jayson Tatum makes running dunk (Jordan Walsh assists)",
+    "period": 1,
+    "clock": "3:36"
+   },
+   {
+    "x": 10,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Jayson Tatum misses 15-foot jumper",
+    "period": 1,
+    "clock": "1:01"
+   },
+   {
+    "x": 36,
+    "y": 24,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Jayson Tatum makes 25-foot three pointer",
+    "period": 2,
+    "clock": "3:03"
+   },
+   {
+    "x": 28,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Layup Shot",
+    "text": "Jayson Tatum makes layup (Luka Garza assists)",
+    "period": 2,
+    "clock": "2:10"
+   },
+   {
+    "x": 14,
+    "y": 14,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Jayson Tatum misses 17-foot pullup jump shot",
+    "period": 2,
+    "clock": "0.0"
+   },
+   {
+    "x": 49,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Jayson Tatum misses 24-foot three point jumper",
+    "period": 3,
+    "clock": "11:43"
+   },
+   {
+    "x": 14,
+    "y": 7,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Jayson Tatum makes 12-foot two point shot (Luka Garza assists)",
+    "period": 3,
+    "clock": "8:16"
+   },
+   {
+    "x": 20,
+    "y": 8,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Bank Jump Shot",
+    "text": "Jayson Tatum misses two point shot",
+    "period": 3,
+    "clock": "6:03"
+   },
+   {
+    "x": 8,
+    "y": 19,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Jayson Tatum misses 25-foot three point step back jumpshot",
+    "period": 3,
+    "clock": "5:30"
+   },
+   {
+    "x": 42,
+    "y": 20,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Jayson Tatum misses 25-foot three point jumper",
+    "period": 3,
+    "clock": "4:58"
+   },
+   {
+    "x": 30,
+    "y": 13,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Jayson Tatum misses 14-foot pullup jump shot",
+    "period": 3,
+    "clock": "4:25"
+   },
+   {
+    "x": 18,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Jayson Tatum misses 8-foot pullup jump shot",
+    "period": 3,
+    "clock": "2:24"
+   },
+   {
+    "x": 26,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Jayson Tatum misses driving layup",
+    "period": 3,
+    "clock": "1:19"
+   },
+   {
+    "x": 15,
+    "y": 15,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Jayson Tatum makes 17-foot pullup jump shot",
+    "period": 4,
+    "clock": "3:41"
+   },
+   {
+    "x": 19,
+    "y": 11,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Jayson Tatum makes 12-foot pullup jump shot",
+    "period": 4,
+    "clock": "3:05"
+   }
+  ],
+  "ft_made": 15,
+  "ft_att": 17
+ }
+}
