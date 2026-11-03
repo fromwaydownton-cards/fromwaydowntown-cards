@@ -1,0 +1,282 @@
+{
+ "pick": {
+  "id": "4065733",
+  "name": "Ty Jerome",
+  "team": "MEM",
+  "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4065733.png",
+  "pts": 40,
+  "reb": 5,
+  "ast": 5,
+  "stl": 2,
+  "blk": 0,
+  "tov": 4,
+  "fgm": 14,
+  "fga": 22,
+  "tpm": 5,
+  "tpa": 6,
+  "pm": 3,
+  "ftm": 7,
+  "fta": 8,
+  "pf": 0,
+  "min": 37,
+  "oreb": 0,
+  "dreb": 5,
+  "game": "401909914",
+  "normal": 19.7,
+  "normal_src": "last season",
+  "jump": 20.3
+ },
+ "shots": {
+  "player": {
+   "id": "4065733",
+   "name": "Ty Jerome",
+   "team": "MEM",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4065733.png",
+   "pts": 40,
+   "reb": 5,
+   "ast": 5,
+   "stl": 2,
+   "blk": 0,
+   "tov": 4,
+   "fgm": 14,
+   "fga": 22,
+   "tpm": 5,
+   "tpa": 6,
+   "pm": 3,
+   "ftm": 7,
+   "fta": 8,
+   "pf": 0,
+   "min": 37,
+   "oreb": 0,
+   "dreb": 5,
+   "game": "401909914",
+   "normal": 19.7,
+   "normal_src": "last season",
+   "jump": 20.3
+  },
+  "shots": [
+   {
+    "x": 28,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Running Pullup Jump Shot",
+    "text": "Ty Jerome makes 5-foot running pullup jump shot",
+    "period": 1,
+    "clock": "9:42"
+   },
+   {
+    "x": 26,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Karlo Matkovic blocks Ty Jerome 's 2-foot driving layup",
+    "period": 1,
+    "clock": "7:39"
+   },
+   {
+    "x": 36,
+    "y": 13,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Ty Jerome misses 16-foot step back jumpshot",
+    "period": 1,
+    "clock": "7:10"
+   },
+   {
+    "x": 33,
+    "y": 12,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Ty Jerome misses driving floating jump shot",
+    "period": 2,
+    "clock": "11:39"
+   },
+   {
+    "x": 31,
+    "y": 9,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Bank Jump Shot",
+    "text": "Ty Jerome misses two point shot",
+    "period": 2,
+    "clock": "9:39"
+   },
+   {
+    "x": 29,
+    "y": 23,
+    "made": true,
+    "value": 2,
+    "type": "Step Back Jump Shot",
+    "text": "Ty Jerome makes 22-foot step back jumpshot",
+    "period": 2,
+    "clock": "8:30"
+   },
+   {
+    "x": 17,
+    "y": 24,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Ty Jerome makes 25-foot three pointer",
+    "period": 2,
+    "clock": "7:53"
+   },
+   {
+    "x": 29,
+    "y": 27,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Ty Jerome makes 26-foot three pointer",
+    "period": 3,
+    "clock": "8:53"
+   },
+   {
+    "x": 8,
+    "y": 22,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Ty Jerome makes 27-foot three pointer",
+    "period": 3,
+    "clock": "8:22"
+   },
+   {
+    "x": 31,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Ty Jerome makes 9-foot driving floating jump shot (Zach Edey assists)",
+    "period": 4,
+    "clock": "11:06"
+   },
+   {
+    "x": 12,
+    "y": 22,
+    "made": false,
+    "value": 0,
+    "type": "Running Pullup Jump Shot",
+    "text": "Ty Jerome misses running pullup jump shot",
+    "period": 4,
+    "clock": "9:17"
+   },
+   {
+    "x": 19,
+    "y": 11,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Ty Jerome misses driving floating jump shot",
+    "period": 4,
+    "clock": "4:32"
+   },
+   {
+    "x": 24,
+    "y": 5,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Ty Jerome makes 4-foot driving floating jump shot (Jaylen Wells assists)",
+    "period": 4,
+    "clock": "3:32"
+   },
+   {
+    "x": 31,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Ty Jerome makes 10-foot driving floating jump shot",
+    "period": 4,
+    "clock": "1:43"
+   },
+   {
+    "x": 14,
+    "y": 25,
+    "made": true,
+    "value": 3,
+    "type": "Running Pullup Jump Shot",
+    "text": "Ty Jerome makes 26-foot running pullup jump shot",
+    "period": 4,
+    "clock": "1:13"
+   },
+   {
+    "x": 21,
+    "y": 10,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Ty Jerome makes 10-foot driving floating jump shot",
+    "period": 4,
+    "clock": "36.1"
+   },
+   {
+    "x": 33,
+    "y": 7,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Ty Jerome makes 10-foot driving floating jump shot",
+    "period": 4,
+    "clock": "4.6"
+   },
+   {
+    "x": 29,
+    "y": 30,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Ty Jerome makes 30-foot three point step back jumpshot",
+    "period": 5,
+    "clock": "3:17"
+   },
+   {
+    "x": 30,
+    "y": 3,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Bank Jump Shot",
+    "text": "Ty Jerome misses two point shot",
+    "period": 5,
+    "clock": "2:34"
+   },
+   {
+    "x": 23,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Ty Jerome makes driving layup",
+    "period": 5,
+    "clock": "1:05"
+   },
+   {
+    "x": 26,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Ty Jerome makes driving layup",
+    "period": 5,
+    "clock": "18.8"
+   },
+   {
+    "x": 36,
+    "y": 10,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Ty Jerome misses 14-foot pullup jump shot",
+    "period": 5,
+    "clock": "0.7"
+   }
+  ],
+  "ft_made": 7,
+  "ft_att": 8
+ }
+}

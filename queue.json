@@ -1,56 +1,6 @@
 {
   "queue": [
     {
-      "key": "night:20261030",
-      "kind": "nightly",
-      "test": false,
-      "folder": "cards/nights/20261030.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261030.jpg"
-      ],
-      "caption": "Whose night are you taking: Barnes, Antetokounmpo or Mitchell?\n\nNBA night leaders, Oct 30, 2026. All 10 final scores in the graphic.\n\nMost points: Scottie Barnes (TOR) 41 pts\nMost rebounds: Giannis Antetokounmpo (MIA) 18 reb\nMost assists: Davion Mitchell (MIA) 11 ast\nBest 3PT%: Jamal Murray (DEN) 7-9 from 3\nWorst +/-: Andrew Nembhard (IND) -28\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
-      "first_comment": "Vote for the best night \ud83d\udc47 1) Barnes  2) Antetokounmpo  3) Mitchell  4) Murray",
-      "title": "NBA night leaders Oct 30",
-      "queued_at": "2026-10-31T05:18:46+00:00",
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261030-nightly.mp4"
-      ]
-    },
-    {
-      "key": "shots:20261030",
-      "kind": "shots",
-      "test": false,
-      "folder": "cards/shots/20261030-shots.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/shots/20261030-shots.jpg"
-      ],
-      "caption": "Barnes put up 41. Which spot on the floor should defenses take away?\n\nShot charts for the top scorers from Oct 30.\n\n1. Scottie Barnes (TOR) 41 pts, 19-34 FG, 1-2 3PT\n2. Jamal Murray (DEN) 39 pts, 10-18 FG, 7-9 3PT\n3. Luka Doncic (LAL) 37 pts, 12-27 FG, 6-16 3PT\n\nGreen = made, red = missed. Follow for the leaders every night.\n\n#NBA #NBAStats #ShotChart #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-10-31T09:00:00-05:00",
-      "title": "Top scorer shot charts Oct 30",
-      "queued_at": "2026-10-31T05:18:47+00:00",
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261030-shots.mp4"
-      ]
-    },
-    {
-      "key": "guess:20261030",
-      "kind": "guess",
-      "test": false,
-      "folder": "cards/guess/20261030-guess.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261030-guess.jpg"
-      ],
-      "caption": "GUESS THE PLAYER. 41 points last night. Who put up this shot chart?\n\nHe's not a star, and this was way above his usual. Two hints are on the graphic.\n\nDrop your guess in the comments. Answer in tonight's post.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-10-31T12:00:00-05:00",
-      "title": "Guess the player Oct 31",
-      "queued_at": "2026-10-31T05:18:48+00:00",
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261030-guess.mp4"
-      ]
-    },
-    {
       "key": "night:20261031",
       "kind": "nightly",
       "test": false,
@@ -135,6 +85,56 @@
       "queued_at": "2026-11-02T05:30:09+00:00",
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261101-mvp.mp4"
+      ]
+    },
+    {
+      "key": "night:20261102",
+      "kind": "nightly",
+      "test": false,
+      "folder": "cards/nights/20261102.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261102.jpg"
+      ],
+      "caption": "Whose night are you taking: Gilgeous-Alexander, Clingan or Doncic?\n\nNBA night leaders, Nov 2, 2026. All 15 final scores in the graphic.\n\nMost points: Shai Gilgeous-Alexander (OKC) 43 pts\nMost rebounds: Donovan Clingan (POR) 18 reb\nMost assists: Luka Doncic (LAL) 13 ast\nBest 3PT%: Nolan Traore (BKN) 5-6 from 3\nWorst +/-: Dennis Schroder (CHA) -30\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
+      "first_comment": "Vote for the best night \ud83d\udc47 1) Gilgeous-Alexander  2) Clingan  3) Doncic  4) Traore",
+      "title": "NBA night leaders Nov 2",
+      "queued_at": "2026-11-03T06:32:50+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261102-nightly.mp4"
+      ]
+    },
+    {
+      "key": "shots:20261102",
+      "kind": "shots",
+      "test": false,
+      "folder": "cards/shots/20261102-shots.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/shots/20261102-shots.jpg"
+      ],
+      "caption": "Gilgeous-Alexander put up 43. Which spot on the floor should defenses take away?\n\nShot charts for the top scorers from Nov 2.\n\n1. Shai Gilgeous-Alexander (OKC) 43 pts, 14-35 FG, 4-8 3PT\n2. Luka Doncic (LAL) 42 pts, 14-24 FG, 6-15 3PT\n3. Ty Jerome (MEM) 40 pts, 14-22 FG, 5-6 3PT\n\nGreen = made, red = missed. Follow for the leaders every night.\n\n#NBA #NBAStats #ShotChart #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-03T09:00:00-06:00",
+      "title": "Top scorer shot charts Nov 2",
+      "queued_at": "2026-11-03T06:32:50+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261102-shots.mp4"
+      ]
+    },
+    {
+      "key": "guess:20261102",
+      "kind": "guess",
+      "test": false,
+      "folder": "cards/guess/20261102-guess.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261102-guess.jpg"
+      ],
+      "caption": "GUESS THE PLAYER. 40 points last night. Who put up this shot chart?\n\nHe's not a star, and this was way above his usual. Two hints are on the graphic.\n\nDrop your guess in the comments. Answer in tonight's post.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-03T12:00:00-06:00",
+      "title": "Guess the player Nov 3",
+      "queued_at": "2026-11-03T06:32:51+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261102-guess.mp4"
       ]
     }
   ]
