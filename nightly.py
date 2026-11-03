@@ -22,6 +22,7 @@ from shot_card import render as render_shots, splits
 from shots_data import build_shots, shots_for
 from espn_extra import prior_ppg, standings
 from guess import pick_outlier
+from discourse import take as hot_take
 from weekly_cards import guess as render_guess, mvp as render_mvp
 
 GUESS_DAYS = {1, 3, 5}      # post Guess the Player on Tue, Thu, Sat (Mon=0)
@@ -89,7 +90,9 @@ def caption(night, leaders):
         lines.append(f"{LABEL[k]}: {p['name']} ({p['team']}) {v}")
     n = sum(g["final"] for g in night["games"])
     reveal = guess_reveal(night["date"])
-    return (f"{question(night, leaders)}\n\n"
+    hook = hot_take([leaders.get(k) for k in ("pts", "ast", "reb", "three")], night["date"],
+                    worst=leaders.get("worst_pm")) or question(night, leaders)
+    return (f"{hook}\n\n"
             + (f"{reveal}\n\n" if reveal else "")
             + f"NBA night leaders, {date}. All {n} final scores in the graphic.\n\n"
             + "\n".join(lines)
@@ -109,7 +112,8 @@ def shots_caption(date, rows):
     q = [f"Where was {last(top['name'])} most dangerous last night? Paint, midrange or three?",
          f"Whose shot chart are you taking: {', '.join(last(v['player']['name']) for v in rows)}?",
          f"{last(top['name'])} put up {top['pts']}. Which spot on the floor should defenses take away?"]
-    return (f"{q[int(date) % len(q)]}\n\nShot charts for the top scorers from {d}.\n\n"
+    hook = hot_take([v["player"] for v in rows], date, offset=1) or q[int(date) % len(q)]
+    return (f"{hook}\n\nShot charts for the top scorers from {d}.\n\n"
             + "\n".join(lines)
             + "\n\nGreen = made, red = missed. Follow for the leaders every night."
             + "\n\n#NBA #NBAStats #ShotChart #hoops #basketball")

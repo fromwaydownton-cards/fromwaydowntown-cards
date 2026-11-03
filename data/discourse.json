@@ -1,0 +1,55 @@
+{
+  "_about": "Current NBA talking points used to open captions. Refresh every 1-2 weeks; entries past 'until' are ignored. Templates can use {name} {last} {team} {pts} {reb} {ast} {fgm} {fga} {tpm} {tpa} {pm} {line} {form}. Only write takes that are true and still current.",
+  "updated": "2026-11-03",
+  "players": [
+    {"match": ["Luka Doncic"], "until": "2026-11-24", "takes": [
+      "Vegas still has Wemby as the MVP favorite. After {line}, should it be Luka?",
+      "Luka MVP talk is getting loud: {line}{form}. Is he No. 1 on your ladder right now?",
+      "The Lakers' roster looks second-tier. Luka doesn't care: {line}. Can he drag them to a top-4 seed?"]},
+    {"match": ["Shai Gilgeous-Alexander"], "until": "2026-11-24", "takes": [
+      "No Jalen Williams, no Cason Wallace, no Chet. SGA still put up {line}. Can he carry OKC back to the West finals?",
+      "OKC's injury list keeps growing and SGA keeps going: {line}. Still a top-3 MVP candidate?"]},
+    {"match": ["Victor Wembanyama"], "until": "2026-11-24", "takes": [
+      "The books still have Wemby as the MVP favorite. {line}. Agree, or is it Luka's award?",
+      "Spurs vs. Thunder in the West finals again feels inevitable. Wemby with {line}. Anyone stopping San Antonio?"]},
+    {"match": ["Giannis Antetokounmpo"], "until": "2026-11-24", "takes": [
+      "The Giannis-to-Miami trade had a rough start. {line}. Is it starting to click?",
+      "Giannis and Bam in the same frontcourt: still a spacing problem? Giannis with {line}."]},
+    {"match": ["Bam Adebayo"], "until": "2026-11-24", "takes": [
+      "Bam said he doesn't want to be Miami's scapegoat. {line}. Does the Giannis-Bam fit work?"]},
+    {"match": ["Nikola Jokic"], "until": "2026-11-24", "takes": [
+      "Jokic vs. the Denver boo birds, continued: {line}. Contract year Joker is a problem.",
+      "Three MVPs, a record contract coming next summer, and {line}. Is Jokic still the best player alive?"]},
+    {"match": ["Jaylen Brown"], "until": "2026-11-11", "takes": [
+      "\"No beef, but it might be lamb chops and some gravy.\" Brown with {line} ahead of the Nov 10 matchup vs. Tatum. Who won the breakup?"]},
+    {"match": ["Jayson Tatum"], "until": "2026-11-11", "takes": [
+      "Tatum vs. Jaylen Brown is Nov 10. Tatum with {line}. Who won the breakup, Boston or Philly?"]},
+    {"match": ["LeBron James", "Joel Embiid", "Tyrese Maxey"], "until": "2026-11-24", "takes": [
+      "LeBron, Embiid, Maxey, Jaylen Brown. {name} with {line}. Is the Sixers' superteam real, or a trainwreck in waiting?"]},
+    {"match": ["Darius Acuff Jr."], "until": "2026-11-24", "takes": [
+      "Rookie Darius Acuff Jr. leads the NBA in shots per game. {pts} on {fgm}-{fga} shooting. Green light or too many shots?",
+      "Mike Bibby says Kings vets will get disgruntled with Acuff's shot volume. {pts} on {fga} shots. Is he right?"]},
+    {"match": ["Yaxel Lendeborg"], "until": "2026-11-24", "takes": [
+      "Rookie of the Year race: Lendeborg with {line}. Is he the favorite right now?"]},
+    {"match": ["Cooper Flagg"], "until": "2026-11-24", "takes": [
+      "Year 2 Cooper Flagg: {line}. All-Star this season, yes or no?"]},
+    {"match": ["Cameron Boozer", "Darryn Peterson", "Caleb Wilson", "AJ Dybantsa", "Aday Mara", "Bennett Stirtz"], "until": "2026-11-30", "takes": [
+      "Deepest rookie class in years. {name} with {line}. Who's your Rookie of the Year right now?"]},
+    {"match": ["LaMelo Ball"], "until": "2026-11-24", "takes": [
+      "Minnesota gave up four firsts for LaMelo, and Ant is out. LaMelo with {line}. Worth it?"]},
+    {"match": ["Stephen Curry"], "until": "2026-11-24", "takes": [
+      "Year 18 and still {line}. Is Steph aging better than anyone in NBA history?"]},
+    {"match": ["Karl-Anthony Towns"], "until": "2026-11-24", "takes": [
+      "Defending champs, contract talks on hold, and KAT with {line}. Can the Knicks run it back?"]},
+    {"match": ["Tyrese Haliburton"], "until": "2026-11-24", "takes": [
+      "Back from the Achilles: Haliburton with {line}. Is Indiana a real threat in the East again?"]},
+    {"match": ["Scottie Barnes"], "until": "2026-11-24", "takes": [
+      "Kawhi's out for a month and Scottie Barnes is running Toronto: {line}. All-NBA this year?"]}
+  ],
+  "teams": [
+    {"match": ["MIA"], "until": "2026-11-24", "worst_pm": "{name} finished {pm}. Is the Giannis trade already a mistake for Miami?"},
+    {"match": ["SAC"], "until": "2026-11-24", "worst_pm": "{name} finished {pm}. The Kings are in trouble. Blow it up?"},
+    {"match": ["DEN"], "until": "2026-11-24", "worst_pm": "{name} finished {pm}. Are the Nuggets in real trouble this year?"},
+    {"match": ["NYK"], "until": "2026-11-24", "worst_pm": "{name} finished {pm}. Are the defending champs actually in trouble?"}
+  ]
+}
