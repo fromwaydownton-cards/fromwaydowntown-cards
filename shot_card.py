@@ -17,7 +17,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 from night_card import (BAR, BAR_EDGE, BG, BOLD, HANDLE, HIGHLIGHT, INK, LIGHT, MUTED, NUM,
-                        ROOT, F, centered, fit, headshot_circle, ring_color)
+                        ROOT, PANEL, F, centered, fit, headshot_circle, ring_color)
 
 W, H = 1080, 1350
 HOOP_FROM_BASELINE = 5.25
@@ -26,8 +26,8 @@ COURT_W_PX = 470
 SCALE = COURT_W_PX / 50.0     # px per foot
 COURT_H_PX = int(DEPTH * SCALE)
 SS = 3                        # supersampling for smooth lines
-FLOOR = (241, 236, 228)
-LINE = (178, 168, 152)
+FLOOR = (28, 30, 37)
+LINE = (88, 93, 106)
 MAKE = (34, 166, 82)
 MISS = (214, 48, 49)
 
@@ -84,7 +84,7 @@ def court(shots, w_px=COURT_W_PX, dot=9):
     d.rectangle((0, 0, w - 1, h - 1), outline=LINE, width=lw)
     # paint + free throw circle
     x0, y0 = P(17, -HOOP_FROM_BASELINE); x1, y1 = P(33, 19 - HOOP_FROM_BASELINE)
-    d.rectangle((x0, y0, x1, y1), fill=(233, 226, 214), outline=LINE, width=lw)
+    d.rectangle((x0, y0, x1, y1), fill=(36, 39, 48), outline=LINE, width=lw)
     cx, cy = P(25, 19 - HOOP_FROM_BASELINE)
     d.ellipse((cx - 6 * k, cy - 6 * k, cx + 6 * k, cy + 6 * k), outline=LINE, width=lw)
     # three-point line: corners then arc
@@ -100,7 +100,7 @@ def court(shots, w_px=COURT_W_PX, dot=9):
     ra = 4 * k
     d.arc((hx - ra, hy - ra, hx + ra, hy + ra), start=0, end=180, fill=LINE, width=lw)
     bx0, by = P(22, -1.25); bx1, _ = P(28, -1.25)
-    d.line((bx0, by, bx1, by), fill=(120, 112, 100), width=3 * SS)
+    d.line((bx0, by, bx1, by), fill=(150, 155, 168), width=3 * SS)
     rr = 0.75 * k
     d.ellipse((hx - rr, hy - rr, hx + rr, hy + rr), outline=(232, 98, 34), width=lw)
 
@@ -206,12 +206,12 @@ def render(shots_data, date, out):
         for j, z in enumerate(("PAINT", "MID", "3PT")):
             m, a = sp[z]
             zx = px + j * (zw + 8)
-            d.rounded_rectangle((zx, by, zx + zw, by + 58), radius=6, fill=(244, 245, 247))
+            d.rounded_rectangle((zx, by, zx + zw, by + 58), radius=6, fill=PANEL)
             pct = f"{round(100 * m / a)}%" if a else "–"
             centered(d, zx + zw / 2, by + 6, f"{m}-{a}  {pct}", zf, INK)
             centered(d, zx + zw / 2, by + 36, z if z != "MID" else "MIDRANGE", zl, MUTED)
         if i < len(rows) - 1:
-            d.line((36, y + row_h - 6, W - 36, y + row_h - 6), fill=(230, 232, 236), width=2)
+            d.line((36, y + row_h - 6, W - 36, y + row_h - 6), fill=(40, 43, 52), width=2)
 
     img.convert("RGB").save(out, "JPEG", quality=93, subsampling=0)
     return rows

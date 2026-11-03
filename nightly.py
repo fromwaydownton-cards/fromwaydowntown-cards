@@ -26,7 +26,11 @@ from discourse import take as hot_take
 from weekly_cards import guess as render_guess, mvp as render_mvp
 
 GUESS_DAYS = {1, 3, 5}      # post Guess the Player on Tue, Thu, Sat (Mon=0)
-NOON = 12
+# Post times, US Central, on the day after the games. Picked from Metricool's
+# best-time data for this account (peaks 10 AM, 12 PM, 6 PM Pacific).
+RECAP_HOUR = 12            # 10 AM Pacific
+SHOTS_HOUR = 14            # 12 PM Pacific
+EVENING_HOUR = 20          # 6 PM Pacific: Guess the Player (Tue/Thu/Sat), MVP ladder (Mon)
 
 ROOT = Path(__file__).resolve().parent
 QUEUE = ROOT / "queue.json"
@@ -89,13 +93,16 @@ def caption(night, leaders):
             v = f"{p['pm']:+d}"
         lines.append(f"{LABEL[k]}: {p['name']} ({p['team']}) {v}")
     n = sum(g["final"] for g in night["games"])
+    finals = [f"{g['away']} {g['away_score']}, {g['home']} {g['home_score']}"
+              for g in night["games"] if g["final"]]
     reveal = guess_reveal(night["date"])
     hook = hot_take([leaders.get(k) for k in ("pts", "ast", "reb", "three")], night["date"],
                     worst=leaders.get("worst_pm")) or question(night, leaders)
     return (f"{hook}\n\n"
             + (f"{reveal}\n\n" if reveal else "")
-            + f"NBA night leaders, {date}. All {n} final scores in the graphic.\n\n"
+            + f"NBA night leaders, {date}.\n\n"
             + "\n".join(lines)
+            + f"\n\nAll {n} final scores:\n" + "\n".join(finals)
             + "\n\nDrop your take in the comments. Follow for the leaders every night."
             + "\n\n#NBA #NBAStats #hoops #basketball")
 
@@ -120,7 +127,7 @@ def shots_caption(date, rows):
 
 
 def next_morning(date, hour=9):
-    """9:00 AM Central on the morning after the games."""
+    """hour:00 Central on the day after the games."""
     day = datetime.strptime(date, "%Y%m%d") + timedelta(days=1)
     return day.replace(hour=hour, tzinfo=ZoneInfo("America/Chicago")).isoformat(timespec="seconds")
 
@@ -136,7 +143,7 @@ def build_shot_entry(night, test=False):
     rel = str(out.relative_to(ROOT))
     return {"key": ("test-shots:" if test else "shots:") + date, "kind": "shots", "test": test,
             "folder": rel, "images": [RAW + rel], "caption": shots_caption(date, rows),
-            "first_comment": "", "post_at": next_morning(date),
+            "first_comment": "", "post_at": next_morning(date, SHOTS_HOUR),
             "title": "Top scorer shot charts " + datetime.strptime(date, "%Y%m%d").strftime("%b %-d"),
             "queued_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
 
@@ -156,7 +163,7 @@ def guess_reveal(date):
     if not f.exists():
         return None
     p = json.loads(f.read_text())["pick"]
-    return (f"Today's Guess the Player answer: {p['name']} ({p['team']}), {p['pts']} pts "
+    return (f"Yesterday's Guess the Player answer: {p['name']} ({p['team']}), {p['pts']} pts "
             f"vs his usual {p['normal']:g}. Did you get it?")
 
 
@@ -180,11 +187,11 @@ def build_guess_entry(night, test=False):
     hint = "He's not a star, and this was way above his usual."
     caption = (f"GUESS THE PLAYER. {pick['pts']} points last night. Who put up this shot chart?\n\n"
                f"{hint} Two hints are on the graphic.\n\n"
-               "Drop your guess in the comments. Answer in tonight's post.\n\n"
+               "Drop your guess in the comments. Answer in tomorrow's recap.\n\n"
                "#NBA #GuessThePlayer #NBAStats #hoops #basketball")
     return {"key": ("test-guess:" if test else "guess:") + date, "kind": "guess", "test": test,
             "folder": rel, "images": [RAW + rel], "caption": caption, "first_comment": "",
-            "post_at": at_central(post_day, NOON),
+            "post_at": at_central(post_day, EVENING_HOUR),
             "title": "Guess the player " + post_day.strftime("%b %-d"),
             "queued_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
 
@@ -213,7 +220,7 @@ def build_mvp_entry(night, test=False):
     post_day = day_after(date)
     return {"key": ("test-mvp:" if test else "mvp:") + date, "kind": "mvp", "test": test,
             "folder": rel, "images": [RAW + rel], "caption": caption,
-            "first_comment": "Your top 5? Drop it below 👇", "post_at": at_central(post_day, NOON),
+            "first_comment": "Your top 5? Drop it below 👇", "post_at": at_central(post_day, EVENING_HOUR),
             "week": [start, date],
             "title": "MVP ladder " + wk,
             "queued_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
@@ -260,7 +267,7 @@ def build(date, test=False):
     rel = str(out.relative_to(ROOT))
     entry = {"key": ("test:" if test else "night:") + date, "kind": "nightly", "test": test,
              "folder": rel, "images": [RAW + rel], "caption": caption(night, leaders),
-             "first_comment": first_comment(leaders),
+             "first_comment": first_comment(leaders), "post_at": next_morning(date, RECAP_HOUR),
              "title": "NBA night leaders " + datetime.strptime(date, "%Y%m%d").strftime("%b %-d"),
              "queued_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
     print(f"BUILT {rel}: " + "; ".join(f"{k}={p['name']}" for k, p in leaders.items()))

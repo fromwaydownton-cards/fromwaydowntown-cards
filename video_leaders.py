@@ -1,7 +1,7 @@
 """Animated 62-second vertical video (1080x1920) of the nightly leaders, for
 TikTok / Reels / Shorts. Built from the same data and style as the graphic.
 
-  0-3s    intro: date + NIGHT LEADERS
+  0-3s    hook: the top scorer's points, huge, with his face and FG line
   3-48s   five leaders, 9s each: tag, headshot, name, stats counting up,
           the winning stat pulses yellow
   48-58s  final scores build row by row
@@ -19,12 +19,13 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 from video_common import draw_result, encode, game_result
 from leaders import pick
 from night_card import (BAR, BAR_EDGE, BG, BOLD, HANDLE, HIGHLIGHT, INK, LIGHT, MUTED, NUM,
-                        ROOT, F, fit, headshot_circle, ring_color, text_color)
+                        ROOT, PANEL, RED, F, cutout, fit, glow_text, headshot_circle, ring_color,
+                        text_color, vivid)
 from night_card import render as render_card
 
 W, H, FPS = 1080, 1920, 30
@@ -159,7 +160,7 @@ class Leader:
         d = ImageDraw.Draw(img)
         for j in range(5):
             x = W / 2 + (j - 2) * 44
-            fill = self.color if j == idx else (210, 213, 219)
+            fill = self.color if j == idx else (70, 74, 84)
             rr = 11 if j == idx else 8
             d.ellipse((x - rr, 1480 - rr, x + rr, 1480 + rr), fill=fill)
         if fade < 1:
@@ -167,20 +168,48 @@ class Leader:
             img.alpha_composite(veil)
 
 
-def intro(img, t, night):
+def hook_parts(night):
+    """Pre-rendered pieces for the opening hook: the night's top scorer."""
+    p = pick(night["players"]).get("pts")
+    if not p:
+        return None
+    hs = cutout(p, 860)
+    return {"p": p, "hs": hs, "col": vivid(p["team"])}
+
+
+def intro(img, t, night, hook):
+    """0-3s hook: giant points number, the scorer rising in front of it, a question."""
+    if not hook:
+        return
+    p, col = hook["p"], hook["col"]
+    glow = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ImageDraw.Draw(glow).ellipse((-200, 250, W + 200, 1350), fill=col + (int(150 * ease(t / 0.4)),))
+    img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(160)))
     d = ImageDraw.Draw(img)
-    date = datetime.strptime(night["date"], "%Y%m%d").strftime("%b %-d, %Y").upper()
-    a = ease(t / 0.5)
-    alpha_text(img, W / 2 - (1 - a) * 200, 560, date, F(NUM, 64), MUTED, a)
-    s = back((t - 0.3) / 0.6)
+    date = datetime.strptime(night["date"], "%Y%m%d").strftime("%b %-d").upper()
+    d.text((60, 190), date, font=F(NUM, 44), fill=INK)
+    d.text((60, 248), "NIGHT LEADERS", font=F(BOLD, 22), fill=MUTED)
+    s = back(t / 0.45)
     if s > 0:
-        tf = F(NUM, max(10, int(150 * s)))
-        ctext(d, W / 2, 680 + (150 - tf.size) / 2, "NIGHT", tf, INK)
-        ctext(d, W / 2, 840 + (150 - tf.size) / 2, "LEADERS", tf, INK)
-    n = sum(g["final"] for g in night["games"])
-    alpha_text(img, W / 2, 1060, f"{n} GAMES  ·  5 STAT LEADERS", F(BOLD, 40), INK, ease((t - 1.0) / 0.5))
-    hf = F(BOLD, 34)
-    alpha_text(img, W / 2, 1160, HANDLE, hf, MUTED, ease((t - 1.3) / 0.5))
+        big = F(NUM, max(10, int(470 * s)))
+        txt = str(int(round(p["pts"] * min(1, t / 0.6))))
+        tw = d.textlength(txt, font=big)
+        glow_text(img, ((W - tw) / 2, 330 + (470 - big.size) / 2), txt, big, HIGHLIGHT, (255, 170, 0), blur=40)
+    if hook["hs"]:
+        hs = hook["hs"]
+        rise = (1 - ease((t - 0.25) / 0.5)) * 300
+        if t > 0.25:
+            c = hs.copy()
+            c.putalpha(Image.eval(c.split()[3], lambda v: int(v * ease((t - 0.25) / 0.4))))
+            img.alpha_composite(c, ((W - hs.width) // 2, int(1240 - hs.height + rise)))
+    d = ImageDraw.Draw(img)
+    d.rectangle((0, 1240, W, H), fill=BG)
+    alpha_text(img, W / 2, 1260, "POINTS", F(NUM, 60), INK, ease((t - 0.6) / 0.3))
+    name = p["name"].upper()
+    alpha_text(img, W / 2, 1335, name, fit(d, name, NUM, 56, W - 120), INK, ease((t - 0.8) / 0.3))
+    sub = f"ON {p['fgm']}-{p['fga']} SHOOTING"
+    alpha_text(img, W / 2, 1412, sub, F(NUM, 44), RED if p["fga"] and p["fgm"] / p["fga"] < 0.45 else HIGHLIGHT,
+               ease((t - 1.1) / 0.3))
 
 
 def scores(img, t, night):
@@ -192,7 +221,11 @@ def scores(img, t, night):
     top, bottom = 400, 1490
     rh = min(100, (bottom - top) / rows)
     cw = (W - 120) / cols
-    f = F(NUM, int(rh * 0.5))
+    size = int(rh * 0.5)
+    while size > 20 and (d.textlength("MEM", font=F(NUM, size)) + d.textlength("888", font=F(NUM, size))
+                         + 80 > (cw - 10) / 2):
+        size -= 1
+    f = F(NUM, size)
     for i, g in enumerate(games):
         a = ease((t - 0.5 - i * 0.35) / 0.35)
         if a <= 0:
@@ -203,7 +236,7 @@ def scores(img, t, night):
         layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
         ld = ImageDraw.Draw(layer)
         if r % 2 == 0:
-            ld.rounded_rectangle((x, y + 4, x + cw - 10, y + rh - 4), radius=12, fill=(244, 245, 247, int(255 * a)))
+            ld.rounded_rectangle((x, y + 4, x + cw - 10, y + rh - 4), radius=12, fill=PANEL + (int(255 * a),))
         aw = g["away_score"] > g["home_score"]
         half = (cw - 10) / 2
         for j, (ab, sc, won) in enumerate(((g["away"], g["away_score"], aw), (g["home"], g["home_score"], not aw))):
@@ -232,12 +265,14 @@ def build(date, out, keep_frames=False):
     leaders = [Leader(L[k], k, night) for k in ORDER if k in L]
     card_path = Path(out).with_suffix(".card.jpg")
     render_card(night, card_path)
-    card = Image.open(card_path).convert("RGBA").resize((1000, 1250), Image.LANCZOS)
+    card = Image.open(card_path).convert("RGBA").crop((0, 0, 1080, 1560))
+    card = card.resize((int(card.width * 1230 / card.height), 1230), Image.LANCZOS)
+    hook = hook_parts(night)
     total = INTRO + SEG * len(leaders) + SCORES + OUTRO
 
     def frame(img, t):
         if t < INTRO:
-            intro(img, t, night)
+            intro(img, t, night, hook)
         elif t < INTRO + SEG * len(leaders):
             k = int((t - INTRO) // SEG)
             leaders[k].draw(img, (t - INTRO) - k * SEG, k)

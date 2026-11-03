@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw
 
 from mvp import ladder
 from night_card import (BAR, BAR_EDGE, BG, BOLD, HANDLE, HIGHLIGHT, INK, LIGHT, MUTED, NUM,
-                        ROOT, F, centered, fit, headshot_circle, ring_color)
+                        ROOT, PANEL, F, centered, fit, headshot_circle, ring_color)
 from shot_card import DEPTH, MAKE, MISS, court, splits, tag_threes
 
 W, H = 1080, 1350
@@ -100,7 +100,7 @@ def guess(date, out):
     for j, z in enumerate(("PAINT", "MID", "3PT")):
         m, a = sp[z]
         zx = px + j * (zw + 8)
-        d.rounded_rectangle((zx, zy, zx + zw, zy + 58), radius=6, fill=(244, 245, 247))
+        d.rounded_rectangle((zx, zy, zx + zw, zy + 58), radius=6, fill=PANEL)
         centered(d, zx + zw / 2, zy + 6, f"{m}-{a}  {round(100 * m / a) if a else 0}%", F(NUM, 22), INK)
         centered(d, zx + zw / 2, zy + 36, "MIDRANGE" if z == "MID" else z, F(BOLD, 13), MUTED)
     # hint + call to action
@@ -109,13 +109,13 @@ def guess(date, out):
     for hint in hints:
         txt = "HINT: " + hint
         hw = d.textlength(txt, font=hf) + 34
-        d.rounded_rectangle((px, hy2, px + hw, hy2 + 34), radius=17, fill=INK)
+        d.rounded_rectangle((px, hy2, px + hw, hy2 + 34), radius=17, fill=BAR)
         d.text((px + 17, hy2 + 6), txt, font=hf, fill=HIGHLIGHT)
         hy2 += 42
     cta_y = max(hy + r + 70, hy2 + 40)
     d.rounded_rectangle((36, cta_y - 18, W - 36, cta_y + 96), radius=14, fill=BAR)
     centered(d, W / 2, cta_y - 2, "DROP YOUR GUESS IN THE COMMENTS", F(NUM, 40), (255, 255, 255))
-    centered(d, W / 2, cta_y + 56, "ANSWER IN TONIGHT'S POST", F(BOLD, 20), HIGHLIGHT)
+    centered(d, W / 2, cta_y + 56, "ANSWER IN TOMORROW'S RECAP", F(BOLD, 20), HIGHLIGHT)
     img.convert("RGB").save(out, "JPEG", quality=93, subsampling=0)
     return p
 
@@ -143,7 +143,7 @@ def mvp(start, end, out, standings=None):
         y = top + i * row_h
         color = ring_color(rw["team"])
         if i % 2 == 0:
-            d.rounded_rectangle((24, y + 4, W - 24, y + row_h - 8), radius=14, fill=(246, 247, 249))
+            d.rounded_rectangle((24, y + 4, W - 24, y + row_h - 8), radius=14, fill=PANEL)
         # rank
         d.rounded_rectangle((44, y + 54, 134, y + 154), radius=12, fill=BAR)
         centered(d, 89, y + 60, str(i + 1), F(NUM, 66), HIGHLIGHT if i == 0 else (255, 255, 255))

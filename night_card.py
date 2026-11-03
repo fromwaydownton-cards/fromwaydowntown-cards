@@ -1,10 +1,11 @@
-"""Render the nightly leaders graphic (1080x1350, 4:5 for feeds).
+"""Render the nightly leaders graphic (1080x1920, 9:16, dark).
 
-Layout follows Zach's template: five headshot circles with team-color rings
-and a dark stat bar under each, then every final score at the bottom.
-  top:          most points
-  left / right: most rebounds / most assists
-  bottom row:   best 3PT% / worst plus-minus
+One row per leader (points, rebounds, assists, best 3PT%, worst +/-): the
+team color bleeds in behind the headshot and the stat that earned the spot
+is huge (gold, red for worst +/-). Final scores go in the caption, not the
+graphic. Nothing important sits in the bottom ~20%, which TikTok/Reels cover.
+
+This module also holds the shared dark palette used by every card and video.
 
 Usage: python3 night_card.py YYYYMMDD [outfile]
 """
@@ -13,7 +14,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from leaders import pick
 from team_colors import TEAM_COLORS, _rgb, contrast
@@ -23,29 +24,24 @@ FONTS = ROOT / "fonts"
 NUM = str(FONTS / "NotoSansBlack-Latin.otf")     # numbers and big labels
 BOLD = str(FONTS / "DejaVuSans-Bold.ttf")         # names (full accent coverage)
 
-W, H = 1080, 1350
-BG = (255, 255, 255)
+W, H = 1080, 1920
+BG = (11, 12, 16)             # near-black
+PANEL = (24, 26, 32)          # cards / zebra rows on BG
 CIRCLE_FILL = (150, 154, 160)   # gray so hair and skin stand out
-BAR = (60, 60, 60)
-BAR_EDGE = (10, 10, 10)
-INK = (20, 20, 24)
-MUTED = (120, 124, 132)
-LIGHT = (205, 208, 214)
+BAR = (34, 36, 44)
+BAR_EDGE = (64, 68, 80)
+INK = (245, 246, 250)
+MUTED = (140, 146, 160)
+LIGHT = (150, 156, 170)
+RED = (255, 59, 59)
 HANDLE = "@FROMWAYDOWNTOWN"
 HIGHLIGHT = (255, 214, 10)   # yellow for the stat that earned the spot
 HIGHLIGHT_STAT = {"pts": "PTS", "reb": "REB", "ast": "AST"}
 
-# (category, circle center, radius) from the template
-SLOTS = [
-    ("pts", (540, 205), 150),
-    ("reb", (190, 345), 145),
-    ("ast", (890, 345), 145),
-    ("three", (320, 705), 148),
-    ("worst_pm", (760, 705), 148),
-]
-TAGS = {"pts": "MOST POINTS", "reb": "MOST REBOUNDS", "ast": "MOST ASSISTS",
-        "three": "BEST 3PT%", "worst_pm": "WORST +/-"}
-BAR_W, BAR_H = 350, 96
+ROWS = [("pts", "MOST POINTS"), ("reb", "MOST REBOUNDS"), ("ast", "MOST ASSISTS"),
+        ("three", "BEST 3PT%"), ("worst_pm", "WORST +/-")]
+TAGS = dict(ROWS)
+ROW_TOP, ROW_H, ROW_GAP = 200, 240, 22
 IMG = [None]   # current canvas, so the bar can paste logos
 
 
@@ -60,7 +56,7 @@ def fit(d, text, path, size, max_w, min_size=14):
 
 
 def ring_color(abbr):
-    """Team primary color; a darker fallback only if it vanishes on white."""
+    """Team primary color, or the secondary if the primary vanishes on the dark background."""
     for h in TEAM_COLORS.get(abbr, ()):
         c = _rgb(h)
         if contrast(c, BG) >= 1.6:
@@ -74,6 +70,15 @@ def text_color(abbr):
         if contrast(c, BG) >= 2.5:
             return c
     return INK
+
+
+def vivid(abbr):
+    """Team color for glows/gradients on near-black (skips blacks and navies)."""
+    for h in TEAM_COLORS.get(abbr, ()):
+        c = _rgb(h)
+        if sum(c) > 200:
+            return c
+    return (150, 150, 160)
 
 
 def centered(d, cx, y, text, font, fill):
@@ -107,115 +112,88 @@ def ring(img, cx, cy, r, color, width=7):
     img.alpha_composite(big.resize((W, H), Image.LANCZOS))
 
 
-def stat_bar(d, cx, top, p, category):
-    x0 = cx - BAR_W // 2
-    d.rounded_rectangle((x0, top, x0 + BAR_W, top + BAR_H), radius=6, fill=BAR,
-                        outline=BAR_EDGE, width=4)
+def glow_text(img, xy, text, font, fill, glow, blur=16):
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ImageDraw.Draw(layer).text(xy, text, font=font, fill=glow + (230,))
+    img.alpha_composite(layer.filter(ImageFilter.GaussianBlur(blur)))
+    ImageDraw.Draw(img).text(xy, text, font=font, fill=fill)
+
+
+def cutout(p, width):
+    f = ROOT / "data" / "headshots" / f"{p['id']}.png"
+    if not f.exists():
+        return None
+    hs = Image.open(f).convert("RGBA")
+    s = width / hs.width
+    return hs.resize((int(hs.width * s), int(hs.height * s)), Image.LANCZOS)
+
+
+def hero(p, cat):
+    """(big number, line beside it, small line under it) for a leader row."""
+    if cat == "three":
+        return f"{p['tpm']}-{p['tpa']}", f"FROM 3  ·  {round(100 * p['tpm'] / p['tpa'])}%", ""
+    if cat == "worst_pm":
+        return f"{p['pm']:+d}", f"{p['pts']} PTS  ·  {p['fgm']}-{p['fga']} FG", ""
+    unit = HIGHLIGHT_STAT[cat]
+    rest = [f"{v} {l}" for v, l in ((p["pts"], "PTS"), (p["reb"], "REB"), (p["ast"], "AST")) if l != unit]
+    return str(p[cat]), unit, "  ·  ".join(rest)
+
+
+def leader_row(img, y, p, cat):
+    h, x0, x1 = ROW_H, 50, W - 50
+    col = vivid(p["team"])
+    accent = RED if cat == "worst_pm" else HIGHLIGHT
+    card = Image.new("RGBA", (x1 - x0, h), PANEL + (255,))
+    grad = Image.new("RGBA", card.size, (0, 0, 0, 0))
+    gd = ImageDraw.Draw(grad)
+    for i in range(card.width):
+        gd.line((i, 0, i, h), fill=col + (max(0, int(150 * (1 - i / (card.width * 0.6)))),))
+    card.alpha_composite(grad)
+    m = Image.new("L", card.size, 0)
+    ImageDraw.Draw(m).rounded_rectangle((0, 0, card.width - 1, h - 1), radius=28, fill=255)
+    img.paste(card, (x0, y), m)
+    hs = cutout(p, int(h * 1.55))
+    if hs:
+        hs = hs.crop((0, 0, hs.width, min(hs.height, h - 6)))
+        img.alpha_composite(hs, (x0 + 10, y + h - hs.height))
+    d = ImageDraw.Draw(img)
+    tx = x0 + 360
+    d.text((tx, y + 26), TAGS[cat], font=F(BOLD, 24), fill=accent)
     name = p["name"].upper()
-    logo_sz, gap = 32, 8
-    name_f = fit(d, name, BOLD, 24, BAR_W - 28 - logo_sz - gap)
-    group = logo_sz + gap + d.textlength(name, font=name_f)
-    gx = cx - group / 2
-    lf_path = ROOT / "data" / "logos" / f"{p['team']}.png"
-    if lf_path.exists():
-        logo = Image.open(lf_path).convert("RGBA")
-        logo.thumbnail((logo_sz, logo_sz), Image.LANCZOS)
-        IMG[0].alpha_composite(logo, (int(gx + (logo_sz - logo.width) / 2), int(top + 6 + (logo_sz - logo.height) / 2)))
-        d = ImageDraw.Draw(IMG[0])
-    d.text((gx + logo_sz + gap, top + 9), name, font=name_f, fill=(255, 255, 255))
-    stats = [("PTS", p["pts"]), ("REB", p["reb"]), ("AST", p["ast"]),
-             ("TO", p["tov"]), ("STOCKS", p["stl"] + p["blk"])]
-    col = (BAR_W - 20) / len(stats)
-    vf, lf = F(NUM, 30), F(BOLD, 12)
-    for i, (lab, val) in enumerate(stats):
-        c = x0 + 10 + col * i + col / 2
-        hot = HIGHLIGHT_STAT.get(category) == lab
-        centered(d, c, top + 36, str(val), vf, HIGHLIGHT if hot else (255, 255, 255))
-        centered(d, c, top + 76, lab, lf, HIGHLIGHT if hot else LIGHT)
+    d.text((tx, y + 58), name, font=fit(d, name, NUM, 40, x1 - tx - 90), fill=INK)
+    big, side, under = hero(p, cat)
+    bf = F(NUM, 108)
+    glow_text(img, (tx - 4, y + 92), big, bf, accent, accent)
+    d = ImageDraw.Draw(img)
+    bw = d.textlength(big, font=bf)
+    d.text((tx + bw + 18, y + 150), side, font=F(NUM, 34), fill=accent if under else MUTED)
+    if under:
+        d.text((tx + bw + 18, y + 192), under, font=F(BOLD, 22), fill=MUTED)
+    lf = ROOT / "data" / "logos" / f"{p['team']}.png"
+    if lf.exists():
+        lg = Image.open(lf).convert("RGBA")
+        lg.thumbnail((56, 56), Image.LANCZOS)
+        img.alpha_composite(lg, (x1 - 30 - lg.width, y + 22))
 
 
-def tag(d, cx, y, text, color):
-    f = F(BOLD, 17)
-    w = d.textlength(text, font=f) + 26
-    d.rounded_rectangle((cx - w / 2, y - 15, cx + w / 2, y + 15), radius=15, fill=color)
-    centered(d, cx, y - 11, text, f, (255, 255, 255))
-
-
-def detail(p, category):
-    if category == "three":
-        return f"{p['tpm']}-{p['tpa']} 3PT  ·  {round(100 * p['tpm'] / p['tpa'])}%"
-    if category == "worst_pm":
-        return f"{p['pm']:+d} PLUS/MINUS"
-    return None
-
-
-def scoreboard(d, games, top):
-    games = [g for g in games if g["final"]]
-    centered(d, W / 2, top, "FINAL SCORES", F(NUM, 30), INK)
-    d.line((60, top + 50, W - 60, top + 50), fill=LIGHT, width=2)
-    cols = 2 if len(games) <= 12 else 3
-    rows = -(-len(games) // cols)
-    area_top, area_bot = top + 66, H - 70
-    row_h = min(64, (area_bot - area_top) / max(rows, 1))
-    col_w = (W - 120) / cols
-    abbr_f, score_f = F(NUM, int(row_h * 0.46)), F(NUM, int(row_h * 0.46))
-    for i, g in enumerate(games):
-        r, c = i % rows, i // rows
-        x = 60 + c * col_w
-        y = area_top + r * row_h
-        if r % 2 == 0:
-            d.rounded_rectangle((x + 6, y + 2, x + col_w - 6, y + row_h - 2), radius=8,
-                                fill=(244, 245, 247))
-        aw = g["away_score"] > g["home_score"]
-        parts = [(g["away"], g["away_score"], aw), (g["home"], g["home_score"], not aw)]
-        half = (col_w - 12) / 2
-        for j, (abbr, score, won) in enumerate(parts):
-            sx = x + 6 + j * half
-            ty = y + (row_h - abbr_f.size) / 2 - abbr_f.size * 0.12
-            d.text((sx + 18, ty), abbr, font=abbr_f, fill=text_color(abbr))
-            s = str(score)
-            d.text((sx + half - 18 - d.textlength(s, font=score_f), ty), s, font=score_f,
-                   fill=INK if won else MUTED)
-        mid = x + 6 + half
-        d.line((mid, y + row_h * 0.25, mid, y + row_h * 0.75), fill=LIGHT, width=2)
-
-
-def render(night, out):
+def render(night, out, upto=5):
     leaders = pick(night["players"])
     img = Image.new("RGBA", (W, H), BG + (255,))
-    IMG[0] = img
     d = ImageDraw.Draw(img)
-
     date = datetime.strptime(night["date"], "%Y%m%d")
-    d.text((36, 28), date.strftime("%b %-d, %Y").upper(), font=F(NUM, 30), fill=INK)
-    d.text((36, 70), "NIGHT LEADERS", font=F(BOLD, 18), fill=MUTED)
-    hf = F(BOLD, 20)
-    d.text((W - 36 - d.textlength(HANDLE, font=hf), 34), HANDLE, font=hf, fill=MUTED)
-
-    for cat, (cx, cy), r in SLOTS:
-        p = leaders.get(cat)
-        if not p:
-            continue
-        img.alpha_composite(headshot_circle(p, r), (cx - r, cy - r))
-        color = ring_color(p["team"])
-        ring(img, cx, cy, r, color)
-        d = ImageDraw.Draw(img)
-        bar_top = int(cy + r * 0.42)
-        stat_bar(d, cx, bar_top, p, cat)
-        tag(d, cx, cy - r, TAGS[cat], color)
-        extra = detail(p, cat)
-        if extra:
-            ef = F(BOLD, 18)
-            ew = d.textlength(extra, font=ef) + 30
-            ey = bar_top + BAR_H + 6
-            d.rounded_rectangle((cx - ew / 2, ey, cx + ew / 2, ey + 32), radius=6,
-                                fill=BAR, outline=BAR_EDGE, width=3)
-            centered(d, cx, ey + 5, extra, ef, HIGHLIGHT)
-
-    scoreboard(d, night["games"], 905)
+    n = sum(g["final"] for g in night["games"])
+    d.text((60, 70), date.strftime("%b %-d").upper(), font=F(NUM, 44), fill=INK)
+    d.text((60, 128), f"NIGHT LEADERS  ·  {n} GAMES", font=F(BOLD, 22), fill=MUTED)
+    hf = F(BOLD, 22)
+    d.text((W - 60 - d.textlength(HANDLE, font=hf), 84), HANDLE, font=hf, fill=MUTED)
+    shown = [(c, leaders[c]) for c, _ in ROWS if c in leaders][:upto]
+    for i, (cat, p) in enumerate(shown):
+        leader_row(img, ROW_TOP + i * (ROW_H + ROW_GAP), p, cat)
+    d = ImageDraw.Draw(img)
+    centered(d, W / 2, ROW_TOP + 5 * (ROW_H + ROW_GAP) + 4, f"All {n} final scores in the caption",
+             F(BOLD, 24), MUTED)
     img.convert("RGB").save(out, "JPEG", quality=93, subsampling=0)
     return leaders
-
 
 if __name__ == "__main__":
     date = sys.argv[1]

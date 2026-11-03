@@ -20,7 +20,8 @@ sports data.
    posted: do not post again; just record it in step 5.
 4. **Post** with Metricool `createScheduledPost`, blogId `7591436`.
    Publish time: if the entry has `post_at` and it is later than now + 3 minutes,
-   use `post_at` exactly (it is the next morning, 9:00 AM Central: send it as
+   use `post_at` exactly (a Central time on the day after the games: recap 12 PM, shot charts 2 PM,
+   Guess the Player / MVP ladder 8 PM. Send it as
    date `post_at` and publicationDate {dateTime: post_at's local time, timezone
    "America/Chicago"}). Otherwise use now + 3 minutes in `America/Los_Angeles`.
    Metricool holds future posts and publishes them on time, so schedule it in this run.

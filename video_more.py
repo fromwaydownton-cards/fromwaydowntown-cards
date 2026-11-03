@@ -13,7 +13,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 from mvp import ladder
-from night_card import (BAR, BAR_EDGE, BOLD, HANDLE, HIGHLIGHT, INK, LIGHT, MUTED, NUM, ROOT, F,
+from night_card import (BAR, BAR_EDGE, BG, PANEL, BOLD, HANDLE, HIGHLIGHT, INK, LIGHT, MUTED, NUM, ROOT, F,
                         fit, headshot_circle, ring_color)
 from shot_card import DEPTH, HOOP_FROM_BASELINE, MAKE, MISS, court, splits, tag_threes
 from shot_card import render as render_shot_card
@@ -103,7 +103,7 @@ def zone_chips(d, y, sp):
     for j, z in enumerate(("PAINT", "MID", "3PT")):
         m, at = sp[z]
         x = 60 + j * (w + 12)
-        d.rounded_rectangle((x, y, x + w, y + 104), radius=10, fill=(244, 245, 247))
+        d.rounded_rectangle((x, y, x + w, y + 104), radius=10, fill=PANEL)
         ctext(d, x + w / 2, y + 10, f"{m}-{at}  {round(100 * m / at) if at else 0}%", F(NUM, 40), INK)
         ctext(d, x + w / 2, y + 64, "MIDRANGE" if z == "MID" else z, F(BOLD, 22), MUTED)
 
@@ -214,7 +214,7 @@ def shots_video(date, out):
             if st > SHOW1 + 1.4:
                 zone_chips(d, y_after + 168, sp)
         if st > SEG - 0.35:
-            img.alpha_composite(Image.new("RGBA", img.size, (255, 255, 255, int(255 * (st - (SEG - 0.35)) / 0.35))))
+            img.alpha_composite(Image.new("RGBA", img.size, BG + (int(255 * (st - (SEG - 0.35)) / 0.35),)))
 
     return encode(out, total, frame, seed=2)
 
@@ -287,7 +287,7 @@ def guess_video(date, out):
             layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
             ld = ImageDraw.Draw(layer)
             ld.rounded_rectangle((W / 2 - hw / 2, hy, W / 2 + hw / 2, hy + 62), radius=31,
-                                 fill=INK + (int(255 * a),))
+                                 fill=BAR + (int(255 * a),))
             ld.text((W / 2 - hw / 2 + 30, hy + 12), txt, font=hf, fill=HIGHLIGHT + (int(255 * a),))
             img.alpha_composite(layer)
             hy += 76
@@ -306,7 +306,7 @@ def guess_video(date, out):
             ld.rounded_rectangle((60, hy, W - 60, hy + 170), radius=18, fill=BAR + (int(255 * a),))
             img.alpha_composite(layer)
             alpha_text(img, W / 2, hy + 22, "DROP YOUR GUESS IN THE COMMENTS", F(NUM, 46), (255, 255, 255), a)
-            alpha_text(img, W / 2, hy + 100, "ANSWER IN TONIGHT'S POST", F(BOLD, 34), HIGHLIGHT, a)
+            alpha_text(img, W / 2, hy + 100, "ANSWER IN TOMORROW'S RECAP", F(BOLD, 34), HIGHLIGHT, a)
 
     return encode(out, total, frame, seed=3)
 
@@ -400,7 +400,7 @@ def mvp_video(start, end, out):
                 ctext(d, c, y0 + 108, lab, F(BOLD, 22), HIGHLIGHT if hot else LIGHT)
         alpha_text(img, W / 2, 1440, f"BEST GAME THIS WEEK: {r['best']} PTS", F(BOLD, 34), INK, ease((st - 4.0) / 0.5))
         if st > SEG - 0.35:
-            img.alpha_composite(Image.new("RGBA", img.size, (255, 255, 255, int(255 * (st - (SEG - 0.35)) / 0.35))))
+            img.alpha_composite(Image.new("RGBA", img.size, BG + (int(255 * (st - (SEG - 0.35)) / 0.35),)))
 
     return encode(out, total, frame, seed=4)
 
