@@ -5,91 +5,91 @@
    "id": "401909922",
    "start": "2026-11-05T00:00Z",
    "final": false,
-   "status": "3:40 - 1st",
+   "status": "4:09 - 3rd",
    "home": "DET",
    "away": "PHI",
-   "home_score": 17,
-   "away_score": 17
+   "home_score": 65,
+   "away_score": 77
   },
   {
    "id": "401909923",
    "start": "2026-11-05T00:00Z",
    "final": false,
-   "status": "3:38 - 1st",
+   "status": "9:51 - 4th",
    "home": "WAS",
    "away": "ATL",
-   "home_score": 25,
-   "away_score": 24
+   "home_score": 87,
+   "away_score": 100
   },
   {
    "id": "401909924",
    "start": "2026-11-05T00:30Z",
    "final": false,
-   "status": "11/4 - 7:30 PM EST",
+   "status": "7:39 - 3rd",
    "home": "BOS",
    "away": "MIL",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 69,
+   "away_score": 56
   },
   {
    "id": "401909925",
    "start": "2026-11-05T00:30Z",
    "final": false,
-   "status": "11/4 - 7:30 PM EST",
+   "status": "Halftime",
    "home": "BKN",
    "away": "CHA",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 50,
+   "away_score": 57
   },
   {
    "id": "401909926",
    "start": "2026-11-05T00:30Z",
    "final": false,
-   "status": "11/4 - 7:30 PM EST",
+   "status": "Halftime",
    "home": "NYK",
    "away": "CHI",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 84,
+   "away_score": 52
   },
   {
    "id": "401909927",
    "start": "2026-11-05T01:00Z",
    "final": false,
-   "status": "11/4 - 8:00 PM EST",
+   "status": "3:09 - 2nd",
    "home": "MEM",
    "away": "IND",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 47,
+   "away_score": 42
   },
   {
    "id": "401909928",
    "start": "2026-11-05T01:00Z",
    "final": false,
-   "status": "11/4 - 8:00 PM EST",
+   "status": "3:10 - 2nd",
    "home": "NOP",
    "away": "UTA",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 41,
+   "away_score": 34
   },
   {
    "id": "401909929",
    "start": "2026-11-05T01:00Z",
    "final": false,
-   "status": "11/4 - 8:00 PM EST",
+   "status": "4:26 - 2nd",
    "home": "OKC",
    "away": "CLE",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 52,
+   "away_score": 30
   },
   {
    "id": "401909930",
    "start": "2026-11-05T01:30Z",
    "final": false,
-   "status": "11/4 - 8:30 PM EST",
+   "status": "3:43 - 1st",
    "home": "HOU",
    "away": "MIN",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 20,
+   "away_score": 22
   },
   {
    "id": "401909931",
