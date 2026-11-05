@@ -1,0 +1,282 @@
+{
+ "pick": {
+  "id": "6475",
+  "name": "Klay Thompson",
+  "team": "MIA",
+  "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/6475.png",
+  "pts": 30,
+  "reb": 5,
+  "ast": 3,
+  "stl": 0,
+  "blk": 1,
+  "tov": 2,
+  "fgm": 11,
+  "fga": 22,
+  "tpm": 8,
+  "tpa": 17,
+  "pm": 21,
+  "ftm": 0,
+  "fta": 0,
+  "pf": 4,
+  "min": 35,
+  "oreb": 1,
+  "dreb": 4,
+  "game": "401909935",
+  "normal": 11.7,
+  "normal_src": "last season",
+  "jump": 18.3
+ },
+ "shots": {
+  "player": {
+   "id": "6475",
+   "name": "Klay Thompson",
+   "team": "MIA",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/6475.png",
+   "pts": 30,
+   "reb": 5,
+   "ast": 3,
+   "stl": 0,
+   "blk": 1,
+   "tov": 2,
+   "fgm": 11,
+   "fga": 22,
+   "tpm": 8,
+   "tpa": 17,
+   "pm": 21,
+   "ftm": 0,
+   "fta": 0,
+   "pf": 4,
+   "min": 35,
+   "oreb": 1,
+   "dreb": 4,
+   "game": "401909935",
+   "normal": 11.7,
+   "normal_src": "last season",
+   "jump": 18.3
+  },
+  "shots": [
+   {
+    "x": 2,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Klay Thompson misses 23-foot three point jumper",
+    "period": 1,
+    "clock": "11:43"
+   },
+   {
+    "x": 34,
+    "y": 15,
+    "made": false,
+    "value": 0,
+    "type": "Fade Away Jump Shot",
+    "text": "Klay Thompson misses 16-foot fade away jump shot",
+    "period": 1,
+    "clock": "10:07"
+   },
+   {
+    "x": 10,
+    "y": 19,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Klay Thompson makes 24-foot three point jumper (Davion Mitchell assists)",
+    "period": 1,
+    "clock": "8:33"
+   },
+   {
+    "x": 12,
+    "y": 6,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Klay Thompson makes 14-foot pullup jump shot (Ryan Conwell assists)",
+    "period": 1,
+    "clock": "5:55"
+   },
+   {
+    "x": 44,
+    "y": 21,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Klay Thompson makes 28-foot three point jumper (Bobby Portis assists)",
+    "period": 1,
+    "clock": "5:31"
+   },
+   {
+    "x": 1,
+    "y": 2,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Klay Thompson makes 24-foot three point jumper (Bobby Portis assists)",
+    "period": 1,
+    "clock": "4:33"
+   },
+   {
+    "x": 49,
+    "y": 4,
+    "made": true,
+    "value": 3,
+    "type": "Fade Away Jump Shot",
+    "text": "Klay Thompson makes 24-foot fade away jump shot (Bam Adebayo assists)",
+    "period": 2,
+    "clock": "2:10"
+   },
+   {
+    "x": 9,
+    "y": 21,
+    "made": false,
+    "value": 0,
+    "type": "Running Jump Shot",
+    "text": "Klay Thompson misses 26-foot running jump shot",
+    "period": 3,
+    "clock": "11:45"
+   },
+   {
+    "x": 33,
+    "y": 18,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Klay Thompson misses 19-foot pullup jump shot",
+    "period": 3,
+    "clock": "9:36"
+   },
+   {
+    "x": 41,
+    "y": 19,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Klay Thompson makes 24-foot three point jumper (Davion Mitchell assists)",
+    "period": 3,
+    "clock": "8:23"
+   },
+   {
+    "x": 28,
+    "y": 26,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Klay Thompson makes 25-foot three point jumper (Bam Adebayo assists)",
+    "period": 3,
+    "clock": "7:50"
+   },
+   {
+    "x": 15,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Klay Thompson misses 27-foot three point jumper",
+    "period": 3,
+    "clock": "5:11"
+   },
+   {
+    "x": 7,
+    "y": 21,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Klay Thompson misses 27-foot three point jumper",
+    "period": 3,
+    "clock": "4:30"
+   },
+   {
+    "x": 9,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Step Back Jump Shot",
+    "text": "Klay Thompson makes 16-foot step back jumpshot (Bam Adebayo assists)",
+    "period": 3,
+    "clock": "4:07"
+   },
+   {
+    "x": 8,
+    "y": 20,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Klay Thompson misses 25-foot three point pullup jump shot",
+    "period": 3,
+    "clock": "2:11"
+   },
+   {
+    "x": 39,
+    "y": 14,
+    "made": true,
+    "value": 2,
+    "type": "Running Pullup Jump Shot",
+    "text": "Klay Thompson makes 19-foot running pullup jump shot (Andrew Wiggins assists)",
+    "period": 4,
+    "clock": "5:59"
+   },
+   {
+    "x": 22,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Klay Thompson misses 26-foot three point jumper",
+    "period": 4,
+    "clock": "5:24"
+   },
+   {
+    "x": 2,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Derrick Jones Jr. blocks Klay Thompson 's 23-foot three point jumper",
+    "period": 4,
+    "clock": "2:12"
+   },
+   {
+    "x": 2,
+    "y": 12,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Klay Thompson misses 25-foot three point pullup jump shot",
+    "period": 4,
+    "clock": "1:09"
+   },
+   {
+    "x": 9,
+    "y": 23,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Klay Thompson misses 27-foot three point jumper",
+    "period": 5,
+    "clock": "3:23"
+   },
+   {
+    "x": 49,
+    "y": 1,
+    "made": true,
+    "value": 3,
+    "type": "Running Jump Shot",
+    "text": "Klay Thompson makes 23-foot running jump shot (Giannis Antetokounmpo assists)",
+    "period": 5,
+    "clock": "2:12"
+   },
+   {
+    "x": 1,
+    "y": -1,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Klay Thompson makes 23-foot three point jumper (Giannis Antetokounmpo assists)",
+    "period": 5,
+    "clock": "1.0"
+   }
+  ],
+  "ft_made": 0,
+  "ft_att": 0
+ }
+}
