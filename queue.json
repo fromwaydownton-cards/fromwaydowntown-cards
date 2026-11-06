@@ -100,6 +100,40 @@
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261104-guess.mp4"
       ]
+    },
+    {
+      "key": "night:20261105",
+      "kind": "nightly",
+      "test": false,
+      "folder": "cards/nights/20261105.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261105.jpg"
+      ],
+      "caption": "Giannis and Bam in the same frontcourt: still a spacing problem? Giannis with 20 pts, 14 reb.\n\nYesterday's Guess the Player answer: Klay Thompson (MIA), 30 pts vs his usual 11.7. Did you get it?\n\nNBA night leaders, Nov 5, 2026.\n\nMost points: Devin Booker (PHX) 30 pts\nMost rebounds: Giannis Antetokounmpo (MIA) 14 reb\nMost assists: Franz Wagner (ORL) 15 ast\nBest 3PT%: Dillon Brooks (PHX) 4-6 from 3\nWorst +/-: Davion Mitchell (MIA) -16\n\nAll 2 final scores:\nORL 104, PHX 117\nMIA 100, GSW 120\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
+      "first_comment": "Vote for the best night \ud83d\udc47 1) Booker  2) Antetokounmpo  3) Wagner  4) Brooks",
+      "post_at": "2026-11-06T12:00:00-06:00",
+      "title": "NBA night leaders Nov 5",
+      "queued_at": "2026-11-06T05:42:50+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261105-nightly.mp4"
+      ]
+    },
+    {
+      "key": "shots:20261105",
+      "kind": "shots",
+      "test": false,
+      "folder": "cards/shots/20261105-shots.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/shots/20261105-shots.jpg"
+      ],
+      "caption": "Booker put up 30. Which spot on the floor should defenses take away?\n\nShot charts for the top scorers from Nov 5.\n\n1. Devin Booker (PHX) 30 pts, 11-22 FG, 4-8 3PT\n2. Stephen Curry (GSW) 29 pts, 9-19 FG, 6-12 3PT\n3. Wendell Carter Jr. (ORL) 27 pts, 10-12 FG, 2-2 3PT\n\nGreen = made, red = missed. Follow for the leaders every night.\n\n#NBA #NBAStats #ShotChart #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-06T14:00:00-06:00",
+      "title": "Top scorer shot charts Nov 5",
+      "queued_at": "2026-11-06T05:42:51+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261105-shots.mp4"
+      ]
     }
   ]
 }
