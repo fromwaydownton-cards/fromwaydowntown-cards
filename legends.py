@@ -1,6 +1,7 @@
 """Guess the Player: Legends library and its shot data.
 
-Shot locations only exist from 1996-97 on, so 80s stars appear through their
+Shot locations only exist from 1996-97 on (and Basketball-Reference's charts for
+the late 90s miss some shots, so cards show a shot PROFILE, never "every shot"), so 80s stars appear through their
 late-career seasons. Sources (fetched once, saved to data/legends/<slug>.json):
   - 2003-04 to 2024-25: the public NBA shot dataset github.com/DomSamangy/NBA_Shots_04_25
   - 1996-97 to 2002-03: Basketball-Reference season shot charts (one page per entry,
@@ -62,7 +63,6 @@ LIBRARY = [
     S("drexler-1997", "Clyde Drexler", "1996-97", 18.0, ["1992 DREAM TEAM MEMBER", "ROOKIE YEAR: 1983-84"], "drexlcl01"),
     S("pippen-1997", "Scottie Pippen", "1996-97", 20.2, ["6-TIME CHAMPION", "ROOKIE YEAR: 1987-88"], "pippesc01"),
     S("robinson-1998", "David Robinson", "1997-98", 21.6, ["ONCE SCORED 71 IN A GAME", "ROOKIE YEAR: 1989-90"], "robinda01"),
-    S("rodman-1997", "Dennis Rodman", "1996-97", 5.7, ["LED THE LEAGUE IN REBOUNDS 7 YEARS IN A ROW", "ROOKIE YEAR: 1986-87"], "rodmade01"),
     # --- 90s / 2000s ---
     S("penny-1997", "Penny Hardaway", "1996-97", 20.5, ["HAD A PUPPET ALTER EGO IN SNEAKER ADS", "NO. 3 PICK IN 1993"], "hardaan01"),
     S("shaq-2000", "Shaquille O'Neal", "1999-00", 29.7, ["WON MVP, ONE VOTE SHY OF UNANIMOUS", "CENTER"], "onealsh01"),
@@ -109,7 +109,6 @@ LIBRARY = [
     S("shai-2024", "Shai Gilgeous-Alexander", "2023-24", 30.1, ["MVP RUNNER-UP THAT SEASON", "BORN IN CANADA"]),
     S("wemby-2025", "Victor Wembanyama", "2024-25", 24.3, ["NO. 1 PICK IN 2023", "BORN IN FRANCE"]),
     # --- famous games ---
-    G("shaq-61", "Shaquille O'Neal", "2000-03-06", 61, ["HE DID IT ON HIS BIRTHDAY", "CENTER"], "onealsh01"),
     G("tmac-62", "Tracy McGrady", "2004-03-10", 62, ["STILL HIS FRANCHISE'S SINGLE-GAME RECORD", "WENT STRAIGHT FROM HIGH SCHOOL"]),
     G("kobe-81", "Kobe Bryant", "2006-01-22", 81, ["SECOND-MOST POINTS IN A GAME EVER", "WENT STRAIGHT FROM HIGH SCHOOL"]),
     G("arenas-60", "Gilbert Arenas", "2006-12-17", 60, ["SCORED 16 IN OVERTIME", "SECOND-ROUND PICK"]),
@@ -178,6 +177,10 @@ def from_dataset(e):
 
 # ---------- Basketball-Reference (1996-97 to 2002-03) -----------------------
 
+# Last day of each regular season: Basketball-Reference's season chart also
+# includes the playoffs, and the legends cards show regular seasons only.
+REG_END = {1997: "1997-04-20", 1998: "1998-04-19", 1999: "1999-05-05", 2000: "2000-04-19",
+           2001: "2001-04-18", 2002: "2002-04-17", 2003: "2003-04-16"}
 TIP = re.compile(r'<div style="top:(-?\d+)px;left:(-?\d+)px;" tip="([^"]+)" class="tooltip (make|miss)"')
 
 
@@ -208,8 +211,10 @@ def from_bbref(e):
                 best = (med, cx, hy)
     _, cx, hy = best
     print(f"  bbref calibration: hoop at left={cx}px top={hy}px, median error {best[0]:.2f} ft")
+    keep = [s for s in raw if e["mode"] == "game" or s["date"] <= REG_END[end]]
     return [{"x": round((s["left"] - cx) / 10 + 25, 2), "y": round((s["top"] - hy) / 10, 2),
-             "made": s["made"], "three": s["three"], "date": s["date"]} for s in raw]
+             "made": s["made"], "three": s["three"], "date": s["date"],
+             "px": [s["left"], s["top"]], "ft": s["ft"]} for s in keep]
 
 
 # ---------- fetch + checks --------------------------------------------------
@@ -245,7 +250,7 @@ def fetch_entry(e):
     if e["mode"] == "game":
         shots = pick_game(shots, e["date"])
     st = summarize(e, shots) if shots else {}
-    ok = bool(shots) and (e["mode"] == "season" and st["fga"] >= 300
+    ok = bool(shots) and (e["mode"] == "season" and st["fga"] >= 250
                           or e["mode"] == "game" and 0 <= st.get("ftm", -1) <= 30)
     rec = {"entry": e, "ok": ok, "stats": st, "shots": shots,
            "fetched": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")}
