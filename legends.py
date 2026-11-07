@@ -212,9 +212,28 @@ def from_bbref(e):
     _, cx, hy = best
     print(f"  bbref calibration: hoop at left={cx}px top={hy}px, median error {best[0]:.2f} ft")
     keep = [s for s in raw if e["mode"] == "game" or s["date"] <= REG_END[end]]
+    e["_profile"] = bbref_profile(page, e["season"])
     return [{"x": round((s["left"] - cx) / 10 + 25, 2), "y": round((s["top"] - hy) / 10, 2),
              "made": s["made"], "three": s["three"], "date": s["date"],
              "px": [s["left"], s["top"]], "ft": s["ft"]} for s in keep]
+
+
+def bbref_profile(page, season):
+    """Official share of FGA by distance for that regular season, from the page's
+    shooting table (the late-90s charts miss some shots, mostly at the rim)."""
+    for m in re.finditer(r"<tr[^>]*>(.*?)</tr>", page, re.S):
+        row = m.group(1)
+        if f">{season}<" not in row or 'data-stat="pct_fga_00_03"' not in row:
+            continue
+        def v(stat):
+            x = re.search(rf'data-stat="{stat}"[^>]*>([.\d]*)<', row)
+            return float(x.group(1)) if x and x.group(1) else None
+        rim, three = v("pct_fga_00_03"), v("pct_fga_fg3a")
+        if rim is None or three is None:
+            continue
+        return {"rim": round(100 * rim), "three": round(100 * three),
+                "mid": round(100 * (1 - rim - three))}
+    return None
 
 
 # ---------- fetch + checks --------------------------------------------------
@@ -252,7 +271,10 @@ def fetch_entry(e):
     st = summarize(e, shots) if shots else {}
     ok = bool(shots) and (e["mode"] == "season" and st["fga"] >= 250
                           or e["mode"] == "game" and 0 <= st.get("ftm", -1) <= 30)
-    rec = {"entry": e, "ok": ok, "stats": st, "shots": shots,
+    profile = e.pop("_profile", None)
+    if e["mode"] == "season" and e.get("bbref") and int(e["season"][:4]) < 2003 and not profile:
+        ok = False                      # partial chart and no official profile: don't post it
+    rec = {"entry": e, "ok": ok, "stats": st, "shots": shots, "profile": profile,
            "fetched": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")}
     DATA.mkdir(parents=True, exist_ok=True)
     (DATA / f"{e['slug']}.json").write_text(json.dumps(rec, separators=(",", ":")))
@@ -283,7 +305,7 @@ def main():
         e = BY_SLUG[slug]
         try:
             r = fetch_entry(e)
-            print(f"{'OK ' if r['ok'] else 'BAD'} {slug}: {r['stats']}")
+            print(f"{'OK ' if r['ok'] else 'BAD'} {slug}: {r['stats']} profile={r.get('profile')}")
             if not r["ok"]:
                 bad.append(slug)
         except Exception as ex:
