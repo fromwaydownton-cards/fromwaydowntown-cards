@@ -1,10 +1,10 @@
 """Guess the Player: Legends library and its shot data.
 
-Shot locations only exist from 1996-97 on (and Basketball-Reference's charts for
-the late 90s miss some shots, so cards show a shot PROFILE, never "every shot"), so 80s stars appear through their
+Shot locations only exist from 1996-97 on, and the late-90s charts miss many shots
+at the rim, so seasons start in 2000-01: 80s stars appear through their last seasons, so 80s stars appear through their
 late-career seasons. Sources (fetched once, saved to data/legends/<slug>.json):
   - 2003-04 to 2024-25: the public NBA shot dataset github.com/DomSamangy/NBA_Shots_04_25
-  - 1996-97 to 2002-03: Basketball-Reference season shot charts (one page per entry,
+  - 2000-01 to 2002-03: Basketball-Reference season shot charts (one page per entry,
     fetched slowly: 6 s apart)
 An entry whose data can't be found is marked missing and never posted.
 
@@ -52,22 +52,20 @@ def G(slug, name, date, pts, hints, bbref=None):
 
 
 LIBRARY = [
-    # --- 80s stars, late-career seasons (1996-97 on) ---
-    S("jordan-1998", "Michael Jordan", "1997-98", 28.7, ["WON MVP AND FINALS MVP THAT SEASON", "ROOKIE YEAR: 1984-85"], "jordami01"),
-    S("olajuwon-1997", "Hakeem Olajuwon", "1996-97", 23.2, ["CENTER, TWO-TIME CHAMPION", "NO. 1 PICK IN 1984"], "olajuha01"),
-    S("malone-1998", "Karl Malone", "1997-98", 27.0, ["POWER FORWARD, 2X MVP IN HIS CAREER", "ROOKIE YEAR: 1985-86"], "malonka01"),
-    S("stockton-1997", "John Stockton", "1996-97", 14.4, ["ALL-TIME LEADER IN ASSISTS AND STEALS", "ROOKIE YEAR: 1984-85"], "stockjo01"),
-    S("barkley-1997", "Charles Barkley", "1996-97", 19.2, ["WON MVP IN THE EARLY 90s", "ROOKIE YEAR: 1984-85"], "barklch01"),
-    S("ewing-1997", "Patrick Ewing", "1996-97", 22.4, ["CENTER, ROOKIE OF THE YEAR IN 1986", "NO. 1 PICK IN 1985"], "ewingpa01"),
-    S("reggie-1998", "Reggie Miller", "1997-98", 19.5, ["SPENT HIS WHOLE CAREER WITH ONE TEAM", "ROOKIE YEAR: 1987-88"], "millere01"),
-    S("drexler-1997", "Clyde Drexler", "1996-97", 18.0, ["1992 DREAM TEAM MEMBER", "ROOKIE YEAR: 1983-84"], "drexlcl01"),
-    S("pippen-1997", "Scottie Pippen", "1996-97", 20.2, ["6-TIME CHAMPION", "ROOKIE YEAR: 1987-88"], "pippesc01"),
-    S("robinson-1998", "David Robinson", "1997-98", 21.6, ["ONCE SCORED 71 IN A GAME", "ROOKIE YEAR: 1989-90"], "robinda01"),
+    # --- 80s stars, late-career seasons. Basketball-Reference's 1996-97 to 1999-00
+    # charts are missing too many shots at the rim to be fair, so the earliest
+    # seasons used are 2000-01 on (Barkley, Drexler, Bird, Magic etc. aren't possible) ---
+    S("jordan-2003", "Michael Jordan", "2002-03", 20.0, ["HIS LAST NBA SEASON", "ROOKIE YEAR: 1984-85"], "jordami01"),
+    S("malone-2003", "Karl Malone", "2002-03", 20.6, ["2X MVP IN HIS CAREER", "ROOKIE YEAR: 1985-86"], "malonka01"),
+    S("stockton-2003", "John Stockton", "2002-03", 10.8, ["HIS LAST SEASON", "ALL-TIME LEADER IN ASSISTS AND STEALS"], "stockjo01"),
+    S("robinson-2003", "David Robinson", "2002-03", 8.5, ["WON THE TITLE IN HIS LAST SEASON", "ROOKIE YEAR: 1989-90"], "robinda01"),
+    S("olajuwon-2002", "Hakeem Olajuwon", "2001-02", 7.1, ["HIS LAST SEASON", "NO. 1 PICK IN 1984"], "olajuha01"),
+    S("ewing-2002", "Patrick Ewing", "2001-02", 6.0, ["HIS LAST SEASON", "NO. 1 PICK IN 1985"], "ewingpa01"),
+    S("pippen-2002", "Scottie Pippen", "2001-02", 10.6, ["6-TIME CHAMPION", "ROOKIE YEAR: 1987-88"], "pippesc01"),
+    S("reggie-2005", "Reggie Miller", "2004-05", 14.8, ["HIS LAST SEASON", "SPENT HIS WHOLE CAREER WITH ONE TEAM"]),
     # --- 90s / 2000s ---
-    S("penny-1997", "Penny Hardaway", "1996-97", 20.5, ["HAD A PUPPET ALTER EGO IN SNEAKER ADS", "NO. 3 PICK IN 1993"], "hardaan01"),
-    S("shaq-2000", "Shaquille O'Neal", "1999-00", 29.7, ["WON MVP, ONE VOTE SHY OF UNANIMOUS", "CENTER"], "onealsh01"),
-    S("payton-2000", "Gary Payton", "1999-00", 24.2, ["1996 DEFENSIVE PLAYER OF THE YEAR", "POINT GUARD"], "paytoga01"),
-    S("hill-2000", "Grant Hill", "1999-00", 25.8, ["CO-ROOKIE OF THE YEAR IN 1995", "DUKE GRADUATE"], "hillgr01"),
+    S("shaq-2001", "Shaquille O'Neal", "2000-01", 28.7, ["WON FINALS MVP THAT SEASON", "CENTER"], "onealsh01"),
+    S("payton-2002", "Gary Payton", "2001-02", 22.1, ["1996 DEFENSIVE PLAYER OF THE YEAR", "POINT GUARD"], "paytoga01"),
     S("iverson-2001", "Allen Iverson", "2000-01", 31.1, ["WON MVP THAT SEASON", "LISTED AT 6 FEET TALL"], "iversal01"),
     S("vince-2001", "Vince Carter", "2000-01", 27.6, ["WON THE 2000 DUNK CONTEST", "PLAYED 22 SEASONS"], "cartevi01"),
     S("webber-2001", "Chris Webber", "2000-01", 27.1, ["NO. 1 PICK IN 1993", "POWER FORWARD"], "webbech01"),
@@ -272,8 +270,6 @@ def fetch_entry(e):
     ok = bool(shots) and (e["mode"] == "season" and st["fga"] >= 250
                           or e["mode"] == "game" and 0 <= st.get("ftm", -1) <= 30)
     profile = e.pop("_profile", None)
-    if e["mode"] == "season" and e.get("bbref") and int(e["season"][:4]) < 2003 and not profile:
-        ok = False                      # partial chart and no official profile: don't post it
     rec = {"entry": e, "ok": ok, "stats": st, "shots": shots, "profile": profile,
            "fetched": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")}
     DATA.mkdir(parents=True, exist_ok=True)
