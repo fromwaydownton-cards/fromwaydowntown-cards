@@ -84,6 +84,25 @@
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261105-shots.mp4"
       ]
+    },
+    {
+      "key": "guess:20261106",
+      "kind": "guess",
+      "test": false,
+      "folder": "cards/guess/20261106-guess.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261106-guess.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #1. 27 points last night from a guy who usually scores 2.2. Who is it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-07T20:00:00-06:00",
+      "title": "Guess the player #1",
+      "queued_at": "2026-11-07T06:14:51+00:00",
+      "subject": "current",
+      "n": 1,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261106-guess.mp4"
+      ]
     }
   ]
 }
