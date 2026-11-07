@@ -145,6 +145,23 @@ def heat_layer(shots, w_px, th, reveal=1.0):
     return big.resize((w_px, h_px), Image.LANCZOS)
 
 
+def spread(shots, min_ft=0.9):
+    """Shots logged at the same spot (layups are often all at the rim) would hide
+    each other; nudge repeats around a small circle so every shot shows."""
+    out, placed = [], []
+    for s in shots:
+        x, y = s["x"], s["y"]
+        k = 0
+        while any(math.hypot(x - px, y - py) < min_ft for px, py in placed) and k < 24:
+            k += 1
+            ang = k * 2.4
+            rad = min_ft * (0.8 + 0.25 * k)
+            x, y = s["x"] + rad * math.cos(ang), max(-4.0, s["y"] + rad * math.sin(ang))
+        placed.append((x, y))
+        out.append(dict(s, x=x, y=y))
+    return out
+
+
 def court_image(subject, w_px, shown=None, reveal=1.0):
     th = subject["theme"]
     img = court_base(w_px, th)
@@ -155,7 +172,8 @@ def court_image(subject, w_px, shown=None, reveal=1.0):
     else:
         scale = w_px / 50.0
         spr = dot_sprites(th, max(14, int(w_px / 62)))
-        sub = shots if shown is None else shots[:shown]
+        sub = spread(shots)
+        sub = sub if shown is None else sub[:shown]
         for s in sorted(sub, key=lambda s: s["made"]):
             x, y = shot_px(s, scale)
             sp = spr[s["made"]]
@@ -269,19 +287,24 @@ def render(subject, out):
         cta_y += 36
     d.rounded_rectangle((36, cta_y, W - 36, H - 30), radius=16, fill=th["chip"])
     mid = (cta_y + H - 30) / 2
-    centered(d, W / 2, mid - 40, "DROP YOUR GUESS IN THE COMMENTS", F(NUM, 38), (255, 255, 255))
-    centered(d, W / 2, mid + 12, "ANSWER IN TOMORROW'S POST", F(BOLD, 20), th["accent"])
+    centered(d, W / 2, mid - 46, "DROP YOUR GUESS IN THE COMMENTS", F(NUM, 44), (255, 255, 255))
+    centered(d, W / 2, mid + 16, "ANSWER IN TOMORROW'S POST", F(BOLD, 24), th["accent"])
     img.convert("RGB").save(out, "JPEG", quality=93, subsampling=0)
     return out
 
 
 # ---------- subjects ---------------------------------------------------------
 
-def profile(shots):
-    """Share of his shots at the rim (within 6 ft), from midrange and from three."""
+def profile(rec):
+    """Share of his shots from 0-3 ft, midrange and three. Uses the official
+    split when the source has one (late-90s charts miss some shots)."""
+    if rec.get("profile"):
+        p = rec["profile"]
+        return {k: f"{p[k]}%" for k in ("rim", "mid", "three")}
+    shots = rec["shots"]
     n = len(shots) or 1
     three = sum(is_three(s) for s in shots)
-    rim = sum(not is_three(s) and math.hypot(s["x"] - 25, s["y"]) <= 6 for s in shots)
+    rim = sum(not is_three(s) and math.hypot(s["x"] - 25, s["y"]) < 4 for s in shots)
     pct = lambda k: f"{round(100 * k / n)}%"
     return {"rim": pct(rim), "mid": pct(n - three - rim), "three": pct(three)}
 
@@ -291,8 +314,8 @@ def legend_subject(rec, n, reveal=None):
     from legends import decade
     shots = sorted(rec["shots"], key=lambda s: (s["date"], not s["made"]))
     if e["mode"] == "season":
-        pr = profile(shots)
-        chips = [("PPG", f"{e['ppg']:.1f}", True), ("AT THE RIM", pr["rim"], False),
+        pr = profile(rec)
+        chips = [("PPG", f"{e['ppg']:.1f}", True), ("0-3 FT", pr["rim"], False),
                  ("MIDRANGE", pr["mid"], False), ("THREES", pr["three"], False)]
         sub = f"LEGENDS EDITION  ·  HIS {e['season']} SEASON SHOT CHART"
     else:

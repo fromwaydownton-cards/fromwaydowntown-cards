@@ -1,9 +1,17 @@
 # Hourly posting run
 
-GitHub Actions (`nightly.yml`) builds the nightly leaders graphic once every
-game of an NBA night is final and adds it to `queue.json`. This run only
-POSTS what is in the queue. It never builds or edits graphics, and never needs
-sports data.
+GitHub Actions (`nightly.yml`) builds the posts and adds them to `queue.json`.
+This run only POSTS what is in the queue. It never builds or edits graphics,
+and never needs sports data.
+
+What gets queued (since Nov 2026):
+- `guess:` / `legend:` entries: Guess the Player #N, every night at 8 PM Central
+  (a current player on Tue/Thu/Sat, a legend on the other nights).
+- `weekly:` entries: weekly per-game leaders, Monday 12 PM Central.
+- `mvp:` entries: MVP ladder, Monday 5 PM Central.
+The nightly recap (`night:`) and nightly shot charts (`shots:`) are retired;
+older entries with those keys are still posted normally if pending.
+All entry kinds are posted the same way below.
 
 ## Steps
 
@@ -20,8 +28,8 @@ sports data.
    posted: do not post again; just record it in step 5.
 4. **Post** with Metricool `createScheduledPost`, blogId `7591436`.
    Publish time: if the entry has `post_at` and it is later than now + 3 minutes,
-   use `post_at` exactly (a Central time on the day after the games: recap 12 PM, shot charts 2 PM,
-   Guess the Player / MVP ladder 8 PM. Send it as
+   use `post_at` exactly (a Central time: Guess the Player 8 PM, weekly leaders Monday 12 PM,
+   MVP ladder Monday 5 PM. Send it as
    date `post_at` and publicationDate {dateTime: post_at's local time, timezone
    "America/Chicago"}). Otherwise use now + 3 minutes in `America/Los_Angeles`.
    Metricool holds future posts and publishes them on time, so schedule it in this run.
