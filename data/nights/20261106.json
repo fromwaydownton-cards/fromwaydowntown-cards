@@ -75,21 +75,21 @@
    "id": "401909294",
    "start": "2026-11-07T03:00Z",
    "final": false,
-   "status": "9:15 - 2nd",
+   "status": "11:29 - 3rd",
    "home": "LAL",
    "away": "POR",
-   "home_score": 28,
-   "away_score": 38
+   "home_score": 55,
+   "away_score": 60
   },
   {
    "id": "401909295",
    "start": "2026-11-07T03:00Z",
    "final": false,
-   "status": "34.3 - 1st",
+   "status": "Halftime",
    "home": "SAC",
    "away": "SAS",
-   "home_score": 27,
-   "away_score": 36
+   "home_score": 56,
+   "away_score": 75
   }
  ],
  "players": [
