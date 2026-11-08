@@ -1,57 +1,6 @@
 {
   "queue": [
     {
-      "key": "night:20261104",
-      "kind": "nightly",
-      "test": false,
-      "folder": "cards/nights/20261104.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/nights/20261104.jpg"
-      ],
-      "caption": "The books still have Wemby as the MVP favorite. 52 pts, 24 reb. Agree, or is it Luka's award?\n\nNBA night leaders, Nov 4, 2026.\n\nMost points: Victor Wembanyama (SAS) 52 pts\nMost rebounds: Domantas Sabonis (SAC) 17 reb\nMost assists: Deni Avdija (POR) 12 ast\nBest 3PT%: Grayson Allen (CHA) 5-7 from 3\nWorst +/-: Norman Powell (CHI) -34\n\nAll 14 final scores:\nPHI 112, DET 106\nATL 120, WAS 105\nMIL 102, BOS 109\nCHA 104, BKN 114\nCHI 105, NYK 135\nIND 107, MEM 103\nUTA 113, NOP 120\nCLE 116, OKC 124\nMIN 117, HOU 107\nTOR 109, DEN 128\nPOR 132, PHX 119\nDAL 111, SAS 112\nLAL 116, SAC 103\nMIA 117, LAC 116\n\nDrop your take in the comments. Follow for the leaders every night.\n\n#NBA #NBAStats #hoops #basketball",
-      "first_comment": "Vote for the best night \ud83d\udc47 1) Wembanyama  2) Sabonis  3) Avdija  4) Allen",
-      "post_at": "2026-11-05T12:00:00-06:00",
-      "title": "NBA night leaders Nov 4",
-      "queued_at": "2026-11-05T06:28:14+00:00",
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261104-nightly.mp4"
-      ]
-    },
-    {
-      "key": "shots:20261104",
-      "kind": "shots",
-      "test": false,
-      "folder": "cards/shots/20261104-shots.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/shots/20261104-shots.jpg"
-      ],
-      "caption": "Spurs vs. Thunder in the West finals again feels inevitable. Wemby with 52 pts, 24 reb. Anyone stopping San Antonio?\n\nShot charts for the top scorers from Nov 4.\n\n1. Victor Wembanyama (SAS) 52 pts, 16-28 FG, 1-8 3PT\n2. Shai Gilgeous-Alexander (OKC) 42 pts, 11-26 FG, 5-11 3PT\n3. Luka Doncic (LAL) 40 pts, 11-24 FG, 6-13 3PT\n\nGreen = made, red = missed. Follow for the leaders every night.\n\n#NBA #NBAStats #ShotChart #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-11-05T14:00:00-06:00",
-      "title": "Top scorer shot charts Nov 4",
-      "queued_at": "2026-11-05T06:28:16+00:00",
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261104-shots.mp4"
-      ]
-    },
-    {
-      "key": "guess:20261104",
-      "kind": "guess",
-      "test": false,
-      "folder": "cards/guess/20261104-guess.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261104-guess.jpg"
-      ],
-      "caption": "GUESS THE PLAYER. 30 points last night. Who put up this shot chart?\n\nHe's not a star, and this was way above his usual. Two hints are on the graphic.\n\nDrop your guess in the comments. Answer in tomorrow's recap.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-11-05T20:00:00-06:00",
-      "title": "Guess the player Nov 5",
-      "queued_at": "2026-11-05T06:28:18+00:00",
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261104-guess.mp4"
-      ]
-    },
-    {
       "key": "night:20261105",
       "kind": "nightly",
       "test": false,
