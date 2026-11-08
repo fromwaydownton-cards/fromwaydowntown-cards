@@ -1,12 +1,21 @@
 {
- "n": 1,
+ "n": 2,
  "days": {
   "20261107": {
    "n": 1,
    "kind": "current",
    "key": "guess:20261106",
    "answer": "Alijah Martin (TOR), 27 pts vs his usual 2.2"
+  },
+  "20261108": {
+   "n": 2,
+   "kind": "legend",
+   "slug": "curry-2016",
+   "key": "legend:20261108",
+   "answer": "Stephen Curry, 2015-16 season"
   }
  },
- "used": []
+ "used": [
+  "curry-2016"
+ ]
 }

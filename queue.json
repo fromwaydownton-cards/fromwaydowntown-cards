@@ -103,6 +103,25 @@
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261106-guess.mp4"
       ]
+    },
+    {
+      "key": "legend:20261108",
+      "kind": "legend",
+      "test": false,
+      "folder": "cards/guess/20261108-legend.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261108-legend.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #2. His shot chart from the 2015-16 season: 30.1 points a game. Who is it?\n\nLast time's answer: Alijah Martin (TOR), 27 pts vs his usual 2.2. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-08T20:00:00-06:00",
+      "title": "Guess the player #2",
+      "queued_at": "2026-11-08T06:04:49+00:00",
+      "subject": "curry-2016",
+      "n": 2,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261108-legend.mp4"
+      ]
     }
   ]
 }
