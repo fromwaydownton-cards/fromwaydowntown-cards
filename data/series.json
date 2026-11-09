@@ -1,5 +1,5 @@
 {
- "n": 2,
+ "n": 3,
  "days": {
   "20261107": {
    "n": 1,
@@ -13,9 +13,17 @@
    "slug": "curry-2016",
    "key": "legend:20261108",
    "answer": "Stephen Curry, 2015-16 season"
+  },
+  "20261109": {
+   "n": 3,
+   "kind": "legend",
+   "slug": "jokic-2022",
+   "key": "legend:20261109",
+   "answer": "Nikola Jokic, 2021-22 season"
   }
  },
  "used": [
-  "curry-2016"
+  "curry-2016",
+  "jokic-2022"
  ]
 }
