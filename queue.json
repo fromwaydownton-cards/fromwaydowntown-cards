@@ -71,6 +71,41 @@
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261108-legend.mp4"
       ]
+    },
+    {
+      "key": "weekly:20261108",
+      "kind": "weekly",
+      "test": false,
+      "folder": "cards/weekly/20261102-20261108.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/weekly/20261102-20261108.jpg"
+      ],
+      "caption": "Luka Doncic led the league with 45.0 points a game this week. Who had the best week?\n\nNBA weekly leaders, Nov 2-8 (per game, min 2 games).\n\nPoints: Luka Doncic (LAL) 45.0 PPG\nRebounds: Victor Wembanyama (SAS) 14.0 RPG\nAssists: Franz Wagner (ORL) 10.7 APG\nSteals: Cade Cunningham (DET) 3.0 SPG\nBlocks: Victor Wembanyama (SAS) 3.5 BPG\nThrees Made: Lauri Markkanen (UTA) 5.7 3PM\n\nDrop your pick in the comments. Follow for Guess the Player every night.\n\n#NBA #NBAStats #hoops #basketball",
+      "first_comment": "Best week? Vote \ud83d\udc47 1) Doncic  2) Wembanyama  3) Wagner",
+      "post_at": "2026-11-09T12:00:00-06:00",
+      "title": "NBA weekly leaders Nov 2-8",
+      "queued_at": "2026-11-09T05:31:01+00:00"
+    },
+    {
+      "key": "mvp:20261108",
+      "kind": "mvp",
+      "test": false,
+      "folder": "cards/mvp/20261102-20261108.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/mvp/20261102-20261108.jpg"
+      ],
+      "caption": "MVP LADDER, week of Nov 2-Nov 8. Is Doncic really No. 1?\n\n1. Luka Doncic (LAL) 45.0 PPG, on/off +41, team 9-2\n2. Victor Wembanyama (SAS) 30.8 PPG, on/off +53, team 8-2\n3. Stephen Curry (GSW) 34.7 PPG, on/off +42, team 7-3\n4. Nikola Jokic (DEN) 25.7 PPG, on/off +16, team 5-3\n5. Anthony Davis (WAS) 26.5 PPG, on/off +34, team 4-6\n\nRanked by Game Score, on/off impact and team record. Who's too high? Who's missing?\n\n#NBA #MVP #NBAStats #hoops #basketball",
+      "first_comment": "Your top 5? Drop it below \ud83d\udc47",
+      "post_at": "2026-11-09T17:00:00-06:00",
+      "week": [
+        "20261102",
+        "20261108"
+      ],
+      "title": "MVP ladder Nov 2-Nov 8",
+      "queued_at": "2026-11-09T05:31:03+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261108-mvp.mp4"
+      ]
     }
   ]
 }
