@@ -55,21 +55,21 @@
    "id": "401909950",
    "start": "2026-11-09T02:00Z",
    "final": false,
-   "status": "8.0 - 2nd",
+   "status": "5:23 - 4th",
    "home": "LAC",
    "away": "NOP",
-   "home_score": 65,
-   "away_score": 60
+   "home_score": 121,
+   "away_score": 105
   },
   {
    "id": "401909951",
    "start": "2026-11-09T02:00Z",
    "final": false,
-   "status": "Halftime",
+   "status": "2:30 - 4th",
    "home": "SAC",
    "away": "MIA",
-   "home_score": 59,
-   "away_score": 68
+   "home_score": 101,
+   "away_score": 106
   }
  ],
  "players": [
