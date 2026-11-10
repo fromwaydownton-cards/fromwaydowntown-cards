@@ -91,6 +91,25 @@
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261109-legend.mp4"
       ]
+    },
+    {
+      "key": "guess:20261109",
+      "kind": "guess",
+      "test": false,
+      "folder": "cards/guess/20261109-guess.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261109-guess.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #4. 44 points last night from a guy who usually scores 20.4. Who is it?\n\nLast time's answer: Nikola Jokic, 2021-22 season. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-10T20:00:00-06:00",
+      "title": "Guess the player #4",
+      "queued_at": "2026-11-10T05:44:39+00:00",
+      "subject": "current",
+      "n": 4,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261109-guess.mp4"
+      ]
     }
   ]
 }

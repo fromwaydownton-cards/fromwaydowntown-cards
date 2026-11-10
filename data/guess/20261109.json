@@ -1,0 +1,272 @@
+{
+ "pick": {
+  "id": "6583",
+  "name": "Anthony Davis",
+  "team": "WAS",
+  "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/6583.png",
+  "pts": 44,
+  "reb": 13,
+  "ast": 1,
+  "stl": 1,
+  "blk": 0,
+  "tov": 3,
+  "fgm": 16,
+  "fga": 21,
+  "tpm": 2,
+  "tpa": 4,
+  "pm": -10,
+  "ftm": 10,
+  "fta": 11,
+  "pf": 4,
+  "min": 34,
+  "oreb": 5,
+  "dreb": 8,
+  "game": "401909954",
+  "normal": 20.4,
+  "normal_src": "last season",
+  "jump": 23.6
+ },
+ "shots": {
+  "player": {
+   "id": "6583",
+   "name": "Anthony Davis",
+   "team": "WAS",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/6583.png",
+   "pts": 44,
+   "reb": 13,
+   "ast": 1,
+   "stl": 1,
+   "blk": 0,
+   "tov": 3,
+   "fgm": 16,
+   "fga": 21,
+   "tpm": 2,
+   "tpa": 4,
+   "pm": -10,
+   "ftm": 10,
+   "fta": 11,
+   "pf": 4,
+   "min": 34,
+   "oreb": 5,
+   "dreb": 8,
+   "game": "401909954",
+   "normal": 20.4,
+   "normal_src": "last season",
+   "jump": 23.6
+  },
+  "shots": [
+   {
+    "x": 26,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Layup Shot Putback",
+    "text": "Anthony Davis makes two point shot",
+    "period": 1,
+    "clock": "9:45"
+   },
+   {
+    "x": 36,
+    "y": 23,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Anthony Davis makes 25-foot three point jumper (Trae Young assists)",
+    "period": 1,
+    "clock": "9:14"
+   },
+   {
+    "x": 27,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Layup Shot Putback",
+    "text": "Anthony Davis makes two point shot",
+    "period": 1,
+    "clock": "6:25"
+   },
+   {
+    "x": 26,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Layup Shot",
+    "text": "Anthony Davis makes layup (Kyshawn George assists)",
+    "period": 1,
+    "clock": "5:25"
+   },
+   {
+    "x": 16,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Jump Shot",
+    "text": "Anthony Davis makes 11-foot turnaround jump shot",
+    "period": 1,
+    "clock": "4:37"
+   },
+   {
+    "x": 4,
+    "y": 13,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Anthony Davis makes 24-foot three point jumper (Trae Young assists)",
+    "period": 2,
+    "clock": "8:44"
+   },
+   {
+    "x": 27,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Layup Shot",
+    "text": "Anthony Davis makes 3-foot layup (Bub Carrington assists)",
+    "period": 2,
+    "clock": "6:59"
+   },
+   {
+    "x": 21,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Finger Roll Layup",
+    "text": "Anthony Davis makes 3-foot two point shot (Bub Carrington assists)",
+    "period": 2,
+    "clock": "5:04"
+   },
+   {
+    "x": 28,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Layup Shot Putback",
+    "text": "Anthony Davis makes two point shot",
+    "period": 2,
+    "clock": "3:49"
+   },
+   {
+    "x": 23,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Cutting Layup Shot",
+    "text": "Anthony Davis misses layup",
+    "period": 2,
+    "clock": "3:19"
+   },
+   {
+    "x": 27,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Layup Shot Putback",
+    "text": "Anthony Davis makes two point shot",
+    "period": 2,
+    "clock": "1:25"
+   },
+   {
+    "x": 33,
+    "y": 17,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot",
+    "text": "Anthony Davis makes 18-foot jumper",
+    "period": 3,
+    "clock": "10:34"
+   },
+   {
+    "x": 17,
+    "y": 5,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "Anthony Davis makes 9-foot driving floating jump shot",
+    "period": 3,
+    "clock": "4:33"
+   },
+   {
+    "x": 24,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Layup Shot",
+    "text": "Anthony Davis makes layup (Bub Carrington assists)",
+    "period": 3,
+    "clock": "3:35"
+   },
+   {
+    "x": 13,
+    "y": 23,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Anthony Davis misses 25-foot three point jumper",
+    "period": 3,
+    "clock": "2:51"
+   },
+   {
+    "x": 15,
+    "y": 26,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Anthony Davis misses 27-foot three point pullup jump shot",
+    "period": 4,
+    "clock": "9:06"
+   },
+   {
+    "x": 24,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Finger Roll Layup Shot",
+    "text": "Anthony Davis makes layup (Kyshawn George assists)",
+    "period": 4,
+    "clock": "7:54"
+   },
+   {
+    "x": 24,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Alley Oop Dunk Shot",
+    "text": "Anthony Davis makes 1-foot alley oop dunk (Trae Young assists)",
+    "period": 4,
+    "clock": "7:06"
+   },
+   {
+    "x": 27,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Floating Jump Shot",
+    "text": "Anthony Davis misses 1-foot floating jump shot",
+    "period": 4,
+    "clock": "6:30"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Tip Shot",
+    "text": "Anthony Davis makes tip shot",
+    "period": 4,
+    "clock": "6:28"
+   },
+   {
+    "x": 29,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Running Alley Oop Layup Shot",
+    "text": "Anthony Davis misses layup",
+    "period": 4,
+    "clock": "5:01"
+   }
+  ],
+  "ft_made": 10,
+  "ft_att": 11
+ }
+}

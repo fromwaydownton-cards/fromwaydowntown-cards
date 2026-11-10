@@ -1,5 +1,5 @@
 {
- "n": 3,
+ "n": 4,
  "days": {
   "20261107": {
    "n": 1,
@@ -20,6 +20,12 @@
    "slug": "jokic-2022",
    "key": "legend:20261109",
    "answer": "Nikola Jokic, 2021-22 season"
+  },
+  "20261110": {
+   "n": 4,
+   "kind": "current",
+   "key": "guess:20261109",
+   "answer": "Anthony Davis (WAS), 44 pts vs his usual 20.4"
   }
  },
  "used": [
