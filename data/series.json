@@ -1,5 +1,5 @@
 {
- "n": 4,
+ "n": 5,
  "days": {
   "20261107": {
    "n": 1,
@@ -26,10 +26,18 @@
    "kind": "current",
    "key": "guess:20261109",
    "answer": "Anthony Davis (WAS), 44 pts vs his usual 20.4"
+  },
+  "20261111": {
+   "n": 5,
+   "kind": "legend",
+   "slug": "malone-2003",
+   "key": "legend:20261111",
+   "answer": "Karl Malone, 2002-03 season"
   }
  },
  "used": [
   "curry-2016",
-  "jokic-2022"
+  "jokic-2022",
+  "malone-2003"
  ]
 }
