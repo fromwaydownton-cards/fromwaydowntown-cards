@@ -1,5 +1,5 @@
 {
- "n": 5,
+ "n": 6,
  "days": {
   "20261107": {
    "n": 1,
@@ -33,6 +33,12 @@
    "slug": "malone-2003",
    "key": "legend:20261111",
    "answer": "Karl Malone, 2002-03 season"
+  },
+  "20261112": {
+   "n": 6,
+   "kind": "current",
+   "key": "guess:20261111",
+   "answer": "Franz Wagner (ORL), 38 pts vs his usual 20.6"
   }
  },
  "used": [
