@@ -1,25 +1,6 @@
 {
   "queue": [
     {
-      "key": "guess:20261109",
-      "kind": "guess",
-      "test": false,
-      "folder": "cards/guess/20261109-guess.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261109-guess.jpg"
-      ],
-      "caption": "GUESS THE PLAYER #4. 44 points last night from a guy who usually scores 20.4. Who is it?\n\nLast time's answer: Nikola Jokic, 2021-22 season. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-11-10T20:00:00-06:00",
-      "title": "Guess the player #4",
-      "queued_at": "2026-11-10T05:44:39+00:00",
-      "subject": "current",
-      "n": 4,
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261109-guess.mp4"
-      ]
-    },
-    {
       "key": "legend:20261111",
       "kind": "legend",
       "test": false,
@@ -55,6 +36,25 @@
       "n": 6,
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261111-guess.mp4"
+      ]
+    },
+    {
+      "key": "legend:20261113",
+      "kind": "legend",
+      "test": false,
+      "folder": "cards/guess/20261113-legend.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261113-legend.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #7. His shot chart from the 2000-01 season: 28.7 points a game. Who is it?\n\nLast time's answer: Franz Wagner (ORL), 38 pts vs his usual 20.6. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-13T20:00:00-06:00",
+      "title": "Guess the player #7",
+      "queued_at": "2026-11-13T06:45:01+00:00",
+      "subject": "shaq-2001",
+      "n": 7,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261113-legend.mp4"
       ]
     }
   ]

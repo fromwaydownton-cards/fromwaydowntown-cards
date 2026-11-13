@@ -1,5 +1,5 @@
 {
- "n": 6,
+ "n": 7,
  "days": {
   "20261107": {
    "n": 1,
@@ -39,11 +39,19 @@
    "kind": "current",
    "key": "guess:20261111",
    "answer": "Franz Wagner (ORL), 38 pts vs his usual 20.6"
+  },
+  "20261113": {
+   "n": 7,
+   "kind": "legend",
+   "slug": "shaq-2001",
+   "key": "legend:20261113",
+   "answer": "Shaquille O'Neal, 2000-01 season"
   }
  },
  "used": [
   "curry-2016",
   "jokic-2022",
-  "malone-2003"
+  "malone-2003",
+  "shaq-2001"
  ]
 }
