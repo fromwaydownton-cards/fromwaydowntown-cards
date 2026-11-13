@@ -1,0 +1,97 @@
+{
+ "date": "20261113",
+ "games": [
+  {
+   "id": "401909296",
+   "start": "2026-11-14T00:00Z",
+   "final": false,
+   "status": "11/13 - 7:00 PM EST",
+   "home": "IND",
+   "away": "NYK",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909297",
+   "start": "2026-11-14T00:00Z",
+   "final": false,
+   "status": "11/13 - 7:00 PM EST",
+   "home": "ORL",
+   "away": "MIL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909298",
+   "start": "2026-11-14T01:00Z",
+   "final": false,
+   "status": "11/13 - 8:00 PM EST",
+   "home": "MIA",
+   "away": "CLE",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909299",
+   "start": "2026-11-14T01:00Z",
+   "final": false,
+   "status": "11/13 - 8:00 PM EST",
+   "home": "CHI",
+   "away": "ATL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909300",
+   "start": "2026-11-14T01:00Z",
+   "final": false,
+   "status": "11/13 - 8:00 PM EST",
+   "home": "NOP",
+   "away": "MEM",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909301",
+   "start": "2026-11-14T01:30Z",
+   "final": false,
+   "status": "11/13 - 8:30 PM EST",
+   "home": "HOU",
+   "away": "UTA",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909302",
+   "start": "2026-11-14T02:30Z",
+   "final": false,
+   "status": "11/13 - 9:30 PM EST",
+   "home": "SAS",
+   "away": "GSW",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909303",
+   "start": "2026-11-14T03:00Z",
+   "final": false,
+   "status": "11/13 - 10:00 PM EST",
+   "home": "SAC",
+   "away": "POR",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909304",
+   "start": "2026-11-14T03:30Z",
+   "final": false,
+   "status": "11/13 - 10:30 PM EST",
+   "home": "LAC",
+   "away": "OKC",
+   "home_score": 0,
+   "away_score": 0
+  }
+ ],
+ "players": [],
+ "all_final": false
+}
