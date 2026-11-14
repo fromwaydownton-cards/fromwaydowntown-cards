@@ -1,0 +1,57 @@
+{
+ "date": "20261114",
+ "games": [
+  {
+   "id": "401909980",
+   "start": "2026-11-15T00:00Z",
+   "final": false,
+   "status": "11/14 - 7:00 PM EST",
+   "home": "NOP",
+   "away": "DEN",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909981",
+   "start": "2026-11-15T00:30Z",
+   "final": false,
+   "status": "11/14 - 7:30 PM EST",
+   "home": "CLE",
+   "away": "DAL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909982",
+   "start": "2026-11-15T01:00Z",
+   "final": false,
+   "status": "11/14 - 8:00 PM EST",
+   "home": "MIA",
+   "away": "DET",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909983",
+   "start": "2026-11-15T01:00Z",
+   "final": false,
+   "status": "11/14 - 8:00 PM EST",
+   "home": "MEM",
+   "away": "BKN",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909984",
+   "start": "2026-11-15T01:00Z",
+   "final": false,
+   "status": "11/14 - 8:00 PM EST",
+   "home": "MIN",
+   "away": "CHI",
+   "home_score": 0,
+   "away_score": 0
+  }
+ ],
+ "players": [],
+ "all_final": false
+}
