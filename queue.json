@@ -1,25 +1,6 @@
 {
   "queue": [
     {
-      "key": "legend:20261111",
-      "kind": "legend",
-      "test": false,
-      "folder": "cards/guess/20261111-legend.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261111-legend.jpg"
-      ],
-      "caption": "GUESS THE PLAYER #5. His shot chart from the 2002-03 season: 20.6 points a game. Who is it?\n\nLast time's answer: Anthony Davis (WAS), 44 pts vs his usual 20.4. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-11-11T20:00:00-06:00",
-      "title": "Guess the player #5",
-      "queued_at": "2026-11-11T06:46:57+00:00",
-      "subject": "malone-2003",
-      "n": 5,
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261111-legend.mp4"
-      ]
-    },
-    {
       "key": "guess:20261111",
       "kind": "guess",
       "test": false,
