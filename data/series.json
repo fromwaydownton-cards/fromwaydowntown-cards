@@ -1,5 +1,5 @@
 {
- "n": 7,
+ "n": 8,
  "days": {
   "20261107": {
    "n": 1,
@@ -46,6 +46,12 @@
    "slug": "shaq-2001",
    "key": "legend:20261113",
    "answer": "Shaquille O'Neal, 2000-01 season"
+  },
+  "20261114": {
+   "n": 8,
+   "kind": "current",
+   "key": "guess:20261113",
+   "answer": "Alperen Sengun (HOU), 43 pts vs his usual 20.4"
   }
  },
  "used": [

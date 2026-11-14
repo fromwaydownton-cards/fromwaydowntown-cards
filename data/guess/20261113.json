@@ -1,0 +1,302 @@
+{
+ "pick": {
+  "id": "4871144",
+  "name": "Alperen Sengun",
+  "team": "HOU",
+  "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4871144.png",
+  "pts": 43,
+  "reb": 12,
+  "ast": 5,
+  "stl": 1,
+  "blk": 1,
+  "tov": 1,
+  "fgm": 17,
+  "fga": 24,
+  "tpm": 1,
+  "tpa": 3,
+  "pm": 7,
+  "ftm": 8,
+  "fta": 12,
+  "pf": 4,
+  "min": 37,
+  "oreb": 5,
+  "dreb": 7,
+  "game": "401909301",
+  "normal": 20.4,
+  "normal_src": "last season",
+  "jump": 22.6
+ },
+ "shots": {
+  "player": {
+   "id": "4871144",
+   "name": "Alperen Sengun",
+   "team": "HOU",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4871144.png",
+   "pts": 43,
+   "reb": 12,
+   "ast": 5,
+   "stl": 1,
+   "blk": 1,
+   "tov": 1,
+   "fgm": 17,
+   "fga": 24,
+   "tpm": 1,
+   "tpa": 3,
+   "pm": 7,
+   "ftm": 8,
+   "fta": 12,
+   "pf": 4,
+   "min": 37,
+   "oreb": 5,
+   "dreb": 7,
+   "game": "401909301",
+   "normal": 20.4,
+   "normal_src": "last season",
+   "jump": 22.6
+  },
+  "shots": [
+   {
+    "x": 27,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Layup Driving Reverse",
+    "text": "Alperen Sengun makes two point shot",
+    "period": 1,
+    "clock": "10:57"
+   },
+   {
+    "x": 26,
+    "y": 6,
+    "made": true,
+    "value": 2,
+    "type": "Running Dunk Shot",
+    "text": "Alperen Sengun makes 5-foot running dunk (Fred VanVleet assists)",
+    "period": 1,
+    "clock": "10:18"
+   },
+   {
+    "x": 23,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Layup Shot",
+    "text": "Alperen Sengun makes 2-foot layup (Kevin Durant assists)",
+    "period": 1,
+    "clock": "8:42"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Tip Shot",
+    "text": "Alperen Sengun makes tip shot",
+    "period": 1,
+    "clock": "7:56"
+   },
+   {
+    "x": 23,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Alperen Sengun makes driving layup",
+    "period": 1,
+    "clock": "5:06"
+   },
+   {
+    "x": 14,
+    "y": 23,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Alperen Sengun misses 24-foot three point jumper",
+    "period": 2,
+    "clock": "11:13"
+   },
+   {
+    "x": 28,
+    "y": 7,
+    "made": true,
+    "value": 2,
+    "type": "Driving Hook Shot",
+    "text": "Alperen Sengun makes 7-foot two point shot",
+    "period": 2,
+    "clock": "10:02"
+   },
+   {
+    "x": 22,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Hook Shot",
+    "text": "Alperen Sengun makes 3-foot two point shot (Bogdan Bogdanovic assists)",
+    "period": 2,
+    "clock": "8:59"
+   },
+   {
+    "x": 26,
+    "y": 6,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Hook Shot",
+    "text": "Alperen Sengun misses 5-foot two point shot",
+    "period": 3,
+    "clock": "11:45"
+   },
+   {
+    "x": 20,
+    "y": 6,
+    "made": true,
+    "value": 2,
+    "type": "Turnaround Hook Shot",
+    "text": "Alperen Sengun makes 7-foot two point shot",
+    "period": 3,
+    "clock": "9:29"
+   },
+   {
+    "x": 28,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Layup Driving Reverse",
+    "text": "Alperen Sengun makes two point shot (Kevin Durant assists)",
+    "period": 3,
+    "clock": "5:20"
+   },
+   {
+    "x": 2,
+    "y": -1,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Alperen Sengun makes 23-foot three point jumper (Kevin Durant assists)",
+    "period": 3,
+    "clock": "4:30"
+   },
+   {
+    "x": 8,
+    "y": 19,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Alperen Sengun misses 25-foot three point pullup jump shot",
+    "period": 3,
+    "clock": "4:00"
+   },
+   {
+    "x": 24,
+    "y": 1,
+    "made": false,
+    "value": 0,
+    "type": "Cutting Layup Shot",
+    "text": "Alperen Sengun misses layup",
+    "period": 3,
+    "clock": "3:37"
+   },
+   {
+    "x": 23,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Hook Shot",
+    "text": "Alperen Sengun makes 1-foot hook shot",
+    "period": 3,
+    "clock": "3:08"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Tip Shot",
+    "text": "Alperen Sengun makes tip shot",
+    "period": 3,
+    "clock": "1:02"
+   },
+   {
+    "x": 27,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Alperen Sengun makes driving layup (Reed Sheppard assists)",
+    "period": 3,
+    "clock": "36.3"
+   },
+   {
+    "x": 27,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Dunk Shot",
+    "text": "Alperen Sengun makes 4-foot dunk (Bogdan Bogdanovic assists)",
+    "period": 4,
+    "clock": "7:57"
+   },
+   {
+    "x": 25,
+    "y": 8,
+    "made": false,
+    "value": 0,
+    "type": "Floating Jump Shot",
+    "text": "Alperen Sengun misses 7-foot floating jump shot",
+    "period": 4,
+    "clock": "7:23"
+   },
+   {
+    "x": 24,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Driving Hook Shot",
+    "text": "Alperen Sengun makes 4-foot two point shot",
+    "period": 4,
+    "clock": "5:44"
+   },
+   {
+    "x": 27,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Layup Shot",
+    "text": "Alperen Sengun makes layup",
+    "period": 4,
+    "clock": "4:29"
+   },
+   {
+    "x": 23,
+    "y": 9,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Hook Shot",
+    "text": "Alperen Sengun misses 8-foot two point shot",
+    "period": 4,
+    "clock": "2:23"
+   },
+   {
+    "x": 28,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Layup Shot",
+    "text": "Alperen Sengun makes layup",
+    "period": 4,
+    "clock": "1:25"
+   },
+   {
+    "x": 28,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Hook Shot",
+    "text": "Alperen Sengun misses 3-foot two point shot",
+    "period": 4,
+    "clock": "51.5"
+   }
+  ],
+  "ft_made": 8,
+  "ft_att": 12
+ }
+}

@@ -56,6 +56,25 @@
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261113-legend.mp4"
       ]
+    },
+    {
+      "key": "guess:20261113",
+      "kind": "guess",
+      "test": false,
+      "folder": "cards/guess/20261113-guess.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261113-guess.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #8. 43 points last night from a guy who usually scores 20.4. Who is it?\n\nLast time's answer: Shaquille O'Neal, 2000-01 season. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-14T20:00:00-06:00",
+      "title": "Guess the player #8",
+      "queued_at": "2026-11-14T06:33:56+00:00",
+      "subject": "current",
+      "n": 8,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261113-guess.mp4"
+      ]
     }
   ]
 }
