@@ -1,25 +1,6 @@
 {
   "queue": [
     {
-      "key": "guess:20261111",
-      "kind": "guess",
-      "test": false,
-      "folder": "cards/guess/20261111-guess.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261111-guess.jpg"
-      ],
-      "caption": "GUESS THE PLAYER #6. 38 points last night from a guy who usually scores 20.6. Who is it?\n\nLast time's answer: Karl Malone, 2002-03 season. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-11-12T20:00:00-06:00",
-      "title": "Guess the player #6",
-      "queued_at": "2026-11-12T06:30:19+00:00",
-      "subject": "current",
-      "n": 6,
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261111-guess.mp4"
-      ]
-    },
-    {
       "key": "legend:20261113",
       "kind": "legend",
       "test": false,
