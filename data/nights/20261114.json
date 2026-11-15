@@ -5,51 +5,51 @@
    "id": "401909980",
    "start": "2026-11-15T00:00Z",
    "final": false,
-   "status": "7:31 - 2nd",
+   "status": "1:15 - 3rd",
    "home": "NOP",
    "away": "DEN",
-   "home_score": 36,
-   "away_score": 38
+   "home_score": 79,
+   "away_score": 84
   },
   {
    "id": "401909981",
    "start": "2026-11-15T00:30Z",
    "final": false,
-   "status": "7:32 - 1st",
+   "status": "12:00 - 3rd",
    "home": "CLE",
    "away": "DAL",
-   "home_score": 13,
-   "away_score": 12
+   "home_score": 71,
+   "away_score": 53
   },
   {
    "id": "401909982",
    "start": "2026-11-15T01:00Z",
    "final": false,
-   "status": "11/14 - 8:00 PM EST",
+   "status": "8:23 - 2nd",
    "home": "MIA",
    "away": "DET",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 44,
+   "away_score": 45
   },
   {
    "id": "401909983",
    "start": "2026-11-15T01:00Z",
    "final": false,
-   "status": "11/14 - 8:00 PM EST",
+   "status": "6:40 - 2nd",
    "home": "MEM",
    "away": "BKN",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 55,
+   "away_score": 37
   },
   {
    "id": "401909984",
    "start": "2026-11-15T01:00Z",
    "final": false,
-   "status": "11/14 - 8:00 PM EST",
+   "status": "5:05 - 2nd",
    "home": "MIN",
    "away": "CHI",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 32,
+   "away_score": 42
   }
  ],
  "players": [],
