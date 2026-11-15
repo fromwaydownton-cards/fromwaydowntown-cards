@@ -56,6 +56,25 @@
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261113-guess.mp4"
       ]
+    },
+    {
+      "key": "legend:20261115",
+      "kind": "legend",
+      "test": false,
+      "folder": "cards/guess/20261115-legend.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261115-legend.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #9. His shot chart from the 2019-20 season: 29.5 points a game. Who is it?\n\nLast time's answer: Alperen Sengun (HOU), 43 pts vs his usual 20.4. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-15T20:00:00-06:00",
+      "title": "Guess the player #9",
+      "queued_at": "2026-11-15T06:20:47+00:00",
+      "subject": "giannis-2020",
+      "n": 9,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261115-legend.mp4"
+      ]
     }
   ]
 }

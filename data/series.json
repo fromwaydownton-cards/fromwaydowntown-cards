@@ -1,5 +1,5 @@
 {
- "n": 8,
+ "n": 9,
  "days": {
   "20261107": {
    "n": 1,
@@ -52,12 +52,20 @@
    "kind": "current",
    "key": "guess:20261113",
    "answer": "Alperen Sengun (HOU), 43 pts vs his usual 20.4"
+  },
+  "20261115": {
+   "n": 9,
+   "kind": "legend",
+   "slug": "giannis-2020",
+   "key": "legend:20261115",
+   "answer": "Giannis Antetokounmpo, 2019-20 season"
   }
  },
  "used": [
   "curry-2016",
   "jokic-2022",
   "malone-2003",
-  "shaq-2001"
+  "shaq-2001",
+  "giannis-2020"
  ]
 }
