@@ -1,5 +1,5 @@
 {
- "n": 9,
+ "n": 10,
  "days": {
   "20261107": {
    "n": 1,
@@ -59,6 +59,13 @@
    "slug": "giannis-2020",
    "key": "legend:20261115",
    "answer": "Giannis Antetokounmpo, 2019-20 season"
+  },
+  "20261116": {
+   "n": 10,
+   "kind": "legend",
+   "slug": "robinson-2003",
+   "key": "legend:20261116",
+   "answer": "David Robinson, 2002-03 season"
   }
  },
  "used": [
@@ -66,6 +73,7 @@
   "jokic-2022",
   "malone-2003",
   "shaq-2001",
-  "giannis-2020"
+  "giannis-2020",
+  "robinson-2003"
  ]
 }
