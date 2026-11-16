@@ -56,6 +56,41 @@
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261115-legend.mp4"
       ]
+    },
+    {
+      "key": "weekly:20261115",
+      "kind": "weekly",
+      "test": false,
+      "folder": "cards/weekly/20261109-20261115.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/weekly/20261109-20261115.jpg"
+      ],
+      "caption": "Luka Doncic led the league with 35.7 points a game this week. Who had the best week?\n\nNBA weekly leaders, Nov 9-15 (per game, min 2 games).\n\nPoints: Luka Doncic (LAL) 35.7 PPG\nRebounds: Karl-Anthony Towns (NYK) 14.8 RPG\nAssists: Davion Mitchell (MIA) 11.3 APG\nSteals: Matisse Thybulle (LAL) 3.0 SPG\nBlocks: Victor Wembanyama (SAS) 5.2 BPG\nThrees Made: Desmond Bane (ORL) 5.7 3PM\n\nDrop your pick in the comments. Follow for Guess the Player every night.\n\n#NBA #NBAStats #hoops #basketball",
+      "first_comment": "Best week? Vote \ud83d\udc47 1) Doncic  2) Towns  3) Mitchell",
+      "post_at": "2026-11-16T12:00:00-06:00",
+      "title": "NBA weekly leaders Nov 9-15",
+      "queued_at": "2026-11-16T05:29:43+00:00"
+    },
+    {
+      "key": "mvp:20261115",
+      "kind": "mvp",
+      "test": false,
+      "folder": "cards/mvp/20261109-20261115.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/mvp/20261109-20261115.jpg"
+      ],
+      "caption": "MVP LADDER, week of Nov 9-Nov 15. Is Wembanyama really No. 1?\n\n1. Victor Wembanyama (SAS) 27.5 PPG, on/off +47, team 12-2\n2. Franz Wagner (ORL) 35.3 PPG, on/off +56, team 5-7\n3. Jamal Murray (DEN) 30.3 PPG, on/off +47, team 7-4\n4. Cade Cunningham (DET) 34.0 PPG, on/off +10, team 8-4\n5. Luka Doncic (LAL) 35.7 PPG, on/off +23, team 12-2\n\nRanked by Game Score, on/off impact and team record. Who's too high? Who's missing?\n\n#NBA #MVP #NBAStats #hoops #basketball",
+      "first_comment": "Your top 5? Drop it below \ud83d\udc47",
+      "post_at": "2026-11-16T17:00:00-06:00",
+      "week": [
+        "20261109",
+        "20261115"
+      ],
+      "title": "MVP ladder Nov 9-Nov 15",
+      "queued_at": "2026-11-16T05:29:44+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261115-mvp.mp4"
+      ]
     }
   ]
 }
