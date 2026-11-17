@@ -1,5 +1,5 @@
 {
- "n": 10,
+ "n": 11,
  "days": {
   "20261107": {
    "n": 1,
@@ -66,6 +66,12 @@
    "slug": "robinson-2003",
    "key": "legend:20261116",
    "answer": "David Robinson, 2002-03 season"
+  },
+  "20261117": {
+   "n": 11,
+   "kind": "current",
+   "key": "guess:20261116",
+   "answer": "Terrence Shannon Jr. (MIN), 34 pts vs his usual 5.6"
   }
  },
  "used": [

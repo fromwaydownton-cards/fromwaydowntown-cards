@@ -91,6 +91,25 @@
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261116-legend.mp4"
       ]
+    },
+    {
+      "key": "guess:20261116",
+      "kind": "guess",
+      "test": false,
+      "folder": "cards/guess/20261116-guess.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261116-guess.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #11. 34 points last night from a guy who usually scores 5.6. Who is it?\n\nLast time's answer: David Robinson, 2002-03 season. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-17T20:00:00-06:00",
+      "title": "Guess the player #11",
+      "queued_at": "2026-11-17T04:29:06+00:00",
+      "subject": "current",
+      "n": 11,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261116-guess.mp4"
+      ]
     }
   ]
 }

@@ -1,0 +1,182 @@
+{
+ "pick": {
+  "id": "4432847",
+  "name": "Terrence Shannon Jr.",
+  "team": "MIN",
+  "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4432847.png",
+  "pts": 34,
+  "reb": 3,
+  "ast": 6,
+  "stl": 1,
+  "blk": 0,
+  "tov": 4,
+  "fgm": 8,
+  "fga": 11,
+  "tpm": 3,
+  "tpa": 4,
+  "pm": 7,
+  "ftm": 15,
+  "fta": 16,
+  "pf": 4,
+  "min": 35,
+  "oreb": 1,
+  "dreb": 2,
+  "game": "401909999",
+  "normal": 5.6,
+  "normal_src": "last season",
+  "jump": 28.4
+ },
+ "shots": {
+  "player": {
+   "id": "4432847",
+   "name": "Terrence Shannon Jr.",
+   "team": "MIN",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4432847.png",
+   "pts": 34,
+   "reb": 3,
+   "ast": 6,
+   "stl": 1,
+   "blk": 0,
+   "tov": 4,
+   "fgm": 8,
+   "fga": 11,
+   "tpm": 3,
+   "tpa": 4,
+   "pm": 7,
+   "ftm": 15,
+   "fta": 16,
+   "pf": 4,
+   "min": 35,
+   "oreb": 1,
+   "dreb": 2,
+   "game": "401909999",
+   "normal": 5.6,
+   "normal_src": "last season",
+   "jump": 28.4
+  },
+  "shots": [
+   {
+    "x": 26,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Running Finger Roll Layup",
+    "text": "Terrence Shannon Jr. makes two point shot (Bones Hyland assists)",
+    "period": 1,
+    "clock": "2:10"
+   },
+   {
+    "x": 39,
+    "y": 22,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Terrence Shannon Jr. makes 25-foot three point jumper (Bones Hyland assists)",
+    "period": 1,
+    "clock": "1:30"
+   },
+   {
+    "x": 26,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Running Finger Roll Layup",
+    "text": "Terrence Shannon Jr. makes two point shot (Rudy Gobert assists)",
+    "period": 2,
+    "clock": "5:44"
+   },
+   {
+    "x": 26,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Running Finger Roll Layup",
+    "text": "Terrence Shannon Jr. makes two point shot",
+    "period": 2,
+    "clock": "5:27"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Running Finger Roll Layup",
+    "text": "Terrence Shannon Jr. makes two point shot",
+    "period": 2,
+    "clock": "4:53"
+   },
+   {
+    "x": 26,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Terrence Shannon Jr. makes running layup",
+    "period": 2,
+    "clock": "53.7"
+   },
+   {
+    "x": 5,
+    "y": 16,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Terrence Shannon Jr. makes 25-foot three point jumper (Bones Hyland assists)",
+    "period": 3,
+    "clock": "1:18"
+   },
+   {
+    "x": 12,
+    "y": 83,
+    "made": false,
+    "value": 0,
+    "type": "Heave Jump Shot",
+    "text": "Terrence Shannon Jr. misses heave jump shot",
+    "period": 3,
+    "clock": "0.1"
+   },
+   {
+    "x": 25,
+    "y": 12,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Terrence Shannon Jr. misses driving floating jump shot",
+    "period": 4,
+    "clock": "10:53"
+   },
+   {
+    "x": 40,
+    "y": 22,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Terrence Shannon Jr. makes 26-foot three point jumper (Ayo Dosunmu assists)",
+    "period": 4,
+    "clock": "9:43"
+   },
+   {
+    "x": 46,
+    "y": 13,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Terrence Shannon Jr. misses 24-foot three point step back jumpshot",
+    "period": 4,
+    "clock": "3:59"
+   },
+   {
+    "x": 23,
+    "y": 11,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Terrence Shannon Jr. misses driving floating jump shot",
+    "period": 4,
+    "clock": "3:16"
+   }
+  ],
+  "ft_made": 15,
+  "ft_att": 16
+ }
+}
