@@ -5,71 +5,71 @@
    "id": "401909994",
    "start": "2026-11-17T00:00Z",
    "final": false,
-   "status": "3:11 - 1st",
+   "status": "2:52 - 3rd",
    "home": "BOS",
    "away": "ORL",
-   "home_score": 12,
-   "away_score": 12
+   "home_score": 71,
+   "away_score": 71
   },
   {
    "id": "401909995",
    "start": "2026-11-17T00:00Z",
    "final": false,
-   "status": "2:50 - 1st",
+   "status": "25.7 - 3rd",
    "home": "CLE",
    "away": "CHI",
-   "home_score": 21,
-   "away_score": 21
+   "home_score": 88,
+   "away_score": 79
   },
   {
    "id": "401909996",
    "start": "2026-11-17T00:00Z",
    "final": false,
-   "status": "2:42 - 1st",
+   "status": "2:26 - 3rd",
    "home": "WAS",
    "away": "MEM",
-   "home_score": 21,
-   "away_score": 25
+   "home_score": 84,
+   "away_score": 93
   },
   {
    "id": "401909997",
    "start": "2026-11-17T00:30Z",
    "final": false,
-   "status": "11/16 - 7:30 PM EST",
+   "status": "23.5 - 2nd",
    "home": "BKN",
    "away": "PHI",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 57,
+   "away_score": 75
   },
   {
    "id": "401909998",
    "start": "2026-11-17T00:30Z",
    "final": false,
-   "status": "11/16 - 7:30 PM EST",
+   "status": "Halftime",
    "home": "MIA",
    "away": "HOU",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 62,
+   "away_score": 46
   },
   {
    "id": "401909999",
    "start": "2026-11-17T01:00Z",
    "final": false,
-   "status": "11/16 - 8:00 PM EST",
+   "status": "9:53 - 2nd",
    "home": "MIN",
    "away": "POR",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 33,
+   "away_score": 33
   },
   {
    "id": "401910000",
    "start": "2026-11-17T01:00Z",
    "final": false,
-   "status": "11/16 - 8:00 PM EST",
+   "status": "7:41 - 2nd",
    "home": "NOP",
    "away": "GSW",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 43,
+   "away_score": 17
   },
   {
    "id": "401910001",
