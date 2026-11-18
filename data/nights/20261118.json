@@ -1,0 +1,127 @@
+{
+ "date": "20261118",
+ "games": [
+  {
+   "id": "401910007",
+   "start": "2026-11-19T00:00Z",
+   "final": false,
+   "status": "11/18 - 7:00 PM EST",
+   "home": "CLE",
+   "away": "MEM",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910008",
+   "start": "2026-11-19T00:00Z",
+   "final": false,
+   "status": "11/18 - 7:00 PM EST",
+   "home": "IND",
+   "away": "HOU",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910009",
+   "start": "2026-11-19T00:00Z",
+   "final": false,
+   "status": "11/18 - 7:00 PM EST",
+   "home": "MIA",
+   "away": "MIL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910010",
+   "start": "2026-11-19T00:00Z",
+   "final": false,
+   "status": "11/18 - 7:00 PM EST",
+   "home": "ORL",
+   "away": "PHI",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910011",
+   "start": "2026-11-19T00:30Z",
+   "final": false,
+   "status": "11/18 - 7:30 PM EST",
+   "home": "BKN",
+   "away": "CHI",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910012",
+   "start": "2026-11-19T00:30Z",
+   "final": false,
+   "status": "11/18 - 7:30 PM EST",
+   "home": "TOR",
+   "away": "WAS",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910013",
+   "start": "2026-11-19T01:00Z",
+   "final": false,
+   "status": "11/18 - 8:00 PM EST",
+   "home": "NOP",
+   "away": "DET",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910014",
+   "start": "2026-11-19T01:00Z",
+   "final": false,
+   "status": "11/18 - 8:00 PM EST",
+   "home": "OKC",
+   "away": "ATL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910016",
+   "start": "2026-11-19T01:00Z",
+   "final": false,
+   "status": "11/18 - 8:00 PM EST",
+   "home": "DAL",
+   "away": "GSW",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910015",
+   "start": "2026-11-19T02:30Z",
+   "final": false,
+   "status": "11/18 - 9:30 PM EST",
+   "home": "DEN",
+   "away": "BOS",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910017",
+   "start": "2026-11-19T03:00Z",
+   "final": false,
+   "status": "11/18 - 10:00 PM EST",
+   "home": "LAL",
+   "away": "UTA",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910018",
+   "start": "2026-11-19T03:00Z",
+   "final": false,
+   "status": "11/18 - 10:00 PM EST",
+   "home": "SAC",
+   "away": "PHX",
+   "home_score": 0,
+   "away_score": 0
+  }
+ ],
+ "players": [],
+ "all_final": false
+}

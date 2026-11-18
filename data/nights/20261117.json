@@ -35,21 +35,21 @@
    "id": "401910006",
    "start": "2026-11-18T03:30Z",
    "final": false,
-   "status": "8:27 - 2nd",
+   "status": "End of 3rd",
    "home": "LAC",
    "away": "UTA",
-   "home_score": 35,
-   "away_score": 42
+   "home_score": 86,
+   "away_score": 88
   },
   {
    "id": "401910005",
    "start": "2026-11-18T04:00Z",
    "final": false,
-   "status": "8:02 - 1st",
+   "status": "Halftime",
    "home": "LAL",
    "away": "CHA",
-   "home_score": 8,
-   "away_score": 9
+   "home_score": 59,
+   "away_score": 66
   }
  ],
  "players": [
