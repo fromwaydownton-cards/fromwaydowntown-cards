@@ -5,31 +5,31 @@
    "id": "401910002",
    "start": "2026-11-18T00:30Z",
    "final": false,
-   "status": "11/17 - 7:30 PM EST",
+   "status": "8:43 - 2nd",
    "home": "TOR",
    "away": "NYK",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 36,
+   "away_score": 29
   },
   {
    "id": "401910003",
    "start": "2026-11-18T01:00Z",
    "final": false,
-   "status": "11/17 - 8:00 PM EST",
+   "status": "8:59 - 1st",
    "home": "MIN",
    "away": "POR",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 2,
+   "away_score": 3
   },
   {
    "id": "401910004",
    "start": "2026-11-18T01:00Z",
    "final": false,
-   "status": "11/17 - 8:00 PM EST",
+   "status": "10:05 - 1st",
    "home": "SAS",
    "away": "DET",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 6,
+   "away_score": 2
   },
   {
    "id": "401910006",
