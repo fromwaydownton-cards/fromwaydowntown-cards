@@ -8,7 +8,7 @@ What gets queued (since Nov 2026):
 - `guess:` / `legend:` entries: Guess the Player #N, every night at 8 PM Central
   (a current player on Tue/Thu/Sat, a legend on the other nights).
 - `weekly:` entries: weekly per-game leaders, Monday 12 PM Central. Since Nov 2026
-  these are SPLIT entries (see "Split entries" below): a video for TikTok/YouTube and
+  these are SPLIT entries (see "Split entries" below): a video for TikTok and
   a 6-image swipeable carousel for Facebook/Instagram.
 - `mvp:` entries: MVP ladder, Monday 5 PM Central.
 The nightly recap (`night:`) and nightly shot charts (`shots:`) are retired;
@@ -39,13 +39,12 @@ All entry kinds are posted the same way below.
    "America/Chicago"}). Otherwise use now + 3 minutes in `America/Los_Angeles`.
    Metricool holds future posts and publishes them on time, so schedule it in this run.
    - Normal entry (`"test": false`): providers tiktok, facebook, instagram
-     (+ youtube if getBrandSettings shows a YouTube channel connected).
+     NEVER YouTube (see "Never" below).
    - Test entry (`"test": true`): provider tiktok ONLY, privacyOption `SELF_ONLY`.
    - **Video entries.** If the entry has `videos`, post the VIDEO, not the image:
      `media` = entry.videos; instagramData type `"REEL"` (showReelOnFeed true);
-     facebookData type `"REEL"`; tiktokData without photoCoverIndex;
-     youtubeData {"title": entry.title (max 100 chars), "type": "short",
-     "privacy": "public", "madeForKids": false, "category": "SPORTS"}.
+     facebookData type `"REEL"`; tiktokData without photoCoverIndex.
+     No youtube provider and no youtubeData.
      If Metricool rejects the video, retry once with the image version
      (media = entry.images, types back to POST) and report it.
    ```json
@@ -66,14 +65,13 @@ All entry kinds are posted the same way below.
    (For a test entry, drop facebook/instagram from providers and their data blocks.)
    - **Split entries.** If the entry has `carousel_on` AND `videos`, make TWO posts
      with the same caption, first comment and publish time:
-     1. Video post: providers tiktok (+ youtube if connected), media = entry.videos,
-        set up exactly like a video entry above (tiktokData without photoCoverIndex,
-        youtubeData as above).
+     1. Video post: provider tiktok only, media = entry.videos,
+        set up exactly like a video entry above (tiktokData without photoCoverIndex).
      2. Carousel post: providers = entry.carousel_on (facebook, instagram),
         media = entry.images (all of them, in order: Metricool posts several
         images as a carousel), facebookData {"type": "POST"}, instagramData
         {"type": "POST", "showReelOnFeed": true, "isAiGenerated": false}.
-     Record both ids in step 5, e.g. "tiktok+youtube video id A; facebook+instagram
+     Record both ids in step 5, e.g. "tiktok video id A; facebook+instagram
      carousel id B". If one half fails, still record the half that posted and say
      which failed. If the entry has `carousel_on` but no `videos` (the video build
      failed), post it as a normal entry with all images (a carousel everywhere).
@@ -88,6 +86,8 @@ All entry kinds are posted the same way below.
 6. **Report** one line per entry: posted / skipped as duplicate / failed + why.
 
 ## Never
+- Post to YouTube. The YouTube channel connected in Metricool (Joe McShorts) is
+  reserved for something else (Zach, Nov 18 2026), even though it is still connected.
 - Post anything that is not in `queue.json`.
 - Post the same entry twice.
 - Change graphics, captions or the queue.
