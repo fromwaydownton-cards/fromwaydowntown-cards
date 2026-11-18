@@ -1,5 +1,5 @@
 {
- "n": 11,
+ "n": 12,
  "days": {
   "20261107": {
    "n": 1,
@@ -72,6 +72,13 @@
    "kind": "current",
    "key": "guess:20261116",
    "answer": "Terrence Shannon Jr. (MIN), 34 pts vs his usual 5.6"
+  },
+  "20261118": {
+   "n": 12,
+   "kind": "legend",
+   "slug": "kobe-2006",
+   "key": "legend:20261118",
+   "answer": "Kobe Bryant, 2005-06 season"
   }
  },
  "used": [
@@ -80,6 +87,7 @@
   "malone-2003",
   "shaq-2001",
   "giannis-2020",
-  "robinson-2003"
+  "robinson-2003",
+  "kobe-2006"
  ]
 }
