@@ -426,7 +426,7 @@ def weekly_video(start, end, out):
         pre.append(dict(k=k, unit=unit, label=label, rows=L[k], color=ring_color(p["team"]),
                         disc=headshot_circle(p, 210), ring=ring_img(210, ring_color(p["team"]), 10),
                         logo=logo))
-    INTRO, SEG, OUTRO = 3.0, 8.0, 6.0
+    INTRO, SEG, OUTRO = 3.0, 9.0, 6.0      # 63 s: TikTok rewards need over 1 minute
     IN, OUT_T = 0.55, 0.45
     total = INTRO + SEG * len(pre) + OUTRO
 

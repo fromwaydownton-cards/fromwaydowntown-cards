@@ -3,7 +3,7 @@
 Categories: PPG, RPG, APG, SPG, BPG, 3PM per game. Minimum MIN_GP games that
 week. Ties go to the higher total, then fewer games. Shows the top 3 in each.
 
-python3 weekly_leaders.py START END [out.jpg]     (needs data/nights/*.json)
+python3 weekly_leaders.py START END [out.jpg] [slides]     (needs data/nights/*.json)
 """
 import json
 import sys
@@ -113,10 +113,86 @@ def render(start, end, out):
     return L
 
 
+# ---------- carousel (Nov 2026): one 1080x1350 slide per stat ---------------
+# Instagram/Facebook get these as a swipeable carousel; TikTok gets the video.
+
+def render_slides(start, end, out_dir, stem):
+    """Write stem-1.jpg ... stem-6.jpg (one per category); returns the paths."""
+    from video_common import ring_img
+    L = leaders(nights_between(start, end), top=5)
+    cats = [c for c in CATS if L.get(c[0])]
+    wk = "WEEK OF " + week_label(start, end).upper()
+    out_dir = Path(out_dir)
+    paths = []
+    for i, (k, unit, label) in enumerate(cats):
+        p = L[k][0]
+        img = Image.new("RGBA", (W, H), BG + (255,))
+        d = ImageDraw.Draw(img)
+        # header: series name, week, handle, page dots
+        d.text((48, 40), "WEEKLY LEADERS", font=F(NUM, 34), fill=HIGHLIGHT)
+        d.text((48, 86), f"{wk}  ·  PER GAME  ·  MIN {MIN_GP} GAMES", font=F(BOLD, 20), fill=MUTED)
+        hf = F(BOLD, 20)
+        d.text((W - 48 - d.textlength(HANDLE, font=hf), 50), HANDLE, font=hf, fill=MUTED)
+        n, gap, wd = len(cats), 10, 34
+        x = W - 48 - (n * wd + (n - 1) * gap)
+        for j in range(n):
+            d.rounded_rectangle((x, 92, x + wd, 100), radius=4, fill=HIGHLIGHT if j == i else BAR_EDGE)
+            x += wd + gap
+        centered(d, W / 2, 150, label, F(NUM, 88), INK)
+        # leader
+        r = 175
+        cx, cy = W / 2, 455
+        img.alpha_composite(headshot_circle(p, r), (int(cx - r), int(cy - r)))
+        rg = ring_img(r, ring_color(p["team"]), 10)
+        img.alpha_composite(rg, (int(cx - rg.width / 2), int(cy - rg.height / 2)))
+        d = ImageDraw.Draw(img)
+        name = p["name"].upper()
+        nf = fit(d, name, NUM, 60, W - 200)
+        logo = None
+        lf = ROOT / "data" / "logos" / f"{p['team']}.png"
+        if lf.exists():
+            logo = Image.open(lf).convert("RGBA")
+            logo.thumbnail((58, 58), Image.LANCZOS)
+        tw = (logo.width + 14 if logo else 0) + d.textlength(name, font=nf)
+        nx = W / 2 - tw / 2
+        if logo:
+            img.alpha_composite(logo, (int(nx), 668))
+            nx += logo.width + 14
+        d.text((nx, 656), name, font=nf, fill=INK)
+        bf, uf = F(NUM, 150), F(NUM, 46)
+        num = f"{p['avg']:.1f}"
+        nw, uw = d.textlength(num, font=bf), d.textlength(unit, font=uf)
+        x0 = W / 2 - (nw + 16 + uw) / 2
+        d.text((x0, 712), num, font=bf, fill=HIGHLIGHT)
+        d.text((x0 + nw + 16, 712 + 150 - 46 - 26), unit, font=uf, fill=LIGHT)
+        centered(d, W / 2, 920, f"{p['gp']} GAMES  ·  {p[k]} TOTAL", F(BOLD, 26), MUTED)
+        # 2-5
+        y = 985
+        for j, q in enumerate(L[k][1:5], 2):
+            d.rounded_rectangle((70, y, W - 70, y + 58), radius=12, fill=PANEL)
+            rf = F(NUM, 30)
+            d.text((96, y + 9), str(j), font=rf, fill=MUTED)
+            nm = f"{q['name'].upper()}  ({q['team']})"
+            d.text((146, y + 14), nm, font=fit(d, nm, BOLD, 26, W - 70 - 146 - 140), fill=INK)
+            val = f"{q['avg']:.1f}"
+            d.text((W - 96 - d.textlength(val, font=rf), y + 9), val, font=rf, fill=INK)
+            y += 66
+        foot = "SWIPE FOR EVERY STAT  »" if i == 0 else ("WHO HAD THE BEST WEEK? COMMENT BELOW" if i == n - 1 else "")
+        if foot:
+            centered(d, W / 2, H - 58, foot, F(BOLD, 24), HIGHLIGHT if i == 0 else INK)
+        f = out_dir / f"{stem}-{i + 1}.jpg"
+        img.convert("RGB").save(f, "JPEG", quality=93, subsampling=0)
+        paths.append(f)
+    return paths
+
+
 if __name__ == "__main__":
     start, end = sys.argv[1], sys.argv[2]
     out = Path(sys.argv[3]) if len(sys.argv) > 3 else ROOT / "cards" / "weekly" / f"{start}-{end}.jpg"
     out.parent.mkdir(parents=True, exist_ok=True)
+    if len(sys.argv) > 4 and sys.argv[4] == "slides":
+        print(render_slides(start, end, out.parent, out.stem))
+        sys.exit()
     L = render(start, end, out)
     for k, rows in L.items():
         print(k, [(r["name"], round(r["avg"], 1), r["gp"]) for r in rows])

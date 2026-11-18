@@ -7,7 +7,9 @@ and never needs sports data.
 What gets queued (since Nov 2026):
 - `guess:` / `legend:` entries: Guess the Player #N, every night at 8 PM Central
   (a current player on Tue/Thu/Sat, a legend on the other nights).
-- `weekly:` entries: weekly per-game leaders, Monday 12 PM Central.
+- `weekly:` entries: weekly per-game leaders, Monday 12 PM Central. Since Nov 2026
+  these are SPLIT entries (see "Split entries" below): a video for TikTok/YouTube and
+  a 6-image swipeable carousel for Facebook/Instagram.
 - `mvp:` entries: MVP ladder, Monday 5 PM Central.
 The nightly recap (`night:`) and nightly shot charts (`shots:`) are retired;
 older entries with those keys are still posted normally if pending.
@@ -25,7 +27,10 @@ All entry kinds are posted the same way below.
    `7591436`, timezone `America/Los_Angeles`, from 3 days ago to 1 day ahead.
    For an entry with `post_at`, search through post_at + 1 day too.
    If any returned post's `text` equals the entry's `caption`, it was already
-   posted: do not post again; just record it in step 5.
+   posted: do not post again; just record it in step 5. For a split entry, check
+   each of its two posts separately by network: the video post (tiktok) and the
+   carousel post (facebook/instagram) share the caption, so only skip the half
+   whose networks already have it.
 4. **Post** with Metricool `createScheduledPost`, blogId `7591436`.
    Publish time: if the entry has `post_at` and it is later than now + 3 minutes,
    use `post_at` exactly (a Central time: Guess the Player 8 PM, weekly leaders Monday 12 PM,
@@ -59,6 +64,19 @@ All entry kinds are posted the same way below.
     "publicationDate": {"dateTime": "<YYYY-MM-DDTHH:MM:SS>", "timezone": "America/Los_Angeles"}}
    ```
    (For a test entry, drop facebook/instagram from providers and their data blocks.)
+   - **Split entries.** If the entry has `carousel_on` AND `videos`, make TWO posts
+     with the same caption, first comment and publish time:
+     1. Video post: providers tiktok (+ youtube if connected), media = entry.videos,
+        set up exactly like a video entry above (tiktokData without photoCoverIndex,
+        youtubeData as above).
+     2. Carousel post: providers = entry.carousel_on (facebook, instagram),
+        media = entry.images (all of them, in order: Metricool posts several
+        images as a carousel), facebookData {"type": "POST"}, instagramData
+        {"type": "POST", "showReelOnFeed": true, "isAiGenerated": false}.
+     Record both ids in step 5, e.g. "tiktok+youtube video id A; facebook+instagram
+     carousel id B". If one half fails, still record the half that posted and say
+     which failed. If the entry has `carousel_on` but no `videos` (the video build
+     failed), post it as a normal entry with all images (a carousel everywhere).
    If Metricool rejects one network, retry once without that network and
    report which one failed. If it rejects the first comment, retry once with
    firstCommentText "" and say so.

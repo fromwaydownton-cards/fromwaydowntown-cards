@@ -1,6 +1,6 @@
-"""Vertical 60-second Guess the Player video (1080x1920), themed like its card.
+"""Vertical 65-second Guess the Player video (1080x1920), themed like its card.
 
-0-3 s title, 3-33 s the shots appear (dots for a game, the heat map fills in
+0-3 s title, 4-34 s the shots appear (dots for a game, the zone chart fills in
 for a season), then the stat bar and hints, a 10-second countdown, and the
 call to action. Uses the shared encoder and original beat from video_common.
 """
@@ -14,7 +14,8 @@ from video_common import H, W, alpha_text, ctext, ease, encode
 COURT_W = 980
 COURT_X = (W - COURT_W) // 2
 COURT_Y = 560
-INTRO, SHOW0, SHOW1, STATS, COUNT, END, TOTAL = 3.0, 4.0, 32.0, 33.0, 46.0, 56.0, 60.0
+# 65 s total: TikTok Creator Rewards only counts videos over 1 minute
+INTRO, SHOW0, SHOW1, STATS, COUNT, END, TOTAL = 3.0, 4.0, 34.0, 35.0, 50.0, 60.0, 65.0
 
 
 def build(subject, out):

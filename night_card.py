@@ -21,21 +21,23 @@ from team_colors import TEAM_COLORS, _rgb, contrast
 
 ROOT = Path(__file__).resolve().parent
 FONTS = ROOT / "fonts"
-NUM = str(FONTS / "NotoSansBlack-Latin.otf")     # numbers and big labels
-BOLD = str(FONTS / "DejaVuSans-Bold.ttf")         # names (full accent coverage)
+# House look (Nov 2026): Barlow Condensed on black, gold numbers.
+NUM = str(FONTS / "BarlowCondensed-Black.ttf")    # numbers and big labels
+BOLD = str(FONTS / "BarlowCondensed-Bold.ttf")    # names (Latin accents covered)
+SCALE = 1.1                                       # condensed faces run small; sizes were set for Noto
 
 W, H = 1080, 1920
-BG = (11, 12, 16)             # near-black
-PANEL = (24, 26, 32)          # cards / zebra rows on BG
+BG = (12, 12, 12)             # black
+PANEL = (28, 26, 22)          # cards / zebra rows on BG
 CIRCLE_FILL = (150, 154, 160)   # gray so hair and skin stand out
-BAR = (34, 36, 44)
-BAR_EDGE = (64, 68, 80)
-INK = (245, 246, 250)
-MUTED = (140, 146, 160)
-LIGHT = (150, 156, 170)
+BAR = (34, 31, 26)
+BAR_EDGE = (80, 72, 55)
+INK = (246, 243, 236)
+MUTED = (160, 150, 130)
+LIGHT = (180, 170, 150)
 RED = (255, 59, 59)
 HANDLE = "@FROMWAYDOWNTOWN"
-HIGHLIGHT = (255, 214, 10)   # yellow for the stat that earned the spot
+HIGHLIGHT = (214, 175, 64)   # gold for the stat that earned the spot
 HIGHLIGHT_STAT = {"pts": "PTS", "reb": "REB", "ast": "AST"}
 
 ROWS = [("pts", "MOST POINTS"), ("reb", "MOST REBOUNDS"), ("ast", "MOST ASSISTS"),
@@ -46,7 +48,7 @@ IMG = [None]   # current canvas, so the bar can paste logos
 
 
 def F(path, size):
-    return ImageFont.truetype(path, size)
+    return ImageFont.truetype(path, max(1, round(size * (SCALE if "Barlow" in path else 1))))
 
 
 def fit(d, text, path, size, max_w, min_size=14):

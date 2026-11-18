@@ -243,12 +243,15 @@ def build_weekly_entry(night, test=False):
     if not test and end.weekday() != 6:
         return None
     start = (end - timedelta(days=6)).strftime("%Y%m%d")
-    out = (ROOT / "cards" / "test" if test else ROOT / "cards" / "weekly") / f"{start}-{date}.jpg"
-    out.parent.mkdir(parents=True, exist_ok=True)
+    out_dir = ROOT / "cards" / "test" if test else ROOT / "cards" / "weekly"
+    out_dir.mkdir(parents=True, exist_ok=True)
     L = weekly_leaders.leaders(weekly_leaders.nights_between(start, date))
     save_headshots([(r["id"], r["headshot"]) for rows in L.values() for r in rows[:1]])
-    L = weekly_leaders.render(start, date, out)
+    # one slide per stat: a swipeable carousel on Instagram/Facebook (Nov 2026)
+    slides = weekly_leaders.render_slides(start, date, out_dir, f"{start}-{date}")
+    out = slides[0]
     rel = str(out.relative_to(ROOT))
+    images = [RAW + str(f.relative_to(ROOT)) for f in slides]
     wk = weekly_leaders.week_label(start, date)
     lines = []
     for k, unit, label in weekly_leaders.CATS:
@@ -264,7 +267,9 @@ def build_weekly_entry(night, test=False):
                + "\n\n#NBA #NBAStats #hoops #basketball")
     post_day = day_after(date)
     return {"key": ("test-weekly:" if test else "weekly:") + date, "kind": "weekly", "test": test,
-            "folder": rel, "images": [RAW + rel], "caption": caption,
+            "folder": rel, "images": images, "caption": caption,
+            # with a video: video to TikTok/YouTube, this carousel to these networks
+            "carousel_on": ["facebook", "instagram"],
             "first_comment": "Best week? Vote 👇 " + "  ".join(
                 f"{i}) {last(L[k][0]['name'])}" for i, k in enumerate(("pts", "reb", "ast"), 1) if L.get(k)),
             "post_at": at_central(post_day, WEEKLY_HOUR), "title": "NBA weekly leaders " + wk,
