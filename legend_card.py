@@ -1,7 +1,7 @@
 """Guess the Player series card (1080x1350), one theme per post.
 
 A "subject" describes what to draw, so the same card serves both the legends
-(a famous season as a heat map, or a famous game as dots) and the current
+(a famous season as a zone chart, or a famous game as dots) and the current
 player picked from last night's games:
   {"mode": "season"|"game", "shots": [...], "n": series number,
    "sub": "LEGENDS EDITION · 1990s", "chips": [(label, value, highlighted)],
@@ -94,55 +94,110 @@ def dot_sprites(th, size):
     return {True: mk.resize((size, size), Image.LANCZOS), False: ms.resize((size, size), Image.LANCZOS)}
 
 
-def hexbins(shots, hex_ft=1.6):
-    """[(cx_ft, cy_ft_from_hoop, attempts, points_per_shot)] on a pointy-top hex grid."""
-    r = hex_ft
-    dx, dy = math.sqrt(3) * r, 1.5 * r
-    bins = {}
+# ---------- season zone chart (replaced the hex heat map, Nov 2026) ----------
+# 8 big zones; shade = share of his shots, label = FG% there. Label spots are
+# in feet (x across, y from the hoop).
+ZONES = ["RIM", "PAINT", "MID L", "MID C", "MID R", "3 L", "3 C", "3 R"]
+ZONE_LABEL_AT = {"RIM": (25, 0.6), "PAINT": (25, 9.4), "MID L": (9.5, 5.5), "MID C": (25, 18.2),
+                 "MID R": (40.5, 5.5), "3 L": (6.2, 21.0), "3 C": (25, 25.4), "3 R": (43.8, 21.0)}
+
+
+def zone_of(x, y, three=None):
+    """Zone name for a spot (feet; y from the hoop)."""
+    if three is None:
+        three = math.hypot(x - 25, y) >= 23.75 or (y <= 14 - HOOP and (x <= 3 or x >= 47))
+    ang = math.degrees(math.atan2(y, x - 25))     # 0 = right baseline, 180 = left
+    side = "R" if ang < 60 else ("L" if ang > 120 or ang < -90 else "C")
+    if y < 0:
+        side = "R" if x > 25 else "L"
+    if three:
+        return "3 " + side
+    if math.hypot(x - 25, y) < 4:
+        return "RIM"
+    if 17 <= x <= 33 and y < 19 - HOOP:
+        return "PAINT"
+    return "MID " + side
+
+
+def zone_stats(shots):
+    st = {z: [0, 0] for z in ZONES}
     for s in shots:
         if not on_court(s):
             continue
-        X, Y = s["x"], s["y"] + HOOP
-        row = round(Y / dy)
-        col = round((X - (row % 2) * dx / 2) / dx)
-        best = None
-        for rr in (row - 1, row, row + 1):
-            for cc in (col - 1, col, col + 1):
-                cx, cy = cc * dx + (rr % 2) * dx / 2, rr * dy
-                dd = (X - cx) ** 2 + (Y - cy) ** 2
-                if best is None or dd < best[0]:
-                    best = (dd, rr, cc, cx, cy)
-        _, rr, cc, cx, cy = best
-        b = bins.setdefault((rr, cc), [cx, cy - HOOP, 0, 0])
-        b[2] += 1
-        b[3] += (3 if is_three(s) else 2) if s["made"] else 0
-    return [(cx, cy, n, pts / n) for cx, cy, n, pts in bins.values()]
+        z = zone_of(s["x"], s["y"], is_three(s))
+        st[z][0] += 1
+        st[z][1] += 1 if s["made"] else 0
+    return st
 
 
-def heat_layer(shots, w_px, th, reveal=1.0):
-    """Season heat map: hex size = how often he shot there, color = points per shot."""
+_ZMAP = {}
+
+
+def zone_map(w_px):
+    """Per-pixel zone index (numpy array), cached per width."""
+    if w_px not in _ZMAP:
+        import numpy as np
+        scale = w_px / 50.0
+        h_px = int(DEPTH * scale)
+        zm = np.zeros((h_px, w_px), dtype=np.int8)
+        for py in range(h_px):
+            y = (py + 0.5) / scale - HOOP
+            for px in range(w_px):
+                zm[py, px] = ZONES.index(zone_of((px + 0.5) / scale, y))
+        _ZMAP[w_px] = zm
+    return _ZMAP[w_px]
+
+
+def zone_layer(shots, w_px, th, reveal=1.0):
+    """Shaded zones with FG% labels. reveal 0..1 fades it in (video)."""
+    import numpy as np
     scale = w_px / 50.0
-    h_px = int(DEPTH * scale)
-    big = Image.new("RGBA", (w_px * SS, h_px * SS), (0, 0, 0, 0))
-    d = ImageDraw.Draw(big)
-    bins = hexbins(shots)
-    if not bins:
-        return big.resize((w_px, h_px), Image.LANCZOS)
-    top = sorted(n for *_, n, _ in bins)[int(len(bins) * 0.97) - 1] if len(bins) > 30 else max(n for *_, n, _ in bins)
-    cold, mid, hot = th["miss"], mix(th["miss"], th["make"], 0.5), th["make"]
-    r_ft = 1.6
-    for cx, cy, n, pps in sorted(bins, key=lambda b: b[2]):
-        f = min(1.0, n / max(top, 1))
-        if f < 0.04:
+    zm = zone_map(w_px)
+    h_px, _ = zm.shape
+    st = zone_stats(shots)
+    n = sum(a for a, _ in st.values()) or 1
+    top = max(a for a, _ in st.values()) or 1
+    rgba = np.zeros((h_px, w_px, 4), dtype=np.uint8)
+    acc = th["line"]
+    for i, z in enumerate(ZONES):
+        a = st[z][0]
+        if not a:
             continue
-        rad = r_ft * (0.35 + 0.65 * math.sqrt(f)) * reveal * scale * SS * 0.98
-        t = (pps - 0.7) / 0.7           # 0.7 PPS = cold, 1.4 PPS = hot
-        col = mix(cold, mid, t * 2) if t < 0.5 else mix(mid, hot, (t - 0.5) * 2)
-        px, py = cx * scale * SS, (cy + HOOP) * scale * SS
-        pts = [(px + rad * math.cos(math.radians(30 + 60 * i)), py + rad * math.sin(math.radians(30 + 60 * i)))
-               for i in range(6)]
-        d.polygon(pts, fill=col + (235,))
-    return big.resize((w_px, h_px), Image.LANCZOS)
+        alpha = int((18 + 112 * (a / top) ** 0.9) * reveal)
+        m = zm == i
+        rgba[m] = (*acc, alpha)
+    # thin zone borders
+    edge = np.zeros_like(zm, dtype=bool)
+    edge[:, 1:] |= zm[:, 1:] != zm[:, :-1]
+    edge[1:, :] |= zm[1:, :] != zm[:-1, :]
+    rgba[edge] = (*th["line"], int(150 * reveal))
+    img = Image.fromarray(rgba, "RGBA")
+    if reveal <= 0.05:
+        return img
+    d = ImageDraw.Draw(img)
+    big = F(NUM, max(14, int(scale * 1.9)))
+    small = F(BOLD, max(10, int(scale * 0.86)))
+    ta = int(255 * min(1.0, reveal * 1.5))
+    for z in ZONES:
+        a, m = st[z]
+        if a / n < 0.015:
+            continue
+        cx, cy = ZONE_LABEL_AT[z]
+        px, py = cx * scale, (cy + HOOP) * scale
+        pct = f"{round(100 * m / a)}%"
+        sub = f"{round(100 * a / n)}% OF SHOTS"
+        l1, t1, r1, b1 = d.textbbox((0, 0), pct, font=big)
+        l2, t2, r2, b2 = d.textbbox((0, 0), sub, font=small)
+        gap, pad = scale * 0.3, scale * 0.45
+        bw = max(r1 - l1, r2 - l2) + 2 * pad
+        bh = (b1 - t1) + gap + (b2 - t2) + 2 * pad
+        top_y = py - bh / 2
+        d.rounded_rectangle((px - bw / 2, top_y, px + bw / 2, top_y + bh), radius=int(scale * 0.45),
+                            fill=th["chip"] + (int(225 * min(1.0, reveal * 1.5)),))
+        d.text((px - (r1 - l1) / 2 - l1, top_y + pad - t1), pct, font=big, fill=(255, 255, 255, ta))
+        d.text((px - (r2 - l2) / 2 - l2, top_y + pad + (b1 - t1) + gap - t2), sub, font=small,
+               fill=th["muted"] + (ta,))
+    return img
 
 
 def spread(shots, min_ft=0.9):
@@ -168,7 +223,7 @@ def court_image(subject, w_px, shown=None, reveal=1.0):
     shots = subject["shots"]
     if subject["mode"] == "season":
         sub = shots if shown is None else shots[:shown]
-        img.alpha_composite(heat_layer(sub, w_px, th, reveal))
+        img.alpha_composite(zone_layer(sub, w_px, th, reveal))
     else:
         scale = w_px / 50.0
         spr = dot_sprites(th, max(14, int(w_px / 62)))
@@ -186,16 +241,9 @@ def legend_key(d, x, y, subject, size=16):
     ink = th["ink"]
     f = F(BOLD, size)
     if subject["mode"] == "season":
-        cold, hot = th["miss"], th["make"]
-        d.text((x, y), "COLD", font=f, fill=ink)
-        bx = x + d.textlength("COLD ", font=f)
-        for i in range(5):
-            t = i / 4
-            c = mix(cold, mix(cold, hot, 0.5), t * 2) if t < 0.5 else mix(mix(cold, hot, 0.5), hot, (t - 0.5) * 2)
-            d.regular_polygon((bx + 11 + i * 24, y + size * 0.6, 10), 6, rotation=30, fill=c)
-        hx = bx + 5 * 24 + 6
-        d.text((hx, y), "HOT", font=f, fill=ink)
-        d.text((hx + d.textlength("HOT  ·  ", font=f) - d.textlength("  ·  ", font=f), y), "  ·  BIGGER = MORE SHOTS",
+        d.rounded_rectangle((x, y + 1, x + size + 4, y + size + 3), radius=4, fill=th["line"])
+        d.text((x + size + 14, y), "BRIGHTER = MORE SHOTS", font=f, fill=ink)
+        d.text((x + size + 14 + d.textlength("BRIGHTER = MORE SHOTS", font=f), y), "  ·  BIG NUMBER = FG% FROM THERE",
                font=f, fill=th["muted"])
     else:
         d.ellipse((x, y + 2, x + size, y + size + 2), fill=th["make"], outline=(255, 255, 255), width=2)

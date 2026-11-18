@@ -4,6 +4,7 @@ weekly MVP ladder. Same look as the leaders video (video_common).
 python3 video_more.py shots YYYYMMDD [out.mp4]
 python3 video_more.py guess YYYYMMDD [out.mp4]
 python3 video_more.py mvp START END [out.mp4]
+python3 video_more.py weekly START END [out.mp4]
 """
 import json
 import sys
@@ -405,9 +406,146 @@ def mvp_video(start, end, out):
     return encode(out, total, frame, seed=4)
 
 
+# ---------- weekly leaders slideshow (Nov 2026) ----------------------------
+# One clean slide per stat on the plain house background: the leader big,
+# numbers 2-5 underneath. Smooth slide-in / slide-out between categories.
+
+def weekly_video(start, end, out):
+    import weekly_leaders as wl
+    L = wl.leaders(wl.nights_between(start, end), top=5)
+    cats = [c for c in wl.CATS if L.get(c[0])]
+    wk = "WEEK OF " + wl.week_label(start, end).upper()
+    pre = []
+    for k, unit, label in cats:
+        p = L[k][0]
+        lf = ROOT / "data" / "logos" / f"{p['team']}.png"
+        logo = None
+        if lf.exists():
+            logo = Image.open(lf).convert("RGBA")
+            logo.thumbnail((64, 64), Image.LANCZOS)
+        pre.append(dict(k=k, unit=unit, label=label, rows=L[k], color=ring_color(p["team"]),
+                        disc=headshot_circle(p, 210), ring=ring_img(210, ring_color(p["team"]), 10),
+                        logo=logo))
+    INTRO, SEG, OUTRO = 3.0, 8.0, 6.0
+    IN, OUT_T = 0.55, 0.45
+    total = INTRO + SEG * len(pre) + OUTRO
+
+    def slide(layer, s, st):
+        d = ImageDraw.Draw(layer)
+        p = s["rows"][0]
+        ctext(d, W / 2, 300, s["label"], F(NUM, 96), INK)
+        ctext(d, W / 2, 420, f"{wk}  ·  PER GAME", F(BOLD, 30), MUTED)
+        # headshot
+        sc = 0.75 + 0.25 * back((st - 0.15) / 0.55)
+        disc, rg = scaled(s["disc"], sc), scaled(s["ring"], sc)
+        layer.alpha_composite(disc, (int(W / 2 - disc.width / 2), int(760 - disc.height / 2)))
+        layer.alpha_composite(rg, (int(W / 2 - rg.width / 2), int(760 - rg.height / 2)))
+        d = ImageDraw.Draw(layer)
+        # name with logo
+        name = p["name"].upper()
+        nf = fit(d, name, NUM, 66, W - 220)
+        tw = (s["logo"].width + 16 if s["logo"] else 0) + d.textlength(name, font=nf)
+        nx = W / 2 - tw / 2
+        if s["logo"]:
+            layer.alpha_composite(s["logo"], (int(nx), 1012))
+            nx += s["logo"].width + 16
+        d.text((nx, 1000), name, font=nf, fill=INK)
+        # big number counts up
+        v = p["avg"] * ease((st - 0.4) / 1.1)
+        bf = F(NUM, 170)
+        uf = F(NUM, 50)
+        num = f"{v:.1f}"
+        nw, uw = d.textlength(num, font=bf), d.textlength(s["unit"], font=uf)
+        x0 = W / 2 - (nw + 18 + uw) / 2
+        d.text((x0, 1070), num, font=bf, fill=HIGHLIGHT)
+        d.text((x0 + nw + 18, 1070 + 170 - 50 - 30), s["unit"], font=uf, fill=LIGHT)
+        ctext(d, W / 2, 1300, f"{p['gp']} GAMES  ·  {p[s['k']]} TOTAL", F(BOLD, 32), MUTED)
+        # 2-5
+        rows = s["rows"][1:5]
+        y0 = 1370
+        for i, q in enumerate(rows):
+            a = ease((st - 1.5 - 0.25 * i) / 0.4)
+            if a <= 0:
+                continue
+            y = y0 + i * 68 + (1 - a) * 20
+            row = Image.new("RGBA", (W - 160, 60), (0, 0, 0, 0))
+            rd = ImageDraw.Draw(row)
+            rd.rounded_rectangle((0, 0, row.width, 60), radius=14, fill=PANEL)
+            rf = F(NUM, 32)
+            rd.text((24, 9), str(i + 2), font=rf, fill=MUTED)
+            nm = f"{q['name'].upper()}  ({q['team']})"
+            rd.text((78, 13), nm, font=fit(rd, nm, BOLD, 28, row.width - 300), fill=INK)
+            val = f"{q['avg']:.1f}"
+            rd.text((row.width - 24 - rd.textlength(val, font=rf), 9), val, font=rf, fill=INK)
+            row.putalpha(row.getchannel("A").point(lambda px: int(px * a)))
+            layer.alpha_composite(row, (80, int(y)))
+
+    def dots(img, k):
+        d = ImageDraw.Draw(img)
+        n, gap, wd = len(pre), 14, 46
+        x = W / 2 - (n * wd + (n - 1) * gap) / 2
+        for i in range(n):
+            d.rounded_rectangle((x, 485, x + wd, 495), radius=5, fill=HIGHLIGHT if i == k else BAR_EDGE)
+            x += wd + gap
+
+    def frame(img, t):
+        if t < INTRO:
+            title_intro(img, t, wk, "WEEKLY", "LEADERS", "EVERY CATEGORY, PER GAME")
+            return
+        if t >= INTRO + SEG * len(pre):
+            ot = t - INTRO - SEG * len(pre)
+            d = ImageDraw.Draw(img)
+            alpha_text(img, W / 2, 330, "THIS WEEK'S LEADERS", F(NUM, 72), INK, ease(ot / 0.5))
+            for i, s in enumerate(pre):
+                a = ease((ot - 0.3 - 0.15 * i) / 0.4)
+                if a <= 0:
+                    continue
+                y = 480 + i * 150
+                row = Image.new("RGBA", (W - 140, 130), (0, 0, 0, 0))
+                rd = ImageDraw.Draw(row)
+                rd.rounded_rectangle((0, 0, row.width, 130), radius=18, fill=PANEL)
+                rd.text((32, 18), s["label"], font=F(BOLD, 26), fill=HIGHLIGHT)
+                nm = s["rows"][0]["name"].upper()
+                rd.text((32, 56), nm, font=fit(rd, nm, NUM, 46, row.width - 330), fill=INK)
+                val = f"{s['rows'][0]['avg']:.1f}"
+                vf = F(NUM, 64)
+                rd.text((row.width - 32 - rd.textlength(s["unit"], font=F(BOLD, 26)), 92), s["unit"],
+                        font=F(BOLD, 26), fill=LIGHT)
+                rd.text((row.width - 32 - rd.textlength(val, font=vf), 8), val, font=vf, fill=HIGHLIGHT)
+                row.putalpha(row.getchannel("A").point(lambda px: int(px * a)))
+                img.alpha_composite(row, (70, int(y + (1 - a) * 24)))
+            alpha_text(img, W / 2, 1420, "WHO HAD THE BEST WEEK?", F(NUM, 56), INK, ease((ot - 1.4) / 0.5))
+            alpha_text(img, W / 2, 1500, "DROP YOUR PICK IN THE COMMENTS", F(BOLD, 34), MUTED,
+                       ease((ot - 1.7) / 0.5))
+            return
+        k = int((t - INTRO) // SEG)
+        st = t - INTRO - k * SEG
+        dots(img, k)
+        layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        slide(layer, pre[k], st)
+        if st < IN:
+            a = ease(st / IN)
+            dx = (1 - a) * 160
+        elif st > SEG - OUT_T:
+            a = 1 - ease((st - (SEG - OUT_T)) / OUT_T)
+            dx = -(1 - a) * 160
+        else:
+            a, dx = 1.0, 0
+        if a < 1:
+            layer.putalpha(layer.getchannel("A").point(lambda px: int(px * a)))
+        img.alpha_composite(layer, (int(dx), 0)) if dx >= 0 else img.alpha_composite(
+            layer.crop((int(-dx), 0, W, H)), (0, 0))
+
+    return encode(out, total, frame, seed=5)
+
+
 if __name__ == "__main__":
     kind = sys.argv[1]
-    if kind == "mvp":
+    if kind == "weekly":
+        out = Path(sys.argv[4]) if len(sys.argv) > 4 else ROOT / "media" / f"{sys.argv[2]}-{sys.argv[3]}-weekly.mp4"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        print(f"{weekly_video(sys.argv[2], sys.argv[3], out):.0f}s", out)
+    elif kind == "mvp":
         out = Path(sys.argv[4]) if len(sys.argv) > 4 else ROOT / "media" / f"{sys.argv[2]}-{sys.argv[3]}-mvp.mp4"
         out.parent.mkdir(parents=True, exist_ok=True)
         print(f"{mvp_video(sys.argv[2], sys.argv[3], out):.0f}s", out)

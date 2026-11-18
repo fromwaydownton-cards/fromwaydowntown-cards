@@ -268,7 +268,7 @@ def build_weekly_entry(night, test=False):
             "first_comment": "Best week? Vote 👇 " + "  ".join(
                 f"{i}) {last(L[k][0]['name'])}" for i, k in enumerate(("pts", "reb", "ast"), 1) if L.get(k)),
             "post_at": at_central(post_day, WEEKLY_HOUR), "title": "NBA weekly leaders " + wk,
-            "queued_at": now_utc()}
+            "week": [start, date], "queued_at": now_utc()}
 
 
 def build_mvp_entry(night, test=False):
@@ -314,6 +314,11 @@ def add_video(entry, date):
             legend_video.build(_SUBJECTS[entry["key"]], out)
         elif entry["kind"] == "mvp":
             video_more.mvp_video(entry["week"][0], entry["week"][1], out)
+        elif entry["kind"] == "weekly":
+            # slideshow, one stat per slide; it needs every leader's headshot
+            save_headshots([(r["id"], r["headshot"]) for rows in weekly_leaders.leaders(
+                weekly_leaders.nights_between(*entry["week"])).values() for r in rows[:1]])
+            video_more.weekly_video(entry["week"][0], entry["week"][1], out)
         else:
             return entry
         entry["videos"] = [MEDIA_RAW + name]
