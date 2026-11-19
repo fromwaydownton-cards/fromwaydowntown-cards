@@ -1,5 +1,5 @@
 {
- "n": 12,
+ "n": 13,
  "days": {
   "20261107": {
    "n": 1,
@@ -79,6 +79,12 @@
    "slug": "kobe-2006",
    "key": "legend:20261118",
    "answer": "Kobe Bryant, 2005-06 season"
+  },
+  "20261119": {
+   "n": 13,
+   "kind": "current",
+   "key": "guess:20261118",
+   "answer": "Cam Spencer (MEM), 26 pts vs his usual 11.1"
   }
  },
  "used": [
