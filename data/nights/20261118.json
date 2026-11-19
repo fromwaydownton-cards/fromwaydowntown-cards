@@ -5,91 +5,91 @@
    "id": "401910007",
    "start": "2026-11-19T00:00Z",
    "final": false,
-   "status": "42.7 - 2nd",
+   "status": "22.9 - 4th",
    "home": "CLE",
    "away": "MEM",
-   "home_score": 70,
-   "away_score": 67
+   "home_score": 119,
+   "away_score": 120
   },
   {
    "id": "401910008",
    "start": "2026-11-19T00:00Z",
    "final": false,
-   "status": "Halftime",
+   "status": "1:07 - 4th",
    "home": "IND",
    "away": "HOU",
-   "home_score": 46,
-   "away_score": 62
+   "home_score": 102,
+   "away_score": 116
   },
   {
    "id": "401910009",
    "start": "2026-11-19T00:00Z",
    "final": false,
-   "status": "4:54 - 2nd",
+   "status": "11:45 - 4th",
    "home": "MIA",
    "away": "MIL",
-   "home_score": 60,
-   "away_score": 36
+   "home_score": 112,
+   "away_score": 86
   },
   {
    "id": "401910010",
    "start": "2026-11-19T00:00Z",
    "final": false,
-   "status": "0.1 - 2nd",
+   "status": "3:18 - 4th",
    "home": "ORL",
    "away": "PHI",
-   "home_score": 69,
-   "away_score": 64
+   "home_score": 107,
+   "away_score": 109
   },
   {
    "id": "401910011",
    "start": "2026-11-19T00:30Z",
    "final": false,
-   "status": "8:30 - 2nd",
+   "status": "11:02 - 4th",
    "home": "BKN",
    "away": "CHI",
-   "home_score": 32,
-   "away_score": 50
+   "home_score": 80,
+   "away_score": 116
   },
   {
    "id": "401910012",
    "start": "2026-11-19T00:30Z",
    "final": false,
-   "status": "End of 1st",
+   "status": "End of 3rd",
    "home": "TOR",
    "away": "WAS",
-   "home_score": 23,
-   "away_score": 29
+   "home_score": 79,
+   "away_score": 78
   },
   {
    "id": "401910013",
    "start": "2026-11-19T01:00Z",
    "final": false,
-   "status": "10:37 - 1st",
+   "status": "Halftime",
    "home": "NOP",
    "away": "DET",
-   "home_score": 0,
-   "away_score": 3
+   "home_score": 60,
+   "away_score": 67
   },
   {
    "id": "401910014",
    "start": "2026-11-19T01:00Z",
    "final": false,
-   "status": "10:08 - 1st",
+   "status": "0.0 - 3rd",
    "home": "OKC",
    "away": "ATL",
-   "home_score": 4,
-   "away_score": 5
+   "home_score": 59,
+   "away_score": 69
   },
   {
    "id": "401910016",
    "start": "2026-11-19T01:00Z",
    "final": false,
-   "status": "10:44 - 1st",
+   "status": "Halftime",
    "home": "DAL",
    "away": "GSW",
-   "home_score": 3,
-   "away_score": 2
+   "home_score": 62,
+   "away_score": 49
   },
   {
    "id": "401910015",
