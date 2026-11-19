@@ -268,7 +268,7 @@ def build_weekly_entry(night, test=False):
     post_day = day_after(date)
     return {"key": ("test-weekly:" if test else "weekly:") + date, "kind": "weekly", "test": test,
             "folder": rel, "images": images, "caption": caption,
-            # with a video: video to TikTok/YouTube, this carousel to these networks
+            # with a video: video to TikTok only (never YouTube), this carousel to these networks
             "carousel_on": ["facebook", "instagram"],
             "first_comment": "Best week? Vote 👇 " + "  ".join(
                 f"{i}) {last(L[k][0]['name'])}" for i, k in enumerate(("pts", "reb", "ast"), 1) if L.get(k)),

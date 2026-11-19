@@ -87,7 +87,9 @@ All entry kinds are posted the same way below.
 
 ## Never
 - Post to YouTube. The YouTube channel connected in Metricool (Joe McShorts) is
-  reserved for something else (Zach, Nov 18 2026), even though it is still connected.
+  reserved for the Flashloop AI videos (Zach, Nov 18-19 2026). No basketball
+  post (guess, legend, weekly, MVP, or anything else from this repo) ever goes
+  there, even though the channel is still connected in this brand.
 - Post anything that is not in `queue.json`.
 - Post the same entry twice.
 - Change graphics, captions or the queue.
