@@ -1,5 +1,5 @@
 {
- "n": 13,
+ "n": 14,
  "days": {
   "20261107": {
    "n": 1,
@@ -85,6 +85,13 @@
    "kind": "current",
    "key": "guess:20261118",
    "answer": "Cam Spencer (MEM), 26 pts vs his usual 11.1"
+  },
+  "20261120": {
+   "n": 14,
+   "kind": "legend",
+   "slug": "dame-2020",
+   "key": "legend:20261120",
+   "answer": "Damian Lillard, 2019-20 season"
   }
  },
  "used": [
@@ -94,6 +101,7 @@
   "shaq-2001",
   "giannis-2020",
   "robinson-2003",
-  "kobe-2006"
+  "kobe-2006",
+  "dame-2020"
  ]
 }

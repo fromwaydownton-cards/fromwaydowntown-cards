@@ -37,6 +37,25 @@
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261118-guess.mp4"
       ]
+    },
+    {
+      "key": "legend:20261120",
+      "kind": "legend",
+      "test": false,
+      "folder": "cards/guess/20261120-legend.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261120-legend.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #14. His shot chart from the 2019-20 season: 30.0 points a game. Who is it?\n\nLast time's answer: Cam Spencer (MEM), 26 pts vs his usual 11.1. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-20T20:00:00-06:00",
+      "title": "Guess the player #14",
+      "queued_at": "2026-11-20T06:34:52+00:00",
+      "subject": "dame-2020",
+      "n": 14,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261120-legend.mp4"
+      ]
     }
   ]
 }
