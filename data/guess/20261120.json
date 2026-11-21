@@ -1,0 +1,222 @@
+{
+ "pick": {
+  "id": "4065732",
+  "name": "De'Andre Hunter",
+  "team": "SAC",
+  "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4065732.png",
+  "pts": 30,
+  "reb": 6,
+  "ast": 2,
+  "stl": 0,
+  "blk": 1,
+  "tov": 0,
+  "fgm": 12,
+  "fga": 16,
+  "tpm": 5,
+  "tpa": 6,
+  "pm": 2,
+  "ftm": 1,
+  "fta": 1,
+  "pf": 2,
+  "min": 37,
+  "oreb": 2,
+  "dreb": 4,
+  "game": "401909313",
+  "normal": 13.7,
+  "normal_src": "last season",
+  "jump": 16.3
+ },
+ "shots": {
+  "player": {
+   "id": "4065732",
+   "name": "De'Andre Hunter",
+   "team": "SAC",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4065732.png",
+   "pts": 30,
+   "reb": 6,
+   "ast": 2,
+   "stl": 0,
+   "blk": 1,
+   "tov": 0,
+   "fgm": 12,
+   "fga": 16,
+   "tpm": 5,
+   "tpa": 6,
+   "pm": 2,
+   "ftm": 1,
+   "fta": 1,
+   "pf": 2,
+   "min": 37,
+   "oreb": 2,
+   "dreb": 4,
+   "game": "401909313",
+   "normal": 13.7,
+   "normal_src": "last season",
+   "jump": 16.3
+  },
+  "shots": [
+   {
+    "x": 49,
+    "y": 7,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "De'Andre Hunter misses 25-foot three point step back jumpshot",
+    "period": 1,
+    "clock": "4:52"
+   },
+   {
+    "x": 39,
+    "y": 22,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "De'Andre Hunter makes 26-foot three point step back jumpshot (Emanuel Sharp assists)",
+    "period": 1,
+    "clock": "2:48"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": false,
+    "value": 0,
+    "type": "Tip Shot",
+    "text": "De'Andre Hunter misses tip shot",
+    "period": 1,
+    "clock": "2:15"
+   },
+   {
+    "x": 6,
+    "y": 19,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "De'Andre Hunter makes 26-foot three point jumper (Zach LaVine assists)",
+    "period": 2,
+    "clock": "5:04"
+   },
+   {
+    "x": 23,
+    "y": 26,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "De'Andre Hunter makes 25-foot three point jumper (Darius Acuff Jr. assists)",
+    "period": 2,
+    "clock": "3:38"
+   },
+   {
+    "x": 22,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "De'Andre Hunter makes 5-foot driving floating jump shot (Darius Acuff Jr. assists)",
+    "period": 2,
+    "clock": "2:40"
+   },
+   {
+    "x": 24,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Driving Finger Roll Layup",
+    "text": "De'Andre Hunter makes 3-foot two point shot (Darius Acuff Jr. assists)",
+    "period": 2,
+    "clock": "18.0"
+   },
+   {
+    "x": 26,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Layup Shot",
+    "text": "De'Andre Hunter makes 2-foot layup (Keegan Murray assists)",
+    "period": 3,
+    "clock": "11:43"
+   },
+   {
+    "x": 23,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "De'Andre Hunter misses driving layup",
+    "period": 3,
+    "clock": "6:49"
+   },
+   {
+    "x": 27,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "De'Andre Hunter makes running layup (Darius Acuff Jr. assists)",
+    "period": 3,
+    "clock": "4:41"
+   },
+   {
+    "x": 5,
+    "y": 16,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "De'Andre Hunter makes 25-foot three point jumper (Darius Acuff Jr. assists)",
+    "period": 3,
+    "clock": "3:33"
+   },
+   {
+    "x": 21,
+    "y": 15,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot",
+    "text": "De'Andre Hunter makes 14-foot jumper",
+    "period": 4,
+    "clock": "6:58"
+   },
+   {
+    "x": 24,
+    "y": 7,
+    "made": true,
+    "value": 2,
+    "type": "Driving Floating Jump Shot",
+    "text": "De'Andre Hunter makes 6-foot driving floating jump shot (Zach LaVine assists)",
+    "period": 4,
+    "clock": "4:01"
+   },
+   {
+    "x": 43,
+    "y": 18,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "De'Andre Hunter makes 24-foot three point jumper (Zach LaVine assists)",
+    "period": 4,
+    "clock": "3:15"
+   },
+   {
+    "x": 33,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Bank Jump Shot",
+    "text": "De'Andre Hunter misses two point shot",
+    "period": 4,
+    "clock": "2:34"
+   },
+   {
+    "x": 22,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Jump Shot Bank",
+    "text": "De'Andre Hunter makes 3-foot two point shot (Darius Acuff Jr. assists)",
+    "period": 4,
+    "clock": "1:56"
+   }
+  ],
+  "ft_made": 1,
+  "ft_att": 1
+ }
+}

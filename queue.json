@@ -1,25 +1,6 @@
 {
   "queue": [
     {
-      "key": "legend:20261118",
-      "kind": "legend",
-      "test": false,
-      "folder": "cards/guess/20261118-legend.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261118-legend.jpg"
-      ],
-      "caption": "GUESS THE PLAYER #12. His shot chart from the 2005-06 season: 35.4 points a game. Who is it?\n\nLast time's answer: Terrence Shannon Jr. (MIN), 34 pts vs his usual 5.6. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-11-18T20:00:00-06:00",
-      "title": "Guess the player #12",
-      "queued_at": "2026-11-18T06:28:10+00:00",
-      "subject": "kobe-2006",
-      "n": 12,
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261118-legend.mp4"
-      ]
-    },
-    {
       "key": "guess:20261118",
       "kind": "guess",
       "test": false,
@@ -55,6 +36,25 @@
       "n": 14,
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261120-legend.mp4"
+      ]
+    },
+    {
+      "key": "guess:20261120",
+      "kind": "guess",
+      "test": false,
+      "folder": "cards/guess/20261120-guess.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261120-guess.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #15. 30 points last night from a guy who usually scores 13.7. Who is it?\n\nLast time's answer: Damian Lillard, 2019-20 season. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-21T20:00:00-06:00",
+      "title": "Guess the player #15",
+      "queued_at": "2026-11-21T06:34:05+00:00",
+      "subject": "current",
+      "n": 15,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261120-guess.mp4"
       ]
     }
   ]

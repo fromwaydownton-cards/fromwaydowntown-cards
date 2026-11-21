@@ -1,5 +1,5 @@
 {
- "n": 14,
+ "n": 15,
  "days": {
   "20261107": {
    "n": 1,
@@ -92,6 +92,12 @@
    "slug": "dame-2020",
    "key": "legend:20261120",
    "answer": "Damian Lillard, 2019-20 season"
+  },
+  "20261121": {
+   "n": 15,
+   "kind": "current",
+   "key": "guess:20261120",
+   "answer": "De'Andre Hunter (SAC), 30 pts vs his usual 13.7"
   }
  },
  "used": [
