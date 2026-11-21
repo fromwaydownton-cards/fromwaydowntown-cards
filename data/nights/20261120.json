@@ -5,41 +5,41 @@
    "id": "401909305",
    "start": "2026-11-21T00:00Z",
    "final": false,
-   "status": "11/20 - 7:00 PM EST",
+   "status": "8:56 - 2nd",
    "home": "ATL",
    "away": "CHA",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 34,
+   "away_score": 39
   },
   {
    "id": "401909306",
    "start": "2026-11-21T00:30Z",
    "final": false,
-   "status": "11/20 - 7:30 PM EST",
+   "status": "7:38 - 1st",
    "home": "BKN",
    "away": "ORL",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 11,
+   "away_score": 11
   },
   {
    "id": "401909307",
    "start": "2026-11-21T00:30Z",
    "final": false,
-   "status": "11/20 - 7:30 PM EST",
+   "status": "8:07 - 1st",
    "home": "CLE",
    "away": "IND",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 8,
+   "away_score": 10
   },
   {
    "id": "401909308",
    "start": "2026-11-21T00:30Z",
    "final": false,
-   "status": "11/20 - 7:30 PM EST",
+   "status": "9:51 - 1st",
    "home": "DET",
    "away": "TOR",
-   "home_score": 0,
-   "away_score": 0
+   "home_score": 2,
+   "away_score": 6
   },
   {
    "id": "401909309",
