@@ -65,31 +65,31 @@
    "id": "401909311",
    "start": "2026-11-21T02:30Z",
    "final": false,
-   "status": "1:57 - 2nd",
+   "status": "11:57 - 4th",
    "home": "UTA",
    "away": "PHX",
-   "home_score": 47,
-   "away_score": 61
+   "home_score": 76,
+   "away_score": 89
   },
   {
    "id": "401909312",
    "start": "2026-11-21T03:00Z",
    "final": false,
-   "status": "2:12 - 1st",
+   "status": "11:16 - 3rd",
    "home": "DEN",
    "away": "HOU",
-   "home_score": 28,
-   "away_score": 26
+   "home_score": 64,
+   "away_score": 62
   },
   {
    "id": "401909313",
    "start": "2026-11-21T03:00Z",
    "final": false,
-   "status": "1:13 - 1st",
+   "status": "5:39 - 3rd",
    "home": "LAL",
    "away": "SAC",
-   "home_score": 25,
-   "away_score": 26
+   "home_score": 70,
+   "away_score": 77
   }
  ],
  "players": [
