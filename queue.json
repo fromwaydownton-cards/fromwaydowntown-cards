@@ -1,25 +1,6 @@
 {
   "queue": [
     {
-      "key": "guess:20261118",
-      "kind": "guess",
-      "test": false,
-      "folder": "cards/guess/20261118-guess.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261118-guess.jpg"
-      ],
-      "caption": "GUESS THE PLAYER #13. 26 points last night from a guy who usually scores 11.1. Who is it?\n\nLast time's answer: Kobe Bryant, 2005-06 season. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-11-19T20:00:00-06:00",
-      "title": "Guess the player #13",
-      "queued_at": "2026-11-19T05:38:44+00:00",
-      "subject": "current",
-      "n": 13,
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261118-guess.mp4"
-      ]
-    },
-    {
       "key": "legend:20261120",
       "kind": "legend",
       "test": false,
@@ -55,6 +36,25 @@
       "n": 15,
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261120-guess.mp4"
+      ]
+    },
+    {
+      "key": "legend:20261122",
+      "kind": "legend",
+      "test": false,
+      "folder": "cards/guess/20261122-legend.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261122-legend.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #16. His shot chart from the 2024-25 season: 24.3 points a game. Who is it?\n\nLast time's answer: De'Andre Hunter (SAC), 30 pts vs his usual 13.7. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-22T20:00:00-06:00",
+      "title": "Guess the player #16",
+      "queued_at": "2026-11-22T11:56:59+00:00",
+      "subject": "wemby-2025",
+      "n": 16,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261122-legend.mp4"
       ]
     }
   ]

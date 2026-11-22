@@ -1,5 +1,5 @@
 {
- "n": 15,
+ "n": 16,
  "days": {
   "20261107": {
    "n": 1,
@@ -98,6 +98,13 @@
    "kind": "current",
    "key": "guess:20261120",
    "answer": "De'Andre Hunter (SAC), 30 pts vs his usual 13.7"
+  },
+  "20261122": {
+   "n": 16,
+   "kind": "legend",
+   "slug": "wemby-2025",
+   "key": "legend:20261122",
+   "answer": "Victor Wembanyama, 2024-25 season"
   }
  },
  "used": [
@@ -108,6 +115,7 @@
   "giannis-2020",
   "robinson-2003",
   "kobe-2006",
-  "dame-2020"
+  "dame-2020",
+  "wemby-2025"
  ]
 }
