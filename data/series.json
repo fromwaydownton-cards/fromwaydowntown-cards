@@ -1,5 +1,5 @@
 {
- "n": 16,
+ "n": 17,
  "days": {
   "20261107": {
    "n": 1,
@@ -105,6 +105,13 @@
    "slug": "wemby-2025",
    "key": "legend:20261122",
    "answer": "Victor Wembanyama, 2024-25 season"
+  },
+  "20261123": {
+   "n": 17,
+   "kind": "legend",
+   "slug": "tatum-2023",
+   "key": "legend:20261123",
+   "answer": "Jayson Tatum, 2022-23 season"
   }
  },
  "used": [
@@ -116,6 +123,7 @@
   "robinson-2003",
   "kobe-2006",
   "dame-2020",
-  "wemby-2025"
+  "wemby-2025",
+  "tatum-2023"
  ]
 }

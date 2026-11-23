@@ -1,0 +1,107 @@
+{
+ "date": "20261123",
+ "games": [
+  {
+   "id": "401910036",
+   "start": "2026-11-24T00:00Z",
+   "final": false,
+   "status": "11/23 - 7:00 PM EST",
+   "home": "CHA",
+   "away": "MEM",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910037",
+   "start": "2026-11-24T00:00Z",
+   "final": false,
+   "status": "11/23 - 7:00 PM EST",
+   "home": "PHI",
+   "away": "POR",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910038",
+   "start": "2026-11-24T00:30Z",
+   "final": false,
+   "status": "11/23 - 7:30 PM EST",
+   "home": "IND",
+   "away": "OKC",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910039",
+   "start": "2026-11-24T00:30Z",
+   "final": false,
+   "status": "11/23 - 7:30 PM EST",
+   "home": "TOR",
+   "away": "MIL",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910040",
+   "start": "2026-11-24T00:30Z",
+   "final": false,
+   "status": "11/23 - 7:30 PM EST",
+   "home": "MIN",
+   "away": "BKN",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910041",
+   "start": "2026-11-24T01:00Z",
+   "final": false,
+   "status": "11/23 - 8:00 PM EST",
+   "home": "CHI",
+   "away": "CLE",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910042",
+   "start": "2026-11-24T01:00Z",
+   "final": false,
+   "status": "11/23 - 8:00 PM EST",
+   "home": "NOP",
+   "away": "PHX",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910043",
+   "start": "2026-11-24T01:30Z",
+   "final": false,
+   "status": "11/23 - 8:30 PM EST",
+   "home": "HOU",
+   "away": "LAC",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910044",
+   "start": "2026-11-24T03:00Z",
+   "final": false,
+   "status": "11/23 - 10:00 PM EST",
+   "home": "LAL",
+   "away": "UTA",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401910045",
+   "start": "2026-11-24T03:00Z",
+   "final": false,
+   "status": "11/23 - 10:00 PM EST",
+   "home": "SAC",
+   "away": "SAS",
+   "home_score": 0,
+   "away_score": 0
+  }
+ ],
+ "players": [],
+ "all_final": false
+}

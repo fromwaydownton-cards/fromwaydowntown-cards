@@ -1,25 +1,6 @@
 {
   "queue": [
     {
-      "key": "legend:20261120",
-      "kind": "legend",
-      "test": false,
-      "folder": "cards/guess/20261120-legend.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261120-legend.jpg"
-      ],
-      "caption": "GUESS THE PLAYER #14. His shot chart from the 2019-20 season: 30.0 points a game. Who is it?\n\nLast time's answer: Cam Spencer (MEM), 26 pts vs his usual 11.1. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-11-20T20:00:00-06:00",
-      "title": "Guess the player #14",
-      "queued_at": "2026-11-20T06:34:52+00:00",
-      "subject": "dame-2020",
-      "n": 14,
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261120-legend.mp4"
-      ]
-    },
-    {
       "key": "guess:20261120",
       "kind": "guess",
       "test": false,
@@ -55,6 +36,76 @@
       "n": 16,
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261122-legend.mp4"
+      ]
+    },
+    {
+      "key": "weekly:20261122",
+      "kind": "weekly",
+      "test": false,
+      "folder": "cards/weekly/20261116-20261122-1.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/weekly/20261116-20261122-1.jpg",
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/weekly/20261116-20261122-2.jpg",
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/weekly/20261116-20261122-3.jpg",
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/weekly/20261116-20261122-4.jpg",
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/weekly/20261116-20261122-5.jpg",
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/weekly/20261116-20261122-6.jpg"
+      ],
+      "caption": "Shai Gilgeous-Alexander led the league with 37.0 points a game this week. Who had the best week?\n\nNBA weekly leaders, Nov 16-22 (per game, min 2 games).\n\nPoints: Shai Gilgeous-Alexander (OKC) 37.0 PPG\nRebounds: Victor Wembanyama (SAS) 16.0 RPG\nAssists: Josh Giddey (CHI) 11.5 APG\nSteals: Dyson Daniels (ATL) 3.7 SPG\nBlocks: Myles Turner (MIL) 3.5 BPG\nThrees Made: Quentin Grimes (LAL) 5.0 3PM\n\nDrop your pick in the comments. Follow for Guess the Player every night.\n\n#NBA #NBAStats #hoops #basketball",
+      "carousel_on": [
+        "facebook",
+        "instagram"
+      ],
+      "first_comment": "Best week? Vote \ud83d\udc47 1) Gilgeous-Alexander  2) Wembanyama  3) Giddey",
+      "post_at": "2026-11-23T12:00:00-06:00",
+      "title": "NBA weekly leaders Nov 16-22",
+      "week": [
+        "20261116",
+        "20261122"
+      ],
+      "queued_at": "2026-11-23T07:47:25+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261122-weekly.mp4"
+      ]
+    },
+    {
+      "key": "mvp:20261122",
+      "kind": "mvp",
+      "test": false,
+      "folder": "cards/mvp/20261116-20261122.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/mvp/20261116-20261122.jpg"
+      ],
+      "caption": "MVP LADDER, week of Nov 16-Nov 22. Is Wembanyama really No. 1?\n\n1. Victor Wembanyama (SAS) 35.7 PPG, on/off +47, team 14-3\n2. Nikola Jokic (DEN) 28.8 PPG, on/off +52, team 10-5\n3. Giannis Antetokounmpo (MIA) 23.5 PPG, on/off +37, team 10-6\n4. Jamal Murray (DEN) 27.0 PPG, on/off +39, team 10-5\n5. Karl-Anthony Towns (NYK) 22.7 PPG, on/off +35, team 11-6\n\nRanked by Game Score, on/off impact and team record. Who's too high? Who's missing?\n\n#NBA #MVP #NBAStats #hoops #basketball",
+      "first_comment": "Your top 5? Drop it below \ud83d\udc47",
+      "post_at": "2026-11-23T17:00:00-06:00",
+      "week": [
+        "20261116",
+        "20261122"
+      ],
+      "title": "MVP ladder Nov 16-Nov 22",
+      "queued_at": "2026-11-23T07:47:28+00:00",
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261122-mvp.mp4"
+      ]
+    },
+    {
+      "key": "legend:20261123",
+      "kind": "legend",
+      "test": false,
+      "folder": "cards/guess/20261123-legend.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261123-legend.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #17. His shot chart from the 2022-23 season: 30.1 points a game. Who is it?\n\nLast time's answer: Victor Wembanyama, 2024-25 season. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-23T20:00:00-06:00",
+      "title": "Guess the player #17",
+      "queued_at": "2026-11-23T07:50:14+00:00",
+      "subject": "tatum-2023",
+      "n": 17,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261123-legend.mp4"
       ]
     }
   ]
