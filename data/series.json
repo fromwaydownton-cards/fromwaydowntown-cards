@@ -1,5 +1,5 @@
 {
- "n": 17,
+ "n": 18,
  "days": {
   "20261107": {
    "n": 1,
@@ -112,6 +112,12 @@
    "slug": "tatum-2023",
    "key": "legend:20261123",
    "answer": "Jayson Tatum, 2022-23 season"
+  },
+  "20261124": {
+   "n": 18,
+   "kind": "current",
+   "key": "guess:20261123",
+   "answer": "Christian Anderson (CHA), 25 pts vs his usual 5.1"
   }
  },
  "used": [

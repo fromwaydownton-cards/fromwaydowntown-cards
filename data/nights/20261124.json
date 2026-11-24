@@ -1,0 +1,37 @@
+{
+ "date": "20261124",
+ "games": [
+  {
+   "id": "401909314",
+   "start": "2026-11-25T00:00Z",
+   "final": false,
+   "status": "11/24 - 7:00 PM EST",
+   "home": "ORL",
+   "away": "DET",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909315",
+   "start": "2026-11-25T01:00Z",
+   "final": false,
+   "status": "11/24 - 8:00 PM EST",
+   "home": "WAS",
+   "away": "BOS",
+   "home_score": 0,
+   "away_score": 0
+  },
+  {
+   "id": "401909316",
+   "start": "2026-11-25T03:00Z",
+   "final": false,
+   "status": "11/24 - 10:00 PM EST",
+   "home": "DEN",
+   "away": "DAL",
+   "home_score": 0,
+   "away_score": 0
+  }
+ ],
+ "players": [],
+ "all_final": false
+}

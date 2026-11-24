@@ -1,0 +1,182 @@
+{
+ "pick": {
+  "id": "5060701",
+  "name": "Christian Anderson",
+  "team": "CHA",
+  "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/5060701.png",
+  "pts": 25,
+  "reb": 2,
+  "ast": 3,
+  "stl": 1,
+  "blk": 1,
+  "tov": 1,
+  "fgm": 9,
+  "fga": 12,
+  "tpm": 6,
+  "tpa": 8,
+  "pm": 13,
+  "ftm": 1,
+  "fta": 1,
+  "pf": 4,
+  "min": 25,
+  "oreb": 2,
+  "dreb": 0,
+  "game": "401910036",
+  "normal": 5.1,
+  "normal_src": "this season",
+  "jump": 19.9
+ },
+ "shots": {
+  "player": {
+   "id": "5060701",
+   "name": "Christian Anderson",
+   "team": "CHA",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/5060701.png",
+   "pts": 25,
+   "reb": 2,
+   "ast": 3,
+   "stl": 1,
+   "blk": 1,
+   "tov": 1,
+   "fgm": 9,
+   "fga": 12,
+   "tpm": 6,
+   "tpa": 8,
+   "pm": 13,
+   "ftm": 1,
+   "fta": 1,
+   "pf": 4,
+   "min": 25,
+   "oreb": 2,
+   "dreb": 0,
+   "game": "401910036",
+   "normal": 5.1,
+   "normal_src": "this season",
+   "jump": 19.9
+  },
+  "shots": [
+   {
+    "x": 10,
+    "y": 24,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Christian Anderson makes 28-foot three point jumper (Royce O'Neale assists)",
+    "period": 1,
+    "clock": "5:34"
+   },
+   {
+    "x": 10,
+    "y": 13,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Christian Anderson makes 19-foot pullup jump shot (Naz Reid assists)",
+    "period": 1,
+    "clock": "3:15"
+   },
+   {
+    "x": 18,
+    "y": 28,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Christian Anderson makes 29-foot three point jumper",
+    "period": 1,
+    "clock": "28.7"
+   },
+   {
+    "x": 43,
+    "y": 19,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Christian Anderson makes 25-foot three point jumper (Sion James assists)",
+    "period": 2,
+    "clock": "5:58"
+   },
+   {
+    "x": 16,
+    "y": 25,
+    "made": true,
+    "value": 3,
+    "type": "Step Back Jump Shot",
+    "text": "Christian Anderson makes 26-foot three point step back jumpshot (Sion James assists)",
+    "period": 2,
+    "clock": "4:50"
+   },
+   {
+    "x": 24,
+    "y": 8,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Christian Anderson misses driving floating jump shot",
+    "period": 2,
+    "clock": "3:43"
+   },
+   {
+    "x": 45,
+    "y": 16,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Christian Anderson misses 25-foot three point jumper",
+    "period": 2,
+    "clock": "3:30"
+   },
+   {
+    "x": 48,
+    "y": 3,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Christian Anderson misses 23-foot three point jumper",
+    "period": 2,
+    "clock": "2:17"
+   },
+   {
+    "x": 19,
+    "y": 25,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Christian Anderson makes 25-foot three pointer",
+    "period": 3,
+    "clock": "2:33"
+   },
+   {
+    "x": 26,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Running Layup Shot",
+    "text": "Christian Anderson makes running layup (Naz Reid assists)",
+    "period": 4,
+    "clock": "7:22"
+   },
+   {
+    "x": 30,
+    "y": 26,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Christian Anderson makes 26-foot three point jumper (Brandon Miller assists)",
+    "period": 4,
+    "clock": "5:40"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": true,
+    "value": 2,
+    "type": "Layup Shot Putback",
+    "text": "Christian Anderson makes two point shot",
+    "period": 4,
+    "clock": "1.2"
+   }
+  ],
+  "ft_made": 1,
+  "ft_att": 1
+ }
+}
