@@ -1,5 +1,5 @@
 {
- "n": 18,
+ "n": 19,
  "days": {
   "20261107": {
    "n": 1,
@@ -118,6 +118,13 @@
    "kind": "current",
    "key": "guess:20261123",
    "answer": "Christian Anderson (CHA), 25 pts vs his usual 5.1"
+  },
+  "20261125": {
+   "n": 19,
+   "kind": "legend",
+   "slug": "benwallace-2004",
+   "key": "legend:20261125",
+   "answer": "Ben Wallace, 2003-04 season"
   }
  },
  "used": [
@@ -130,6 +137,7 @@
   "kobe-2006",
   "dame-2020",
   "wemby-2025",
-  "tatum-2023"
+  "tatum-2023",
+  "benwallace-2004"
  ]
 }
