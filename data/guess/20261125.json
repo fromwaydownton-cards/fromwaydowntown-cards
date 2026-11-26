@@ -1,0 +1,212 @@
+{
+ "pick": {
+  "id": "4431671",
+  "name": "Jaden McDaniels",
+  "team": "MIN",
+  "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4431671.png",
+  "pts": 32,
+  "reb": 10,
+  "ast": 5,
+  "stl": 1,
+  "blk": 1,
+  "tov": 0,
+  "fgm": 11,
+  "fga": 15,
+  "tpm": 4,
+  "tpa": 5,
+  "pm": 13,
+  "ftm": 6,
+  "fta": 6,
+  "pf": 4,
+  "min": 37,
+  "oreb": 2,
+  "dreb": 8,
+  "game": "401909320",
+  "normal": 14.8,
+  "normal_src": "last season",
+  "jump": 17.2
+ },
+ "shots": {
+  "player": {
+   "id": "4431671",
+   "name": "Jaden McDaniels",
+   "team": "MIN",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4431671.png",
+   "pts": 32,
+   "reb": 10,
+   "ast": 5,
+   "stl": 1,
+   "blk": 1,
+   "tov": 0,
+   "fgm": 11,
+   "fga": 15,
+   "tpm": 4,
+   "tpa": 5,
+   "pm": 13,
+   "ftm": 6,
+   "fta": 6,
+   "pf": 4,
+   "min": 37,
+   "oreb": 2,
+   "dreb": 8,
+   "game": "401909320",
+   "normal": 14.8,
+   "normal_src": "last season",
+   "jump": 17.2
+  },
+  "shots": [
+   {
+    "x": 23,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Jaden McDaniels makes driving layup",
+    "period": 1,
+    "clock": "10:43"
+   },
+   {
+    "x": 24,
+    "y": 9,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Jaden McDaniels makes 9-foot pullup jump shot (Terrence Shannon Jr. assists)",
+    "period": 1,
+    "clock": "1:51"
+   },
+   {
+    "x": 33,
+    "y": 3,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Shai Gilgeous-Alexander blocks Jaden McDaniels 's 9-foot pullup jump shot",
+    "period": 2,
+    "clock": "5:38"
+   },
+   {
+    "x": 39,
+    "y": 22,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Jaden McDaniels makes 26-foot three pointer",
+    "period": 2,
+    "clock": "2:15"
+   },
+   {
+    "x": 25,
+    "y": 21,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Jaden McDaniels misses 20-foot pullup jump shot",
+    "period": 2,
+    "clock": "1:33"
+   },
+   {
+    "x": 48,
+    "y": -3,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Jaden McDaniels makes 23-foot three point jumper (Ayo Dosunmu assists)",
+    "period": 3,
+    "clock": "9:47"
+   },
+   {
+    "x": 1,
+    "y": 0,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Jaden McDaniels misses 24-foot three point jumper",
+    "period": 3,
+    "clock": "7:06"
+   },
+   {
+    "x": 26,
+    "y": 3,
+    "made": false,
+    "value": 0,
+    "type": "Driving Layup Shot",
+    "text": "Alex Caruso blocks Jaden McDaniels 's 3-foot driving layup",
+    "period": 3,
+    "clock": "6:29"
+   },
+   {
+    "x": 27,
+    "y": -1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Dunk Shot",
+    "text": "Jaden McDaniels makes 2-foot driving dunk (Joan Beringer assists)",
+    "period": 3,
+    "clock": "5:29"
+   },
+   {
+    "x": 24,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Jaden McDaniels makes driving layup (LaMelo Ball assists)",
+    "period": 3,
+    "clock": "4:20"
+   },
+   {
+    "x": 28,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Jaden McDaniels makes driving layup (Bones Hyland assists)",
+    "period": 3,
+    "clock": "3:55"
+   },
+   {
+    "x": 48,
+    "y": 3,
+    "made": true,
+    "value": 3,
+    "type": "Pullup Jump Shot",
+    "text": "Jaden McDaniels makes 23-foot three pointer (Ayo Dosunmu assists)",
+    "period": 3,
+    "clock": "1:52"
+   },
+   {
+    "x": 9,
+    "y": 21,
+    "made": true,
+    "value": 3,
+    "type": "Running Pullup Jump Shot",
+    "text": "Jaden McDaniels makes 25-foot running pullup jump shot",
+    "period": 3,
+    "clock": "0.0"
+   },
+   {
+    "x": 29,
+    "y": 8,
+    "made": true,
+    "value": 2,
+    "type": "Floating Jump Shot",
+    "text": "Jaden McDaniels makes 8-foot floating jump shot (LaMelo Ball assists)",
+    "period": 4,
+    "clock": "5:00"
+   },
+   {
+    "x": 22,
+    "y": 9,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Jaden McDaniels makes 9-foot pullup jump shot",
+    "period": 4,
+    "clock": "3:54"
+   }
+  ],
+  "ft_made": 6,
+  "ft_att": 6
+ }
+}

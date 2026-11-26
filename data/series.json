@@ -1,5 +1,5 @@
 {
- "n": 19,
+ "n": 20,
  "days": {
   "20261107": {
    "n": 1,
@@ -125,6 +125,12 @@
    "slug": "benwallace-2004",
    "key": "legend:20261125",
    "answer": "Ben Wallace, 2003-04 season"
+  },
+  "20261126": {
+   "n": 20,
+   "kind": "current",
+   "key": "guess:20261125",
+   "answer": "Jaden McDaniels (MIN), 32 pts vs his usual 14.8"
   }
  },
  "used": [
