@@ -1,5 +1,5 @@
 {
- "n": 20,
+ "n": 21,
  "days": {
   "20261107": {
    "n": 1,
@@ -131,6 +131,13 @@
    "kind": "current",
    "key": "guess:20261125",
    "answer": "Jaden McDaniels (MIN), 32 pts vs his usual 14.8"
+  },
+  "20261127": {
+   "n": 21,
+   "kind": "legend",
+   "slug": "rose-2011",
+   "key": "legend:20261127",
+   "answer": "Derrick Rose, 2010-11 season"
   }
  },
  "used": [
@@ -144,6 +151,7 @@
   "dame-2020",
   "wemby-2025",
   "tatum-2023",
-  "benwallace-2004"
+  "benwallace-2004",
+  "rose-2011"
  ]
 }

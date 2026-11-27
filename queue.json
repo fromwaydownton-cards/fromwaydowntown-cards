@@ -56,6 +56,25 @@
       "videos": [
         "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261125-guess.mp4"
       ]
+    },
+    {
+      "key": "legend:20261127",
+      "kind": "legend",
+      "test": false,
+      "folder": "cards/guess/20261127-legend.jpg",
+      "images": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261127-legend.jpg"
+      ],
+      "caption": "GUESS THE PLAYER #21. His shot chart from the 2010-11 season: 25.0 points a game. Who is it?\n\nLast time's answer: Jaden McDaniels (MIN), 32 pts vs his usual 14.8. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
+      "first_comment": "",
+      "post_at": "2026-11-27T20:00:00-06:00",
+      "title": "Guess the player #21",
+      "queued_at": "2026-11-27T10:57:15+00:00",
+      "subject": "rose-2011",
+      "n": 21,
+      "videos": [
+        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261127-legend.mp4"
+      ]
     }
   ]
 }
