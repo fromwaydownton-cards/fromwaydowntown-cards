@@ -1,25 +1,6 @@
 {
   "queue": [
     {
-      "key": "guess:20261123",
-      "kind": "guess",
-      "test": false,
-      "folder": "cards/guess/20261123-guess.jpg",
-      "images": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/main/cards/guess/20261123-guess.jpg"
-      ],
-      "caption": "GUESS THE PLAYER #18. 25 points last night from a guy who usually scores 5.1. Who is it?\n\nLast time's answer: Jayson Tatum, 2022-23 season. Did you get it?\n\nDrop your guess in the comments. Answer in tomorrow's post. Follow so you don't miss one.\n\n#NBA #GuessThePlayer #NBAStats #hoops #basketball",
-      "first_comment": "",
-      "post_at": "2026-11-24T20:00:00-06:00",
-      "title": "Guess the player #18",
-      "queued_at": "2026-11-24T15:05:31+00:00",
-      "subject": "current",
-      "n": 18,
-      "videos": [
-        "https://raw.githubusercontent.com/fromwaydownton-cards/fromwaydowntown-cards/media/20261123-guess.mp4"
-      ]
-    },
-    {
       "key": "legend:20261125",
       "kind": "legend",
       "test": false,
