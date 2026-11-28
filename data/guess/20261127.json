@@ -1,0 +1,262 @@
+{
+ "pick": {
+  "id": "4433134",
+  "name": "Scottie Barnes",
+  "team": "TOR",
+  "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4433134.png",
+  "pts": 34,
+  "reb": 1,
+  "ast": 5,
+  "stl": 0,
+  "blk": 3,
+  "tov": 3,
+  "fgm": 11,
+  "fga": 20,
+  "tpm": 2,
+  "tpa": 4,
+  "pm": 14,
+  "ftm": 10,
+  "fta": 10,
+  "pf": 3,
+  "min": 36,
+  "oreb": 1,
+  "dreb": 0,
+  "game": "401909329",
+  "normal": 18.1,
+  "normal_src": "last season",
+  "jump": 15.9
+ },
+ "shots": {
+  "player": {
+   "id": "4433134",
+   "name": "Scottie Barnes",
+   "team": "TOR",
+   "headshot": "https://a.espncdn.com/i/headshots/nba/players/full/4433134.png",
+   "pts": 34,
+   "reb": 1,
+   "ast": 5,
+   "stl": 0,
+   "blk": 3,
+   "tov": 3,
+   "fgm": 11,
+   "fga": 20,
+   "tpm": 2,
+   "tpa": 4,
+   "pm": 14,
+   "ftm": 10,
+   "fta": 10,
+   "pf": 3,
+   "min": 36,
+   "oreb": 1,
+   "dreb": 0,
+   "game": "401909329",
+   "normal": 18.1,
+   "normal_src": "last season",
+   "jump": 15.9
+  },
+  "shots": [
+   {
+    "x": 35,
+    "y": 15,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Scottie Barnes makes 18-foot pullup jump shot (Immanuel Quickley assists)",
+    "period": 1,
+    "clock": "11:36"
+   },
+   {
+    "x": 2,
+    "y": 10,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Scottie Barnes misses 25-foot three point jumper",
+    "period": 1,
+    "clock": "8:18"
+   },
+   {
+    "x": 4,
+    "y": 14,
+    "made": true,
+    "value": 3,
+    "type": "Jump Shot",
+    "text": "Scottie Barnes makes 25-foot three point jumper (Immanuel Quickley assists)",
+    "period": 1,
+    "clock": "8:01"
+   },
+   {
+    "x": 1,
+    "y": 5,
+    "made": true,
+    "value": 3,
+    "type": "Running Pullup Jump Shot",
+    "text": "Scottie Barnes makes 24-foot running pullup jump shot (Immanuel Quickley assists)",
+    "period": 1,
+    "clock": "6:53"
+   },
+   {
+    "x": 6,
+    "y": 18,
+    "made": false,
+    "value": 0,
+    "type": "Jump Shot",
+    "text": "Scottie Barnes misses 26-foot three point jumper",
+    "period": 1,
+    "clock": "5:15"
+   },
+   {
+    "x": 13,
+    "y": 10,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot",
+    "text": "Scottie Barnes makes 15-foot jumper (Jamal Shead assists)",
+    "period": 1,
+    "clock": "1:12"
+   },
+   {
+    "x": 31,
+    "y": 19,
+    "made": false,
+    "value": 0,
+    "type": "Step Back Jump Shot",
+    "text": "Scottie Barnes misses 19-foot step back jumpshot",
+    "period": 1,
+    "clock": "13.3"
+   },
+   {
+    "x": 38,
+    "y": 2,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Fade Away Jump Shot",
+    "text": "Scottie Barnes misses 13-foot two point shot",
+    "period": 2,
+    "clock": "10:24"
+   },
+   {
+    "x": 25,
+    "y": 1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Scottie Barnes makes driving layup (Immanuel Quickley assists)",
+    "period": 2,
+    "clock": "3:59"
+   },
+   {
+    "x": 36,
+    "y": 12,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Scottie Barnes misses 15-foot pullup jump shot",
+    "period": 2,
+    "clock": "3:28"
+   },
+   {
+    "x": 25,
+    "y": 2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Dunk Shot",
+    "text": "Scottie Barnes makes 1-foot driving dunk (Ja'Kobe Walter assists)",
+    "period": 2,
+    "clock": "1:25"
+   },
+   {
+    "x": 10,
+    "y": 3,
+    "made": true,
+    "value": 2,
+    "type": "Jump Shot",
+    "text": "Scottie Barnes makes 14-foot jumper (Immanuel Quickley assists)",
+    "period": 2,
+    "clock": "49.9"
+   },
+   {
+    "x": 36,
+    "y": 7,
+    "made": true,
+    "value": 2,
+    "type": "Pullup Jump Shot",
+    "text": "Scottie Barnes makes 13-foot pullup jump shot (Immanuel Quickley assists)",
+    "period": 3,
+    "clock": "10:53"
+   },
+   {
+    "x": 25,
+    "y": -1,
+    "made": true,
+    "value": 2,
+    "type": "Driving Layup Shot",
+    "text": "Scottie Barnes makes driving layup (Immanuel Quickley assists)",
+    "period": 3,
+    "clock": "7:22"
+   },
+   {
+    "x": 40,
+    "y": 0,
+    "made": false,
+    "value": 0,
+    "type": "Pullup Jump Shot",
+    "text": "Scottie Barnes misses 15-foot pullup jump shot",
+    "period": 3,
+    "clock": "2:27"
+   },
+   {
+    "x": 27,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Driving Floating Jump Shot",
+    "text": "Scottie Barnes misses driving floating jump shot",
+    "period": 3,
+    "clock": "1:27"
+   },
+   {
+    "x": 29,
+    "y": 4,
+    "made": true,
+    "value": 2,
+    "type": "Cutting Layup Shot",
+    "text": "Scottie Barnes makes 5-foot layup (Jamal Shead assists)",
+    "period": 3,
+    "clock": "57.5"
+   },
+   {
+    "x": 24,
+    "y": -2,
+    "made": true,
+    "value": 2,
+    "type": "Driving Finger Roll Layup",
+    "text": "Scottie Barnes makes 2-foot two point shot (Jamal Shead assists)",
+    "period": 3,
+    "clock": "4.6"
+   },
+   {
+    "x": 11,
+    "y": 5,
+    "made": false,
+    "value": 0,
+    "type": "Turnaround Jump Shot",
+    "text": "Scottie Barnes misses 14-foot turnaround jump shot",
+    "period": 4,
+    "clock": "6:30"
+   },
+   {
+    "x": 25,
+    "y": 0,
+    "made": false,
+    "value": 0,
+    "type": "Tip Shot",
+    "text": "Scottie Barnes misses tip shot",
+    "period": 4,
+    "clock": "34.9"
+   }
+  ],
+  "ft_made": 10,
+  "ft_att": 10
+ }
+}

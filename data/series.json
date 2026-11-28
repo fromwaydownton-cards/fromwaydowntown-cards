@@ -1,5 +1,5 @@
 {
- "n": 21,
+ "n": 22,
  "days": {
   "20261107": {
    "n": 1,
@@ -138,6 +138,12 @@
    "slug": "rose-2011",
    "key": "legend:20261127",
    "answer": "Derrick Rose, 2010-11 season"
+  },
+  "20261128": {
+   "n": 22,
+   "kind": "current",
+   "key": "guess:20261127",
+   "answer": "Scottie Barnes (TOR), 34 pts vs his usual 18.1"
   }
  },
  "used": [
